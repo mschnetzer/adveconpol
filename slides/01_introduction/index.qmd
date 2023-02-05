@@ -92,7 +92,7 @@ schedule <- read_xlsx("../../data/schedule/schedule.xlsx")
 ```{r table}
 #| echo: false
 #| results: 'asis'
-schedule %>% arrange(Date) %>% select(-c(Paper,PDF,Slides)) %>%
+schedule %>% arrange(Date) %>% select(-c(Chart)) %>%
   mutate(Assignment = ifelse(!is.na(Assignment),
         glue('<i class="fa-solid fa-pen fa-lg red"></i>'),
         glue('<i class="fa-solid fa-pen fa-lg grey200"></i>')),

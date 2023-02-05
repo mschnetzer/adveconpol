@@ -1,1 +1,0 @@
-HTMLWidgets.widget(sankeyNetworkDefinition);

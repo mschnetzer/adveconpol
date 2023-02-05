@@ -13,5 +13,11 @@
   },
   "visualization.qmd": {
     "visualization.html": "ba097fab"
+  },
+  "slides/01_introduction/index.qmd": {
+    "index.html": "8cb37349"
+  },
+  "slides/02_data/index.qmd": {
+    "index.html": "a0057e0a"
   }
 }

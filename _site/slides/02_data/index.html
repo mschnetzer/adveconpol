@@ -10,11 +10,11 @@
 <script src="../../site_libs/quarto-contrib/lord-icon-bundle-3.4.2/bundle.js"></script>
 <link href="../../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
 <link href="../../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.1.175">
+  <meta name="generator" content="quarto-1.2.335">
 
   <meta name="author" content="Dr.&nbsp;Matthias Schnetzer">
   <meta name="dcterms.date" content="2022-10-21">
-  <title>PI 2159 Special Topics in Economic Policy -     The economics of inequality</title>
+  <title>PI 5620 Advanced Economic Policy -     Economic Policy Visualization</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -344,24 +344,26 @@
   
   <script src="../../site_libs/kePrint-0.0.1/kePrint.js"></script>
   <link href="../../site_libs/lightable-0.0.1/lightable.css" rel="stylesheet">
-  <script src="../../site_libs/htmlwidgets-1.6.0/htmlwidgets.js"></script>
-  <script src="../../site_libs/d3-4.9.1/d3.min.js"></script>
-  <script src="../../site_libs/sankey-1/sankey.js"></script>
-  <script src="../../site_libs/sankeyNetworkDefinition-1/sankeyNetworkDefinition.js"></script>
-  <script src="../../site_libs/sankeyNetwork-binding-0.5.0/sankeyNetwork.js"></script>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet">
 </head>
 <body class="quarto-light">
   <div class="reveal">
     <div class="slides">
 
-<section id="title-slide" class="center">
-  <h1 class="title"><p><span class="fa-stack course-icon"> <i class="fas fa-comment fa-stack-2x blue"></i> <i class="fas fa-scale-unbalanced fa-stack-1x fa-inverse" style="margin-top:-5pt"></i> </span><br> The economics of inequality</p></h1>
+<section id="title-slide" class="quarto-title-block center">
+  <h1 class="title"><p><span class="fa-stack course-icon"> <i class="fas fa-comment fa-stack-2x blue"></i> <i class="fas fa-chart-column fa-stack-1x fa-inverse" style="margin-top:-5pt"></i> </span><br> Economic Policy Visualization</p></h1>
   <p class="subtitle">Data sources and definitions</p>
-  <p class="author">Dr.&nbsp;Matthias Schnetzer</p>
-  <p class="date">October 21, 2022</p>
-</section>
 
+<div class="quarto-title-authors">
+<div class="quarto-title-author">
+<div class="quarto-title-author-name">
+Dr.&nbsp;Matthias Schnetzer 
+</div>
+</div>
+</div>
+
+  <p class="date">10/21/22</p>
+</section>
 <section id="section" class="slide level2 smaller">
 <h2></h2>
 <p><span class="bubble bubble-bottom-left absolute" style="--bubcol: var(--bubcol-blue);top: 5%; left: 18%; ">Has inequality been rising lately?</span></p>
@@ -647,7 +649,7 @@
 </ul></li>
 <li>Interview mode: CAPI/CATI</li>
 <li>Rotating 4 year panel; Ad-hoc modules</li>
-<li>Standard documentation for Austria: <a href="https://www.statistik.at/fileadmin/shared/QM/Standarddokumentationen/B/std_b_eu-silc-2020.pdf"><i class="fa-solid fa-file-pdf" aria-hidden="true"></i></a></li>
+<li>Standard documentation for Austria: <a href="https://www.statistik.at/fileadmin/shared/QM/Standarddokumentationen/B/std_b_eu-silc-2020.pdf"><i class="fa-solid fa-file-pdf" aria-label="file-pdf"></i></a></li>
 </ul>
 </section>
 <section id="income-data-in-eu-silc" class="slide level2 smaller">
@@ -733,236 +735,6 @@
 <aside><div>
 <p>Source: <span class="citation" data-cites="angel:2019">Angel et al. (<a href="#/bibliography" role="doc-biblioref" onclick="">2019</a>)</span></p>
 </div></aside></section>
-<section id="what-about-capital-income" class="slide level2 smaller">
-<h2>What about capital income?</h2>
-<p><img data-src="img/capinc1.png" class="absolute" style="top: 100px; left: 0px; width: 550px; "></p>
-<div class="fragment">
-<p><img data-src="img/capinc2.png" class="absolute" style="top: 100px; right: 0px; width: 450px; "></p>
-
-</div>
-<aside><div>
-<p>Source: <span class="citation" data-cites="ertl:2022">Ertl et al. (<a href="#/bibliography" role="doc-biblioref" onclick="">2022</a>)</span></p>
-</div></aside></section></section>
-<section>
-<section id="how-do-you-measure-personal-income-inequality" class="title-slide slide level1 center">
-<h1>How do you measure personal income inequality?</h1>
-<div class="absolute" style="top: 90%; left: 30%; width: 369px; height: 400px; ">
-<p><img data-src="../../data/img/avatar_explain.png"></p>
-</div>
-<div class="footer">
-
-</div>
-</section>
-<section id="common-properties-of-inequality-measures" class="slide level2 smaller">
-<h2>Common properties of inequality measures</h2>
-<div class="columns">
-<div class="column" style="width:35%;">
-<p><img data-src="img/cowell.jpg" height="400"></p>
-</div><div class="column altlist" style="width:65%;">
-<ul>
-<li><span class="marker-hl">Anonymity</span> principle: it does not matter who earns the income</li>
-<li><span class="marker-hl">Population</span> principle: the absolute population size does not matter, only proportions do</li>
-<li><span class="marker-hl">Relative income</span> (or scale) principle: Relative incomes matter, not the absolute levels</li>
-<li><span class="marker-hl">Dalton</span> (or transfer) principle: A regressive transfer within the distribution increases inequality</li>
-</ul>
-</div>
-</div>
-
-<aside class="notes">
-<ul>
-<li>Anonymity principle: In an economy composed of two people, Mr.&nbsp;Smith and Mrs.&nbsp;Jones, where one of them has 60% of the income and the other 40%, the inequality metric should be the same whether it is Mr.&nbsp;Smith or Mrs.&nbsp;Jones who has the 40% share</li>
-<li>Population independence: The income inequality metric should not depend on whether an economy has a large or small population. An economy with only a few people should not be automatically judged by the metric as being more equal than a large economy with lots of people.</li>
-<li>Scale principle: If every person’s income in an economy is doubled (or multiplied by any positive constant) then the overall metric of inequality should not change.</li>
-<li>Dalton principle: In its weak form it says that if some income is transferred from a rich person to a poor person, while still preserving the order of income ranks, then the measured inequality should not increase. In its strong form, the measured level of inequality should decrease.</li>
-</ul>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-<aside><div>
-<p>Reading recommenation: <span class="citation" data-cites="cowell:2011">Cowell (<a href="#/bibliography" role="doc-biblioref" onclick="">2011</a>)</span></p>
-</div></aside></section>
-<section id="lorenz-curve-and-gini-coefficient" class="slide level2 smaller">
-<h2>Lorenz curve and Gini coefficient</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<p><img data-src="img/lorenz.png"></p>
-</div><div class="column" style="width:50%;">
-<p>Gini coefficient: <span class="math display">\[\frac{A}{(A+B)} \in (0, 1)\]</span> <br> Alternative: Half of the relative mean absolute difference <span class="math display">\[G= \frac{\sum_{i=1}^{n}\sum_{j=1}^{n}|y_i - y_j|}{2n^2\bar{y}}\]</span></p>
-</div>
-</div>
-</section>
-<section id="alternative-inequality-measures" class="slide level2 smaller">
-<h2>Alternative inequality measures</h2>
-<div class="altlis">
-<ul>
-<li>Shares</li>
-<li>Ratios (point or share ratios, e.g.&nbsp;Palma ratio)</li>
-<li>General Entropy (GE) measures:
-<ul>
-<li>Decomposable</li>
-<li>Determine distance parameter <span class="math inline">\(\alpha\)</span> (lower values put more weight on changes in lower tail; higher values at the top;)</li>
-<li><span class="math inline">\(\alpha = 0\)</span>: Theil‘s L (mean log deviation)</li>
-<li><span class="math inline">\(\alpha = 1\)</span>: Theil‘s T: <span class="math inline">\(\frac{1}{N} \sum_{i=1}^{N}\frac{y_i}{\bar{y}} ln\left(\frac{y_i}{\bar{y}}\right) \in (0; ln(N))\)</span></li>
-<li><span class="math inline">\(\alpha = 2\)</span>: Half the squared Coefficient of Variation (ratio of std. deviation to mean)</li>
-</ul></li>
-</ul>
-</div>
-</section></section>
-<section>
-<section id="income-distribution-in-the-national-accounts" class="title-slide slide level1 center">
-<h1>Income distribution in the National Accounts</h1>
-<div class="absolute" style="top: 90%; left: 30%; width: 369px; height: 400px; ">
-<p><img data-src="../../data/img/avatar_finger.png"></p>
-</div>
-<div class="footer">
-
-</div>
-</section>
-<section id="national-accounts" class="slide level2">
-<h2>National Accounts</h2>
-
-<img data-src="index_files/figure-revealjs/unnamed-chunk-1-1.png" width="960" class="r-stretch"></section>
-<section id="institutional-sectors-in-the-sna" class="slide level2 smaller">
-<h2>Institutional sectors in the SNA</h2>
-<div class="tbl-classic">
-<table>
-<colgroup>
-<col style="width: 15%">
-<col style="width: 17%">
-<col style="width: 17%">
-<col style="width: 17%">
-<col style="width: 17%">
-<col style="width: 17%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Ownership</th>
-<th><span class="hl hl-dred">(S.11)</span> <br> Non-financial corporations</th>
-<th><span class="hl hl-blue">(S.12)</span> <br> Financial corporations</th>
-<th><span class="hl hl-yellow">(S.13)</span> <br> General government</th>
-<th><span class="hl hl-green">(S.14)</span> <br> Households</th>
-<th><span class="hl hl-brown">(S.15)</span> <br> NPIs serving households</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Public sector</td>
-<td>Public non-financial corporations</td>
-<td>Public financial corporations</td>
-<td>All government units and government NPIs</td>
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td>National private sector</td>
-<td>National private non-financial corporations</td>
-<td>National private financial corporations</td>
-<td></td>
-<td>All households</td>
-<td>All NPIs serving households</td>
-</tr>
-<tr class="odd">
-<td>Foreign-controlled sector</td>
-<td>Foreign-controlled non-financial corporations</td>
-<td>Foreign-controlled financial corporations</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="tbl-note">
-<p>Note: The sectors presented in this table are domestic sectors (S.1). S.2 accounts for the rest of the world (RoW).</p>
-</div>
-</section>
-<section id="income-accounts-in-the-sna" class="slide level2">
-<h2>Income accounts in the SNA</h2>
-<div class="tbl-classic tbl-smaller">
-<table>
-<colgroup>
-<col style="width: 72%">
-<col style="width: 27%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Income accounts</th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Gross domestic product (GDP) at market prices (I)</td>
-<td></td>
-</tr>
-<tr class="even">
-<td>- Consumption of fixed capital</td>
-<td></td>
-</tr>
-<tr class="odd">
-<td>= Net domestic product</td>
-<td></td>
-</tr>
-<tr class="even">
-<td>(I)</td>
-<td></td>
-</tr>
-<tr class="odd">
-<td>+ Primary incomes receivable from the rest of world</td>
-<td><span class="hl hl-blue">Rest of world</span></td>
-</tr>
-<tr class="even">
-<td>- Primary incomes payable to the rest of world</td>
-<td><span class="hl hl-blue">Rest of world</span></td>
-</tr>
-<tr class="odd">
-<td>= Gross national income (GNI) at market prices</td>
-<td></td>
-</tr>
-<tr class="even">
-<td>- Consumption of fixed capital</td>
-<td><span class="hl hl-dred">Depreciation</span></td>
-</tr>
-<tr class="odd">
-<td>= Net national income <strong>at market prices</strong></td>
-<td></td>
-</tr>
-<tr class="even">
-<td>- Taxes on products</td>
-<td><span class="hl hl-yellow">Government</span></td>
-</tr>
-<tr class="odd">
-<td>+ Subsidies on products</td>
-<td><span class="hl hl-yellow">Government</span></td>
-</tr>
-<tr class="even">
-<td>= Net national income <strong>at factor cost</strong></td>
-<td><span class="hl hl-green">Production factors</span></td>
-</tr>
-</tbody>
-</table>
-</div>
-</section>
-<section id="data-for-austria-in-billion-euro" class="slide level2 smaller">
-<h2>Data for Austria (in billion Euro)</h2>
-<div class="cell-output-display">
-<div id="htmlwidget-a1197de6f79a4dad8c8e" style="width:1000px;height:500px;" class="sankeyNetwork html-widget "></div>
-<script type="application/json" data-for="htmlwidget-a1197de6f79a4dad8c8e">{"x":{"links":{"source":[0,0,0,0,1,1,2,2,2,2],"target":[1,3,4,5,2,6,7,8,9,10],"value":[256.1,66.4,46.4,1,175.8,80.3,102.2,20.7,22,30.8],"group":["linkcol","linkcol","linkcol","linkcol","linkcol","linkcol","linkcol","linkcol","linkcol","linkcol"]},"nodes":{"name":["Gross domestic product  (MP)","Net national income (FC)","Compensation of employees","Consumption of fixed capital","Taxes on products – Subsidies","Primary income with rest of world (ROW)","Net operating surplus + mixed income","Net wages and salaries","Wage tax","Social security cont. Employees","Social security cont. Employers"],"group":["nocol","NNI","CE","nocol","nocol","nocol","nocol","nocol","nocol","nocol","nocol"]},"options":{"NodeID":"name","NodeGroup":"group","LinkGroup":"group","colourScale":"d3.scaleOrdinal() .domain([\"NNI\", \"CE\", \"nocol\", \"linkcol\"]) \n            .range([\"#d03161\", \"#5d8198\", \"#d4d4d4\", \"#e4e4e4\"])","fontSize":14,"fontFamily":"Roboto Slab","nodeWidth":15,"nodePadding":10,"units":"","margin":{"top":null,"right":null,"bottom":null,"left":null},"iterations":32,"sinksRight":false}},"evals":[],"jsHooks":{"render":[{"code":"\n  function(el) { \n    var nodeWidth = this.sankey.nodeWidth();\n    var links = this.sankey.links();\n        \n    links.forEach((d, i) => {\n      var startX = d.source.x + nodeWidth;\n      var endX = d.target.x;\n      \n      var startY = d.source.y + d.sy + d.dy / 2;\n      var endY = d.target.y + d.ty + d.dy / 2;\n      \n      d3.select(el).select(\"svg g\")\n        .append(\"text\")\n        .attr(\"text-anchor\", \"middle\")\n        .attr(\"alignment-baseline\", \"middle\")\n        .attr(\"font-size\", \"13\")\n        .attr(\"font-family\", \"Roboto Slab\")\n        .attr(\"x\", startX + ((endX - startX) / 2))\n        .attr(\"y\", startY + ((endY - startY) / 2))\n        .text(d.value);\n    })\n  }\n","data":null}]}}</script>
-</div>
-<div class="fragment">
-<div style="font-size:1.5rem;text-align:center;font-family:'Roboto Slab">
-<p>Wage share = <span class="hl hl-blue">Compensation of Employees</span> / <span class="hl hl-dred">Net national income at factor cost</span></p>
-</div>
-</div>
-</section>
 <section id="bibliography" class="slide level2 bibstyle smaller scrollable">
 <h2>Bibliography</h2>
 <div class="footer">
@@ -971,17 +743,11 @@
 
 
 <img src="../../data/img/wu-logo-simple.png" class="slide-logo r-stretch"><div class="footer footer-default">
-<p>PI 2159 Special Topics in Economic Policy | Winter term 2022/23</p>
+<p>PI 5620 Advanced Economic Policy | Summer term 2023</p>
 </div>
 <div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography">
 <div id="ref-angel:2019" class="csl-entry" role="doc-biblioentry">
 Angel, Stefan/Disslbacher, Franziska/Humer, Stefan/Schnetzer, Matthias (2019). What did you really earn last year?: Explaining measurement error in survey income data. <em>Journal of the Royal Statistical Society: Series A (Statistics in Society)</em>. DOI: <a href="https://doi.org/10.1111/rssa.12463">10.1111/rssa.12463</a>
-</div>
-<div id="ref-cowell:2011" class="csl-entry" role="doc-biblioentry">
-Cowell, Frank (2011). <em>Measuring inequality</em>. Oxford University Press.
-</div>
-<div id="ref-ertl:2022" class="csl-entry" role="doc-biblioentry">
-Ertl, Michael/Humer, Stefan/Moser, Mathias/Schnetzer, Matthias (2022). The micro-macro gap in property incomes: Consequences for household income inequality. <em>Journal of Income Distribution</em>.
 </div>
 <div id="ref-un:2011" class="csl-entry" role="doc-biblioentry">
 United Nations (2011). <em>Canberra group handbook on household income statistics</em> (2nd ed.). Geneva: United Nations.
@@ -1205,12 +971,15 @@ United Nations (2011). <em>Canberra group handbook on household income statistic
       // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
       // slide changes (different for each slide format).
       (function () {
-        function fireSlideChanged(previousSlide, currentSlide) {
-
-          // dispatch for htmlwidgets
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
           const event = window.document.createEvent("Event");
           event.initEvent("slideenter", true, true);
           window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
 
           // dispatch for shiny
           if (window.jQuery) {
@@ -1221,13 +990,6 @@ United Nations (2011). <em>Canberra group handbook on household income statistic
               window.jQuery(currentSlide).trigger("shown");
             }
           }
-        }
-
-        // hookup for reveal
-        if (window.Reveal) {
-          window.Reveal.addEventListener("slidechanged", function(event) {
-            fireSlideChanged(event.previousSlide, event.currentSlide);
-          });
         }
 
         // hookup for slidy
@@ -1279,7 +1041,24 @@ United Nations (2011). <em>Canberra group handbook on household income statistic
         button.classList.add('code-copy-button-checked');
         var currentTitle = button.getAttribute("title");
         button.setAttribute("title", "Copied!");
+        let tooltip;
+        if (window.bootstrap) {
+          button.setAttribute("data-bs-toggle", "tooltip");
+          button.setAttribute("data-bs-placement", "left");
+          button.setAttribute("data-bs-title", "Copied!");
+          tooltip = new bootstrap.Tooltip(button, 
+            { trigger: "manual", 
+              customClass: "code-copy-button-tooltip",
+              offset: [0, -8]});
+          tooltip.show();    
+        }
         setTimeout(function() {
+          if (tooltip) {
+            tooltip.hide();
+            button.removeAttribute("data-bs-title");
+            button.removeAttribute("data-bs-toggle");
+            button.removeAttribute("data-bs-placement");
+          }
           button.setAttribute("title", currentTitle);
           button.classList.remove('code-copy-button-checked');
         }, 1000);
@@ -1317,24 +1096,42 @@ United Nations (2011). <em>Canberra group handbook on household income statistic
           return note.innerHTML;
         });
       }
+      const findCites = (el) => {
+        const parentEl = el.parentElement;
+        if (parentEl) {
+          const cites = parentEl.dataset.cites;
+          if (cites) {
+            return {
+              el,
+              cites: cites.split(' ')
+            };
+          } else {
+            return findCites(el.parentElement)
+          }
+        } else {
+          return undefined;
+        }
+      };
       var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
       for (var i=0; i<bibliorefs.length; i++) {
         const ref = bibliorefs[i];
-        const cites = ref.parentNode.getAttribute('data-cites').split(' ');
-        tippyHover(ref, function() {
-          var popup = window.document.createElement('div');
-          cites.forEach(function(cite) {
-            var citeDiv = window.document.createElement('div');
-            citeDiv.classList.add('hanging-indent');
-            citeDiv.classList.add('csl-entry');
-            var biblioDiv = window.document.getElementById('ref-' + cite);
-            if (biblioDiv) {
-              citeDiv.innerHTML = biblioDiv.innerHTML;
-            }
-            popup.appendChild(citeDiv);
+        const citeInfo = findCites(ref);
+        if (citeInfo) {
+          tippyHover(citeInfo.el, function() {
+            var popup = window.document.createElement('div');
+            citeInfo.cites.forEach(function(cite) {
+              var citeDiv = window.document.createElement('div');
+              citeDiv.classList.add('hanging-indent');
+              citeDiv.classList.add('csl-entry');
+              var biblioDiv = window.document.getElementById('ref-' + cite);
+              if (biblioDiv) {
+                citeDiv.innerHTML = biblioDiv.innerHTML;
+              }
+              popup.appendChild(citeDiv);
+            });
+            return popup.innerHTML;
           });
-          return popup.innerHTML;
-        });
+        }
       }
     });
     </script>
