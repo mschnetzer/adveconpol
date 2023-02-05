@@ -1,0 +1,80 @@
+---
+title: "Syllabus"
+page-layout: full
+css: layout/css/adveconpol.scss
+---
+
+::: {.grid .course-info .course-info-syllabus}
+
+::: {.g-col-12 .g-col-sm-6 .g-col-md-4}
+#### Lecturer
+
+- {{< fa user >}} &nbsp; {{< var instructor.name >}}
+- {{< fa globe >}} &nbsp; [{{< var instructor.url >}}]({{< var instructor.url >}})
+- {{< fa envelope >}} &nbsp; <a href="mailto:{{< var instructor.email >}}">{{< var instructor.email >}}</a>
+- {{< fa brands twitter >}} &nbsp; [{{< var instructor.twitter >}}](https://www.twitter.com/{{< var instructor.twitter >}})
+:::
+
+::: {.g-col-12 .g-col-sm-6 .g-col-md-4}
+#### Dates
+
+- {{< fa calendar-alt >}} &nbsp; {{< var course.dates >}}
+- {{< fa calendar >}} &nbsp; {{< var course.days >}}
+- {{< fa clock >}} &nbsp; {{< var course.time >}}
+- {{< fa location-dot >}} &nbsp; {{< var course.location >}}
+:::
+
+::: {.g-col-12 .g-col-sm-6 .g-col-md-4}
+#### Highlights
+
+- {{< fa users-line >}} &nbsp; max. {{< var course.students >}} students
+- {{< fa comments >}} &nbsp; Engage in policy discussion
+- {{< fa laptop-code >}} &nbsp;&nbsp; Improve your R coding skills
+- {{< fa pencil >}} &nbsp; Create an own data visualization
+:::
+
+:::
+
+
+#### Course design
+
+The lecturer introduces into various fields of economic policy and provides examples of data visualizations that serve as starting point for discussions. As the graphic illustration of statistical data gains in importance in both the academic and the public discourse, students will learn best practices and gain insights into the visualization of data. Another take-away of the course is to strengthen the knowledge about the power and limitations of the underlying data. A part of each session is dedicated to the work with data. The lecturer provides R-code to produce figures in class. Studens are expected to recreate three charts at home. The main assignment is the production of a comprehensive data visualization on a selected topic of economic policy. Studens will present their chart in class and draft a report with a detailed description of the data, the code and the final visualization in RMarkdown.
+
+The course offers a lot of room for discussion in order to permit students to assess various arguments and perspectives, form their own opinion, and argue in a group setting. The teaching is designed to encourage students to actively participate in the debates, raise questions, and gain experience in visualizing data for academic publications or the general debate.
+
+#### Recommended literature
+
+::: {.recommended-lit }
+|   |   |
+|--------|--------|
+| ![](data/img/schwabish.jpg) | **Jonathan Schwabish** <br> *Better Data Visualizations: A Guide for Scholars, Researchers, and Wonks* <br> Columbia University Press <br> ISBN-13: 9780231193115 <br> [Link](https://cup.columbia.edu/book/better-data-visualizations/9780231193115) |
+| ![](data/img/spiegelhalter.jpeg) | **David Spiegelhalter** <br> *The Art of Statistics Learning from Data* <br> Penguin Books UK <br> ISBN-13: 9780241258767 <br> [Link](https://www.penguin.co.uk/books/294857/the-art-of-statistics-by-spiegelhalter-david/9780241258767) |
+: {tbl-colwidths="[15,85]"}
+:::
+
+#### Learning outcomes
+
+After completing this course, students will:
+
+- know key figures in various fields of economic policy
+- be aware of the potentials and limitations of available data for specific policy discussions
+- show improved programming skills in R and the ability to create a RMarkdown report
+- have basic knowledge of important principles of data visualization
+- be able to create simple charts to enrich their academic articles
+
+#### Grading
+
+::: { .grading }
+ | 
+-|---------------------------------------------
+ {{< fa home >}} | Assignments: 30\% (0-10 points for each visualization) 
+ {{< fa person-chalkboard >}}  | Chart presentation: 30\% (0-20 points for the quality of the presentation, 0-10 for the preliminary chart) 
+ {{< fa file-pen >}}  | Written report: 40\% (0-40 points for the report and the final chart) 
+:::
+
+{{< fa regular face-grin-stars >}} &nbsp; 100-90: Excellent &emsp;
+{{< fa regular face-smile >}} &nbsp; 89-80: Good &emsp;
+{{< fa regular face-meh >}} &nbsp; 79-65: Satisfactory &emsp;
+{{< fa regular face-rolling-eyes >}} &nbsp; 64-50: Sufficient
+
+**All single tasks have to be passed** (50\% threshold each).

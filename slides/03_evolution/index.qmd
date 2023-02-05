@@ -1,0 +1,516 @@
+---
+metadata-files: 
+    - ../../_variables.yml
+title: |
+    <span class='fa-stack course-icon'>
+        <i class='fas {{< var course.icon-bg >}} fa-stack-2x blue'></i>
+        <i class='fas {{< var course.icon >}} fa-stack-1x fa-inverse' style='margin-top:-5pt'></i>
+      </span><br>
+    {{< var course.subtitle >}}
+author: "{{< var instructor.name >}}"  
+subtitle: Evolution of inequality
+date: November 04, 2022
+from: markdown+emoji
+bibliography: ../../data/lit/wipol_spec.bib
+csl: ../../data/lit/wipol.csl
+execute:
+  echo: true
+format:
+  revealjs:
+    theme: ../econpol_slides.scss
+    footer: '{{< var course.number >}} {{< var course.title >}} | {{< var course.semester >}}'
+    logo: ../../data/img/wu-logo-simple.png
+    header-includes: |
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet"/>
+    slide-number: true
+    show-slide-number: all
+    transition: fade
+    progress: true
+    multiplex: false
+    preview-links: true
+    fig-cap-location: top
+    hide-inactive-cursor: true
+    highlight-style: printing
+    pause: true
+---
+
+## Recap
+
+::: columns
+::: {.column width="25%"}
+{{< li gaqzgxto trigger=loop delay=1000 colors=secondary:#e76254 class=large >}}
+:::
+
+::: {.column width="75%"}
+- Which data sources for the measurement of income do you know?
+- How do they measure income and what are their drawbacks?
+- How do we calculate the functional distribution of income?
+:::
+:::
+
+# Changes in the wage share since the 1980s
+
+::: {.absolute top="90%" left="30%" width="369" height="400"}
+![](../../data/img/avatar_point.png)
+:::
+
+::: footer
+:::
+
+
+## The wage share in Austria {.smaller}
+
+```{r wsaut}
+#| echo: false
+#| results: 'asis'
+library(tidyverse)
+library(MetBrewer)
+library(msthemes)
+load("data/wageshares.RData")
+
+wsdata %>% filter(Country == "Austria") %>%
+  arrange(year) %>%
+  ggplot(aes(x=year, y=value)) +
+  geom_line(size=1.5, color = "red") +
+  scale_x_date(breaks= seq(min(wsdata$year),max(wsdata$year), by = "10 years"), 
+               date_labels = "%Y", limits= as.Date(c("1960","2020"), format="%Y")) +
+  scale_y_continuous(limits = c(55,80), labels = scales::percent_format(scale = 1)) +
+  labs(y = "Wage share in % of GDP at factor cost", x = "") +
+  theme_ms() + 
+  theme(legend.text = element_text(size = 14),
+        legend.position = "none",
+        axis.title = element_text(size = 14),
+        axis.text = element_text(size = 12))
+```
+::: {.aside}
+Note: Adjusted wage share as percentage of GDP at current factor cost.<br>
+Source: Ameco (ALCD2)
+:::
+
+
+## Functional income distribution in Continental Europe {.smaller}
+
+```{r wseur}
+#| echo: false
+#| results: 'asis'
+wsdata %>% filter(Country %in% c("Germany","Spain","France","Italy")) %>%
+  arrange(Country,year) %>%
+  ggplot(aes(x=year, y=value, group=Country, color=Country)) +
+  geom_line(size=1.2) +
+  scale_color_manual(values = met.brewer("Egypt"), guide = guide_legend(title = NULL), breaks = levels(fct_reorder2(wsdata$Country, wsdata$year, wsdata$value))) +
+  scale_x_date(breaks= seq(min(wsdata$year),max(wsdata$year), by = "10 years"), 
+               date_labels = "%Y", limits= as.Date(c("1960","2020"), format="%Y")) +
+  scale_y_continuous(limits = c(55,80), labels = scales::percent_format(scale = 1)) +
+  labs(y = "Wage share in % of GDP at factor cost", x = "") +
+  theme_ms() + 
+  theme(legend.text = element_text(size = 14),
+        legend.position = c(0.8,0.8),
+        axis.title = element_text(size = 14),
+        axis.text = element_text(size = 12))
+```
+
+::: {.aside}
+Note: Adjusted wage share as percentage of GDP at current factor cost. <br>
+Source: Ameco (ALCD2)
+:::
+
+
+## Functional distribution in Anglosaxon countries {.smaller}
+
+```{r wsanglo}
+#| echo: false
+#| results: 'asis'
+wsdata %>% filter(Country %in% c("United States","Australia","Canada","United Kingdom")) %>%
+  arrange(Country,year) %>%
+  ggplot(aes(x=year, y=value, group=Country, color=Country)) +
+  geom_line(size=1.2) +
+  scale_color_manual(values = met.brewer("Navajo"), guide = guide_legend(title = NULL), breaks = levels(fct_reorder2(wsdata$Country, wsdata$year, wsdata$value))) +
+  scale_x_date(breaks= seq(min(wsdata$year),max(wsdata$year), by = "10 years"), 
+               date_labels = "%Y", limits= as.Date(c("1960","2020"), format="%Y")) +
+  scale_y_continuous(limits = c(55,80), labels = scales::percent_format(scale = 1)) +
+  labs(y = "Wage share in % of GDP at factor cost", x = "") +
+  theme_ms() + 
+  theme(legend.text = element_text(size = 14),
+        legend.position = c(0.8,0.8),
+        axis.title = element_text(size = 14),
+        axis.text = element_text(size = 12))
+```
+::: {.aside}
+Note: Adjusted wage share as percentage of GDP at current factor cost.<br>
+Source: Ameco (ALCD2)
+:::
+
+## Factors influencing the wage share {.smaller}
+
+::: {.iconlist style="font-size:1.8rem"}
+- [Labour market]{.marker-hl}
+- {{< li zpxybbhl trigger=loop delay=1000 colors=secondary:#e76254 class=small >}}Organization [(e.g. collective bargaining, workers councils)]{.grey600 style="font-size:1.3rem"}
+- {{< li uukerzzv trigger=loop delay=1000 colors=secondary:#e76254 class=small >}}Leverage [(e.g. unemployment rate, strength of unions)]{.grey600 style="font-size:1.3rem"}
+- [Product markets]{.marker-hl}
+- {{< li gqzfzudq trigger=loop delay=1000 colors=secondary:#e76254 class=small >}} Globalization
+- {{< li qhgmphtg trigger=loop delay=1000 colors=secondary:#e76254 class=small >}}
+Technological change
+- [Politics]{.marker-hl}
+- {{< li qhviklyi trigger=loop delay=1000 colors=secondary:#e76254 class=small >}}Influence of capital income earners
+:::
+
+::: {.aside}
+<i class="fa-solid fa-book"></i> Reading recommendation: @stockhammer:2015
+:::
+
+# Changes in personal income inequality in Austria
+
+::: {.absolute top="90%" left="30%" width="369" height="400"}
+![](../../data/img/avatar_hands.png)
+:::
+
+::: footer
+:::
+
+## Net annual income of employees {.smaller}
+
+```{r incevol}
+#| echo: false
+#| results: asis
+year <- c(1998:2019)
+p10 <- c(100,97,97,93,92,87,84,83,84,87,82,80,77,71,69,67,67,67,69,72,75,74)
+p50 <- c(100,101,102,100,99,99,99,99,100,100,99,102,100,98,97,96,96,97,100,100,101,102)
+p90 <- c(100,102,103,100,100,100,100,101,102,103,103,106,104,102,102,101,100,101,105,104,104,106)
+df <- tibble(year,p10,p50,p90)
+
+df |> pivot_longer(-year, names_to = "perc", values_to = "value") |>
+  ggplot(aes(x = year, group = perc)) +
+  geom_hline(yintercept = 100, color = "gray30", size = 0.5, linetype = "longdash") +
+  geom_line(aes(y = value, color = perc), size = 2, na.rm = T) +
+  scale_color_manual(values = msc_palette[c(1,4,5)], labels = c("P10","Median","P90"),
+  guide = guide_legend(reverse = T, keywidth = unit(3,"lines"))) +
+  scale_x_continuous(breaks = seq(1998,2020,4)) +
+  labs(x = NULL, y = "Inflation-adjusted change in net income (1998=100)") +
+  theme_ms() + 
+  theme(legend.position = c(0.15, 0.2), 
+        legend.title = element_blank(),
+        legend.text = element_text(size = 14),
+        axis.title = element_text(size = 14),
+        axis.text = element_text(size = 12))
+```
+
+:::{.aside}
+Source: Rechnungshof
+:::
+
+
+## Net annual income by gender {.smaller}
+
+```{r incgen}
+#| echo: false
+#| results: asis
+year <- c(1998:2019)
+p10.m <- c(100,95,94,86,82,76,73,72,74,78,73,67,65,57,54,52,51,50,51,53,55,54)
+p50.m <- c(100,101,102,101,100,100,100,100,101,102,101,103,102,100,99,98,98,98,102,101,101,103)
+p90.m <- c(100,102,104,101,101,101,100,101,102,103,103,107,105,102,102,101,100,100,104,103,103,104)
+p10.f <- c(100,100,101,101,103,100,97,96,97,99,93,94,92,87,86,85,85,86,88,93,97,96)
+p50.f <- c(100,101,102,100,100,100,101,102,102,103,102,106,105,103,102,102,102,103,106,106,108,110)
+p90.f <- c(100,102,103,101,101,102,101,102,103,104,104,108,107,105,104,104,103,104,109,108,108,110)
+df <- tibble(year,p10.m,p50.m,p90.m,p10.f,p50.f,p90.f) |> 
+  pivot_longer(-year, names_to = "perc", values_to = "value") |>
+  separate(perc, into = c("perc","gender"), sep = "\\.")
+
+df |>
+  ggplot(aes(x = year, y = value, 
+            color = gender, linetype = perc, alpha = perc, size = perc)) +
+  geom_hline(yintercept = 100, color = "gray30", size = 0.5, linetype = "longdash") +
+  geom_line() +
+  scale_alpha_manual(values = c(0.5,1,0.5), guide = guide_none()) +
+  scale_size_manual(values = c(1,2,1), guide = guide_none()) +
+  scale_linetype_manual(values = c("longdash", "solid", "dotdash"), labels = c("P10","Median","P90"), guide = guide_legend(keywidth = unit(3,"lines"), reverse = T)) +
+  scale_color_manual(values = MetBrewer::met.brewer("Lakota"),
+  labels = c("Female","Male"), guide = guide_legend(keywidth = unit(3,"lines"),
+  override.aes = list(size = 2))) +
+  scale_x_continuous(breaks = seq(1998,2020,4)) +
+  labs(x = NULL, y = "Inflation-adjusted change in net income (1998=100)") +
+  theme_ms() + 
+  theme(legend.position = c(0.15, 0.25), 
+        legend.title = element_blank(),
+        legend.text = element_text(size = 14),
+        axis.title = element_text(size = 14),
+        axis.text = element_text(size = 12))
+```
+:::{.aside}
+Source: Rechnungshof
+:::
+
+## Gross annual income by social status {.smaller}
+
+```{r incsoc}
+#| echo: false
+#| results: asis
+year <- c(1998:2019)
+p10.bc <- c(100,97,94,92,86,80,78,76,74,77,72,69,68,60,59,56,55,54,56,57,58,61)
+p50.bc <- c(100,101,99,98,95,93,93,91,92,94,93,91,90,88,87,86,86,87,87,87,90,93)
+p90.bc <- c(100,102,101,101,100,100,100,99,101,102,101,100,100,99,99,99,100,100,100,100,101,102)
+p10.wc <- c(100,97,98,96,103,103,98,98,104,106,100,96,92,92,92,92,92,92,92,100,105,97)
+p50.wc <- c(100,101,100,100,101,102,101,101,102,103,102,104,102,100,101,101,101,102,103,103,104,105)
+p90.wc <- c(100,101,101,100,99,99,98,99,100,102,102,102,101,100,100,100,100,100,101,101,101,102)
+p10.cs <- c(100,103,104,103,103,105,111,112,115,116,118,122,123,120,122,122,123,126,128,127,126,128)
+p50.cs <- c(100,104,104,103,109,112,113,114,118,120,122,126,126,123,124,123,123,126,128,127,128,130)
+p90.cs <- c(100,104,104,102,107,110,110,110,113,114,116,119,119,116,117,116,117,119,120,120,121,123)
+df <- tibble(year,p10.bc,p50.bc,p90.bc,p10.wc,p50.wc,p90.wc,p10.cs,p50.cs,p90.cs) |> 
+  pivot_longer(-year, names_to = "perc", values_to = "value") |>
+  separate(perc, into = c("perc","socstat"), sep = "\\.") |>
+  mutate(socstat = factor(socstat, levels = c("bc","wc","cs")))
+
+df |>
+  ggplot(aes(x = year, y = value, 
+            color = socstat, linetype = perc, alpha = perc, size = perc)) +
+  geom_hline(yintercept = 100, color = "gray30", size = 0.5, linetype = "longdash") +
+  geom_line() +
+  scale_alpha_manual(values = c(0.5,1,0.5), guide = guide_none()) +
+  scale_size_manual(values = c(1,2,1), guide = guide_none()) +
+  scale_linetype_manual(values = c("longdash", "solid", "dotdash"), labels = c("P10","Median","P90"), guide = guide_legend(keywidth = unit(3,"lines"), reverse = T)) +
+  scale_color_manual(values = MetBrewer::met.brewer("Juarez"),
+  labels = c(bc="Blue collar",wc="White collar",cs="Civil servants"), guide = guide_legend(keywidth = unit(3,"lines"), reverse=T, override.aes = list(size = 2))) +
+  scale_x_continuous(breaks = seq(1998,2020,4)) +
+  labs(x = NULL, y = "Inflation-adjusted change in gross income (1998=100)") +
+  theme_ms() + 
+  theme(legend.position = c(0.15, 0.25), 
+        legend.title = element_blank(),
+        legend.text = element_text(size = 14),
+        axis.title = element_text(size = 14),
+        axis.text = element_text(size = 12))
+```
+:::{.aside}
+Source: Rechnungshof
+:::
+
+## Evolution of the Gender Pay Gap {.smaller}
+
+```{r gpg}
+#| echo: false
+#| results: asis
+library(eurostat)
+library(colorspace)
+
+df <- get_eurostat("sdg_05_20", filters = list(nace_r2 = "B-S_X_O", time = 2000:2022, geo = c("AT","DE","IT","FR","ES","SE")), type="code", time_format="num")
+
+plotdf <- df |> 
+  mutate(geo = factor(geo, levels = df |> filter(time == 2020) |> arrange(desc(values)) |> pull(geo)))
+
+cols <- lighten(MetBrewer::met.brewer("VanGogh2")[c(1:5,8)], .2)
+
+plotdf |> filter(time>2005) |>
+  ggplot(aes(x = time, y = values, color = geo, alpha = geo, fill = geo, group = geo)) +
+  geom_smooth(size = 1, method = "loess", se=F) +
+  stat_smooth(se=FALSE, geom="area", method = 'loess', alpha= .15, size = 0) +
+  ggrepel::geom_label_repel(data = df |> filter(time == 2020), aes(x = time, y = values, label = geo),direction = "y", size = 3, family = "Victor Mono", fontface = "bold", fill = "white", alpha = 1, nudge_x = 0.4, segment.color = NA) +
+  scale_color_manual(values = cols) +
+  scale_fill_manual(values = cols) +
+  scale_y_continuous(limits = c(0,NA), labels = scales::label_percent(scale = 1)) +
+  labs(x = NULL, y = NULL) +
+  theme_ms() +
+  theme(legend.position = "none", 
+        legend.title = element_blank(),
+        legend.text = element_text(size = 14),
+        axis.title = element_text(size = 14),
+        axis.text = element_text(size = 12))
+```
+
+::: {.aside}
+Source: Eurostat
+:::
+
+# The evolution of global inequality
+
+::: {.absolute top="90%" left="30%" width="369" height="400"}
+![](../../data/img/avatar_break.png)
+:::
+
+::: footer
+:::
+
+## Historical development of inequality: 3 views
+
+::: {layout="[[1,1], [1]]" .dred style="font-size:1.5rem;text-align:center"}
+![Kuznets](img/kuznets.png){width=400px}
+
+![Piketty](img/piketty.png){width=400px}
+
+![Milanovic](img/milanovic.png){width=800px}
+:::
+
+## Determinants of the change in inequality {.smaller}
+
+::: columns
+::: {.column style="font-size:1.5rem"}
+[Increase]{.red style="font-size:1.8rem"}
+
+* Rents:
+  - Technological revolution
+  - Globalization
+* Cumulative causation:
+  - Capital income
+  - Homogamy
+  - Political influence
+:::
+
+::: {.column style="font-size:1.5rem"}
+[Decrease]{.red style="font-size:1.8rem"}
+
+* Benign factors:
+  - Rising education (decreasing education premium)
+  - Low-skill biased technological progress
+  - Labour scarcity
+  - Global income compression
+  - Social political pressure (e.g. unions)
+* Malign factors:
+  - Wars 
+  - Social unrest
+  - Epidemics [see also @scheidel:2018]
+:::
+:::
+
+::: {.aside}
+Source: @milanovic:2018
+:::
+
+## Global inequality 1820-2020 {.smaller}
+
+![](img/globalineq1820_2020.png){fig-align="center" height="500px"}
+
+::: {.aside}
+Source: @wir:2022
+:::
+
+## Decomposition of global inequality {.smaller}
+
+![](img/theildecom.png){fig-align="center" height="500px"}
+
+::: {.aside}
+Source: @wir:2022
+:::
+
+## Global growth of real income, 1980-2008 {.smaller}
+
+![](img/elephant1.png){height=500px fig-align="center"}
+
+::: {.absolute top="130" left="350" .textbox .fragment .fade-up .dred style="font-size:1rem;padding:0.3rem 0.3rem;"}
+Rising incomes in emerging economies
+:::
+::: {.absolute top="480" left="350" .textbox .fragment .fade-up .dred style="font-size:1rem;padding:0.3rem 0.3rem;"}
+Stagnation of middle class in industrial countries
+:::
+::: {.absolute top="180" right="100" .textbox .fragment .fade-up .dred style="font-size:1rem;padding:0.3rem 0.3rem;"}
+Booming global top 1%
+:::
+
+::: {.aside}
+Source: @milanovic:2018
+:::
+
+## Global growth of real income, 1980-2020 {.smaller}
+
+![](img/elephant3.png){fig-align="center"}
+
+::: {.aside}
+Source: @wir:2022
+:::
+
+## Change in global income distribution {.smaller}
+
+::: {layout-ncol=2}
+![](img/globalineq1980.png)
+
+![](img/globalineq2018.png)
+:::
+
+::: {.aside}
+Source: @chancel:2019
+:::
+
+## Global income distribution 1990 {.smaller}
+
+![](img/globincdist1990.png){fig-align="center" height="500px"}
+
+::: {.aside}
+Source: @wir:2018
+:::
+
+## Global income distribution 2016 {.smaller}
+
+![](img/globincdist2016.png){fig-align="center" height="500px"}
+
+::: {.aside}
+Source: @wir:2018
+:::
+
+## Regional composition of global top 10% {.smaller}
+
+![](img/compositiontop10.png){fig-align="center" height="500px"}
+
+::: {.aside}
+Source: @wir:2022
+:::
+
+## Regional composition of global bottom 50% {.smaller}
+
+![](img/compositionbottom50.png){fig-align="center" height="500px"}
+
+::: {.aside}
+Source: @wir:2022
+:::
+
+# The Piketty argument: Capital is back
+
+::: {.absolute top="90%" left="30%" width="369" height="400"}
+![](../../data/img/avatar_cool.png)
+:::
+
+::: footer
+:::
+
+## Wealth-to-income ratios {.smaller}
+
+![](img/piketty1.png){height=500px fig-align="center"}
+
+::: {.aside}
+Source: @pikettysaez:2014
+:::
+
+## A question of savings rate and growth
+
+$$ \beta = \frac{K}{Y} \approx \frac{s}{g} $$
+
+The ratio of savings rate and economic growth (population + productivity growth) determines the wealth-to-income ratio in the long run.
+
+$s=10\%; ~g=3\% \rightarrow$ [wealth-to-income]{.secfont}: $300\%$ <br>
+$s=10\%; ~g=1.5\% \rightarrow$ [wealth-to-income]{.secfont}: $600\%$
+
+Capital is back because low growth is back!
+
+## The controversial inequality of $r$ and $g$ {.medium}
+
+Capital share ($\alpha$) increases if the rate of return to capital $r$ is
+larger than the growth of national income (from work) $g$: $r > g$ 
+
+$$ \alpha = r\beta = r\left(\frac{s}{g}\right) $$
+
+::: {.blockquote style="font-size:1.8rem;"}
+When the rate of return on capital significantly exceeds the growth of the economy [...], then it logically follows that inherited wealth grows faster than output and income. People with inherited wealth need save only a portion of their income from capital to see that capital grow more quickly than the economy as a whole.
+::: 
+
+::: {style="font-size:1.2rem;text-align:right;font-family:'Roboto Slab';"}
+Thomas @pikettycap21:2014 [p. 26]
+:::
+
+## Evolution of $r$ and $g$ {.smaller}
+
+![](img/piketty2.png){height=500px fig-align="center"}
+
+::: {.aside}
+Source: @pikettysaez:2014
+:::
+
+
+## Bibliography {.bibstyle}
+
+:::footer
+:::

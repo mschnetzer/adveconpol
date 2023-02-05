@@ -1,0 +1,62 @@
+---
+title: "{{< var course.title >}}"
+subtitle: "{{< var course.subtitle >}}"
+details: |
+    {{< var course.number >}} • {{< var course.semester >}} <br> {{< var university.name >}}
+course-icon: "{{< var course.icon >}}"
+course-icon-bg: "{{< var course.icon-bg >}}"
+page-layout: full
+format:
+  html:
+    template-partials: layout/partials/title-block.html
+    css: layout/css/adveconpol.scss
+---
+
+::: {.home}
+
+::: {.grid .course-info}
+
+::: {.g-col-12 .g-col-sm-6 .g-col-md-4}
+#### Lecturer
+
+- {{< fa user >}} &nbsp; {{< var instructor.name >}}
+- {{< fa globe >}} &nbsp; [{{< var instructor.url >}}]({{< var instructor.url >}})
+- {{< fa envelope >}} &nbsp; <a href="mailto:{{< var instructor.email >}}">{{< var instructor.email >}}</a>
+- {{< fa brands twitter >}} &nbsp; [{{< var instructor.twitter >}}](https://www.twitter.com/{{< var instructor.twitter >}})
+:::
+
+::: {.g-col-12 .g-col-sm-6 .g-col-md-4}
+#### Course details
+
+- {{< fa calendar-alt >}} &nbsp; {{< var course.dates >}}
+- {{< fa calendar >}} &nbsp; {{< var course.days >}}
+- {{< fa clock >}} &nbsp; {{< var course.time >}}
+- {{< fa location-dot >}} &nbsp; {{< var course.location >}}
+:::
+
+::: {.g-col-12 .g-col-sm-6 .g-col-md-4}
+#### Contact
+
+{{< var instructor.contact_policy >}}
+:::
+
+:::
+
+
+#### Summary
+
+"A picture is worth a thousand words". This course approaches contemporary issues of economic policy by analyzing innovative or iconic data visualizations. Based on selected illustrations, we discuss the underlying data, the theoretical background and policy implications in various fields of empirical economics. In a second step, we will assemble plots in class and study the basics of data visualization. Students are required to recreate figures at home to improve their skills in coding. The main task is that students will design a comprehensive data visualization with the [ggplot-Package](https://ggplot2.tidyverse.org/index.html) in R and draft a report around that figure in [RMarkdown](https://rmarkdown.rstudio.com). Student will need to bring their laptop to class and prior knowledge of data handling in R is beneficial.
+
+<br>
+![](data/img/energy.png)
+<br>
+
+To sum up, students will gain:
+
+::: {.summary-points}
+- an overview of contemporary debates in economic policy based on recent empirical research
+- a basic understanding of principles of data visualization and the use of figures in economic policy debates
+- knowledge how to enrich academic publications with informative graphs
+:::
+
+:::

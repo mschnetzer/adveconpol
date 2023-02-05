@@ -1,0 +1,497 @@
+---
+metadata-files: 
+    - ../../_variables.yml
+title: |
+    <span class='fa-stack course-icon'>
+        <i class='fas {{< var course.icon-bg >}} fa-stack-2x blue'></i>
+        <i class='fas {{< var course.icon >}} fa-stack-1x fa-inverse' style='margin-top:-5pt'></i>
+      </span><br>
+    {{< var course.subtitle >}}
+author: "{{< var instructor.name >}}"  
+subtitle: Data sources and definitions
+date: October 21, 2022
+from: markdown+emoji
+bibliography: ../../data/lit/wipol_spec.bib
+csl: ../../data/lit/wipol.csl
+prefer-html: true
+execute:
+  echo: true
+format:
+  revealjs:
+    theme: ../econpol_slides.scss
+    footer: '{{< var course.number >}} {{< var course.title >}} | {{< var course.semester >}}'
+    logo: ../../data/img/wu-logo-simple.png
+    header-includes: |
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet"/>
+    slide-number: true
+    show-slide-number: all
+    transition: fade
+    progress: true
+    multiplex: false
+    scrollable: false
+    preview-links: true
+    hide-inactive-cursor: true
+    highlight-style: printing
+    pause: true
+---
+
+## {.smaller}
+
+[Has inequality been rising lately?]{.bubble .bubble-bottom-left .absolute top="5%" left="18%" style="--bubcol: var(--bubcol-blue);"}
+
+::: {.fragment .fade-in}
+[What inequality do you mean exactly?]{.bubble .bubble-bottom-right .absolute top="20%" right="18%" style="--bubcol: var(--bubcol-red);"}
+:::
+
+![](img/discuss1.png){.absolute bottom="0" left="5%" width="300px"}
+![](img/discuss2.png){.absolute bottom="0" right="5%" width="300px" style="transform: rotateY(180deg);"}
+
+:::footer
+Illustrations by [https://openpeeps.com](https://openpeeps.com).
+:::
+
+# How is income defined and how do we measure it?
+
+::: {.absolute top="90%" left="30%" width="400px" height="336px"}
+![](../../data/img/avatar_shrug.png)
+:::
+
+::: footer
+:::
+
+## Income concepts according to Canberra Group {.smaller}
+
+```{r packages}
+#| echo: false
+#| warning: false
+librarian::shelf(tidyverse, knitr, kableExtra)
+options(knitr.kable.NA = '')
+```
+
+::: {.tbl-larger}
+```{r canberra}
+#| echo: false
+#| results: 'asis'
+tribble(
+  ~ID, ~Concept, ~Aggregate,
+  "1", "Income from employment", "1a + 1b",
+  "&nbsp; 1a", "Employee income", NA_character_,
+  "&nbsp; 1b", "Income from self-employment", NA_character_,
+  "2", "Property income", NA_character_,
+  "3", "Income from household production", NA_character_,
+  "4", "Current transfers received", NA_character_,
+  "5", "Income from production", "1 + 3",
+  "6", "Primary income", "1 + 2 + 3",
+  "7", "Current transfers paid (taxes, fees, etc.)", NA_character_,
+  "8", "Disposable income", "6 + 4 - 7"
+) %>%
+kbl(escape = FALSE, align = "llr") %>%
+kable_classic(full_width = F)
+```
+:::
+
+::: aside 
+Source: @un:2011, 11
+:::
+
+## System of National Accounts (SNA)
+
+::: {.tbl-larger}
+```{r sna}
+#| echo: false
+#| results: 'asis'
+tribble(
+  ~ID, ~Concept,
+  "D.1", "Compensation of employees",
+  "&nbsp; D.11", "Wages and salaries",
+  "&nbsp; D.12", "Employers social contributions",
+  "B.2G", "Operating surplus, gross",
+  "B.3G", "Mixed income, gross",
+  "D.4", "Property income",
+  "&nbsp; D.41", "Interest",
+  "&nbsp; D.42", "Distributed income of corporations",
+  "&nbsp; D.43", "Reinvested earnings on foreign direct investment",
+  "&nbsp; D.44", "Investment income disbursements (e.g. insurances)",
+  "&nbsp; D.45", "Rent"
+) %>%
+kbl(escape = FALSE, align = "ll") %>%
+kable_classic(full_width = F)
+```
+:::
+
+## Austrian tax law
+
+::: {.tbl-larger}
+```{r tax}
+#| echo: false
+#| results: 'asis'
+tribble(
+  ~ID, ~Concept, ~Description,
+  1, "Income from agriculture and forestry", "Farmers, forest managers",
+  2, "Income from self-employment", "E.g. Freelancers, Architects, Lawyer, Doctors, Consultants, CEO if she holds > 25%",
+  3, "Business income", "All other self-employed activities",
+  4, "Employee income", "Employees, retirees",
+  5, "Renting and lease of land", "Particularly renting of real estate properties",
+  6, "Property income", "Savings accounts, dividends (final taxation with capital income tax)",
+  7, "Other income", "Income from speculation, income from selling private property, etc."
+) %>%
+kbl(escape = FALSE, align = "ll") %>%
+kable_classic(full_width = F)
+```
+:::
+
+## Income data sources in Austria
+
+::: {.tbl-classic .tbl-larger}
+| Income Type | Aggregate time series | Long-term distribution | Short-term distribution |
+|-------------|-----------------------|------------------------|----------------------|
+| Employee income | [WTD]{.hl .hl-dred} [SSD]{.hl .hl-dred} | [WTD]{.hl .hl-dred} [SSD]{.hl .hl-dred} | [WTD]{.hl .hl-dred} [SSD]{.hl .hl-dred} [SES]{.hl .hl-blue} [EU-SILC]{.hl .hl-blue} [HFCS]{.hl .hl-blue} |
+| Self-employed | [ITD]{.hl .hl-dred} [(IWITD)]{.hl .hl-dred} | | [ITD]{.hl .hl-dred} [(IWITD)]{.hl .hl-dred} [EU-SILC]{.hl .hl-blue} [HFCS]{.hl .hl-blue} |
+| Property income | [CGT]{.hl .hl-dred} [(ITD)]{.hl .hl-dred} | | [EU-SILC]{.hl .hl-blue} [HFCS]{.hl .hl-blue} |
+| Transfers | [Various admin. sources]{.hl .hl-dred} | | [EU-SILC]{.hl .hl-blue} [HFCS]{.hl .hl-blue} |
+| Disposable household income | [SNA]{.hl .hl-dred} | | [HBS]{.hl .hl-blue} [EU-SILC]{.hl .hl-blue} [HFCS]{.hl .hl-blue} |
+
+: {tbl-colwidths="[25,25,20,30]"}
+:::
+
+::: {.tbl-note}
+[Administrative]{.hl .hl-dred} and [survey]{.hl .hl-blue} data sources: Wage tax data (WTD), Income tax data (ITD), Integrated wage and income tax data (IWITD), Social security data (SSD), Capital gains tax data (CGT), System of National Accounts (SNA), European Survey of Income and Living Conditions (EU-SILC), Household Finance and Consumption Survey (HFCS), Household Budgetary Survey (HBS), Structure of Earnings Survey (SES)
+:::
+
+## What is EU-SILC? {.smaller}
+
+- European Union Statistics on Income and Living Conditions (by Eurostat)
+- Harmonized sample survey in private households
+- Replaced [European Community Household Panel]{.secfont} (1994-2001) in 2003
+- Conducted in all EU member states and Switzerland, Norway, Iceland, Turkey, Serbia and Macedonia
+- Sample:
+    - :austria: Stratified random sample from population register with approx. 6,000 households annually 
+    - :eu: approx. 135,000 households ([use weights!]{.circle-hl})
+- Interview mode: CAPI/CATI
+- Rotating 4 year panel; Ad-hoc modules
+- Standard documentation for Austria: [{{< fa file-pdf >}}](https://www.statistik.at/fileadmin/shared/QM/Standarddokumentationen/B/std_b_eu-silc-2020.pdf) 
+
+## Income data in EU-SILC {.smaller}
+
+::: columns
+::: {.column style="font-size:1.4rem"}
+[**Individual level:**]{.red style="font-size:1.7rem"}
+
+- [employee cash or near cash income]{.hl .hl-blue}
+- cash benefits or losses from self-employment
+- pension from individual private plans
+- [unemployment benefits]{.hl .hl-blue}
+- [old-age benefits]{.hl .hl-blue}
+- [survivor benefits]{.hl .hl-blue}
+- [sickness benefits]{.hl .hl-blue}
+- [disability benefits]{.hl .hl-blue}
+- [education-related allowances]{.hl .hl-blue}
+:::
+
+::: {.column style="font-size:1.4rem"}
+[**Household level:**]{.red style="font-size:1.7rem"}
+
+- income from rental of a property or land
+- [family/children related allowances]{.hl .hl-blue}
+- social exclusion not elsewhere classified
+- housing allowances
+- regular inter-household cash transfers received
+- alimonies received
+- interest, dividends, profit from capital investments in incorporated business
+- [income received by people aged under 16]{.hl .hl-blue}
+:::
+:::
+
+::: aside
+Note: Variables that use [administrative data]{.hl .hl-blue} are highlighted.
+:::
+
+# Do income data from various sources fit together?
+
+::: {.absolute top="90%" left="30%" width="369" height="400"}
+![](../../data/img/avatar_laptop.png)
+:::
+
+::: footer
+:::
+
+## Administrative versus survey data {.smaller}
+
+::: {.absolute top="10%" left="0"}
+![](img/admsvy1.png)
+:::
+
+::: {.absolute top="30%" left="27%" .textbox .fragment .fade-up}
+::: columns
+::: {.column width="75%" .altlist}
+### Impact on response behavior:
+
+- Social desirability
+- Sociodemographic characteristics
+- Survey design
+- Learning effect
+:::
+
+:::{.column width="25%"}
+<br />
+{{< li zpxybbhl trigger=loop delay=1000 colors=secondary:#e76254 >}}
+:::
+:::
+:::
+
+::: aside
+Source: @angel:2019
+:::
+
+## Mean reverting errors {.smaller}
+
+![](img/admsvy2.png)
+
+::: aside
+Source: @angel:2019
+:::
+
+## How do we explain the mismatch? {.smaller}
+
+![](img/admsvy3.png)
+
+::: aside
+Source: @angel:2019
+:::
+
+## What about capital income? {.smaller}
+
+![](img/capinc1.png){.absolute top="100px" left="0" width="550px"}
+
+. . .
+
+![](img/capinc2.png){.absolute top="100px" right="0" width="450px"}
+
+::: aside
+Source: @ertl:2022
+:::
+
+# How do you measure personal income inequality?
+
+::: {.absolute top="90%" left="30%" width="369" height="400"}
+![](../../data/img/avatar_explain.png)
+:::
+
+::: footer
+:::
+
+## Common properties of inequality measures {.smaller}
+
+:::columns
+::: {.column width="35%"}
+![](img/cowell.jpg){height="400px"}
+:::
+:::{.column width="65%" .altlist}
+- [Anonymity]{.marker-hl} principle: it does not matter who earns the income
+- [Population]{.marker-hl} principle: the absolute population size does not matter, only proportions do
+- [Relative income]{.marker-hl} (or scale) principle: Relative incomes matter, not the absolute levels
+- [Dalton]{.marker-hl} (or transfer) principle: A regressive transfer within the distribution increases inequality 
+:::
+:::
+
+::: aside
+Reading recommenation: @cowell:2011
+:::
+
+::: {.notes}
+- Anonymity principle: In an economy composed of two people, Mr. Smith and Mrs. Jones, where one of them has 60% of the income and the other 40%, the inequality metric should be the same whether it is Mr. Smith or Mrs. Jones who has the 40% share
+- Population independence: The income inequality metric should not depend on whether an economy has a large or small population. An economy with only a few people should not be automatically judged by the metric as being more equal than a large economy with lots of people.
+- Scale principle: If every person's income in an economy is doubled (or multiplied by any positive constant) then the overall metric of inequality should not change.
+- Dalton principle: In its weak form it says that if some income is transferred from a rich person to a poor person, while still preserving the order of income ranks, then the measured inequality should not increase. In its strong form, the measured level of inequality should decrease.
+:::
+
+## Lorenz curve and Gini coefficient {.smaller}
+
+::: columns
+::: {.column width="50%"}
+![](img/lorenz.png)
+:::
+::: {.column width="50%"}
+Gini coefficient:
+$$\frac{A}{(A+B)} \in (0, 1)$$
+<br />
+Alternative: Half of the relative mean absolute difference
+$$G= \frac{\sum_{i=1}^{n}\sum_{j=1}^{n}|y_i - y_j|}{2n^2\bar{y}}$$
+:::
+:::
+
+## Alternative inequality measures {.smaller}
+
+::: {.altlis}
+- Shares
+- Ratios (point or share ratios, e.g. Palma ratio)
+- General Entropy (GE) measures:
+  - Decomposable
+  - Determine distance parameter $\alpha$ (lower values put more weight on changes in lower tail; higher values at the top;)
+  - $\alpha = 0$: Theil‘s L (mean log deviation)
+  - $\alpha = 1$: Theil‘s T: $\frac{1}{N} \sum_{i=1}^{N}\frac{y_i}{\bar{y}} ln\left(\frac{y_i}{\bar{y}}\right) \in (0; ln(N))$
+  - $\alpha = 2$: Half the squared Coefficient of Variation (ratio of std. deviation to mean) 
+:::
+
+# Income distribution in the National Accounts
+
+::: {.absolute top="90%" left="30%" width="369" height="400"}
+![](../../data/img/avatar_finger.png)
+:::
+
+::: footer
+:::
+
+## National Accounts
+
+```{r, engine = 'tikz'}
+#| echo: false
+\definecolor{nablue}{HTML}{5d8198}
+\definecolor{nadred}{HTML}{d03161}
+\definecolor{nagreen}{HTML}{218500}
+\usetikzlibrary{shapes.arrows}
+\tikzstyle{na} = [
+  circle,
+  font = {\footnotesize},
+  minimum size =2cm,
+  align=center,
+  draw=black,
+  thick]
+\begin{tikzpicture}
+  \node[na, color=nablue] (exacc) at (0,0) {Expenditure \\ Accounts};
+  \node[na, color=nadred] (incacc) at (3,0) {Income \\ Accounts};
+  \node[na, color=nagreen] (prodacc) at (1.5,2.5) {Production \\ Accounts};
+  \node[] at (1.5, 1) {GDP};
+  \draw[draw=nadred, very thin] (4, 1) rectangle ++(4,3);
+  \node[align=center] at (5.5, 2) {Wage share};
+  \node[align=center] at (6.5, 3) {Profit share};
+  \draw[very thick] (4.5, 2.3) -- (7.4, 2.7);
+  \node[single arrow, draw=black, very thick, fill=white,
+      minimum width = 10pt, single arrow head extend=3pt,
+      minimum height= 8mm, rotate=-90] at (5, 3) {};
+  \node[single arrow, draw=black, very thick, fill=white,
+      minimum width = 10pt, single arrow head extend=3pt,
+      minimum height= 8mm, rotate=90] at (7, 2) {};
+  \draw[very thick, -stealth, draw=nadred] (incacc.east) -| (6,1);
+  \draw[very thick] (incacc.north) to[out=90,in=0] (prodacc.east);
+  \draw[very thick] (prodacc.west) to[out=180,in=90] (exacc.north);
+  \draw[very thick] (exacc.south east) to[out=315,in=225] (incacc.south west);
+\end{tikzpicture}
+```
+
+
+## Institutional sectors in the SNA {.smaller}
+
+::: {.tbl-classic}
+| Ownership | [(S.11)]{.hl .hl-dred} <br> Non-financial corporations | [(S.12)]{.hl .hl-blue} <br> Financial corporations | [(S.13)]{.hl .hl-yellow} <br> General government | [(S.14)]{.hl .hl-green} <br> Households | [(S.15)]{.hl .hl-brown} <br> NPIs serving households |
+|---|---|---|---|---|---|
+| Public sector | Public non-financial corporations | Public financial corporations | All government units and government NPIs | | |
+| National private sector | National private non-financial corporations | National private financial corporations | | All households | All NPIs serving households |
+| Foreign-controlled sector | Foreign-controlled non-financial corporations | Foreign-controlled financial corporations |
+: {tbl-colwidths="[15,17,17,17,17,17]"}
+:::
+
+::: {.tbl-note}
+Note: The sectors presented in this table are domestic sectors (S.1). S.2 accounts for the rest of the world (RoW).
+:::
+
+## Income accounts in the SNA
+
+::: {.tbl-classic .tbl-smaller}
+| Income accounts | |
+|-------------|-----|
+| Gross domestic product (GDP) at market prices (I) |
+| - Consumption of fixed capital |
+| = Net domestic product |
+| (I) |
+| + Primary incomes receivable from the rest of world | [Rest of world]{.hl .hl-blue} |
+| - Primary incomes payable to the rest of world | [Rest of world]{.hl .hl-blue} |
+| = Gross national income (GNI) at market prices |
+| - Consumption of fixed capital | [Depreciation]{.hl .hl-dred} |
+| = Net national income **at market prices** |
+| - Taxes on products | [Government]{.hl .hl-yellow} |
+| + Subsidies on products | [Government]{.hl .hl-yellow} |
+| = Net national income **at factor cost** | [Production factors]{.hl .hl-green} |
+:::
+
+## Data for Austria (in billion Euro) {.smaller}
+
+```{r snaaut}
+#| echo: false
+#| results: 'asis'
+library(networkD3)
+library(MetBrewer)
+
+snaut <- tribble(
+  ~source, ~target, ~value,
+  "Gross domestic product  (MP)", "Net national income (FC)", 256.1,
+  "Gross domestic product  (MP)", "Consumption of fixed capital", 66.4,
+  "Gross domestic product  (MP)", "Taxes on products – Subsidies", 46.4,
+  "Gross domestic product  (MP)", "Primary income with rest of world (ROW)", 1,
+  "Net national income (FC)", "Compensation of employees", 175.8,
+  "Net national income (FC)", "Net operating surplus + mixed income", 80.3,
+  "Compensation of employees", "Net wages and salaries", 102.2,
+  "Compensation of employees", "Wage tax", 20.7,
+  "Compensation of employees", "Social security cont. Employees", 22,
+  "Compensation of employees", "Social security cont. Employers", 30.8
+)
+
+nodes <- data.frame(
+  name=c(snaut$source, snaut$target) |> unique()
+)
+
+nodes$group <- factor(case_when(
+  nodes$name == "Net national income (FC)" ~ "NNI",
+  nodes$name == "Compensation of employees" ~ "CE",
+  TRUE ~ "nocol"))
+
+snaut$group <- "linkcol"
+snaut$IDsource <- match(snaut$source, nodes$name)-1 
+snaut$IDtarget <- match(snaut$target, nodes$name)-1
+
+my_color <- 'd3.scaleOrdinal() .domain(["NNI", "CE", "nocol", "linkcol"]) 
+            .range(["#d03161", "#5d8198", "#d4d4d4", "#e4e4e4"])'
+
+p <- sankeyNetwork(Links = snaut, Nodes = nodes,
+              Source = "IDsource", Target = "IDtarget", 
+              NodeGroup = "group", LinkGroup = "group",
+              Value = "value", NodeID = "name", colourScale = my_color,
+              sinksRight=FALSE, fontSize = 14, fontFamily = 'Roboto Slab', 
+              width = "1000px", height="500px")
+
+htmlwidgets::onRender(p, '
+  function(el) { 
+    var nodeWidth = this.sankey.nodeWidth();
+    var links = this.sankey.links();
+        
+    links.forEach((d, i) => {
+      var startX = d.source.x + nodeWidth;
+      var endX = d.target.x;
+      
+      var startY = d.source.y + d.sy + d.dy / 2;
+      var endY = d.target.y + d.ty + d.dy / 2;
+      
+      d3.select(el).select("svg g")
+        .append("text")
+        .attr("text-anchor", "middle")
+        .attr("alignment-baseline", "middle")
+        .attr("font-size", "13")
+        .attr("font-family", "Roboto Slab")
+        .attr("x", startX + ((endX - startX) / 2))
+        .attr("y", startY + ((endY - startY) / 2))
+        .text(d.value);
+    })
+  }
+')
+```
+
+::: {.fragment}
+::: {style="font-size:1.5rem;text-align:center;font-family:'Roboto Slab"}
+Wage share = [Compensation of Employees]{.hl .hl-blue} / [Net national income at factor cost]{.hl .hl-dred}
+:::
+:::
+
+## Bibliography {.bibstyle}
+
+:::footer
+:::

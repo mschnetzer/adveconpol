@@ -1,0 +1,272 @@
+---
+metadata-files: 
+    - ../../_variables.yml
+title: |
+    <span class='fa-stack course-icon'>
+        <i class='fas {{< var course.icon-bg >}} fa-stack-2x blue'></i>
+        <i class='fas {{< var course.icon >}} fa-stack-1x fa-inverse' style='margin-top:-5pt'></i>
+      </span><br>
+    {{< var course.subtitle >}}
+author: "{{< var instructor.name >}}"  
+subtitle: Post-Keynesian models of inequality and growth
+date: December 09, 2022
+from: markdown+emoji
+bibliography: ../../data/lit/wipol_spec.bib
+csl: ../../data/lit/wipol.csl
+execute:
+  echo: true
+format:
+  revealjs:
+    theme: ../econpol_slides.scss
+    footer: '{{< var course.number >}} {{< var course.title >}} | {{< var course.semester >}}'
+    logo: ../../data/img/wu-logo-simple.png
+    header-includes: |
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet"/>
+    slide-number: true
+    show-slide-number: all
+    transition: fade
+    progress: true
+    multiplex: false
+    scrollable: false
+    preview-links: true
+    hide-inactive-cursor: true
+    highlight-style: printing
+    pause: true
+---
+
+## Recap
+
+::: columns
+::: {.column width="25%"}
+{{< li gaqzgxto trigger=loop delay=1000 colors=secondary:#e76254 class=large >}}
+:::
+
+::: {.column width="75%"}
+- What are the channels of income redistribution by the welfare state?
+- What do the terms "progressive" and "regressive" with regard to the tax system mean?
+- Which one has a stronger effect on redistribution in Austria? Taxation or transfers?
+:::
+:::
+
+# Macroeconomic implications of functional distribution
+
+::: {.absolute top="90%" left="30%" width="369" height="400"}
+![](../../data/img/avatar_hoodie.png)
+:::
+
+::: footer
+:::
+
+## Distribution and growth
+
+Two questions in Post-Keynesian economics:
+
+- Which effect do **real wage increases** have on **employment**?
+- Which effect does a **shift in the functional distribution** have on **growth**?
+
+::: {.aside}
+<i class="fa-solid fa-book"></i> Lavoie, Marc (2006): Introduction to Post-Keynesian Economics. Palgrave Macmillan: New York, chapters 4 & 5.
+:::
+
+## Labour market in economics {.smaller}
+
+### Neoclassical model of the labour market:
+- Price (real wage) brings supply and demand into equilibrium
+- LM = one market among many
+- Effect of real wage increase on employment is negative
+- Why? Wages are costs
+
+### Post-Keynesians:
+- Labour market is downstream of production
+- Production is determined by effective demand
+- Effect of real wage increase on employment is positive
+- Why? Wages are demand
+
+## Post-Keynesian growth models {.smaller}
+
+### 4 generations of PK growth models:
+
+1. Keynes, Kalecki
+2. Robinson, Kaldor
+3. Bhaduri, Marglin, Dutt, Taylor
+4. Barbosa, Rada, Rezai, Hein, Onaran, Stockhammer
+
+<br>
+
+::: {.tbl-classic .tbl-larger}
+|     | Full employment | Unemployment |
+|-----|-----------------|--------------|
+| **Full capacity utilization** | Kaldor (v.1) | Robinson |
+| **Excess capacity** | - | Kalecki |
+:::
+
+# The wage-led/profit-led debate
+
+::: {.absolute top="90%" left="30%" width="369" height="400"}
+![](../../data/img/avatar_explain.png)
+:::
+
+::: footer
+:::
+
+
+## General framework {.smaller}
+
+- Post-Keynesian growth model: Investment and savings function depend on distribution (neither savings nor technological progress determine growth)
+- Aggregate output equals wages and profits ($r$ = profit rate)
+$$ pX = wN + prK $$
+- $\delta$ is the wage share and $\pi$ is the profit share
+$$ \delta = \frac{wN}{pX} \\
+\pi = \frac{prK}{pX} = \frac{rK}{X} $$
+
+## Determination of profit rate {.smaller}
+
+- Let $X_{fe}$ be potential output, $l$ labour/output ratio, $v$ capital/output ratio (= technology, assumed constant: $v=1$) and $u$ capacity utilization
+$$ l=\frac{N}{X}; v=\frac{K}{X_{fe}}; u=\frac{X}{X_{fe}} $$ 
+$$ p=w\frac{N}{X} + rp \frac{K}{X}; \frac{K}{X} = \frac{v}{u}; v=1; $$
+$$ p = wl + rpu^{−1} \rightarrow \pi = \frac{rp}{up} = \frac{r}{u} \rightarrow r= \pi u $$
+
+- Profit rate $r$ depends on profit share $\pi$ and capacity utilization $u$
+
+## Recall partial derivatives
+
+$$ y = \frac{u(x)}{v(x)} $$
+
+$$ y' = \frac{u'(x) \cdot v(x) - v'(x) \cdot u(x)}{v^2(x)} $$
+
+## First generation: Kaldor-Robinson {.smaller}
+
+- Assumption: Workers do not save, full capacity utilization ($u=1$)
+- Growth rate of investments consists of growth of autonomous investments $g_0$ and the elasticity to the profit rate $\alpha r$
+$$ g_I = g_0 + \alpha r $$
+- Savings come only out of profits [[Cambridge equation]{.marker-hl}: @pasinetti:1962] with $s$ as saving propensity of capitalists
+$$ g_S = sr $$
+- In equilibrium $g_S = g_I$ and thus
+$$ sr = g_0 + \alpha r \\ 
+r^∗= \frac{g_0}{(s − \alpha)} $$
+
+## {.smaller}
+
+- How does the profit rate react to saving?
+$$ \frac{\partial r^*}{\partial s} = − \frac{g_0}{(s−\alpha)^2} <0 $$
+- The equilibrium growth rate with $r^*$ is
+$$ g^∗ = g_0 + \alpha r^* = g_0 + \alpha \frac{g_0}{s− \alpha} = \frac{sg_0}{s−\alpha} $$
+- How does the growth rate react to saving?
+$$ \frac{\partial g^*}{\partial s} = \frac{g_0(s−\alpha)−sg_0}{(s−\alpha)^2} = −\frac{\alpha g_0}{(s−\alpha)^2} <0 $$
+- Higher propensity to save reduces growth and profitability due to lower aggregate demand.
+
+## Second generation: Neo-Kaleckians {.smaller}
+
+- Capacity utilization now endogenous (relax assumption of $u=1$); a high capacity utilization leads firms to invest more to satisfy expected demand
+$$ g_I = g_0 + \alpha r + \beta u $$
+- In equilibrium $g_I = g_S = sr$ and since $r = u \pi$ 
+$$ su\pi = g_0 + \alpha u \pi + \beta u \\ 
+u^* = \frac{g_0}{\pi(s−\alpha)−\beta} \\
+\frac{\partial u^*}{\partial \pi} = −\frac{(s-\alpha)g_0}{\left[ \pi (s−\alpha)− \beta\right]^2} <0 $$
+- A rising profit share reduces aggregate demand (lower consumption propensity of capitalists) and thus capacity utilization
+
+## {.smaller}
+
+- The profit rate falls with rising profit share:
+$$ r^* = \pi u^* = \frac{\pi g_0}{\pi (s−\alpha)−\beta} \\
+\frac{\partial r^*}{\partial \pi} = −\frac{g_0}{[\pi (s−\alpha)−\beta]^2} <0 $$
+- The growth rate also reacts negatively to a rising profit share
+$$ g^* = g_0 + \alpha r^* + \beta u^* = \frac{g_0 \pi s}{\pi (s−\alpha)−\beta} \\ 
+\frac{\partial g^*}{\partial \pi} = −\frac{g_0 s \beta}{[\pi (s−\alpha)−\beta]^2} <0 $$
+
+## Third generation: Bhaduri-Marglin {.smaller}
+
+- Focus on the profit share $\pi$ instead of the profit rate $r$ in the investment function
+$$ g_I = g_0 + \alpha \pi + \beta u $$
+- Capacity utilization reacts negatively to a rising profit share
+$$ s \pi u = g_0 + \alpha \pi + \beta u \\
+u^* = \frac{g_0 + \alpha \pi}{s\pi - \beta} \\
+\frac{\partial u^*}{\partial \pi} = −\frac{sg_0 + \alpha\beta}{(s\pi - \beta)^2} <0 $$
+
+---
+
+::: {style="font-size:1.8rem;"}
+- Change in the profit rate is now ambiguous
+$$ r^* = \pi u^* = \frac{\pi(g_0 + \alpha\pi)}{s\pi - \beta} \\ 
+\frac{\partial r^*}{\partial \pi} = \frac{\alpha\pi - u^* \beta}{s\pi − \beta} < \mathtt{or} >0 $$
+- Same for the growth rate
+$$ g^* = g_0 + \alpha\pi + \beta u^* = \frac{s\pi(g_0 + \alpha\pi)}{s\pi - \beta} \\ 
+\frac{\partial g^*}{\partial \pi} = \frac{s(\alpha\pi - \beta u^*)}{s\pi - \beta} < \mathtt{or} > 0 $$ 
+- There are now [two cases]{.marker-hl}:
+$$ \frac{\partial g^*}{\partial \pi} = \begin{cases} 
+>0: \alpha\pi > \beta u^* & \mathtt{profit−led} \\ 
+<0: \alpha\pi < \beta u^* & \mathtt{wage-led} 
+\end{cases} $$
+:::
+
+## Wage-led/profit-led debate {.smaller}
+
+- Seminal theoretical paper: @bhaduri:1990
+  - [Wage-led]{.hl .hl-dred} vs. [profit-led]{.hl .hl-blue}: When income is redistributed towards labour, does investment react more strongly to higher demand or to the lower profit rate?
+- First empirical estimate: @bowles:1995
+- Taken up by Post-Keynesians 
+  - in Europe (Hein, Onaran, Stockhammer, etc.): Neo-Kaleckians, [wage-led]{.hl .hl-dred}
+  - and in the US (Taylor, etc.): Neo-Goodwinians, [profit-led]{.hl .hl-blue}
+
+## Components of demand
+
+$$ Y = C + I + NX $$ 
+
+Which components increase when income is redistributed towards labour?
+
+::: {.incremental}
+- Consumption $C$: rises
+- Investments $I$: depends on firm‘s reaction to higher demand vs. lower profit rate 
+- Net exports $NX$: imports rise, exports fall $\rightarrow NX$ fall
+:::
+
+## It's an empirical question {.smaller}
+
+::: {.tbl-smaller}
+| Wage share &uarr; | Consumption | Investment | Net exports | Dom. demand | Total demand |
+|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+| :eu: | [**&uarr;**]{.dred} | [**&darr;**]{.blue} | [**&darr;**]{.blue} | [**&uarr;**]{.dred} | [**&uarr;**]{.dred} |
+| :de: | [**&uarr;**]{.dred} | [**&darr;**]{.blue} | [**&darr;**]{.blue} | [**&uarr;**]{.dred} | [**&uarr;**]{.dred} |
+| :fr: | [**&uarr;**]{.dred} | [**&darr;**]{.blue} | [**&darr;**]{.blue} | [**&uarr;**]{.dred} | [**&uarr;**]{.dred} |
+| :it: | [**&uarr;**]{.dred} | [**&darr;**]{.blue} | [**&darr;**]{.blue} | [**&uarr;**]{.dred} | [**&uarr;**]{.dred} |
+| :uk: | [**&uarr;**]{.dred} | [**&darr;**]{.blue} | [**&darr;**]{.blue} | [**&uarr;**]{.dred} | [**&uarr;**]{.dred} |
+| :us: | [**&uarr;**]{.dred} | [**&darr;**]{.blue} | [**&darr;**]{.blue} | [**&uarr;**]{.dred} | [**&uarr;**]{.dred} |
+| :jp: | [**&uarr;**]{.dred} | [**&darr;**]{.blue} | [**&darr;**]{.blue} | [**&uarr;**]{.dred} | [**&uarr;**]{.dred} |
+| :canada: | [**&uarr;**]{.dred} | [**&darr;**]{.blue} | [**&darr;**]{.blue} | [**&uarr;**]{.dred} | [**&darr;**]{.blue} |
+| :australia: | [**&uarr;**]{.dred} | [**&darr;**]{.blue} | [**&darr;**]{.blue} | [**&uarr;**]{.dred} | [**&darr;**]{.blue} |
+| :mexico: | [**&uarr;**]{.dred} | [**&darr;**]{.blue} | [**&darr;**]{.blue} | [**&uarr;**]{.dred} | [**&darr;**]{.blue} |
+| :argentina: | [**&uarr;**]{.dred} | [**&darr;**]{.blue} | [**&darr;**]{.blue} | [**&uarr;**]{.dred} | [**&darr;**]{.blue} |
+| :cn: | [**&uarr;**]{.dred} | [**&darr;**]{.blue} | [**&darr;**]{.blue} | [**&uarr;**]{.dred} | [**&darr;**]{.blue} |
+| :india: | [**&uarr;**]{.dred} | [**&darr;**]{.blue} | [**&darr;**]{.blue} | [**&uarr;**]{.dred} | [**&darr;**]{.blue} |
+| :south_africa: | [**&uarr;**]{.dred} | [**&darr;**]{.blue} | [**&darr;**]{.blue} | [**&uarr;**]{.dred} | [**&darr;**]{.blue} |
+:::
+
+::: {.aside}
+Source: @onaran:2012
+:::
+
+## Meta-Regression analysis
+
+In a new working paper [@dammerer:2022], we study
+
+- 578 estimates for the relationship between functional distribution and aggregate demand
+- from 33 empirical studies
+- over 163 years and 59 countries and regions
+- whereof 218 estimates refer to total demand and 360 to domestic demand
+
+## Histogram of estimates
+
+![](img/mrahistogram.png){fig-align="center"}
+
+## Funnel plot for total demand
+
+![](img/mrafunnel_total.png){fig-align="center"}
+
+## Funnel plot for domestic demand
+
+![](img/mrafunnel_domestic.png){fig-align="center"}
+
+## Bibliography {.bibstyle}
+
+:::footer
+:::

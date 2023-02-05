@@ -1,0 +1,271 @@
+---
+metadata-files: 
+    - ../../_variables.yml
+title: |
+    <span class='fa-stack course-icon'>
+        <i class='fas {{< var course.icon-bg >}} fa-stack-2x blue'></i>
+        <i class='fas {{< var course.icon >}} fa-stack-1x fa-inverse' style='margin-top:-5pt'></i>
+      </span><br>
+    {{< var course.subtitle >}}
+author: "{{< var instructor.name >}}"  
+subtitle: Fiscal policy, growth, and inequality
+date: December 16, 2022
+from: markdown+emoji
+bibliography: ../../data/lit/wipol_spec.bib
+csl: ../../data/lit/wipol.csl
+execute:
+  echo: true
+format:
+  revealjs:
+    theme: ../econpol_slides.scss
+    footer: '{{< var course.number >}} {{< var course.title >}} | {{< var course.semester >}}'
+    logo: ../../data/img/wu-logo-simple.png
+    header-includes: |
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet"/>
+    slide-number: true
+    show-slide-number: all
+    transition: fade
+    progress: true
+    multiplex: false
+    scrollable: false
+    preview-links: false
+    hide-inactive-cursor: true
+    highlight-style: printing
+    pause: true
+---
+
+## Recap
+
+::: columns
+::: {.column width="25%"}
+{{< li gaqzgxto trigger=loop delay=1000 colors=secondary:#e76254 class=large >}}
+:::
+
+::: {.column width="75%"}
+- What are wage-led and profit-led growth?
+- How do growth regimes differ for small open and large closed economies?
+- What are the opposed theories for the relationship between personal inequality and current account balances?
+:::
+:::
+
+## Keynesian legitimation for fiscal policy
+
+- [Aggregate demand]{.marker-hl} determines economic growth
+- Lack of aggregate demand and involuntary [unemployment]{.marker-hl} persists
+- Fiscal policy is essential to reduce economic volatility
+- [Anti-cyclic]{.marker-hl} fiscal policy (government spending and taxation)
+- [No balanced budget]{.marker-hl} required in the short term
+- Public investment features [multiplier effect]{.marker-hl}
+
+## The fiscal multiplier {.medium}
+
+$$ Y = C(\theta) + I(r) + G + NX $$
+
+. . .
+
+$$ C = \alpha_0 + \alpha_1 (1 - \theta) Y $$
+
+. . .
+
+$$ Y - \alpha_1(1-\theta)Y = \alpha_0 + I(r) + G + NX $$ 
+
+. . .
+
+$$ \frac{\partial Y}{\partial G} = \frac{1}{(1 - \alpha_1 + \alpha_1 \theta)} $$
+
+. . .
+
+$$ \alpha_1 \in (0, 1); \; \theta \in (0, 1); \; \frac{\partial Y}{\partial G} > 1 $$
+
+
+## Second-round effects {.medium}
+
+$$ \alpha_1 = 0.6; \; \theta = 0.3; $$
+
+Total multiplier: $$ Y^* = 1/(1 - 0.6 + 0.6 \cdot 0.3) \simeq 1.7 $$
+
+First round:
+$$ \alpha_1 (1-\theta)\Delta Y = 0.6 \cdot (1-0.3) \cdot 1 \simeq 0.4 $$
+
+Second round:
+$$ 0.6 \cdot (1-0.3) \cdot 0.4 \simeq 0.2 $$
+
+## Keynes Cross
+
+```{r engine='tikz'}
+#| echo: false
+#| results: asis
+#| fig-align: center
+
+\usetikzlibrary{calc,trees,positioning,arrows,chains,shapes.geometric,decorations.pathreplacing,decorations.markings,decorations.pathmorphing,shapes,matrix,shapes.symbols}
+\tikzset{->-/.style={decoration={
+	  markings,
+	  mark=at position #1 with {\arrow{>}}},postaction={decorate}}}
+	
+\begin{tikzpicture}[scale=2, dot/.style={circle, fill=black, minimum size=4pt, inner sep=0pt, outer sep=-1pt}]
+	% Schriftgröße
+	\tikzstyle{every node}=[font=\small, color=black]
+  % Achsen zeichnen
+	\node[left] at (-2.5,1) {$w/P$};
+    \draw[<->] (-2.5,1) coordinate (x_1) -- (2.5,1) coordinate (x_2) node[right] {$Y$}; 
+	\node[below] at (0,-0.5) {$N$};
+	\draw[<->] (0,-0.5) coordinate (y_1) -- (0,2.5) coordinate (y_2) node[above] {$AD$};
+	% Winkel einzeichnen mit arc von 0 bis 45 Grad und bei .3 vom Ursprung entfernt beginnen 
+	\draw (0,1)--(0.4,1) arc (0:45:0.4) node[above] at (0.25,1) {\tiny $45^\circ$};
+    % Vollbeschäftigungs- und Konsumgerade zeichnen sowie Schnittpunkt c berechnen
+    \draw[thick, color=red!80] (0,1) coordinate (a_1) -- (1.6,2.6) coordinate (a_2) node[above] {$Y$};
+    \draw[thick, color=blue!70] (0,1.7) coordinate (b_1) -- (1.8,2.2) coordinate (b_2) node[right] {$AD$};
+	\coordinate (c) at (intersection of a_1--a_2 and b_1--b_2);
+	% Arbeitsmarkt zeichnen
+	\draw[thick, color=orange!60] (-0.2,0.8) coordinate (d_1) -- (-2,-0.4) coordinate (d_2) node[below] {$N^S$};
+	\draw[thick, color=orange!60] (-2,0.8) coordinate (d_3) -- (-0.2,-0.4) coordinate (d_4) node[below] {$N^D$};
+	\coordinate (d) at (intersection of d_1--d_2 and d_3--d_4);
+	% Produktionsfunktion zeichnen
+	\draw [thick, color=green!80] (0,1) coordinate (e_1) parabola bend (0,1) (1.7,-0.4) coordinate (e_2) node[below] {$F(N,\bar{K})$};
+	% Schnittpunkt auf der Produktionsfunktion bei Vollbeschäftigung
+	\coordinate (e) at (intersection of d--[xshift=1]d and e_1--e_2);
+	\draw[very thin,->-=.5,->-=.25,->-=.75] (d)--([xshift=9]e) node[dot] {};
+	\coordinate (f) at (intersection of [xshift=9]e--[xshift=9,yshift=10]e and a_1--a_2);
+	\draw[very thin,->-=.5,->-=.25,->-=.75,->] ([xshift=9]e)--(f);
+	% Schnittpunkt auf der Produktionsfunktion bei effektiver Nachfrage
+	\coordinate (g) at (intersection of c--[yshift=-1]c and e_1--e_2);
+	\draw[very thin,->-=.5,->-=.25,->-=.75] (c)--([yshift=10]g) node[dot] {};
+	\coordinate (h) at (intersection of [yshift=10]g--[xshift=-1,yshift=10]g and d_3--d_4);
+	\draw[very thin,->-=.5,->-=.25,->-=.75,->] ([yshift=10]g)--(h);
+	% Arbeitslosigkeit einzeichnen
+	\coordinate (i_1) at (intersection of d--e and y_1--y_2);
+	\coordinate (i_2) at (intersection of h--[yshift=10]g and y_1--y_2);
+	\draw[decorate, decoration={brace, mirror}, thick] (i_1) -- (i_2) node[midway, right=1pt] {\tiny{$UE$}};
+	% Überproduktion einzeichnen
+	\coordinate (j_1) at (intersection of c--g and x_1--x_2);
+	\coordinate (j_2) at (intersection of f--[xshift=9]e and x_1--x_2);
+	\draw[decorate, decoration={brace, mirror}, thick] (j_1) -- (j_2) node[midway, below=1pt] {\tiny{$SP$}};
+	% Ausweitung der Staatsausgaben einzeichnen
+	\draw[very thick, color=blue!70] (0,1.94) coordinate (k_1) -- (1.8,2.44) coordinate (k_2) node[right] {$AD'$};
+	\draw[decorate, decoration={brace, mirror}, thick] ([xshift=12]b_2) -- ([xshift=12]k_2) node[midway, right=1pt] {\tiny{$\Delta G$}};
+	\coordinate (l) at (intersection of k_1--k_2 and a_1--a_2);
+	% Schnittpunkte der Staatsausgaben mit der Y-Achse
+	\coordinate (m_1) at (intersection of c--[xshift=-1]c and y_1--y_2);
+	\coordinate (m_2) at (intersection of l--[xshift=-1]l and y_1--y_2);
+	\draw[very thin, dashed] (c)--(m_1);
+	\draw[very thin, dashed] (l)--(m_2);
+	\draw[decorate, decoration={brace}] (m_1) -- (m_2) node[midway, left=1pt] {\tiny{$\Delta AD = \Delta Y > \Delta G$}};
+\end{tikzpicture}
+```
+
+## Discuss with your neighbour {.smaller}
+
+[What do you expect the effect of restrictive fiscal policy (taxes and spending) on income inequality to be?]{.bubble .bubble-bottom-left .absolute top="20%" left="20%" style="max-width:450px;--bubcol: var(--bubcol-blue);font-size:1.5rem;"}
+
+[What are the potential channels for these effects?]{.bubble .bubble-bottom-right .absolute top="45%" left="35%" style="max-width:350px;--bubcol: var(--bubcol-dred);font-size:1.5rem;"}
+
+![](img/discuss1.png){.absolute bottom="0px" left="5%" height="400px"}
+![](img/discuss2.png){.absolute bottom="0px" right="5%" height="400px" style="transform: rotateY(180deg);"}
+
+## Effects of fiscal consolidation {.smaller}
+
+Studies typically find that [inequality increases]{.marker-hl} in periods of fiscal consolidation (with similar data):
+
+- @ball:2013: 17 OECD countries from 1978 to 2009
+- @agnello:2014: 18 industrialized countries from 1978 to 2009
+- @woo:2016: 17 OECD countries from 1980 to 2010
+- @heimberger:2020: 17 OECD countries from 1978 to 2013
+
+Data on fiscal consolidation is provided by @devries:2011: "A New Action-based Dataset of Fiscal Consolidation". Narrative approach that focuses on policy actions (tax hikes and/or spending cuts) taken by governments with the intent of reducing the budget deficit.
+
+Methodology: Impulse response functions (IRF) from local projections as proposed by @jorda:2005.
+
+## Consolidation episodes {.smaller}
+
+::: {.tbl-classic .tbl-smaller}
+| Country | Epidodes | Country | Epidodes |
+|:-------:|:---------|:-------:|:---------|
+| :australia: | 1985–1988, 1994–1999 | :it: | 1991–1998, 2004–2007, 2010–2013 |
+| :austria: | 1980–1981, 1984, 1996–1997, 2001–2002, 2011–2013 | :jp: | 1979–1983, 1997–1998, 2003–2007 |
+| :belgium: | 1982–1985, 1987, 1990, 1992–1994, 1996–1997, 2010–2013 | :netherlands: | 1981–1988, 1991–1993, 2004–2005 |
+| :canada: | 1984–1997 | :portugal: | 1983, 2000, 2002, 2005–2007, 2010–2013 |
+| :denmark: | 1983–1986, 1995, 2011–2013 | :es: | 1983–1984, 1989, 1992–1997, 2009–2013 |
+| :finland: | 1992–1997 | :sweden: | 1984, 1993–1998 |
+| :fr: | 1979, 1987, 1991, 1995–1997, 2011–2013 | :uk: | 1979–1982, 1994–1999, 2010–2013 |
+| :de: | 1982–1984, 1991–1995, 1997, 1999–2000, 2003–2004, 2006–2007, 2011–2013 | :us: | 1978, 1980–1981, 1985–1988, 1990–1998, 2011–2013 |
+| :ireland: | 1982–1988, 2009–2013 | | |
+: {tbl-colwidths="[10,40,10,40]"}
+:::
+
+::: {.aside}
+Source: @devries:2011
+:::
+
+## Austerity measures have dampened growth in Europe
+
+![](img/austerity.png){fig-align="center" height="500px"}
+
+
+## Fiscal consolidation increases inequality {.smaller}
+
+![](img/consolidation.png){fig-align="center"}
+
+::: {.aside}
+Source: @ball:2013
+:::
+
+
+## Fiscal consolidation: Spending versus taxes {.smaller}
+
+![](img/spending_tax.png){fig-align="center"}
+
+::: {.aside}
+Source: @ball:2013
+:::
+
+## Results seem to be stable across studies {.smaller}
+
+:::: {.columns}
+::: {.column width="50%"}
+![](img/tax-based.png){fig-align="center"}
+:::
+::: {.column width="50%"}
+![](img/spending-based.png){fig-align="center"}
+:::
+::::
+
+::: {.aside}
+Source: @woo:2016
+:::
+
+## Fiscal consolidation increases unemployment {.smaller}
+
+![](img/unemployment.png){fig-align="center"}
+
+::: {.aside}
+Source: @ball:2013
+:::
+
+## Effects of contractionary monetary policy shocks
+
+Study by @furceri:2018: 
+
+- (unanticipated) changes in short-term interest rates for a panel of 32 countries from 1990 to 2013 
+- contractionary monetary policy shocks increase income inequality, expansionary monetary policy reduces inequality
+- effect is asymmetric: tightening of monetary policy raises inequality more than easing lowers it
+
+## Effect of monetary policy on output, unemployment and inflation {.smaller}
+
+![](img/monetarypolicy.png){fig-align="center"}
+
+::: {.aside}
+Source: @furceri:2018
+:::
+
+## Effect of monetary policy shocks on inequality {.smaller}
+
+![](img/monetaryineq.png){fig-align="center" height="500px"}
+
+::: {.aside}
+Source: @furceri:2018
+:::
+
+## Bibliography {.bibstyle}
+
+:::footer
+:::

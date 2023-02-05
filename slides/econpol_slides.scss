@@ -1,0 +1,404 @@
+/*-- scss:defaults --*/
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;400;700;900&family=Ubuntu:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Yanone+Kaffeesatz:wght@200;300;400;700&family=Playfair+Display&display=swap');
+
+// fonts
+$titlefont: 'Yanone Kaffeesatz';
+$primfont: 'Ubuntu';
+$secfont: 'Roboto Slab';
+$quotefont: 'Playfair Display';
+
+// colors
+$blue:   #5d8198 !default;
+$red:    #e76254 !default;
+$dred:   #d03161 !default;
+$yellow: #ffd500 !default;
+$green:  #218500 !default;
+$brown:  #d37b00 !default;
+$white:   #fff !default;
+$grey100: #f8f9fa !default;
+$grey200: #e9ecef !default;
+$grey300: #ddd !default;
+$grey400: #ced4da !default;
+$grey500: #adb5bd !default;
+$grey600: #868e96 !default;
+$grey700: #495057 !default;
+$grey800: #343a40 !default;
+$grey900: #212529 !default;
+$black:    #000 !default;
+
+:root {
+  --bubcol-blue: #5d8198;
+  --bubcol-red: #e76254;
+  --bubcol-dred: #d03161;
+}
+
+$font-family-sans-serif: $primfont !default;
+$font-family-serif: $secfont !default;
+$link-color: $blue;
+$link-color-hover: $dred;
+
+// headings
+$presentation-heading-font: $titlefont !default;
+$presentation-heading-font-weight: 400;
+$presentation-heading-color: $red !default;
+$presentation-h1-font-size: 1.7em;
+$presentation-h2-font-size: 1.3em;
+$presentation-h3-font-size: 1em;
+$presentation-font-smaller: 0.7;
+$presentation-font-medium: 0.8;
+
+// Medium slide style
+.reveal.medium .slides section,
+.reveal .slides section.medium {
+  font-size: #{$presentation-font-medium}em;
+}
+.reveal.medium .slides aside, 
+.reveal .slides section.medium aside {
+  font-size: 0.625em;
+}
+.reveal.medium .slides h1,
+.reveal .slides section.medium h1 {
+  font-size: calc(#{$presentation-h1-font-size} / #{$presentation-font-medium});
+}
+.reveal.medium .slides h2,
+.reveal .slides section.medium h2 {
+  font-size: calc(#{$presentation-h2-font-size} / #{$presentation-font-medium});
+}
+.reveal.medium .slides h3,
+.reveal .slides section.medium h3 {
+  font-size: calc(#{$presentation-h3-font-size} / #{$presentation-font-medium});
+}
+
+/*-- scss:rules --*/
+
+/* Colors, icon, and markers */
+
+.blue { color: $blue; }
+.red { color: $red }
+.dred { color : $dred }
+.grey200 { color: $grey200 }
+.grey600 { color: $grey600 }
+.secfont { font-family: $secfont;}
+
+.icon {
+    color: $dred;
+}
+
+.iconlist ul {
+    list-style: none;
+    text-indent: -0.7rem;
+    padding-left: 1.4rem;
+  }
+
+.altlist ul {
+    list-style: none;
+}
+
+lord-icon.small {
+    width: 60px;
+    height: 60px;
+}
+
+lord-icon.large {
+  width: 200px;
+  height: 200px;
+}
+
+.altlist ul li:before {
+  font-family: 'FontAwesome';
+  font-size: 1.3rem;
+  content: '\f0a9';
+  margin: 0 15px 0 -20px;
+}
+
+.circle-hl {
+    position: relative;
+  }
+  
+.circle-hl:before {
+    content: "";
+    z-index: -1;
+    left: -0.4em;
+    top: -0.15em;
+    border-width: 2.7px;
+    border-style: solid;
+    border-color: $blue;
+    position: absolute;
+    border-right-color: transparent;
+    width: 100%;
+    height: 1em;
+    transform: rotate(2deg);
+    opacity: 0.65;
+    border-radius: 75%;
+    padding: 0.1em 0.25em;
+  }
+  
+.circle-hl:after {
+    content: "";
+    z-index: -1;
+    left: -0.6em;
+    top: 0.04em;
+    padding: 0.05em 0.29em;
+    border-width: 2.7px;
+    border-style: solid;
+    border-color: $blue;
+    border-left-color: transparent;
+    border-top-color: transparent;
+    position:absolute;
+    width: 100%;
+    height: 1em;
+    transform: rotate(-1deg);
+    opacity: 0.65;
+    border-radius: 80%;
+  }
+
+.marker-hl {
+    position: relative;
+  }
+  
+.marker-hl::before {
+    background-color: #ffd500;
+    content: "";
+    position: absolute;
+    width: calc(100% + 4px);
+    height: 60%;
+    left: -2px;
+    bottom: 0;
+    z-index: -1;
+    transform: rotate(-2deg);
+  }
+
+.hl {
+  color: $white;
+  font-weight: 400;
+  padding: 0.05rem 0.25rem;
+  line-height: 1.6;
+}
+
+.hl-blue { background-color: $blue; }
+.hl-dred { background-color: $dred; }
+.hl-yellow { background-color: $yellow; }
+.hl-green { background-color: $green; }
+.hl-brown { background-color: $brown; }
+
+/* Slides standards */
+
+.backgrounds .title-slide {
+    background-color: $blue;
+  }
+
+.title-slide h1 {
+    font-family: $titlefont;
+    font-weight: 400;
+    text-align: center;
+  }
+
+.reveal .slide-number {
+    font-family: $secfont;
+    font-size: 0.8rem;
+  }
+
+.reveal .footer {
+    font-family: $secfont;
+    font-size: 0.6rem;
+    font-weight: 100;
+    color: $grey800;
+  }
+
+.reveal aside {
+    font-family: $primfont;
+    font-size: 1rem;
+    font-weight: 100;
+  }
+
+.slide h2 {
+    margin-bottom: 50px;
+  }
+
+.bibstyle {
+    font-family: $secfont;
+    font-size: 1.2rem !important;
+    font-weight: 100 !important;
+  }
+
+/* Main title slide */
+
+.slide-background:first-child {
+    background-color: $grey200;
+  }
+
+h1.title {
+    font-family: $titlefont;
+    font-size: 6rem;
+    font-weight: 700;
+    color: $red !important;
+  }
+
+  p.subtitle {
+    font-family: $titlefont;
+    font-size: 4rem;
+    font-weight: 400;
+    color: $blue;
+  }
+
+  p.author {
+    font-family: $secfont;
+    font-size: 2rem;
+    line-height: 2rem;
+    font-weight: 100;
+    color: $grey800;
+  }
+  
+  p.date{
+    font-family: $secfont;
+    font-size: 2rem;
+    line-height: 2rem;
+    font-weight: 100;
+    color: $grey800;
+  }
+
+  .course-icon {
+    font-size: 4rem;
+    display: block;
+    margin: 50px auto 0 -10px;
+  }
+
+/* Others */
+
+.schedule-table th {
+    font-weight: 400;
+    font-size: 1.3rem !important;
+  }
+  
+.schedule-table td, tr, tbody {
+    font-weight: 100;
+    font-size: 1.3rem !important;
+    border-bottom: 0.5px solid $grey400 !important;
+  }
+
+.poster-table th {
+    font-family: $secfont;
+    font-weight: 400;
+    font-size: 1.3rem !important;
+  }
+  
+.poster-table td, tr, tbody {
+    font-family: $secfont;
+    font-weight: 100;
+    font-size: 1.3rem !important;
+    border-bottom: solid 2px $grey200 !important;
+    padding-top: 0.4rem !important;
+    padding-bottom: 0.4rem !important;
+  }
+
+.tbl-larger td, tr, th, tbody {
+    font-size: 1.5rem !important;
+  }
+
+.tbl-smaller th, td, tr, tbody {
+    font-size: 1.2rem !important;
+  }
+
+.tbl-classic th {
+  border-top: 5px solid #000;
+}
+
+.tbl-classic tbody {
+  border-top: 2px solid #000;
+  border-bottom: 5px solid #000;
+}
+
+.tbl-note {
+  font-size: 1rem;
+  font-family: $secfont;
+  font-weight: 100;
+}
+
+.textbox {
+  font-family: $primfont;
+  background-color: $grey100;
+  border: 4px solid $black;
+  font-size: 1.3rem;
+  padding: 1rem 1rem;
+  border-radius: 1.2rem;
+}
+
+.bubble {
+  position: relative;
+  background-color: var(--bubcol);
+  border-radius: 1.2rem;
+  padding: 1.5rem 1.5rem;
+  text-align: center;
+  color: $white;
+}
+
+.bubble-bottom-left:before {
+  content: "";
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  border-left: 24px solid var(--bubcol);
+  border-right: 12px solid transparent;
+  border-top: 12px solid var(--bubcol);
+  border-bottom: 20px solid transparent;
+  left: 32px;
+  bottom: -24px;
+}
+
+.bubble-bottom-right:before {
+  content: "";
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  border-right: 24px solid var(--bubcol);
+  border-left: 12px solid transparent;
+  border-top: 12px solid var(--bubcol);
+  border-bottom: 20px solid transparent;
+  right: 32px;
+  bottom: -24px;
+}
+
+.blockquote {
+  border-left: 3px solid $blue;
+  color: #1a1a1a;
+  font-family: $quotefont;
+  font-style: italic;
+  line-height: 2rem;
+  max-width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1rem 3rem;
+  position: relative;
+  transition: .2s border ease-in-out;
+  z-index: 0;
+}
+
+.blockquote:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -4px;
+    height: 2em;
+    width: 5px;
+    margin-top: -1em;
+}
+
+.blockquote:after {
+    content: open-quote;
+    position: absolute;
+    top: 50%;
+    left: -0.5em;
+    color: $blue;
+    font-family: $quotefont;
+    font-size: 5rem;
+    font-style: normal;
+    background-color: $white;
+    line-height: 2.5rem;
+    text-align: center;
+    text-indent: -2px;
+    width: 1em;
+    padding-top: 2rem;
+    margin-top: -0.5em;
+    transition: .2s all ease-in-out, .4s transform ease-in-out;
+}

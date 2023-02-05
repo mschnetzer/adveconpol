@@ -1,0 +1,300 @@
+---
+metadata-files: 
+    - ../../_variables.yml
+title: |
+    <span class='fa-stack course-icon'>
+        <i class='fas {{< var course.icon-bg >}} fa-stack-2x blue'></i>
+        <i class='fas {{< var course.icon >}} fa-stack-1x fa-inverse' style='margin-top:-5pt'></i>
+      </span><br>
+    {{< var course.subtitle >}}
+author: "{{< var instructor.name >}}"  
+subtitle: Intergenerational Mobility
+date: November 18, 2022
+from: markdown+emoji
+bibliography: ../../data/lit/wipol_spec.bib
+csl: ../../data/lit/wipol.csl
+execute:
+  echo: true
+format:
+  revealjs:
+    theme: ../econpol_slides.scss
+    footer: '{{< var course.number >}} {{< var course.title >}} | {{< var course.semester >}}'
+    logo: ../../data/img/wu-logo-simple.png
+    header-includes: |
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet"/>
+    slide-number: true
+    show-slide-number: all
+    transition: fade
+    progress: true
+    multiplex: false
+    scrollable: false
+    preview-links: false
+    hide-inactive-cursor: true
+    highlight-style: printing
+    pause: true
+---
+
+## Recap
+
+::: columns
+::: {.column width="25%"}
+{{< li gaqzgxto trigger=loop delay=1000 colors=secondary:#e76254 class=large >}}
+:::
+
+::: {.column width="75%"}
+- What is the definition of net wealth?
+- What data do we have to analyze the distribution of household wealth?
+- Which methods are commonly used to adjust for the non-response bias?
+- What are the differences between wealth inequality and income inequality?
+:::
+:::
+
+## Discuss with your neighbour {.smaller}
+
+[How would you describe the state of intergenerational social mobility in your country?]{.bubble .bubble-bottom-left .absolute top="20%" left="25%" style="max-width:350px;--bubcol: var(--bubcol-blue);font-size:1.5rem;"}
+
+[Which channels do you know where parents exert influence on the socio-economic outcomes of children?]{.bubble .bubble-bottom-right .absolute top="50%" left="30%" style="max-width:350px;--bubcol: var(--bubcol-dred);font-size:1.5rem;"}
+
+![](img/discuss1.png){.absolute bottom="0px" left="5%" height="600px"}
+![](img/discuss2.png){.absolute bottom="0px" right="5%" height="600px" style="transform: rotateY(180deg);"}
+
+::: footer
+Illustrations by [https://openpeeps.com](https://openpeeps.com).
+:::
+
+
+## Selected channels of intergenerational persistence {.medium}
+
+::: {.altlist .incremental}
+- Children of well-off families [attend better educational institutions]{.marker-hl}, which results in higher incomes later on.
+- Family background shapes [individual labor market-related]{.marker-hl} characteristics (Habitus, social and cultural capital, health, etc.)
+- Children of poorer families face [higher opportunity costs]{.marker-hl} at their job search and tend to accept the first job opportunity
+- [Social networks]{.marker-hl} of the well-off facilitate job search substantially
+:::
+
+::: {.aside}
+Source: @franzini:2009
+:::
+
+## Glass ceiling
+
+::: {.blockquote style="font-size:1.9rem;"}
+That room [at the top] rarely opens up because those mediocrities are too well-screened by parents who hire private tutors, buy cultural enrichment, teach etiquette, set expectations, stand as personal examples of success, coach interview technique, navigate any bureaucratic maze put before them, set up home in nice areas, arrange internships via friends and, just to rub in their supremacy, make direct gifts of cash and assets. To fail under these conditions is a kind of achievement in itself.  
+:::
+
+::: {style="font-size:1.2rem;text-align:right;font-family:'Roboto Slab';"}
+Janan Ganesh<br>Financial Times (December 9, 2016)
+:::
+
+## Traditional theory {.smaller}
+
+@becker:1979, @becker:1986:
+
+::: {.incremental}
+- Optimization problem for parental investments into the human capital of descendants (utility of parents is maximized)
+- Stochastic term for "birth lottery" (genetic abilities, talents): *Nature versus Nurture*
+- Parental utility does not only depend on the life-cycle income of the descendant, but there is dynastic utility
+:::
+
+. . .
+
+Response by @daly:1982: Provision of descendants in future generations is a public good, since the future offspring may potentially descend from all other members in a society.
+
+. . .
+
+Objection by @mani:2013: Rational parental behaviour is limited by income and wealth, since poverty impedes cognitive abilities of adults and hinders rational investment decisions in childern.
+
+## Measurement of intergenerational mobility
+
+::: {style="text-align:center;"}
+Intergenerational earnings elasticity: $\beta$
+$$log~y_{ic} = \alpha + \beta~y_{ip} + \varepsilon_{ic}$$
+Intergenerational earnings correlation: $\rho$
+$$\rho = \beta~\frac{\sigma_p}{\sigma_c}$$
+with $\sigma$ being the standard deviation.
+:::
+
+## Life cycle vs. current income
+
+::: {style="font-size:1.5rem;"}
+(Measurable) current income corresponds to life cycle income plus random transitory deviations
+$$ y_{ic}^* = y_{ic} + \omega_{ic} \\
+y_{ip}^* = y_{ip} + \omega_{ip} $$
+
+Intergenerational elasticity is calculated with current income records
+
+$$ plim~\widehat{\beta} = \frac{cov(y_{ip}^*, y_{ic}^*)}{var(y_{ip}^*)} = \\ 
+= \frac{\beta\left[var(y_{ip}) + cov(y_{ip}, \omega_{ip})\right] + cov(y_{ic}, \omega_{ic})/\beta + cov(\omega_{ic}, \omega_{ip})}{var(y_{ip}) + 2 \cdot cov(y_{ip}, \omega_{ip}) + var(\omega_{ip})} $$
+ 
+Consequently there is an attenuation bias (downward bias)
+$$ plim~\widehat{\beta} = \beta \frac{var(y_{ip})}{var(y_{ip}) + var(\omega_{ip})} < \beta $$
+:::
+
+## Transition matrices {.smaller}
+
+A transition matrix captures the probabilities of switches $p_{ij}$ from status $i$ to $j$.
+
+$$
+  P =
+  \left[ {\begin{array}{cccc}
+    p_{11} & p_{12} & \cdots & p_{1n}\\
+    p_{21} & p_{22} & \cdots & p_{2n}\\
+    \vdots & \vdots & \ddots & \vdots\\
+    p_{m1} & p_{m2} & \cdots & p_{mn}\\
+  \end{array} } \right]
+$$
+
+There are various indices to compare transition matrices:
+
+- Prais-Index: $M(P) = \frac{n - trace(P)}{n-1}$ where $M(P) \in [0,1]$
+- Absolute Average Jump (AAJ): $\Omega = \frac{\sum_{i=1}^{n}|rank_{ic} - rank_{ip}|}{n}$
+
+## Great Gatsby curve {.smaller}
+
+![](img/gatsbycurve.png){fig-align="center" width="800px"}
+
+. . .
+
+::: {style="width:150px; height:100px; display:table-cell; text-align:center;vertical-align:middle; border-radius:50%; border: 2px dashed black; background-color:white; opacity:0.9; font-size:3rem;" .absolute top="250px" left="310px"}
+:austria:
+:::
+
+::: {.aside}
+Source: @corak:2013
+:::
+
+## Intergenerational persistence in Austria
+
+::: {.tbl-classic .tbl-smaller}
+| Financial situation of parental household at the age of 14 was... | 45-59 year-old respondents today earn … than the average individual in this age class |
+|-----|-----|
+| ...very bad | [**19% less**]{.dred} |
+| ...bad | 9% less |
+| ...good | 15% more |
+| ...very good | [**21% more**]{.dred} |
+:::
+::: {.tbl-note}
+Income in % of average net income by financial situation in parental household<br>
+Source: EU-SILC 2011, own calculation
+:::
+
+. . .
+
+<br>
+
+::: {.tbl-classic .tbl-smaller}
+| Parental edu. &darr; | Compulsory | Apprenticeship | Higher secondary | Tertiary |
+|-----|-----|-----|-----|-----|
+| Compulsory | 32.6 | 46.1 | 14.4 | [**6.9**]{.dred} |
+| Apprenticeship | 7.5 | [**59.3**]{.dred} | 17.3 | 15.9 |
+| Higher secondary | 6.0 | 18.6 | 41.9 | 33.6 |
+| Tertiary | 3.6 | 15.6 | 23.5 | [**57.3**]{.dred} |
+:::
+::: {.tbl-note}
+Educational attainment of children with respect to parental educational level (25-44 year-old)<br>
+Source: Statistik Austria, Bildung in Zahlen 2020/21
+:::
+
+## Alternative figure of educational mobility {.smaller}
+
+![](img/educationmobility.png){fig-align="center"}
+
+::: {.aside}
+Note: Sample of 25 to 44 years of age
+:::
+
+## Decreasing absolute mobility in the US {.smaller}
+
+![](img/mobilityusa.png){fig-align="center"}
+
+::: {.aside}
+Source: @chetty:2017
+:::
+
+## Multigenerational persistence {.smaller}
+
+::: columns
+::: {.column width="50%"}
+![](img/grandparents1.png){fig-align="center"}
+:::
+::: {.column width="50%"}
+![](img/grandparents2.png){fig-align="center"}
+:::
+:::
+
+::: {.aside}
+Source: @neidhofer:2018
+:::
+
+## Long-term social persistence
+
+::: {.iconlist}
+- :uk: @clark:2015: Richest british families around 1850 still own four times the average family wealth in 2012 (= [5 generations later]{.marker-hl})
+- :it: @barone:2020: Families with highest income in Florence in 1427 still are at the top of the income distribution in 2011 (= [6 centuries later]{.marker-hl})
+- :de: @braun:2017: Social status in Germany also depends from the great-grandparents.<br> (= [4 generations later]{.marker-hl})
+:::
+
+## Cultural capital and wealth {.smaller}
+
+![](img/books.png)
+
+::: {.aside}
+Y-axis: More than 100 books in the parental household at age 10?<br>
+Source: HFCS 2014, own calculations
+:::
+
+## Projections of inheritances in Austria {.smaller}
+
+![](img/inhprojection.png){fig-align="center" height="450px"}
+
+::: {.aside}
+Inheritance projection in billion Euros (with 90%, 95% and 99% confidence intervals) <br>
+Source: Altzinger/Humer (2013)
+:::
+
+## Potential revenues of an inheritance tax {.smaller}
+
+- Wealth data from HFCS
+- Mortality tables by age, gender and education by IIASA for next 50 years
+- Simulation of deceases
+- Inheritance when all household members of a generation have died
+
+::: {.tbl-classic .tbl-smaller}
+| Tax rate | Exemption (m€) | CI | Inheritance cases | Inheritances (m€) | Tax cases | Tax revenues (m€) |
+|:----:|:----:|:----:|----:|----:|----:|----:|
+| 15% | 0.5 | P05 | 39,197 | 10,079 | 1,627 | 338 |
+| [15%]{.hl .hl-blue} | [0.5]{.hl .hl-blue} | P50 | 40,225 | 11,894 | [2,081]{.hl .hl-blue} | [620]{.hl .hl-blue} |
+| 15% | 0.5 | P95 | 41,583 | 14,262 | 2,422 | 933 |
+| 25% | 1.0 | P05 | 39,197 | 10,079 | 700 | 257 |
+| [25%]{.hl .hl-dred} | [1.0]{.hl .hl-dred} | P50 | 40,225 | 11,894 | [972]{.hl .hl-dred} | [670]{.hl .hl-dred} |
+| 25% | 1.0 | P95 | 41,583 | 14,262 | 1,276 | 1.191 |
+: {tbl-colwidths="[12,12,10,12,12,12,15]"}
+:::
+::: {.tbl-note}
+The table shows the median and a confidence interval (P5 and P95) of a projection based on 100 simulations.
+:::
+
+::: {.aside}
+Source: @humer:2014
+:::
+
+## Inheritance taxes in Europe {.smaller}
+
+![](img/inheritancetaxeurope.png){fig-align="center" height="500px"}
+
+::: {.aside}
+Source: Tax Foundation
+:::
+
+## Evolution of inheritance tax rates, 1900-2017 {.smaller}
+
+![](img/inheritancetax.png){fig-align="center" height="500px"}
+
+::: {.aside}
+Source: @wir:2018
+:::
+
+## Bibliography {.bibstyle}
+
+:::footer
+:::

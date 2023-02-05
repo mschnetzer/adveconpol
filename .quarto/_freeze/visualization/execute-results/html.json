@@ -1,0 +1,14 @@
+{
+  "hash": "21f417ba0d5f7d4ddff713956d0adb1d",
+  "result": {
+    "markdown": "---\ntitle: \"Chart & Report\"\npage-layout: full\ncss: layout/css/adveconpol.scss\n---\n\n\n#### Data visualization\n\nYou will create a preliminary chart for a presentation in one of the two final sessions of the course. The presentation should provide an intuition of the research question you want to address, the underlying data of the chart and, most important, your ideas for composing the chart in that style. **Your time slot for the presentation is five minutes.** Then we will have a brief Q&A. You are free to present only one slide with your chart or up to 4 slides to lead the audience through the process of chart creation, e.g.\n\n\n::: {.cell}\n\n```{.r .cell-code}\n5+9\n```\n\n::: {.cell-output .cell-output-stdout}\n```\n[1] 14\n```\n:::\n:::\n\n\n- Research question: What do you want to test with your chart? \n- Data: What data did you use?\n- Chart: What does the chart show? What were your thoughts when choosing this style?\n- Conclusion: What can we learn from the data visualization for economic policy?\n\n#### RMarkdown report\n\nYou have to draft a rudimentary research proposal for a hypothetical (but feasible) bachelor thesis [on a selected topic](#topics). **The final version of the report is due on June 30, 2023.** This research project should be an empirical project, i.e. you should work with data. Writing a proposal includes the formulation of a relevant and interesting research question, a literature review that allows you to identify the research gap you will contribute to (and hence an explanation of your contribution to the relevant literature), the search for and explanation of an available data set that includes the information you need, and a brief outline of the methodology. You should structure the report as follows:\n\n- *Introduction:* Explain why the topic you chose is important and interesting for the academic/public debate.\n- *Research question:* What is the specific research question that you want to address with your visualization?\n- *Data:* What data did you use? What were the limitations and problems of data availability? What should the reader be aware of when looking at the chart?\n- *Result:* Present and describe the chart that you have created.\n- *Conclusion*: What are the policy conclusions of your chart? \n- *Code:* Provide the full code for your data visualization as a code block in the appendix of the report.\n\n#### Cheatsheets\n\n[![](data/img/dplyr.png){width=120}](data/cheatsheets/dplyr.pdf) [![](data/img/ggplot2.png){width=120}](data/cheatsheets/ggplot.pdf) [![](data/img/rmarkdown.png){width=120}](data/cheatsheets/rmarkdown.pdf)",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

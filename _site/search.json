@@ -1,0 +1,1080 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "PI 5620 Advanced Economic Policy",
+    "section": "",
+    "text": "Advanced Economic Policy\n        \n        \n            Economic Policy Visualization\n        \n        \n            PI 5620 • Summer term 2023  Vienna University of Economics and Business\n        \n    \n    \n          \n            \n            \n          \n        \n\n\n\n\n\nLecturer\n\n   Dr. Matthias Schnetzer\n   https://mschnetzer.github.io\n   mschnetz@wu.ac.at\n   matschnetzer\n\n\n\nCourse details\n\n   Mar 6, 2023 – Jun 26, 2023\n   Mondays\n   10:00–12:00\n   TC.4.15\n\n\n\nContact\nPlease contact me via e-mail and I will usually respond within a few days. Note that we use the learning platform learn.wu.ac.at for all assignments in this course.\n\n\n\nSummary\n“A picture is worth a thousand words”. This course approaches contemporary issues of economic policy by analyzing innovative or iconic data visualizations. Based on selected illustrations, we discuss the underlying data, the theoretical background and policy implications in various fields of empirical economics. In a second step, we will assemble plots in class and study the basics of data visualization. Students are required to recreate figures at home to improve their skills in coding. The main task is that students will design a comprehensive data visualization with the ggplot-Package in R and draft a report around that figure in RMarkdown. Student will need to bring their laptop to class and prior knowledge of data handling in R is beneficial.\n  \nTo sum up, students will gain:\n\n\nan overview of contemporary debates in economic policy based on recent empirical research\na basic understanding of principles of data visualization and the use of figures in economic policy debates\nknowledge how to enrich academic publications with informative graphs"
+  },
+  {
+    "objectID": "slides/04_wealth/index.html#recap",
+    "href": "slides/04_wealth/index.html#recap",
+    "title": "    The economics of inequality",
+    "section": "Recap",
+    "text": "Recap\n\n\n\n\n\nWhich trend can you identify for the wage share in most European countries and why is that?\nWhat are Kuznets Waves?\nWhat does the elephant curve by Branko Milanovic show?\nWhat are malign and benign factors that might lead to a decrease in global inequality?"
+  },
+  {
+    "objectID": "slides/04_wealth/index.html#definition-of-private-wealth",
+    "href": "slides/04_wealth/index.html#definition-of-private-wealth",
+    "title": "    The economics of inequality",
+    "section": "Definition of private wealth",
+    "text": "Definition of private wealth\n\n\n\nNon-financial assets\n\nDwellings (owner-occupied residence, other real estate)\nConsumer durables (vehicles, etc.)\nValuables\nIntellectual property\n\n\n\nFinancial assets\n\nCurrency and deposits\nNet equity in own unincorporated business\nMututal funds and investment funds\n(Private) Pensions funds\nBonds and other debt securities\nShares and other equity\nLife insurance funds -Other financial assets\n\n\n\nLiabilities\n\nOwner-occupied residence loans\nConsumer durable loans (e.g. for vehicles)\nOther investment loans (collateralized)\nOther loans (e.g. education loans)\n\n\n\n\n\nNo human, social and cultural capital; No public social security pensions (marketable vs. augmented wealth)\n\n\n\nSource: OECD (2013)"
+  },
+  {
+    "objectID": "slides/04_wealth/index.html#hfcs-versus-national-accounts",
+    "href": "slides/04_wealth/index.html#hfcs-versus-national-accounts",
+    "title": "    The economics of inequality",
+    "section": "HFCS versus National Accounts",
+    "text": "HFCS versus National Accounts\n\n\n\n\n\n\n\n\n\n\n\nUnderreporting in HFCS in % of NA\nTangible assets\nFinancial wealth\nLiabilities\nNet wealth\n\n\n\n\nAustria\n-8\n62\n59\n12\n\n\nGermany\n15\n58\n29\n30\n\n\nFrance\n17\n61\n33\n32\n\n\nSpain\n16\n63\n39\n24\n\n\nItaly\n-5\n80\n60\n23\n\n\nBelgium\n-21\n42\n24\n6\n\n\nFinland\n-1\n63\n12\n22\n\n\nNetherlands\n13\n86\n16\n47\n\n\n\n\n\n\nSource: Vermeulen (2016)"
+  },
+  {
+    "objectID": "slides/04_wealth/index.html#why-is-there-underreporting-in-hfcs",
+    "href": "slides/04_wealth/index.html#why-is-there-underreporting-in-hfcs",
+    "title": "    The economics of inequality",
+    "section": "Why is there underreporting in HFCS?",
+    "text": "Why is there underreporting in HFCS?\n\n\nTarget population in Austria: 3.9 million households\nGross sample in HFCS 2017: 6,280 households\nRealized interviews: 3,072 households\nResponse rate in HFCS 2017: approx. 50%\nResidual: refused interviews, invalid addresses, households not available, etc.\n\n\n\n\nResponse refusal correlates with wealth and is highest at the top (Vermeulen, 2016)\nWealthy households own a greater number of assets and miss some components more easily (Kennickell/Woodburn, 1999)\n\n\n\nPress R"
+  },
+  {
+    "objectID": "slides/04_wealth/index.html#upstream-strategy-oversampling",
+    "href": "slides/04_wealth/index.html#upstream-strategy-oversampling",
+    "title": "    The economics of inequality",
+    "section": "Upstream strategy: Oversampling",
+    "text": "Upstream strategy: Oversampling\n\nUndercoverage and Underreporting\nOversampling is crucial for wealth surveys\nOversampling in HFCS 2017: 🇧🇪 🇨🇾 🇩🇪 🇪🇪 🇪🇸 🇫🇮 🇫🇷 🇬🇷 🇭🇷 🇭🇺 🇮🇪 🇱🇻 🇱🇹 🇱🇺 🇵🇱 🇵🇹 🇸🇰\nNo oversampling: 🇦🇹 🇮🇹 🇲🇹 🇳🇱 🇸🇮\nHow does oversampling work?\n\nExternal personal wealth data (🇫🇷 🇪🇸)\nList of streets with high-income people (🇩🇪 🇸🇰)\nIncome tax data (🇱🇺 20% of the sample from top 10% earners)\nRegions with higher average income (🇵🇱)"
+  },
+  {
+    "objectID": "slides/04_wealth/index.html#downstream-strategy-pareto-estimation",
+    "href": "slides/04_wealth/index.html#downstream-strategy-pareto-estimation",
+    "title": "    The economics of inequality",
+    "section": "Downstream strategy: Pareto estimation",
+    "text": "Downstream strategy: Pareto estimation\n\nPareto-Distribution is a sensible approximation to the distribution of large wealth\nTwo parameters:\n\nThreshold for “large” wealth \\(m\\)\nPareto-Index \\(\\alpha\\)\n\n\n\\[P_i(x_i) = Pr(X_i \\leqslant x_i) = 1 - \\left(\\frac{m_i}{x_i}\\right)^{\\alpha_i}\\] \\[\\forall ~\\text{implicates} ~i = 1...5 \\wedge x_i \\geqslant m_i\\]\n\nA smaller \\(\\alpha\\) means greater inequality. Empirically, \\(\\alpha\\) often is around 1.5 for wealth.\n\n\n\n Reading recommendation: Gabaix (2016)"
+  },
+  {
+    "objectID": "slides/04_wealth/index.html#european-rich-list-database-erldb-and-hfcs",
+    "href": "slides/04_wealth/index.html#european-rich-list-database-erldb-and-hfcs",
+    "title": "    The economics of inequality",
+    "section": "European Rich List Database (ERLDB) and HFCS",
+    "text": "European Rich List Database (ERLDB) and HFCS"
+  },
+  {
+    "objectID": "slides/04_wealth/index.html#cumulative-density-function-of-wealth-in-germany",
+    "href": "slides/04_wealth/index.html#cumulative-density-function-of-wealth-in-germany",
+    "title": "    The economics of inequality",
+    "section": "Cumulative density function of wealth in Germany",
+    "text": "Cumulative density function of wealth in Germany"
+  },
+  {
+    "objectID": "slides/04_wealth/index.html#adjustment-of-top-1-shares",
+    "href": "slides/04_wealth/index.html#adjustment-of-top-1-shares",
+    "title": "    The economics of inequality",
+    "section": "Adjustment of top 1% shares",
+    "text": "Adjustment of top 1% shares"
+  },
+  {
+    "objectID": "slides/04_wealth/index.html#convergence-of-adjusted-survey-data-and-national-accounts",
+    "href": "slides/04_wealth/index.html#convergence-of-adjusted-survey-data-and-national-accounts",
+    "title": "    The economics of inequality",
+    "section": "Convergence of adjusted survey data and national accounts",
+    "text": "Convergence of adjusted survey data and national accounts"
+  },
+  {
+    "objectID": "slides/04_wealth/index.html#self-positioning-in-the-wealth-distribution",
+    "href": "slides/04_wealth/index.html#self-positioning-in-the-wealth-distribution",
+    "title": "    The economics of inequality",
+    "section": "Self-positioning in the wealth distribution",
+    "text": "Self-positioning in the wealth distribution\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCorrect positioning of households in the richest decile: 0\nAverage estimated decile in the richest decile: 6\nAverage estimated decile in the poorest decile: 3\n\n\n\n\n\nFor animated version, see here"
+  },
+  {
+    "objectID": "slides/04_wealth/index.html#net-wealth-distribution-in-austria",
+    "href": "slides/04_wealth/index.html#net-wealth-distribution-in-austria",
+    "title": "    The economics of inequality",
+    "section": "Net wealth distribution in Austria",
+    "text": "Net wealth distribution in Austria\n\n\n\n\nMedian: 83,000€\n\n\nAverage net wealthof total population:318,000€\n\n\nAverage net wealthof top 1%:12,500,000€\n\n\n\nSource: Heck et al. (2020)"
+  },
+  {
+    "objectID": "slides/04_wealth/index.html#alternative-figure-for-wealth-distribution",
+    "href": "slides/04_wealth/index.html#alternative-figure-for-wealth-distribution",
+    "title": "    The economics of inequality",
+    "section": "Alternative figure for wealth distribution",
+    "text": "Alternative figure for wealth distribution"
+  },
+  {
+    "objectID": "slides/04_wealth/index.html#participation-in-wealth-components",
+    "href": "slides/04_wealth/index.html#participation-in-wealth-components",
+    "title": "    The economics of inequality",
+    "section": "Participation in wealth components",
+    "text": "Participation in wealth components\n\n\n\n \n  \n    Participation in % \n    Bottom half(0-50%) \n    Upper middle(51-80%) \n    Affluent(91-95%) \n    Top 5%(96-100%) \n  \n \n\n  \n    Vehicles \n    65.5 \n    87.4 \n    93.2 \n    97.4 \n  \n  \n    Owner-occupied residence \n    6.2 \n    80.3 \n    94.1 \n    93.2 \n  \n  \n    Other real estate \n    2.8 \n    14.7 \n    27.9 \n    60.8 \n  \n  \n    Business wealth \n    2.1 \n    4.8 \n    13.3 \n    50.2 \n  \n  \n    Deposits \n    99.4 \n    99.6 \n    99.3 \n    100.0 \n  \n  \n    Saving accounts \n    80.1 \n    91.1 \n    95.5 \n    97.7 \n  \n  \n    Mutual and investment funds \n    3.6 \n    8.1 \n    19.6 \n    26.9 \n  \n  \n    Bonds \n    1.2 \n    2.8 \n    5.0 \n    9.7 \n  \n  \n    Shares \n    1.9 \n    5.8 \n    10.1 \n    15.0"
+  },
+  {
+    "objectID": "slides/04_wealth/index.html#gender-net-wealth-gap-in-austria",
+    "href": "slides/04_wealth/index.html#gender-net-wealth-gap-in-austria",
+    "title": "    The economics of inequality",
+    "section": "Gender net wealth gap in Austria",
+    "text": "Gender net wealth gap in Austria\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMean wealth\nMean GWG (in €)\nMean GWG (in %)\nMedian Wealth\nMedian GWG (in €)\nMedian GWG (in %)\n\n\n\n\nAll respondents\n\n\n\n\n\n\n\n\nCouples\n356,553\n\n\n173,683\n\n\n\n\nMale\n207,485\n58,417\n28\n82,285\n13,862\n17\n\n\nFemale\n149,068\n\n\n68,422\n\n\n\n\nMale respondent\n\n\n\n\n\n\n\n\nMale\n270,307\n110,995\n41.1\n99,347\n27,085\n27.3\n\n\nFemale\n159,312\n\n\n72,262\n\n\n\n\nFemale respondent\n\n\n\n\n\n\n\n\nMale\n138,830\n957\n0.7\n63,825\n−1,395\n-2.2\n\n\nFemale\n137,873\n\n\n65,220\n\n\n\n\n\n\n\n\nNote: The respondent in HFCS is the financially most knowledgeable person who is best informed about the household’s finances.  Source: Rehm et al. (2022)"
+  },
+  {
+    "objectID": "slides/04_wealth/index.html#migrant-net-wealth-gap-in-austria",
+    "href": "slides/04_wealth/index.html#migrant-net-wealth-gap-in-austria",
+    "title": "    The economics of inequality",
+    "section": "Migrant net wealth gap in Austria",
+    "text": "Migrant net wealth gap in Austria\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMean wealth\nMean MWG (in €)\nMean MWG (in %)\nMedian Wealth\nMedian MWG (in €)\nMedian MWG (in %)\n\n\n\n\nNatives\n165,730\n\n\n59,001\n\n\n\n\nMigrants\n\n\n\n\n\n\n\n\nTotal\n98,007\n67,723\n41\n15,931\n43,070\n73\n\n\n1st generation\n63,001\n102,729\n62\n9,917\n49,084\n83\n\n\n2nd generation\n139,775\n25,955\n16\n32,763\n26,238\n44\n\n\n1st generation migrants only\n\n\n\n\n\n\n\n\nShort stay\n39,598\n126,132\n76\n4,935\n54,066\n92\n\n\nLong stay\n86,317\n79,413\n48\n20,196\n38,805\n66\n\n\n\n\n\n\nNote: First-generation migrants are distinguished into short (⩽20 years) and long (>20 years) time since arrival in Austria. Source: Muckenhuber et al. (2022)"
+  },
+  {
+    "objectID": "slides/04_wealth/index.html#global-income-and-wealth-inequality",
+    "href": "slides/04_wealth/index.html#global-income-and-wealth-inequality",
+    "title": "    The economics of inequality",
+    "section": "Global income and wealth inequality",
+    "text": "Global income and wealth inequality\n\n\n\n\n\n\n\nSource: Chancel et al. (2022)"
+  },
+  {
+    "objectID": "slides/04_wealth/index.html#income-and-wealth-inequality-across-europe",
+    "href": "slides/04_wealth/index.html#income-and-wealth-inequality-across-europe",
+    "title": "    The economics of inequality",
+    "section": "Income and wealth inequality across Europe",
+    "text": "Income and wealth inequality across Europe"
+  },
+  {
+    "objectID": "slides/04_wealth/index.html#extreme-global-wealth-inequality",
+    "href": "slides/04_wealth/index.html#extreme-global-wealth-inequality",
+    "title": "    The economics of inequality",
+    "section": "Extreme global wealth inequality",
+    "text": "Extreme global wealth inequality\n\n\n\n\n\n\n\nSource: Chancel et al. (2022)"
+  },
+  {
+    "objectID": "slides/04_wealth/index.html#private-and-public-wealth",
+    "href": "slides/04_wealth/index.html#private-and-public-wealth",
+    "title": "    The economics of inequality",
+    "section": "Private and public wealth",
+    "text": "Private and public wealth\n\n\n\n\n\n\n\nSource: Chancel et al. (2022)"
+  },
+  {
+    "objectID": "slides/04_wealth/index.html#bibliography",
+    "href": "slides/04_wealth/index.html#bibliography",
+    "title": "    The economics of inequality",
+    "section": "Bibliography",
+    "text": "Bibliography\n\n\n\n\n\n\nPI 2159 Special Topics in Economic Policy | Winter term 2022/23\n\n\n\nChancel, Lucas/Piketty, Thomas/Saez, Emmanuel/Zucman, Gabriel (2022). World inequality report 2022. World Inequality Lab.\n\n\nGabaix, Xavier (2016). Power laws in economics: An introduction. Journal of Economic Perspectives, 30(1), 185–206. DOI: 10.1257/jep.30.1.185\n\n\nHeck, Ines/Kapeller, Jakob/Wildauer, Rafael (2020). Vermögenskonzentration in Österreich – ein update auf basis des HFCS 2017 (AK Working Paper No. 206). AK Wien.\n\n\nKennickell, Arthur B./Woodburn, R. Louise (1999). Consistent weight design for the 1989, 1992 and 1995 SCFs, and the distribution of wealth. Review of Income and Wealth, 45(2), 193–215. DOI: 10.1111/j.1475-4991.1999.tb00328.x\n\n\nMuckenhuber, Mattias/Rehm, Miriam/Schnetzer, Matthias (2022). A tale of integration? The migrant wealth gap in austria. European Journal of Population, 38(2), 163–190. DOI: 10.1007/s10680-021-09604-1\n\n\nOECD (2013). OECD guidelines for micro statistics on household wealth. OECD. DOI: 10.1787/9789264194878-en\n\n\nRehm, Miriam/Schneebaum, Alyssa/Schuster, Barbara (2022). Intra-couple wealth inequality: What’s socio-demographics got to do with it? European Journal of Population, 38(4), 681–720. DOI: 10.1007/s10680-022-09633-4\n\n\nVermeulen, Philip (2016). Estimating the top tail of the wealth distribution. The American Economic Review, 106(5), 646–650. DOI: 10.1257/aer.p20161021"
+  },
+  {
+    "objectID": "slides/08_fiscalpolicy/index.html#recap",
+    "href": "slides/08_fiscalpolicy/index.html#recap",
+    "title": "    The economics of inequality",
+    "section": "Recap",
+    "text": "Recap\n\n\n\n\n\nWhat are wage-led and profit-led growth?\nHow do growth regimes differ for small open and large closed economies?\nWhat are the opposed theories for the relationship between personal inequality and current account balances?"
+  },
+  {
+    "objectID": "slides/08_fiscalpolicy/index.html#keynesian-legitimation-for-fiscal-policy",
+    "href": "slides/08_fiscalpolicy/index.html#keynesian-legitimation-for-fiscal-policy",
+    "title": "    The economics of inequality",
+    "section": "Keynesian legitimation for fiscal policy",
+    "text": "Keynesian legitimation for fiscal policy\n\nAggregate demand determines economic growth\nLack of aggregate demand and involuntary unemployment persists\nFiscal policy is essential to reduce economic volatility\nAnti-cyclic fiscal policy (government spending and taxation)\nNo balanced budget required in the short term\nPublic investment features multiplier effect"
+  },
+  {
+    "objectID": "slides/08_fiscalpolicy/index.html#the-fiscal-multiplier",
+    "href": "slides/08_fiscalpolicy/index.html#the-fiscal-multiplier",
+    "title": "    The economics of inequality",
+    "section": "The fiscal multiplier",
+    "text": "The fiscal multiplier\n\\[ Y = C(\\theta) + I(r) + G + NX \\]\n\n\\[ C = \\alpha_0 + \\alpha_1 (1 - \\theta) Y \\]\n\n\n\\[ Y - \\alpha_1(1-\\theta)Y = \\alpha_0 + I(r) + G + NX \\]\n\n\n\\[ \\frac{\\partial Y}{\\partial G} = \\frac{1}{(1 - \\alpha_1 + \\alpha_1 \\theta)} \\]\n\n\n\\[ \\alpha_1 \\in (0, 1); \\; \\theta \\in (0, 1); \\; \\frac{\\partial Y}{\\partial G} > 1 \\]"
+  },
+  {
+    "objectID": "slides/08_fiscalpolicy/index.html#second-round-effects",
+    "href": "slides/08_fiscalpolicy/index.html#second-round-effects",
+    "title": "    The economics of inequality",
+    "section": "Second-round effects",
+    "text": "Second-round effects\n\\[ \\alpha_1 = 0.6; \\; \\theta = 0.3; \\]\nTotal multiplier: \\[ Y^* = 1/(1 - 0.6 + 0.6 \\cdot 0.3) \\simeq 1.7 \\]\nFirst round: \\[ \\alpha_1 (1-\\theta)\\Delta Y = 0.6 \\cdot (1-0.3) \\cdot 1 \\simeq 0.4 \\]\nSecond round: \\[ 0.6 \\cdot (1-0.3) \\cdot 0.4 \\simeq 0.2 \\]"
+  },
+  {
+    "objectID": "slides/08_fiscalpolicy/index.html#keynes-cross",
+    "href": "slides/08_fiscalpolicy/index.html#keynes-cross",
+    "title": "    The economics of inequality",
+    "section": "Keynes Cross",
+    "text": "Keynes Cross"
+  },
+  {
+    "objectID": "slides/08_fiscalpolicy/index.html#discuss-with-your-neighbour",
+    "href": "slides/08_fiscalpolicy/index.html#discuss-with-your-neighbour",
+    "title": "    The economics of inequality",
+    "section": "Discuss with your neighbour",
+    "text": "Discuss with your neighbour\nWhat do you expect the effect of restrictive fiscal policy (taxes and spending) on income inequality to be?\nWhat are the potential channels for these effects?"
+  },
+  {
+    "objectID": "slides/08_fiscalpolicy/index.html#effects-of-fiscal-consolidation",
+    "href": "slides/08_fiscalpolicy/index.html#effects-of-fiscal-consolidation",
+    "title": "    The economics of inequality",
+    "section": "Effects of fiscal consolidation",
+    "text": "Effects of fiscal consolidation\nStudies typically find that inequality increases in periods of fiscal consolidation (with similar data):\n\nBall et al. (2013): 17 OECD countries from 1978 to 2009\nAgnello/Sousa (2014): 18 industrialized countries from 1978 to 2009\nWoo et al. (2016): 17 OECD countries from 1980 to 2010\nHeimberger (2020): 17 OECD countries from 1978 to 2013\n\nData on fiscal consolidation is provided by Devries et al. (2011): “A New Action-based Dataset of Fiscal Consolidation”. Narrative approach that focuses on policy actions (tax hikes and/or spending cuts) taken by governments with the intent of reducing the budget deficit.\nMethodology: Impulse response functions (IRF) from local projections as proposed by Jordà (2005)."
+  },
+  {
+    "objectID": "slides/08_fiscalpolicy/index.html#consolidation-episodes",
+    "href": "slides/08_fiscalpolicy/index.html#consolidation-episodes",
+    "title": "    The economics of inequality",
+    "section": "Consolidation episodes",
+    "text": "Consolidation episodes\n\n\n\n\n\n\n\n\n\n\nCountry\nEpidodes\nCountry\nEpidodes\n\n\n\n\n🇦🇺\n1985–1988, 1994–1999\n🇮🇹\n1991–1998, 2004–2007, 2010–2013\n\n\n🇦🇹\n1980–1981, 1984, 1996–1997, 2001–2002, 2011–2013\n🇯🇵\n1979–1983, 1997–1998, 2003–2007\n\n\n🇧🇪\n1982–1985, 1987, 1990, 1992–1994, 1996–1997, 2010–2013\n🇳🇱\n1981–1988, 1991–1993, 2004–2005\n\n\n🇨🇦\n1984–1997\n🇵🇹\n1983, 2000, 2002, 2005–2007, 2010–2013\n\n\n🇩🇰\n1983–1986, 1995, 2011–2013\n🇪🇸\n1983–1984, 1989, 1992–1997, 2009–2013\n\n\n🇫🇮\n1992–1997\n🇸🇪\n1984, 1993–1998\n\n\n🇫🇷\n1979, 1987, 1991, 1995–1997, 2011–2013\n🇬🇧\n1979–1982, 1994–1999, 2010–2013\n\n\n🇩🇪\n1982–1984, 1991–1995, 1997, 1999–2000, 2003–2004, 2006–2007, 2011–2013\n🇺🇸\n1978, 1980–1981, 1985–1988, 1990–1998, 2011–2013\n\n\n🇮🇪\n1982–1988, 2009–2013\n\n\n\n\n\n\n\n\nSource: Devries et al. (2011)"
+  },
+  {
+    "objectID": "slides/08_fiscalpolicy/index.html#austerity-measures-have-dampened-growth-in-europe",
+    "href": "slides/08_fiscalpolicy/index.html#austerity-measures-have-dampened-growth-in-europe",
+    "title": "    The economics of inequality",
+    "section": "Austerity measures have dampened growth in Europe",
+    "text": "Austerity measures have dampened growth in Europe"
+  },
+  {
+    "objectID": "slides/08_fiscalpolicy/index.html#fiscal-consolidation-increases-inequality",
+    "href": "slides/08_fiscalpolicy/index.html#fiscal-consolidation-increases-inequality",
+    "title": "    The economics of inequality",
+    "section": "Fiscal consolidation increases inequality",
+    "text": "Fiscal consolidation increases inequality\n\n\n\n\n\n\n\nSource: Ball et al. (2013)"
+  },
+  {
+    "objectID": "slides/08_fiscalpolicy/index.html#fiscal-consolidation-spending-versus-taxes",
+    "href": "slides/08_fiscalpolicy/index.html#fiscal-consolidation-spending-versus-taxes",
+    "title": "    The economics of inequality",
+    "section": "Fiscal consolidation: Spending versus taxes",
+    "text": "Fiscal consolidation: Spending versus taxes\n\n\n\n\n\n\n\nSource: Ball et al. (2013)"
+  },
+  {
+    "objectID": "slides/08_fiscalpolicy/index.html#results-seem-to-be-stable-across-studies",
+    "href": "slides/08_fiscalpolicy/index.html#results-seem-to-be-stable-across-studies",
+    "title": "    The economics of inequality",
+    "section": "Results seem to be stable across studies",
+    "text": "Results seem to be stable across studies\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSource: Woo et al. (2016)"
+  },
+  {
+    "objectID": "slides/08_fiscalpolicy/index.html#fiscal-consolidation-increases-unemployment",
+    "href": "slides/08_fiscalpolicy/index.html#fiscal-consolidation-increases-unemployment",
+    "title": "    The economics of inequality",
+    "section": "Fiscal consolidation increases unemployment",
+    "text": "Fiscal consolidation increases unemployment\n\n\n\n\n\n\n\nSource: Ball et al. (2013)"
+  },
+  {
+    "objectID": "slides/08_fiscalpolicy/index.html#effects-of-contractionary-monetary-policy-shocks",
+    "href": "slides/08_fiscalpolicy/index.html#effects-of-contractionary-monetary-policy-shocks",
+    "title": "    The economics of inequality",
+    "section": "Effects of contractionary monetary policy shocks",
+    "text": "Effects of contractionary monetary policy shocks\nStudy by Furceri et al. (2018):\n\n(unanticipated) changes in short-term interest rates for a panel of 32 countries from 1990 to 2013\ncontractionary monetary policy shocks increase income inequality, expansionary monetary policy reduces inequality\neffect is asymmetric: tightening of monetary policy raises inequality more than easing lowers it"
+  },
+  {
+    "objectID": "slides/08_fiscalpolicy/index.html#effect-of-monetary-policy-on-output-unemployment-and-inflation",
+    "href": "slides/08_fiscalpolicy/index.html#effect-of-monetary-policy-on-output-unemployment-and-inflation",
+    "title": "    The economics of inequality",
+    "section": "Effect of monetary policy on output, unemployment and inflation",
+    "text": "Effect of monetary policy on output, unemployment and inflation\n\n\n\n\n\n\n\nSource: Furceri et al. (2018)"
+  },
+  {
+    "objectID": "slides/08_fiscalpolicy/index.html#effect-of-monetary-policy-shocks-on-inequality",
+    "href": "slides/08_fiscalpolicy/index.html#effect-of-monetary-policy-shocks-on-inequality",
+    "title": "    The economics of inequality",
+    "section": "Effect of monetary policy shocks on inequality",
+    "text": "Effect of monetary policy shocks on inequality\n\n\n\n\n\n\n\nSource: Furceri et al. (2018)"
+  },
+  {
+    "objectID": "slides/08_fiscalpolicy/index.html#bibliography",
+    "href": "slides/08_fiscalpolicy/index.html#bibliography",
+    "title": "    The economics of inequality",
+    "section": "Bibliography",
+    "text": "Bibliography\n\n\n\n\n\n\nPI 2159 Special Topics in Economic Policy | Winter term 2022/23\n\n\n\nAgnello, Luca/Sousa, Ricardo M. (2014). How does fiscal consolidation impact on income inequality? Review of Income and Wealth, 60(4), 702–726. DOI: 10.1111/roiw.12004\n\n\nBall, Laurence/Furceri, Davide/Leigh, Daniel/Loungani, Prakash (2013). The distributional effects of fiscal consolidation (Working Paper No. WP/13/151). IMF.\n\n\nDevries, Pete/Guajardo, Jaime/Leigh, Daniel/Pescatori, Andrea (2011). A new action-based dataset of fiscal consolidation (Working Paper No. WP/11/128). IMF.\n\n\nFurceri, Davide/Loungani, Prakash/Zdzienicka, Aleksandra (2018). The effects of monetary policy shocks on inequality. Journal of International Money and Finance, 85, 168–186. DOI: 10.1016/j.jimonfin.2017.11.004\n\n\nHeimberger, Philipp (2020). The dynamic effects of fiscal consolidation episodes on income inequality: Evidence for 17 OECD countries over 19782013. Empirica, 47(1), 53–81. DOI: 10.1007/s10663-018-9404-z\n\n\nJordà, Òscar (2005). Estimation and inference of impulse responses by local projections. American Economic Review, 95(1), 161–182. DOI: 10.1257/0002828053828518\n\n\nWoo, Jaejoon/Bova, Elva/Kinda, Tidiane/Zhang, Y. Sophia (2016). Distributional consequences of fiscal adjustments: What do the data say? IMF Economic Review, 65(2), 273–307. DOI: 10.1057/s41308-016-0021-1"
+  },
+  {
+    "objectID": "slides/07_growth/index.html#recap",
+    "href": "slides/07_growth/index.html#recap",
+    "title": "    The economics of inequality",
+    "section": "Recap",
+    "text": "Recap\n\n\n\n\n\nWhat are the channels of income redistribution by the welfare state?\nWhat do the terms “progressive” and “regressive” with regard to the tax system mean?\nWhich one has a stronger effect on redistribution in Austria? Taxation or transfers?"
+  },
+  {
+    "objectID": "slides/07_growth/index.html#distribution-and-growth",
+    "href": "slides/07_growth/index.html#distribution-and-growth",
+    "title": "    The economics of inequality",
+    "section": "Distribution and growth",
+    "text": "Distribution and growth\nTwo questions in Post-Keynesian economics:\n\nWhich effect do real wage increases have on employment?\nWhich effect does a shift in the functional distribution have on growth?\n\n\n\n Lavoie, Marc (2006): Introduction to Post-Keynesian Economics. Palgrave Macmillan: New York, chapters 4 & 5."
+  },
+  {
+    "objectID": "slides/07_growth/index.html#labour-market-in-economics",
+    "href": "slides/07_growth/index.html#labour-market-in-economics",
+    "title": "    The economics of inequality",
+    "section": "Labour market in economics",
+    "text": "Labour market in economics\nNeoclassical model of the labour market:\n\nPrice (real wage) brings supply and demand into equilibrium\nLM = one market among many\nEffect of real wage increase on employment is negative\nWhy? Wages are costs\n\nPost-Keynesians:\n\nLabour market is downstream of production\nProduction is determined by effective demand\nEffect of real wage increase on employment is positive\nWhy? Wages are demand"
+  },
+  {
+    "objectID": "slides/07_growth/index.html#post-keynesian-growth-models",
+    "href": "slides/07_growth/index.html#post-keynesian-growth-models",
+    "title": "    The economics of inequality",
+    "section": "Post-Keynesian growth models",
+    "text": "Post-Keynesian growth models\n4 generations of PK growth models:\n\nKeynes, Kalecki\nRobinson, Kaldor\nBhaduri, Marglin, Dutt, Taylor\nBarbosa, Rada, Rezai, Hein, Onaran, Stockhammer\n\n\n\n\n\n\n\nFull employment\nUnemployment\n\n\n\n\nFull capacity utilization\nKaldor (v.1)\nRobinson\n\n\nExcess capacity\n-\nKalecki"
+  },
+  {
+    "objectID": "slides/07_growth/index.html#general-framework",
+    "href": "slides/07_growth/index.html#general-framework",
+    "title": "    The economics of inequality",
+    "section": "General framework",
+    "text": "General framework\n\nPost-Keynesian growth model: Investment and savings function depend on distribution (neither savings nor technological progress determine growth)\nAggregate output equals wages and profits (\\(r\\) = profit rate) \\[ pX = wN + prK \\]\n\\(\\delta\\) is the wage share and \\(\\pi\\) is the profit share \\[ \\delta = \\frac{wN}{pX} \\\\\n\\pi = \\frac{prK}{pX} = \\frac{rK}{X} \\]"
+  },
+  {
+    "objectID": "slides/07_growth/index.html#determination-of-profit-rate",
+    "href": "slides/07_growth/index.html#determination-of-profit-rate",
+    "title": "    The economics of inequality",
+    "section": "Determination of profit rate",
+    "text": "Determination of profit rate\n\nLet \\(X_{fe}\\) be potential output, \\(l\\) labour/output ratio, \\(v\\) capital/output ratio (= technology, assumed constant: \\(v=1\\)) and \\(u\\) capacity utilization \\[ l=\\frac{N}{X}; v=\\frac{K}{X_{fe}}; u=\\frac{X}{X_{fe}} \\] \\[ p=w\\frac{N}{X} + rp \\frac{K}{X}; \\frac{K}{X} = \\frac{v}{u}; v=1; \\] \\[ p = wl + rpu^{−1} \\rightarrow \\pi = \\frac{rp}{up} = \\frac{r}{u} \\rightarrow r= \\pi u \\]\nProfit rate \\(r\\) depends on profit share \\(\\pi\\) and capacity utilization \\(u\\)"
+  },
+  {
+    "objectID": "slides/07_growth/index.html#recall-partial-derivatives",
+    "href": "slides/07_growth/index.html#recall-partial-derivatives",
+    "title": "    The economics of inequality",
+    "section": "Recall partial derivatives",
+    "text": "Recall partial derivatives\n\\[ y = \\frac{u(x)}{v(x)} \\]\n\\[ y' = \\frac{u'(x) \\cdot v(x) - v'(x) \\cdot u(x)}{v^2(x)} \\]"
+  },
+  {
+    "objectID": "slides/07_growth/index.html#first-generation-kaldor-robinson",
+    "href": "slides/07_growth/index.html#first-generation-kaldor-robinson",
+    "title": "    The economics of inequality",
+    "section": "First generation: Kaldor-Robinson",
+    "text": "First generation: Kaldor-Robinson\n\nAssumption: Workers do not save, full capacity utilization (\\(u=1\\))\nGrowth rate of investments consists of growth of autonomous investments \\(g_0\\) and the elasticity to the profit rate \\(\\alpha r\\) \\[ g_I = g_0 + \\alpha r \\]\nSavings come only out of profits (Cambridge equation: Pasinetti, 1962) with \\(s\\) as saving propensity of capitalists \\[ g_S = sr \\]\nIn equilibrium \\(g_S = g_I\\) and thus \\[ sr = g_0 + \\alpha r \\\\\nr^∗= \\frac{g_0}{(s − \\alpha)} \\]"
+  },
+  {
+    "objectID": "slides/07_growth/index.html#section",
+    "href": "slides/07_growth/index.html#section",
+    "title": "    The economics of inequality",
+    "section": "",
+    "text": "How does the profit rate react to saving? \\[ \\frac{\\partial r^*}{\\partial s} = − \\frac{g_0}{(s−\\alpha)^2} <0 \\]\nThe equilibrium growth rate with \\(r^*\\) is \\[ g^∗ = g_0 + \\alpha r^* = g_0 + \\alpha \\frac{g_0}{s− \\alpha} = \\frac{sg_0}{s−\\alpha} \\]\nHow does the growth rate react to saving? \\[ \\frac{\\partial g^*}{\\partial s} = \\frac{g_0(s−\\alpha)−sg_0}{(s−\\alpha)^2} = −\\frac{\\alpha g_0}{(s−\\alpha)^2} <0 \\]\nHigher propensity to save reduces growth and profitability due to lower aggregate demand."
+  },
+  {
+    "objectID": "slides/07_growth/index.html#second-generation-neo-kaleckians",
+    "href": "slides/07_growth/index.html#second-generation-neo-kaleckians",
+    "title": "    The economics of inequality",
+    "section": "Second generation: Neo-Kaleckians",
+    "text": "Second generation: Neo-Kaleckians\n\nCapacity utilization now endogenous (relax assumption of \\(u=1\\)); a high capacity utilization leads firms to invest more to satisfy expected demand \\[ g_I = g_0 + \\alpha r + \\beta u \\]\nIn equilibrium \\(g_I = g_S = sr\\) and since \\(r = u \\pi\\) \\[ su\\pi = g_0 + \\alpha u \\pi + \\beta u \\\\\nu^* = \\frac{g_0}{\\pi(s−\\alpha)−\\beta} \\\\\n\\frac{\\partial u^*}{\\partial \\pi} = −\\frac{(s-\\alpha)g_0}{\\left[ \\pi (s−\\alpha)− \\beta\\right]^2} <0 \\]\nA rising profit share reduces aggregate demand (lower consumption propensity of capitalists) and thus capacity utilization"
+  },
+  {
+    "objectID": "slides/07_growth/index.html#section-1",
+    "href": "slides/07_growth/index.html#section-1",
+    "title": "    The economics of inequality",
+    "section": "",
+    "text": "The profit rate falls with rising profit share: \\[ r^* = \\pi u^* = \\frac{\\pi g_0}{\\pi (s−\\alpha)−\\beta} \\\\\n\\frac{\\partial r^*}{\\partial \\pi} = −\\frac{g_0}{[\\pi (s−\\alpha)−\\beta]^2} <0 \\]\nThe growth rate also reacts negatively to a rising profit share \\[ g^* = g_0 + \\alpha r^* + \\beta u^* = \\frac{g_0 \\pi s}{\\pi (s−\\alpha)−\\beta} \\\\\n\\frac{\\partial g^*}{\\partial \\pi} = −\\frac{g_0 s \\beta}{[\\pi (s−\\alpha)−\\beta]^2} <0 \\]"
+  },
+  {
+    "objectID": "slides/07_growth/index.html#third-generation-bhaduri-marglin",
+    "href": "slides/07_growth/index.html#third-generation-bhaduri-marglin",
+    "title": "    The economics of inequality",
+    "section": "Third generation: Bhaduri-Marglin",
+    "text": "Third generation: Bhaduri-Marglin\n\nFocus on the profit share \\(\\pi\\) instead of the profit rate \\(r\\) in the investment function \\[ g_I = g_0 + \\alpha \\pi + \\beta u \\]\nCapacity utilization reacts negatively to a rising profit share \\[ s \\pi u = g_0 + \\alpha \\pi + \\beta u \\\\\nu^* = \\frac{g_0 + \\alpha \\pi}{s\\pi - \\beta} \\\\\n\\frac{\\partial u^*}{\\partial \\pi} = −\\frac{sg_0 + \\alpha\\beta}{(s\\pi - \\beta)^2} <0 \\]"
+  },
+  {
+    "objectID": "slides/07_growth/index.html#wage-ledprofit-led-debate",
+    "href": "slides/07_growth/index.html#wage-ledprofit-led-debate",
+    "title": "    The economics of inequality",
+    "section": "Wage-led/profit-led debate",
+    "text": "Wage-led/profit-led debate\n\nSeminal theoretical paper: Bhaduri/Marglin (1990)\n\nWage-led vs. profit-led: When income is redistributed towards labour, does investment react more strongly to higher demand or to the lower profit rate?\n\nFirst empirical estimate: Bowles/Boyer (1995)\nTaken up by Post-Keynesians\n\nin Europe (Hein, Onaran, Stockhammer, etc.): Neo-Kaleckians, wage-led\nand in the US (Taylor, etc.): Neo-Goodwinians, profit-led"
+  },
+  {
+    "objectID": "slides/07_growth/index.html#components-of-demand",
+    "href": "slides/07_growth/index.html#components-of-demand",
+    "title": "    The economics of inequality",
+    "section": "Components of demand",
+    "text": "Components of demand\n\\[ Y = C + I + NX \\]\nWhich components increase when income is redistributed towards labour?\n\n\nConsumption \\(C\\): rises\nInvestments \\(I\\): depends on firm‘s reaction to higher demand vs. lower profit rate\nNet exports \\(NX\\): imports rise, exports fall \\(\\rightarrow NX\\) fall"
+  },
+  {
+    "objectID": "slides/07_growth/index.html#its-an-empirical-question",
+    "href": "slides/07_growth/index.html#its-an-empirical-question",
+    "title": "    The economics of inequality",
+    "section": "It’s an empirical question",
+    "text": "It’s an empirical question\n\n\n\n\n\n\n\n\n\n\n\n\nWage share ↑\nConsumption\nInvestment\nNet exports\nDom. demand\nTotal demand\n\n\n\n\n🇪🇺\n↑\n↓\n↓\n↑\n↑\n\n\n🇩🇪\n↑\n↓\n↓\n↑\n↑\n\n\n🇫🇷\n↑\n↓\n↓\n↑\n↑\n\n\n🇮🇹\n↑\n↓\n↓\n↑\n↑\n\n\n🇬🇧\n↑\n↓\n↓\n↑\n↑\n\n\n🇺🇸\n↑\n↓\n↓\n↑\n↑\n\n\n🇯🇵\n↑\n↓\n↓\n↑\n↑\n\n\n🇨🇦\n↑\n↓\n↓\n↑\n↓\n\n\n🇦🇺\n↑\n↓\n↓\n↑\n↓\n\n\n🇲🇽\n↑\n↓\n↓\n↑\n↓\n\n\n🇦🇷\n↑\n↓\n↓\n↑\n↓\n\n\n🇨🇳\n↑\n↓\n↓\n↑\n↓\n\n\n🇮🇳\n↑\n↓\n↓\n↑\n↓\n\n\n🇿🇦\n↑\n↓\n↓\n↑\n↓\n\n\n\n\n\n\nSource: Onaran/Galanis (2012)"
+  },
+  {
+    "objectID": "slides/07_growth/index.html#meta-regression-analysis",
+    "href": "slides/07_growth/index.html#meta-regression-analysis",
+    "title": "    The economics of inequality",
+    "section": "Meta-Regression analysis",
+    "text": "Meta-Regression analysis\nIn a new working paper (Dammerer et al., 2022), we study\n\n578 estimates for the relationship between functional distribution and aggregate demand\nfrom 33 empirical studies\nover 163 years and 59 countries and regions\nwhereof 218 estimates refer to total demand and 360 to domestic demand"
+  },
+  {
+    "objectID": "slides/07_growth/index.html#histogram-of-estimates",
+    "href": "slides/07_growth/index.html#histogram-of-estimates",
+    "title": "    The economics of inequality",
+    "section": "Histogram of estimates",
+    "text": "Histogram of estimates"
+  },
+  {
+    "objectID": "slides/07_growth/index.html#funnel-plot-for-total-demand",
+    "href": "slides/07_growth/index.html#funnel-plot-for-total-demand",
+    "title": "    The economics of inequality",
+    "section": "Funnel plot for total demand",
+    "text": "Funnel plot for total demand"
+  },
+  {
+    "objectID": "slides/07_growth/index.html#funnel-plot-for-domestic-demand",
+    "href": "slides/07_growth/index.html#funnel-plot-for-domestic-demand",
+    "title": "    The economics of inequality",
+    "section": "Funnel plot for domestic demand",
+    "text": "Funnel plot for domestic demand"
+  },
+  {
+    "objectID": "slides/07_growth/index.html#bibliography",
+    "href": "slides/07_growth/index.html#bibliography",
+    "title": "    The economics of inequality",
+    "section": "Bibliography",
+    "text": "Bibliography\n\n\n\n\n\n\nPI 2159 Special Topics in Economic Policy | Winter term 2022/23\n\n\n\nBhaduri, Amit/Marglin, Stephen (1990). Unemployment and the real wage: The economic basis for contesting political ideologies. Cambridge Journal of Economics, 14(4), 375–393. DOI: 10.1093/oxfordjournals.cje.a035141\n\n\nBowles, Samuel/Boyer, Robert (1995). Wages, aggregate demand, and employment in an open economy: An empirical investigation. In Macroeconomic policy after the conservative era : Studies in investment, saving and finance (143–171). Cambridge Univ. Press.\n\n\nDammerer, Quirin/List, Ludwig/Rehm, Miriam/Schnetzer, Matthias (2022). What are the macroeconomic effects of a declining wage share? A meta-analysis of the nexus between the functional distribution of income and aggregate demand. Working paper.\n\n\nOnaran, Özlem/Galanis, Giorgos (2012). Is aggregate demand wage-led or profit-led? National and global effects (Conditions of Work and Employment Series No. 40). ILO.\n\n\nPasinetti, Luigi L. (1962). Rate of profit and income distribution in relation to the rate of economic growth. The Review of Economic Studies, 29(4), 267. DOI: 10.2307/2296303"
+  },
+  {
+    "objectID": "slides/03_evolution/index.html#recap",
+    "href": "slides/03_evolution/index.html#recap",
+    "title": "    The economics of inequality",
+    "section": "Recap",
+    "text": "Recap\n\n\n\n\n\nWhich data sources for the measurement of income do you know?\nHow do they measure income and what are their drawbacks?\nHow do we calculate the functional distribution of income?"
+  },
+  {
+    "objectID": "slides/03_evolution/index.html#the-wage-share-in-austria",
+    "href": "slides/03_evolution/index.html#the-wage-share-in-austria",
+    "title": "    The economics of inequality",
+    "section": "The wage share in Austria",
+    "text": "The wage share in Austria\n\n\n\n\n\nNote: Adjusted wage share as percentage of GDP at current factor cost. Source: Ameco (ALCD2)"
+  },
+  {
+    "objectID": "slides/03_evolution/index.html#functional-income-distribution-in-continental-europe",
+    "href": "slides/03_evolution/index.html#functional-income-distribution-in-continental-europe",
+    "title": "    The economics of inequality",
+    "section": "Functional income distribution in Continental Europe",
+    "text": "Functional income distribution in Continental Europe\n\n\n\n\n\nNote: Adjusted wage share as percentage of GDP at current factor cost.  Source: Ameco (ALCD2)"
+  },
+  {
+    "objectID": "slides/03_evolution/index.html#functional-distribution-in-anglosaxon-countries",
+    "href": "slides/03_evolution/index.html#functional-distribution-in-anglosaxon-countries",
+    "title": "    The economics of inequality",
+    "section": "Functional distribution in Anglosaxon countries",
+    "text": "Functional distribution in Anglosaxon countries\n\n\n\n\n\nNote: Adjusted wage share as percentage of GDP at current factor cost. Source: Ameco (ALCD2)"
+  },
+  {
+    "objectID": "slides/03_evolution/index.html#factors-influencing-the-wage-share",
+    "href": "slides/03_evolution/index.html#factors-influencing-the-wage-share",
+    "title": "    The economics of inequality",
+    "section": "Factors influencing the wage share",
+    "text": "Factors influencing the wage share\n\n\nLabour market\nOrganization (e.g. collective bargaining, workers councils)\nLeverage (e.g. unemployment rate, strength of unions)\nProduct markets\n Globalization\n Technological change\nPolitics\nInfluence of capital income earners\n\n\n\n\n Reading recommendation: Stockhammer (2015)"
+  },
+  {
+    "objectID": "slides/03_evolution/index.html#net-annual-income-of-employees",
+    "href": "slides/03_evolution/index.html#net-annual-income-of-employees",
+    "title": "    The economics of inequality",
+    "section": "Net annual income of employees",
+    "text": "Net annual income of employees\n\n\n\n\n\nSource: Rechnungshof"
+  },
+  {
+    "objectID": "slides/03_evolution/index.html#net-annual-income-by-gender",
+    "href": "slides/03_evolution/index.html#net-annual-income-by-gender",
+    "title": "    The economics of inequality",
+    "section": "Net annual income by gender",
+    "text": "Net annual income by gender\n\n\n\n\n\nSource: Rechnungshof"
+  },
+  {
+    "objectID": "slides/03_evolution/index.html#gross-annual-income-by-social-status",
+    "href": "slides/03_evolution/index.html#gross-annual-income-by-social-status",
+    "title": "    The economics of inequality",
+    "section": "Gross annual income by social status",
+    "text": "Gross annual income by social status\n\n\n\n\n\nSource: Rechnungshof"
+  },
+  {
+    "objectID": "slides/03_evolution/index.html#evolution-of-the-gender-pay-gap",
+    "href": "slides/03_evolution/index.html#evolution-of-the-gender-pay-gap",
+    "title": "    The economics of inequality",
+    "section": "Evolution of the Gender Pay Gap",
+    "text": "Evolution of the Gender Pay Gap\n\n\n\n\n\nSource: Eurostat"
+  },
+  {
+    "objectID": "slides/03_evolution/index.html#historical-development-of-inequality-3-views",
+    "href": "slides/03_evolution/index.html#historical-development-of-inequality-3-views",
+    "title": "    The economics of inequality",
+    "section": "Historical development of inequality: 3 views",
+    "text": "Historical development of inequality: 3 views\n\n\n\n\n\nKuznets\n\n\n\n\n\n\n\nPiketty\n\n\n\n\n\n\n\n\n\nMilanovic"
+  },
+  {
+    "objectID": "slides/03_evolution/index.html#determinants-of-the-change-in-inequality",
+    "href": "slides/03_evolution/index.html#determinants-of-the-change-in-inequality",
+    "title": "    The economics of inequality",
+    "section": "Determinants of the change in inequality",
+    "text": "Determinants of the change in inequality\n\n\nIncrease\n\nRents:\n\nTechnological revolution\nGlobalization\n\nCumulative causation:\n\nCapital income\nHomogamy\nPolitical influence\n\n\n\nDecrease\n\nBenign factors:\n\nRising education (decreasing education premium)\nLow-skill biased technological progress\nLabour scarcity\nGlobal income compression\nSocial political pressure (e.g. unions)\n\nMalign factors:\n\nWars\nSocial unrest\nEpidemics (see also Scheidel, 2018)\n\n\n\n\n\n\nSource: Milanovic (2018)"
+  },
+  {
+    "objectID": "slides/03_evolution/index.html#global-inequality-1820-2020",
+    "href": "slides/03_evolution/index.html#global-inequality-1820-2020",
+    "title": "    The economics of inequality",
+    "section": "Global inequality 1820-2020",
+    "text": "Global inequality 1820-2020\n\n\n\n\n\n\n\nSource: Chancel et al. (2022)"
+  },
+  {
+    "objectID": "slides/03_evolution/index.html#decomposition-of-global-inequality",
+    "href": "slides/03_evolution/index.html#decomposition-of-global-inequality",
+    "title": "    The economics of inequality",
+    "section": "Decomposition of global inequality",
+    "text": "Decomposition of global inequality\n\n\n\n\n\n\n\nSource: Chancel et al. (2022)"
+  },
+  {
+    "objectID": "slides/03_evolution/index.html#global-growth-of-real-income-1980-2008",
+    "href": "slides/03_evolution/index.html#global-growth-of-real-income-1980-2008",
+    "title": "    The economics of inequality",
+    "section": "Global growth of real income, 1980-2008",
+    "text": "Global growth of real income, 1980-2008\n\n\n\n\n\n\nRising incomes in emerging economies\n\n\nStagnation of middle class in industrial countries\n\n\nBooming global top 1%\n\n\n\nSource: Milanovic (2018)"
+  },
+  {
+    "objectID": "slides/03_evolution/index.html#global-growth-of-real-income-1980-2020",
+    "href": "slides/03_evolution/index.html#global-growth-of-real-income-1980-2020",
+    "title": "    The economics of inequality",
+    "section": "Global growth of real income, 1980-2020",
+    "text": "Global growth of real income, 1980-2020\n\n\n\n\n\n\n\nSource: Chancel et al. (2022)"
+  },
+  {
+    "objectID": "slides/03_evolution/index.html#change-in-global-income-distribution",
+    "href": "slides/03_evolution/index.html#change-in-global-income-distribution",
+    "title": "    The economics of inequality",
+    "section": "Change in global income distribution",
+    "text": "Change in global income distribution\n\n\n\n\n\n\n\n\n\n\n\n\nSource: Chancel (2019)"
+  },
+  {
+    "objectID": "slides/03_evolution/index.html#global-income-distribution-1990",
+    "href": "slides/03_evolution/index.html#global-income-distribution-1990",
+    "title": "    The economics of inequality",
+    "section": "Global income distribution 1990",
+    "text": "Global income distribution 1990\n\n\n\n\n\n\n\nSource: Chancel et al. (2018)"
+  },
+  {
+    "objectID": "slides/03_evolution/index.html#global-income-distribution-2016",
+    "href": "slides/03_evolution/index.html#global-income-distribution-2016",
+    "title": "    The economics of inequality",
+    "section": "Global income distribution 2016",
+    "text": "Global income distribution 2016\n\n\n\n\n\n\n\nSource: Chancel et al. (2018)"
+  },
+  {
+    "objectID": "slides/03_evolution/index.html#regional-composition-of-global-top-10",
+    "href": "slides/03_evolution/index.html#regional-composition-of-global-top-10",
+    "title": "    The economics of inequality",
+    "section": "Regional composition of global top 10%",
+    "text": "Regional composition of global top 10%\n\n\n\n\n\n\n\nSource: Chancel et al. (2022)"
+  },
+  {
+    "objectID": "slides/03_evolution/index.html#regional-composition-of-global-bottom-50",
+    "href": "slides/03_evolution/index.html#regional-composition-of-global-bottom-50",
+    "title": "    The economics of inequality",
+    "section": "Regional composition of global bottom 50%",
+    "text": "Regional composition of global bottom 50%\n\n\n\n\n\n\n\nSource: Chancel et al. (2022)"
+  },
+  {
+    "objectID": "slides/03_evolution/index.html#wealth-to-income-ratios",
+    "href": "slides/03_evolution/index.html#wealth-to-income-ratios",
+    "title": "    The economics of inequality",
+    "section": "Wealth-to-income ratios",
+    "text": "Wealth-to-income ratios\n\n\n\n\n\n\n\nSource: Piketty/Saez (2014)"
+  },
+  {
+    "objectID": "slides/03_evolution/index.html#a-question-of-savings-rate-and-growth",
+    "href": "slides/03_evolution/index.html#a-question-of-savings-rate-and-growth",
+    "title": "    The economics of inequality",
+    "section": "A question of savings rate and growth",
+    "text": "A question of savings rate and growth\n\\[ \\beta = \\frac{K}{Y} \\approx \\frac{s}{g} \\]\nThe ratio of savings rate and economic growth (population + productivity growth) determines the wealth-to-income ratio in the long run.\n\\(s=10\\%; ~g=3\\% \\rightarrow\\) wealth-to-income: \\(300\\%\\)  \\(s=10\\%; ~g=1.5\\% \\rightarrow\\) wealth-to-income: \\(600\\%\\)\nCapital is back because low growth is back!"
+  },
+  {
+    "objectID": "slides/03_evolution/index.html#the-controversial-inequality-of-r-and-g",
+    "href": "slides/03_evolution/index.html#the-controversial-inequality-of-r-and-g",
+    "title": "    The economics of inequality",
+    "section": "The controversial inequality of \\(r\\) and \\(g\\)",
+    "text": "The controversial inequality of \\(r\\) and \\(g\\)\nCapital share (\\(\\alpha\\)) increases if the rate of return to capital \\(r\\) is larger than the growth of national income (from work) \\(g\\): \\(r > g\\)\n\\[ \\alpha = r\\beta = r\\left(\\frac{s}{g}\\right) \\]\n\nWhen the rate of return on capital significantly exceeds the growth of the economy […], then it logically follows that inherited wealth grows faster than output and income. People with inherited wealth need save only a portion of their income from capital to see that capital grow more quickly than the economy as a whole.\n\n\nThomas Piketty (2014, 26)"
+  },
+  {
+    "objectID": "slides/03_evolution/index.html#evolution-of-r-and-g",
+    "href": "slides/03_evolution/index.html#evolution-of-r-and-g",
+    "title": "    The economics of inequality",
+    "section": "Evolution of \\(r\\) and \\(g\\)",
+    "text": "Evolution of \\(r\\) and \\(g\\)\n\n\n\n\n\n\n\nSource: Piketty/Saez (2014)"
+  },
+  {
+    "objectID": "slides/03_evolution/index.html#bibliography",
+    "href": "slides/03_evolution/index.html#bibliography",
+    "title": "    The economics of inequality",
+    "section": "Bibliography",
+    "text": "Bibliography\n\n\n\n\n\n\nPI 2159 Special Topics in Economic Policy | Winter term 2022/23\n\n\n\nChancel, Lucas (2019). Ten facts about inequality in advanced economies (Working Paper). WID.world.\n\n\nChancel, Lucas/Piketty, Thomas/Saez, Emmanuel/Zucman, Gabriel (2018). World inequality report 2018. World Inequality Lab.\n\n\nChancel, Lucas/Piketty, Thomas/Saez, Emmanuel/Zucman, Gabriel (2022). World inequality report 2022. World Inequality Lab.\n\n\nMilanovic, Branko (2018). Global inequality. A new approach for the age of globalization. Harvard University Press.\n\n\nPiketty, Thomas (2014). Capital in the twenty-first century. Harvard University Press. DOI: 10.4159/9780674369542\n\n\nPiketty, Thomas/Saez, Emmanuel (2014). Inequality in the long run. Science, 344(6186), 838–843. DOI: 10.1126/science.1251936\n\n\nScheidel, Walter (2018). The great leveler. Princeton University Press. DOI: 10.23943/9780691184319\n\n\nStockhammer, Engelbert (2015). Determinants of the wage share: A panel analysis of advanced and developing economies. British Journal of Industrial Relations, 55(1), 3–33. DOI: 10.1111/bjir.12165"
+  },
+  {
+    "objectID": "slides/06_redistribution/index.html#recap",
+    "href": "slides/06_redistribution/index.html#recap",
+    "title": "    The economics of inequality",
+    "section": "Recap",
+    "text": "Recap\n\n\n\n\n\nWhat is the definition of net wealth?\nWhat data do we have to analyze the distribution of household wealth?\nWhich methods are commonly used to adjust for the non-response bias?\nHow large are the differences between wealth inequality and income inequality?"
+  },
+  {
+    "objectID": "slides/06_redistribution/index.html#the-rise-of-the-welfare-state",
+    "href": "slides/06_redistribution/index.html#the-rise-of-the-welfare-state",
+    "title": "    The economics of inequality",
+    "section": "The rise of the welfare state",
+    "text": "The rise of the welfare state\n\n\n\n\n\n\n\nSource: Chancel et al. (2022)"
+  },
+  {
+    "objectID": "slides/06_redistribution/index.html#evolution-of-income-taxation",
+    "href": "slides/06_redistribution/index.html#evolution-of-income-taxation",
+    "title": "    The economics of inequality",
+    "section": "Evolution of income taxation",
+    "text": "Evolution of income taxation\n\n\n\n\n\n\n\nSource: Chancel et al. (2022)"
+  },
+  {
+    "objectID": "slides/06_redistribution/index.html#bibliography",
+    "href": "slides/06_redistribution/index.html#bibliography",
+    "title": "    The economics of inequality",
+    "section": "Bibliography",
+    "text": "Bibliography\n\n\n\n\n\n\nPI 2159 Special Topics in Economic Policy | Winter term 2022/23\n\n\n\nChancel, Lucas/Piketty, Thomas/Saez, Emmanuel/Zucman, Gabriel (2022). World inequality report 2022. World Inequality Lab."
+  },
+  {
+    "objectID": "slides/05_mobility/index.html#recap",
+    "href": "slides/05_mobility/index.html#recap",
+    "title": "    The economics of inequality",
+    "section": "Recap",
+    "text": "Recap\n\n\n\n\n\nWhat is the definition of net wealth?\nWhat data do we have to analyze the distribution of household wealth?\nWhich methods are commonly used to adjust for the non-response bias?\nWhat are the differences between wealth inequality and income inequality?"
+  },
+  {
+    "objectID": "slides/05_mobility/index.html#discuss-with-your-neighbour",
+    "href": "slides/05_mobility/index.html#discuss-with-your-neighbour",
+    "title": "    The economics of inequality",
+    "section": "Discuss with your neighbour",
+    "text": "Discuss with your neighbour\nHow would you describe the state of intergenerational social mobility in your country?\nWhich channels do you know where parents exert influence on the socio-economic outcomes of children?\n \n\nIllustrations by https://openpeeps.com."
+  },
+  {
+    "objectID": "slides/05_mobility/index.html#selected-channels-of-intergenerational-persistence",
+    "href": "slides/05_mobility/index.html#selected-channels-of-intergenerational-persistence",
+    "title": "    The economics of inequality",
+    "section": "Selected channels of intergenerational persistence",
+    "text": "Selected channels of intergenerational persistence\n\n\nChildren of well-off families attend better educational institutions, which results in higher incomes later on.\nFamily background shapes individual labor market-related characteristics (Habitus, social and cultural capital, health, etc.)\nChildren of poorer families face higher opportunity costs at their job search and tend to accept the first job opportunity\nSocial networks of the well-off facilitate job search substantially\n\n\n\n\nSource: Franzini/Raitano (2009)"
+  },
+  {
+    "objectID": "slides/05_mobility/index.html#glass-ceiling",
+    "href": "slides/05_mobility/index.html#glass-ceiling",
+    "title": "    The economics of inequality",
+    "section": "Glass ceiling",
+    "text": "Glass ceiling\n\nThat room [at the top] rarely opens up because those mediocrities are too well-screened by parents who hire private tutors, buy cultural enrichment, teach etiquette, set expectations, stand as personal examples of success, coach interview technique, navigate any bureaucratic maze put before them, set up home in nice areas, arrange internships via friends and, just to rub in their supremacy, make direct gifts of cash and assets. To fail under these conditions is a kind of achievement in itself.\n\n\nJanan GaneshFinancial Times (December 9, 2016)"
+  },
+  {
+    "objectID": "slides/05_mobility/index.html#traditional-theory",
+    "href": "slides/05_mobility/index.html#traditional-theory",
+    "title": "    The economics of inequality",
+    "section": "Traditional theory",
+    "text": "Traditional theory\nBecker/Tomes (1979), Becker/Tomes (1986):\n\n\nOptimization problem for parental investments into the human capital of descendants (utility of parents is maximized)\nStochastic term for “birth lottery” (genetic abilities, talents): Nature versus Nurture\nParental utility does not only depend on the life-cycle income of the descendant, but there is dynastic utility\n\n\n\nResponse by Daly (1982): Provision of descendants in future generations is a public good, since the future offspring may potentially descend from all other members in a society.\n\n\nObjection by Mani et al. (2013): Rational parental behaviour is limited by income and wealth, since poverty impedes cognitive abilities of adults and hinders rational investment decisions in childern."
+  },
+  {
+    "objectID": "slides/05_mobility/index.html#measurement-of-intergenerational-mobility",
+    "href": "slides/05_mobility/index.html#measurement-of-intergenerational-mobility",
+    "title": "    The economics of inequality",
+    "section": "Measurement of intergenerational mobility",
+    "text": "Measurement of intergenerational mobility\n\nIntergenerational earnings elasticity: \\(\\beta\\) \\[log~y_{ic} = \\alpha + \\beta~y_{ip} + \\varepsilon_{ic}\\] Intergenerational earnings correlation: \\(\\rho\\) \\[\\rho = \\beta~\\frac{\\sigma_p}{\\sigma_c}\\] with \\(\\sigma\\) being the standard deviation."
+  },
+  {
+    "objectID": "slides/05_mobility/index.html#life-cycle-vs.-current-income",
+    "href": "slides/05_mobility/index.html#life-cycle-vs.-current-income",
+    "title": "    The economics of inequality",
+    "section": "Life cycle vs. current income",
+    "text": "Life cycle vs. current income\n\n(Measurable) current income corresponds to life cycle income plus random transitory deviations \\[ y_{ic}^* = y_{ic} + \\omega_{ic} \\\\\ny_{ip}^* = y_{ip} + \\omega_{ip} \\]\nIntergenerational elasticity is calculated with current income records\n\\[ plim~\\widehat{\\beta} = \\frac{cov(y_{ip}^*, y_{ic}^*)}{var(y_{ip}^*)} = \\\\\n= \\frac{\\beta\\left[var(y_{ip}) + cov(y_{ip}, \\omega_{ip})\\right] + cov(y_{ic}, \\omega_{ic})/\\beta + cov(\\omega_{ic}, \\omega_{ip})}{var(y_{ip}) + 2 \\cdot cov(y_{ip}, \\omega_{ip}) + var(\\omega_{ip})} \\]\nConsequently there is an attenuation bias (downward bias) \\[ plim~\\widehat{\\beta} = \\beta \\frac{var(y_{ip})}{var(y_{ip}) + var(\\omega_{ip})} < \\beta \\]"
+  },
+  {
+    "objectID": "slides/05_mobility/index.html#transition-matrices",
+    "href": "slides/05_mobility/index.html#transition-matrices",
+    "title": "    The economics of inequality",
+    "section": "Transition matrices",
+    "text": "Transition matrices\nA transition matrix captures the probabilities of switches \\(p_{ij}\\) from status \\(i\\) to \\(j\\).\n\\[\n  P =\n  \\left[ {\\begin{array}{cccc}\n    p_{11} & p_{12} & \\cdots & p_{1n}\\\\\n    p_{21} & p_{22} & \\cdots & p_{2n}\\\\\n    \\vdots & \\vdots & \\ddots & \\vdots\\\\\n    p_{m1} & p_{m2} & \\cdots & p_{mn}\\\\\n  \\end{array} } \\right]\n\\]\nThere are various indices to compare transition matrices:\n\nPrais-Index: \\(M(P) = \\frac{n - trace(P)}{n-1}\\) where \\(M(P) \\in [0,1]\\)\nAbsolute Average Jump (AAJ): \\(\\Omega = \\frac{\\sum_{i=1}^{n}|rank_{ic} - rank_{ip}|}{n}\\)"
+  },
+  {
+    "objectID": "slides/05_mobility/index.html#great-gatsby-curve",
+    "href": "slides/05_mobility/index.html#great-gatsby-curve",
+    "title": "    The economics of inequality",
+    "section": "Great Gatsby curve",
+    "text": "Great Gatsby curve\n\n\n\n\n\n\n\n🇦🇹\n\n\n\n\nSource: Corak (2013)"
+  },
+  {
+    "objectID": "slides/05_mobility/index.html#intergenerational-persistence-in-austria",
+    "href": "slides/05_mobility/index.html#intergenerational-persistence-in-austria",
+    "title": "    The economics of inequality",
+    "section": "Intergenerational persistence in Austria",
+    "text": "Intergenerational persistence in Austria\n\n\n\n\n\n\n\n\nFinancial situation of parental household at the age of 14 was…\n45-59 year-old respondents today earn … than the average individual in this age class\n\n\n\n\n…very bad\n19% less\n\n\n…bad\n9% less\n\n\n…good\n15% more\n\n\n…very good\n21% more\n\n\n\n\n\nIncome in % of average net income by financial situation in parental household Source: EU-SILC 2011, own calculation\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nParental edu. ↓\nCompulsory\nApprenticeship\nHigher secondary\nTertiary\n\n\n\n\nCompulsory\n32.6\n46.1\n14.4\n6.9\n\n\nApprenticeship\n7.5\n59.3\n17.3\n15.9\n\n\nHigher secondary\n6.0\n18.6\n41.9\n33.6\n\n\nTertiary\n3.6\n15.6\n23.5\n57.3\n\n\n\n\n\nEducational attainment of children with respect to parental educational level (25-44 year-old) Source: Statistik Austria, Bildung in Zahlen 2020/21"
+  },
+  {
+    "objectID": "slides/05_mobility/index.html#alternative-figure-of-educational-mobility",
+    "href": "slides/05_mobility/index.html#alternative-figure-of-educational-mobility",
+    "title": "    The economics of inequality",
+    "section": "Alternative figure of educational mobility",
+    "text": "Alternative figure of educational mobility\n\n\n\n\n\n\n\nNote: Sample of 25 to 44 years of age"
+  },
+  {
+    "objectID": "slides/05_mobility/index.html#decreasing-absolute-mobility-in-the-us",
+    "href": "slides/05_mobility/index.html#decreasing-absolute-mobility-in-the-us",
+    "title": "    The economics of inequality",
+    "section": "Decreasing absolute mobility in the US",
+    "text": "Decreasing absolute mobility in the US\n\n\n\n\n\n\n\nSource: Chetty et al. (2017)"
+  },
+  {
+    "objectID": "slides/05_mobility/index.html#multigenerational-persistence",
+    "href": "slides/05_mobility/index.html#multigenerational-persistence",
+    "title": "    The economics of inequality",
+    "section": "Multigenerational persistence",
+    "text": "Multigenerational persistence\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSource: Neidhöfer/Stockhausen (2018)"
+  },
+  {
+    "objectID": "slides/05_mobility/index.html#long-term-social-persistence",
+    "href": "slides/05_mobility/index.html#long-term-social-persistence",
+    "title": "    The economics of inequality",
+    "section": "Long-term social persistence",
+    "text": "Long-term social persistence\n\n\n🇬🇧 Clark/Cummins (2015): Richest british families around 1850 still own four times the average family wealth in 2012 (= 5 generations later)\n🇮🇹 Barone/Mocetti (2020): Families with highest income in Florence in 1427 still are at the top of the income distribution in 2011 (= 6 centuries later)\n🇩🇪 Braun/Stuhler (2017): Social status in Germany also depends from the great-grandparents. (= 4 generations later)"
+  },
+  {
+    "objectID": "slides/05_mobility/index.html#cultural-capital-and-wealth",
+    "href": "slides/05_mobility/index.html#cultural-capital-and-wealth",
+    "title": "    The economics of inequality",
+    "section": "Cultural capital and wealth",
+    "text": "Cultural capital and wealth\n\n\n\nY-axis: More than 100 books in the parental household at age 10? Source: HFCS 2014, own calculations"
+  },
+  {
+    "objectID": "slides/05_mobility/index.html#projections-of-inheritances-in-austria",
+    "href": "slides/05_mobility/index.html#projections-of-inheritances-in-austria",
+    "title": "    The economics of inequality",
+    "section": "Projections of inheritances in Austria",
+    "text": "Projections of inheritances in Austria\n\n\n\n\n\n\n\nInheritance projection in billion Euros (with 90%, 95% and 99% confidence intervals)  Source: Altzinger/Humer (2013)"
+  },
+  {
+    "objectID": "slides/05_mobility/index.html#potential-revenues-of-an-inheritance-tax",
+    "href": "slides/05_mobility/index.html#potential-revenues-of-an-inheritance-tax",
+    "title": "    The economics of inequality",
+    "section": "Potential revenues of an inheritance tax",
+    "text": "Potential revenues of an inheritance tax\n\nWealth data from HFCS\nMortality tables by age, gender and education by IIASA for next 50 years\nSimulation of deceases\nInheritance when all household members of a generation have died\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTax rate\nExemption (m€)\nCI\nInheritance cases\nInheritances (m€)\nTax cases\nTax revenues (m€)\n\n\n\n\n15%\n0.5\nP05\n39,197\n10,079\n1,627\n338\n\n\n15%\n0.5\nP50\n40,225\n11,894\n2,081\n620\n\n\n15%\n0.5\nP95\n41,583\n14,262\n2,422\n933\n\n\n25%\n1.0\nP05\n39,197\n10,079\n700\n257\n\n\n25%\n1.0\nP50\n40,225\n11,894\n972\n670\n\n\n25%\n1.0\nP95\n41,583\n14,262\n1,276\n1.191\n\n\n\n\n\nThe table shows the median and a confidence interval (P5 and P95) of a projection based on 100 simulations.\n\n\n\nSource: Humer (2014)"
+  },
+  {
+    "objectID": "slides/05_mobility/index.html#inheritance-taxes-in-europe",
+    "href": "slides/05_mobility/index.html#inheritance-taxes-in-europe",
+    "title": "    The economics of inequality",
+    "section": "Inheritance taxes in Europe",
+    "text": "Inheritance taxes in Europe\n\n\n\n\n\n\n\nSource: Tax Foundation"
+  },
+  {
+    "objectID": "slides/05_mobility/index.html#evolution-of-inheritance-tax-rates-1900-2017",
+    "href": "slides/05_mobility/index.html#evolution-of-inheritance-tax-rates-1900-2017",
+    "title": "    The economics of inequality",
+    "section": "Evolution of inheritance tax rates, 1900-2017",
+    "text": "Evolution of inheritance tax rates, 1900-2017\n\n\n\n\n\n\n\nSource: Chancel et al. (2018)"
+  },
+  {
+    "objectID": "slides/05_mobility/index.html#bibliography",
+    "href": "slides/05_mobility/index.html#bibliography",
+    "title": "    The economics of inequality",
+    "section": "Bibliography",
+    "text": "Bibliography\n\n\n\n\n\n\nPI 2159 Special Topics in Economic Policy | Winter term 2022/23\n\n\n\nBarone, Guglielmo/Mocetti, Sauro (2020). Intergenerational mobility in the very long run: Florence 1427-2011. The Review of Economic Studies, 88(4), 1863–1891. DOI: 10.1093/restud/rdaa075\n\n\nBecker, Gary/Tomes, Nigel (1979). An equilibrium theory of the distribution of income and intergenerational mobility. The Journal of Political Economy, 87(6), 1153–1189.\n\n\nBecker, Gary/Tomes, Nigel (1986). Human capital and the rise and fall of families. Journal of Labor Economics, 4(3), S1–S39.\n\n\nBraun, Sebastian Till/Stuhler, Jan (2017). The transmission of inequality across multiple generations: Testing recent theories with evidence from germany. The Economic Journal, 128(609), 576–611. DOI: 10.1111/ecoj.12453\n\n\nChancel, Lucas/Piketty, Thomas/Saez, Emmanuel/Zucman, Gabriel (2018). World inequality report 2018. World Inequality Lab.\n\n\nChetty, Raj/Grusky, David/Hell, Maximilian/Hendren, Nathaniel/Manduca, Robert/Narang, Jimmy (2017). The fading american dream: Trends in absolute income mobility since 1940. Science, 356(6336), 398–406. DOI: 10.1126/science.aal4617\n\n\nClark, Gregory/Cummins, Neil (2015). Intergenerational wealth mobility in england, 1858–2012: Surnames and social mobility. The Economic Journal, 125(582), 61–85. DOI: 10.1111/ecoj.12165\n\n\nCorak, Miles (2013). Income inequality, equality of opportunity, and intergenerational mobility. Journal of Economic Perspectives, 27(3), 79–102. DOI: 10.1257/jep.27.3.79\n\n\nDaly, Herman E. (1982). Chicago school individualism versus sexual reproduction: A critique of becker and tomes. Journal of Economic Issues, 16(1), 307–312.\n\n\nFranzini, Maurizio/Raitano, Michele (2009). Persistence of inequality in europe: The role of family economic conditions. International Review of Applied Economics, 23(3), 345–366. DOI: 10.1080/02692170902811777\n\n\nHumer, Stefan (2014). Aufkommen von erbschaftssteuern – modellrechnung exemplarischer tarife. Wirtschaft Und Gesellschaft, 40(1), 151–159.\n\n\nMani, Anandi/Mullainathan, Sendhil/Shafir, Eldar/Zhao, Jiaying (2013). Poverty impedes cognitive function. Science, 341(6149), 976–980. DOI: 10.1126/science.1238041\n\n\nNeidhöfer, Guido/Stockhausen, Maximilian (2018). Dynastic inequality compared: Multigenerational mobility in the united states, the united kingdom, and germany. Review of Income and Wealth, 65(2), 383–414. DOI: 10.1111/roiw.12364"
+  },
+  {
+    "objectID": "slides/01_introduction/index.html#course-info",
+    "href": "slides/01_introduction/index.html#course-info",
+    "title": "    The economics of inequality",
+    "section": "Course info",
+    "text": "Course info\n\n\n\n\n   \n\n\n\n\n Matthias Schnetzer\n Vienna Chamber of Labour & WU Vienna\n mschnetz@wu.ac.at\n https://mschnetzer.github.io\n matschnetzer\n\n\n\n\n\n Oct 14, 2022 – Jan 20, 2023\n 10:00–12:00\n TC.3.10\n https://mschnetzer.github.io/econpol"
+  },
+  {
+    "objectID": "slides/01_introduction/index.html#who-are-you",
+    "href": "slides/01_introduction/index.html#who-are-you",
+    "title": "    The economics of inequality",
+    "section": "Who are you?",
+    "text": "Who are you?\n   \nWhat do you already know about inequality and what do you expect of this course?"
+  },
+  {
+    "objectID": "slides/01_introduction/index.html#schedule",
+    "href": "slides/01_introduction/index.html#schedule",
+    "title": "    The economics of inequality",
+    "section": "Schedule",
+    "text": "Schedule\n\n\n\n\n \n  \n    Date \n    Time \n    Content \n    Assignment \n    Room \n  \n \n\n  \n    Oct 14, 2022 \n    10:00-12:00 \n    Overview and administration \n     \n    TC.3.10 \n  \n  \n    Oct 21, 2022 \n    10:00-12:00 \n    Data sources and definitions \n     \n    TC.3.10 \n  \n  \n    Nov 04, 2022 \n    10:00-12:00 \n    Evolution of inequality \n     \n    TC.3.10 \n  \n  \n    Nov 11, 2022 \n    10:00-12:00 \n    Recent research on wealth inequality \n     \n    TC.3.10 \n  \n  \n    Nov 18, 2022 \n    10:00-12:00 \n    Intergenerational mobility \n     \n    TC.3.10 \n  \n  \n    Dec 02, 2022 \n    10:30-12:30 \n    Welfare state redistribution \n     \n    D5.1.002 \n  \n  \n    Dec 09, 2022 \n    10:00-12:00 \n    Post-Keynesian models of inequality and growth \n     \n    TC.3.10 \n  \n  \n    Dec 16, 2022 \n    10:00-12:00 \n    Fiscal policy, growth, and inequality \n     \n    TC.4.04 \n  \n  \n    Dec 23, 2022 \n    10:00-12:00 \n    Inequality, power and policy conclusions \n     \n    TC.3.10 \n  \n  \n    Jan 13, 2023 \n    10:00-12:00 \n    Poster-Session I \n     \n    TC.3.10 \n  \n  \n    Jan 20, 2023 \n    10:00-12:00 \n    Poster-Session II \n     \n    D5.1.002"
+  },
+  {
+    "objectID": "slides/01_introduction/index.html#assignments",
+    "href": "slides/01_introduction/index.html#assignments",
+    "title": "    The economics of inequality",
+    "section": "Assignments",
+    "text": "Assignments\nWhile assignments 1 (Piketty/Zucman, 2014) and 3 (Stockhammer/Onaran, 2013) are mandatory, students may choose between 2 (Milanovic, 2015) and 4 (Atkinson, 2014). Please write a summary of the provided paper with a limit of 400 words and upload it on the learning platform.\nThe submission deadline is 9 a.m. on the day of the respective teaching unit. You can structure your text around the following questions:\n\nWhat is the research question?\nWhy is this question interesting?\nHow does the author approach and answer this question?\nWhat are the main findings?\nIs the paper credible? Why? Why not?"
+  },
+  {
+    "objectID": "slides/01_introduction/index.html#essays-posters",
+    "href": "slides/01_introduction/index.html#essays-posters",
+    "title": "    The economics of inequality",
+    "section": "Essays & Posters",
+    "text": "Essays & Posters\n\n\nResearch Proposal\n\n\nIntroduction\nLiterature review\nResearch question and hypotheses\nMethodology\nData\nConclusion\nBibliography\n\n\nDeadline: January 31, 2023\n\nPoster\n\n\nTitle\nAuthor\nBrief literature review\nHighlights of your research proposal research gap, research question, data, method\nConclusion What do you expect? Why is your research policy-relevant?\nReferences\n\n\nDeadline: Date of the poster session"
+  },
+  {
+    "objectID": "slides/01_introduction/index.html#poster-session-i",
+    "href": "slides/01_introduction/index.html#poster-session-i",
+    "title": "    The economics of inequality",
+    "section": "Poster Session I",
+    "text": "Poster Session I\n\n\n\n\n\n\n\n\n\n\n\n#\nTopic\nStarting literature\nSession\n\n\n\n\n1\nHistorical evolution of inequality\nAlvaredo et al. (2013); Milanovic et al. (2011)\n1\n\n\n2\nDevelopments in global inequality\nKanbur (2019); Bourguignon (2018); Milanovic (2013)\n1\n\n\n3\nDistributional National Accounts (DINA)\nGarbinti et al. (2018); Piketty et al. (2017)\n1\n\n\n4\nGender pay gaps\nChristofides et al. (2013); Redmond/Mcguinness (2018)\n1\n\n\n5\nThe distribution of wealth\nPfeffer/Waitkus (2021); Zucman (2019); Fessler/Schürz (2018)\n1\n\n\n6\nThe missing top in wealth data\nBach et al. (2019); Vermeulen (2018); Eckerstorfer et al. (2016)\n1\n\n\n7\nInheritances and wealth inequality\nAlvaredo et al. (2017); Adermon et al. (2018)\n1\n\n\n8\nIntergenerational mobility\nChetty et al. (2022); Chetty/Hendren (2018); Corak (2013)\n1"
+  },
+  {
+    "objectID": "slides/01_introduction/index.html#poster-session-ii",
+    "href": "slides/01_introduction/index.html#poster-session-ii",
+    "title": "    The economics of inequality",
+    "section": "Poster Session II",
+    "text": "Poster Session II\n\n\n\n\n\n\n\n\n\n\n\n#\nTopic\nStarting literature\nSession\n\n\n\n\n9\nFunctional distribution and growth\nStockhammer/Stehrer (2011); Stockhammer (2017)\n2\n\n\n10\nRestrictive fiscal policy and inequality\nHope/Limberg (2022); Alpino et al. (2022); Savage et al. (2018)\n2\n\n\n11\nTaxation and tax evasion\nTørsløv et al. (2022); Diamond/Saez (2011); Alstadsæter et al. (2019)\n2\n\n\n12\nInequality and political elites\nLópez et al. (2022); Bonica et al. (2013); Gilens/Page (2014)\n2\n\n\n13\nInequality and preferences for redistribution\nAhrens (2022); Alesina et al. (2018); Kuziemko et al. (2015)\n2\n\n\n14\nPower in economics\nStansbury/Summers (2020); Dutt (2015); Rothschild (2002)\n2"
+  },
+  {
+    "objectID": "slides/01_introduction/index.html#grading",
+    "href": "slides/01_introduction/index.html#grading",
+    "title": "    The economics of inequality",
+    "section": "Grading",
+    "text": "Grading\n  Assignments: 30% (0-10 points for each homework)  \n\n Poster presentation: 30% (0-20 points for the quality of the presentation, 0-10 for the poster style and structure)  \n\n\n Essay/Research proposal: 40% (0-40 points for the essay)\n\n\n\n\n   100-90: Excellent      89-80: Good      79-65: Satisfactory      64-50: Sufficient  All single tasks have to be passed (50% threshold each)."
+  },
+  {
+    "objectID": "slides/01_introduction/index.html#feedback-and-evaluation",
+    "href": "slides/01_introduction/index.html#feedback-and-evaluation",
+    "title": "    The economics of inequality",
+    "section": "Feedback and Evaluation",
+    "text": "Feedback and Evaluation\nLet me know your feedback on the course anytime. If possible, I will try to incorporate your feedback immediately. At least, I will consider it for future courses.\nAdditionally, there will be an anonymous online evaluation at the end of semester. You are asked to fill in the evaluation in class in one of the two January sessions. Please take part in the online evaluation even if you cannot be present in these session."
+  },
+  {
+    "objectID": "slides/01_introduction/index.html#bibliography",
+    "href": "slides/01_introduction/index.html#bibliography",
+    "title": "    The economics of inequality",
+    "section": "Bibliography",
+    "text": "Bibliography\n\n\n\n\n\n\nPI 2159 Special Topics in Economic Policy | Winter term 2022/23\n\n\n\nAdermon, Adrian/Lindahl, Mikael/Waldenström, Daniel (2018). Intergenerational wealth mobility and the role of inheritance: Evidence from multiple generations. The Economic Journal, 128(612), F482–F513. DOI: 10.1111/ecoj.12535\n\n\nAhrens, Leo (2022). Unfair inequality and the demand for redistribution: Why not all inequality is equal. Socio-Economic Review, 20(2), 463–487. DOI: 10.1093/ser/mwaa051\n\n\nAlesina, Alberto/Stantcheva, Stefanie/Teso, Edoardo (2018). Intergenerational mobility and preferences for redistribution. American Economic Review, 108(2), 521–554. DOI: 10.1257/aer.20162015\n\n\nAlpino, Matteo/Asatryan, Zareh/Blesse, Sebastian/Wehrhöfer, Nils (2022). Austerity and distributional policy. Journal of Monetary Economics. DOI: 10.1016/j.jmoneco.2022.07.006\n\n\nAlstadsæter, Annette/Johannesen, Niels/Zucman, Gabriel (2019). Tax evasion and inequality. American Economic Review, 109(6), 2073–2103. DOI: 10.1257/aer.20172043\n\n\nAlvaredo, Facundo/Atkinson, Anthony B./Piketty, Thomas/Saez, Emmanuel (2013). The top 1 percent in international and historical perspective. Journal of Economic Perspectives, 27(3), 3–20. DOI: 10.1257/jep.27.3.3\n\n\nAlvaredo, Facundo/Garbinti, Bertrand/Piketty, Thomas (2017). On the share of inheritance in aggregate wealth: Europe and the USA, 1900-2010. Economica, 84(334), 239–260. DOI: 10.1111/ecca.12233\n\n\nAtkinson, A. B. (2014). After piketty? The British Journal of Sociology, 65(4), 619–638. DOI: 10.1111/1468-4446.12105\n\n\nBach, Stefan/Thiemann, Andreas/Zucco, Aline (2019). Looking for the missing rich: Tracing the top tail of the wealth distribution. International Tax and Public Finance, 26(6), 1234–1258. DOI: 10.1007/s10797-019-09578-1\n\n\nBonica, Adam/McCarty, Nolan/Poole, Keith T./Rosenthal, Howard (2013). Why hasn’t democracy slowed rising inequality? The Journal of Economic Perspectives, 27(3), 103–123. DOI: 10.1257/jep.27.3.103\n\n\nBourguignon, Francois (2018). World changes in inequality: An overview of facts, causes, consequences, and policies. CESifo Economic Studies, 64(3), 345–370. DOI: 10.1093/cesifo/ifx028\n\n\nChetty, Raj/Hendren, Nathaniel (2018). The impacts of neighborhoods on intergenerational mobility i: Childhood exposure effects. The Quarterly Journal of Economics, 133(3), 1107–1162. DOI: 10.1093/qje/qjy007\n\n\nChetty, Raj/Jackson, Matthew O./Kuchler, Theresa/Stroebel, Johannes/Hendren, Nathaniel/Fluegge, Robert B./… Wernerfelt, Nils (2022). Social capital i: Measurement and associations with economic mobility. Nature, 608(7921), 108–121. DOI: 10.1038/s41586-022-04996-4\n\n\nChristofides, Louis N./Polycarpou, Alexandros/Vrachimis, Konstantinos (2013). Gender wage gaps, “sticky floors” and “glass ceilings” in europe. Labour Economics, 21, 86–102. DOI: 10.1016/j.labeco.2013.01.003\n\n\nCorak, Miles (2013). Income inequality, equality of opportunity, and intergenerational mobility. Journal of Economic Perspectives, 27(3), 79–102. DOI: 10.1257/jep.27.3.79\n\n\nDiamond, Peter/Saez, Emmanuel (2011). The case for a progressive tax: From basic research to policy recommendation. Journal of Economic Perspectives, 25(4), 165–190. DOI: 10.1257/jep.25.4.165\n\n\nDutt, Amitava Krishna (2015). Uncertainty, power, institutions, and crisis: Implications for economic analysis and the future of capitalism. Review of Keynesian Economics, 3(1), 9–28. DOI: 10.4337/roke.2015.01.02\n\n\nEckerstorfer, Paul/Halak, Johannes/Kapeller, Jakob/Schütz, Bernhard/Springholz, Florian/Wildauer, Rafael (2016). Correcting for the missing rich: An application to wealth survey data. Review of Income and Wealth, 62(4), 605–627. DOI: 10.1111/roiw.12188\n\n\nFessler, Pirmin/Schürz, Martin (2018). Private wealth across european countries: The role of income, inheritance and the welfare state. Journal of Human Development and Capabilities, 19(4), 521–549. DOI: 10.1080/19452829.2018.1507422\n\n\nGarbinti, Bertrand/Goupille-Lebret, Jonathan/Piketty, Thomas (2018). Income inequality in france, 1900–2014: Evidence from distributional national accounts (DINA). Journal of Public Economics, 162, 63–77. DOI: 10.1016/j.jpubeco.2018.01.012\n\n\nGilens, Martin/Page, Benjamin I. (2014). Testing theories of american politics: Elites, interest groups, and average citizens. Perspectives on Politics, 12(3), 564–581. DOI: 10.1017/S1537592714001595\n\n\nHope, David/Limberg, Julian (2022). The economic consequences of major tax cuts for the rich. Socio-Economic Review, 20(2), 539–559. DOI: 10.1093/ser/mwab061\n\n\nKanbur, Ravi (2019). Inequality in a global perspective. Oxford Review of Economic Policy, 35(3), 431–444. DOI: 10.1093/oxrep/grz010\n\n\nKuziemko, Ilyana/Norton, Michael I./Saez, Emmanuel/Stantcheva, Stefanie (2015). How elastic are preferences for redistribution? Evidence from randomized survey experiments. American Economic Review, 105(4), 1478–1508. DOI: 10.1257/aer.20130360\n\n\nLópez, Matias/Silva, Graziella Moraes/Teeger, Chana/Marques, Pedro (2022). Economic and cultural determinants of elite attitudes toward redistribution. Socio-Economic Review, 20(2), 489–514. DOI: 10.1093/ser/mwaa015\n\n\nMilanovic, Branko (2013). Global income inequality in numbers: In history and now. Global Policy, 4(2), 198–208. DOI: 10.1111/1758-5899.12032\n\n\nMilanovic, Branko (2015). Global inequality of opportunity: How much of our income is determined by where we live? Review of Economics and Statistics, 97(2), 452–460. DOI: 10.1162/rest_a_00432\n\n\nMilanovic, Branko/Lindert, Peter H./Williamson, Jeffrey G. (2011). Pre-industrial inequality. The Economic Journal, 121(551), 255–272. DOI: 10.1111/j.1468-0297.2010.02403.x\n\n\nPfeffer, Fabian T./Waitkus, Nora (2021). The wealth inequality of nations. American Sociological Review, 86(4), 567–602. DOI: 10.1177/00031224211027800\n\n\nPiketty, Thomas/Saez, Emmanuel/Zucman, Gabriel (2017). Distributional national accounts: Methods and estimates for the united states. The Quarterly Journal of Economics, 133(2), 553–609. DOI: 10.1093/qje/qjx043\n\n\nPiketty, Thomas/Zucman, Gabriel (2014). Capital is back: Wealth-income ratios in rich countries 1700–2010. The Quarterly Journal of Economics, 129(3), 1255–1310. DOI: 10.1093/qje/qju018\n\n\nRedmond, Paul/Mcguinness, Seamus (2018). The gender wage gap in europe: Job preferences, gender convergence and distributional effects. Oxford Bulletin of Economics and Statistics, 81(3), 564–587. DOI: 10.1111/obes.12282\n\n\nRothschild, Kurt W. (2002). The absence of power in contemporary economic theory. The Journal of Socio-Economics, 31(5), 433–442. DOI: 10.1016/S1053-5357(02)00207-X\n\n\nSavage, M./Callan, T./Nolan, B./Colgan, B. (2018). The great recession, austerity and inequality: Lessons from ireland. Review of Income and Wealth, 65(2), 312–336. DOI: 10.1111/roiw.12337\n\n\nStansbury, Anna/Summers, Lawrence (2020). Declining worker power and american economic performance. Brookings Papers on Economic Activity, Spring, 1–96.\n\n\nStockhammer, Engelbert (2017). Wage-led versus profit-led demand: What have we learned? A kaleckian-minskyan view. Review of Keynesian Economics, 5(1), 25–42. DOI: 10.4337/roke.2017.01.03\n\n\nStockhammer, Engelbert/Onaran, Ozlem (2013). Wage-led growth: Theory, evidence, policy. Review of Keynesian Economics, 1(1), 61–78. DOI: https://doi.org/10.4337/roke.2017.01.03\n\n\nStockhammer, Engelbert/Stehrer, Robert (2011). Goodwin or kalecki in demand? Functional income distribution and aggregate demand in the short run. Review of Radical Political Economics, 43(4), 506–522. DOI: 10.1177/0486613411402642\n\n\nTørsløv, Thomas/Wier, Ludvig/Zucman, Gabriel (2022). The missing profits of nations. The Review of Economic Studies. DOI: 10.1093/restud/rdac049\n\n\nVermeulen, Philip (2018). How fat is the top tail of the wealth distribution? Review of Income and Wealth, 64(2), 357–387. DOI: 10.1111/roiw.12279\n\n\nZucman, Gabriel (2019). Global wealth inequality. Annual Review of Economics, 11(1), 109–138. DOI: 10.1146/annurev-economics-080218-025852"
+  },
+  {
+    "objectID": "slides/09_power/index.html#recap",
+    "href": "slides/09_power/index.html#recap",
+    "title": "    The economics of inequality",
+    "section": "Recap",
+    "text": "Recap\n\n\n\n\n\nHow does the fiscal multiplier work?\nHow to resolve the trade-off between unemployment and surplus production in a Keynesian framework?\nWhat is the effect of restrictive fiscal policy on inequality?\nWhat is the effect of expansive monetary policy on inequality?"
+  },
+  {
+    "objectID": "slides/09_power/index.html#power-in-mainstream-economics-i",
+    "href": "slides/09_power/index.html#power-in-mainstream-economics-i",
+    "title": "    Economic Policy Visualization",
+    "section": "Power in mainstream economics I",
+    "text": "Power in mainstream economics I\n\nPower is restricted to monopoly power and bargaining power as deviations in General Equilibrium Theory: Perfect markets are free of power imbalances\nBöhm-Bawerk (1914): “Macht oder ökonomisches Gesetz” in a controversy with the German Historical School of Economics (esp. Rudolf Stolzmann)\nPerspective: methodological individualism vs. social classes (Rothschild, 2002); Power remains individualised, no institutions or power regimes\nEpistemology: Economics perceives itself as exact science with physics-inspired methodology which is superiour to other social sciences (see e.g. Fourcade et al., 2015; Lazear, 2000)"
+  },
+  {
+    "objectID": "slides/09_power/index.html#power-in-mainstream-economics-ii",
+    "href": "slides/09_power/index.html#power-in-mainstream-economics-ii",
+    "title": "    Economic Policy Visualization",
+    "section": "Power in mainstream economics II",
+    "text": "Power in mainstream economics II\n\nSamuelson (1957): “Remember that in a perfectly competitive market, it really does not matter who hires whom; so have labor hire capital.”\n“Hiring simply means buying”: Why should one contracting partner wield more power?\nAlchian/Demsetz (1972): “The firm […] has no power of fiat, no authority, no disciplinary action any different […] from ordinary market contracting between any two people.”\nIs there a difference between the relations Shopkeeper-Employee and Shopkeeper-Customer?"
+  },
+  {
+    "objectID": "slides/09_power/index.html#power-between-mainstream-and-heterodox-economics",
+    "href": "slides/09_power/index.html#power-between-mainstream-and-heterodox-economics",
+    "title": "    Economic Policy Visualization",
+    "section": "Power between mainstream and heterodox economics",
+    "text": "Power between mainstream and heterodox economics\n\nClassical economists addressed the balance of powers\n\nSmith: Power balance between social classes\nMarx: class struggle; exploitation;\n(Petty, Quesnay, Ricardo, etc.)\n\nGeorge Akerlof: Asymmetrical information\nMichal Kalecki: Degree of monopoly; political aspects of full employment;\nBowles/Gintis: Short-side power; the role of (threats of) sanctions;\nPolitical Economy: Relational, strategic, structural power"
+  },
+  {
+    "objectID": "slides/09_power/index.html#definitions-of-power",
+    "href": "slides/09_power/index.html#definitions-of-power",
+    "title": "    Economic Policy Visualization",
+    "section": "Definitions of power",
+    "text": "Definitions of power\n\nA exercises power over B when A affects B in a manner contrary to B‘s interest. (Max Weber)\n\nPerson A has power over person B is equivalent to saying that A’s behaviour causes B’s behaviour. (Robert Dahl)\n\nRather than A getting B to do something B would not otherwise do, social relations of power typically involve both A and B doing what they ordinarily do. (Karl Marx)\n\nSee also: Dahl (1957)"
+  },
+  {
+    "objectID": "slides/09_power/index.html#functions-of-wealth",
+    "href": "slides/09_power/index.html#functions-of-wealth",
+    "title": "    Economic Policy Visualization",
+    "section": "Functions of wealth",
+    "text": "Functions of wealth\n\n\n\n\n\n\nSource: Fessler/Schürz (2018)"
+  },
+  {
+    "objectID": "slides/09_power/index.html#power-relations-affect-distribution",
+    "href": "slides/09_power/index.html#power-relations-affect-distribution",
+    "title": "    Economic Policy Visualization",
+    "section": "Power relations affect distribution",
+    "text": "Power relations affect distribution\n\nI attempt to show that social classes should be analyzed as power and production relations between social groups, not just as deciles in statistical distributions.\n\nThe main question confronting us today is not really about capital in the twenty-first century. It is about democracy in the twenty-first century.\n\nSources: Piketty (2015, 523); Stiglitz (2014)"
+  },
+  {
+    "objectID": "slides/09_power/index.html#interdependence-of-power-and-inequality",
+    "href": "slides/09_power/index.html#interdependence-of-power-and-inequality",
+    "title": "    Economic Policy Visualization",
+    "section": "Interdependence of power and inequality",
+    "text": "Interdependence of power and inequality\n\nI start from the rather pragmatic concern that current levels of inequality are too high and that this outcome in part reflects the fact that the balance of power is weighted against consumers and workers.\nIt is my belief that the rise in inequality can in many cases be traced directly or indirectly to changes in the balance of powers. If that is correct, then measures to reduce inequality can be successful only if countervailing power is brought to bear.\n\nSource: Atkinson (2015, 83, 124)"
+  },
+  {
+    "objectID": "slides/09_power/index.html#inequality-and-power-current-policy-challenges",
+    "href": "slides/09_power/index.html#inequality-and-power-current-policy-challenges",
+    "title": "    Economic Policy Visualization",
+    "section": "Inequality and power: current policy challenges",
+    "text": "Inequality and power: current policy challenges\n\nImbalances between public and private wealth and the democratic organisation of vital tasks in the welfare state\nNarrow financial leeway for fiscal policy versus increasing concentration of private wealth\nPatronage and philanthropy as instruments of power?\nPolitical participation and interference\nPrivate wealth and possibilities to create profitable economic conditions\n\nTax policy (LuxLeaks, Panama Leaks), trade policy (TTIP, CETA), social policy\n\nCommodification as a result of social power imbalances\n\n\nFurther reading: Rehm/Schnetzer (2015)"
+  },
+  {
+    "objectID": "slides/09_power/index.html#who-commands-policy",
+    "href": "slides/09_power/index.html#who-commands-policy",
+    "title": "    Economic Policy Visualization",
+    "section": "Who commands policy?",
+    "text": "Who commands policy?\n\n\n\n\n\n\n\n\n\n\n\nSource: Gilens/Page (2014)"
+  },
+  {
+    "objectID": "slides/09_power/index.html#one-person-one-vote",
+    "href": "slides/09_power/index.html#one-person-one-vote",
+    "title": "    Economic Policy Visualization",
+    "section": "One person, one vote?",
+    "text": "One person, one vote?\n\n\n\n\n\n\nSource: Bonica et al. (2013)"
+  },
+  {
+    "objectID": "slides/09_power/index.html#bibliography",
+    "href": "slides/09_power/index.html#bibliography",
+    "title": "    Economic Policy Visualization",
+    "section": "Bibliography",
+    "text": "Bibliography"
+  },
+  {
+    "objectID": "slides/02_data/index.html#section",
+    "href": "slides/02_data/index.html#section",
+    "title": "    The economics of inequality",
+    "section": "",
+    "text": "Has inequality been rising lately?\n\nWhat inequality do you mean exactly?\n\n \n\nIllustrations by https://openpeeps.com."
+  },
+  {
+    "objectID": "slides/02_data/index.html#income-concepts-according-to-canberra-group",
+    "href": "slides/02_data/index.html#income-concepts-according-to-canberra-group",
+    "title": "    The economics of inequality",
+    "section": "Income concepts according to Canberra Group",
+    "text": "Income concepts according to Canberra Group\n\n\n\n\n\n\n\n \n  \n    ID \n    Concept \n    Aggregate \n  \n \n\n  \n    1 \n    Income from employment \n    1a + 1b \n  \n  \n      1a \n    Employee income \n     \n  \n  \n      1b \n    Income from self-employment \n     \n  \n  \n    2 \n    Property income \n     \n  \n  \n    3 \n    Income from household production \n     \n  \n  \n    4 \n    Current transfers received \n     \n  \n  \n    5 \n    Income from production \n    1 + 3 \n  \n  \n    6 \n    Primary income \n    1 + 2 + 3 \n  \n  \n    7 \n    Current transfers paid (taxes, fees, etc.) \n     \n  \n  \n    8 \n    Disposable income \n    6 + 4 - 7 \n  \n\n\n\n\n\n\n\nSource: United Nations (2011), 11"
+  },
+  {
+    "objectID": "slides/02_data/index.html#system-of-national-accounts-sna",
+    "href": "slides/02_data/index.html#system-of-national-accounts-sna",
+    "title": "    The economics of inequality",
+    "section": "System of National Accounts (SNA)",
+    "text": "System of National Accounts (SNA)\n\n\n\n\n \n  \n    ID \n    Concept \n  \n \n\n  \n    D.1 \n    Compensation of employees \n  \n  \n      D.11 \n    Wages and salaries \n  \n  \n      D.12 \n    Employers social contributions \n  \n  \n    B.2G \n    Operating surplus, gross \n  \n  \n    B.3G \n    Mixed income, gross \n  \n  \n    D.4 \n    Property income \n  \n  \n      D.41 \n    Interest \n  \n  \n      D.42 \n    Distributed income of corporations \n  \n  \n      D.43 \n    Reinvested earnings on foreign direct investment \n  \n  \n      D.44 \n    Investment income disbursements (e.g. insurances) \n  \n  \n      D.45 \n    Rent"
+  },
+  {
+    "objectID": "slides/02_data/index.html#austrian-tax-law",
+    "href": "slides/02_data/index.html#austrian-tax-law",
+    "title": "    The economics of inequality",
+    "section": "Austrian tax law",
+    "text": "Austrian tax law\n\n\n\n\n \n  \n    ID \n    Concept \n    Description \n  \n \n\n  \n    1 \n    Income from agriculture and forestry \n    Farmers, forest managers \n  \n  \n    2 \n    Income from self-employment \n    E.g. Freelancers, Architects, Lawyer, Doctors, Consultants, CEO if she holds > 25% \n  \n  \n    3 \n    Business income \n    All other self-employed activities \n  \n  \n    4 \n    Employee income \n    Employees, retirees \n  \n  \n    5 \n    Renting and lease of land \n    Particularly renting of real estate properties \n  \n  \n    6 \n    Property income \n    Savings accounts, dividends (final taxation with capital income tax) \n  \n  \n    7 \n    Other income \n    Income from speculation, income from selling private property, etc."
+  },
+  {
+    "objectID": "slides/02_data/index.html#income-data-sources-in-austria",
+    "href": "slides/02_data/index.html#income-data-sources-in-austria",
+    "title": "    The economics of inequality",
+    "section": "Income data sources in Austria",
+    "text": "Income data sources in Austria\n\n\n\n\n\n\n\n\n\n\nIncome Type\nAggregate time series\nLong-term distribution\nShort-term distribution\n\n\n\n\nEmployee income\nWTD SSD\nWTD SSD\nWTD SSD SES EU-SILC HFCS\n\n\nSelf-employed\nITD (IWITD)\n\nITD (IWITD) EU-SILC HFCS\n\n\nProperty income\nCGT (ITD)\n\nEU-SILC HFCS\n\n\nTransfers\nVarious admin. sources\n\nEU-SILC HFCS\n\n\nDisposable household income\nSNA\n\nHBS EU-SILC HFCS\n\n\n\n\n\nAdministrative and survey data sources: Wage tax data (WTD), Income tax data (ITD), Integrated wage and income tax data (IWITD), Social security data (SSD), Capital gains tax data (CGT), System of National Accounts (SNA), European Survey of Income and Living Conditions (EU-SILC), Household Finance and Consumption Survey (HFCS), Household Budgetary Survey (HBS), Structure of Earnings Survey (SES)"
+  },
+  {
+    "objectID": "slides/02_data/index.html#what-is-eu-silc",
+    "href": "slides/02_data/index.html#what-is-eu-silc",
+    "title": "    The economics of inequality",
+    "section": "What is EU-SILC?",
+    "text": "What is EU-SILC?\n\nEuropean Union Statistics on Income and Living Conditions (by Eurostat)\nHarmonized sample survey in private households\nReplaced European Community Household Panel (1994-2001) in 2003\nConducted in all EU member states and Switzerland, Norway, Iceland, Turkey, Serbia and Macedonia\nSample:\n\n🇦🇹 Stratified random sample from population register with approx. 6,000 households annually\n🇪🇺 approx. 135,000 households (use weights!)\n\nInterview mode: CAPI/CATI\nRotating 4 year panel; Ad-hoc modules\nStandard documentation for Austria:"
+  },
+  {
+    "objectID": "slides/02_data/index.html#income-data-in-eu-silc",
+    "href": "slides/02_data/index.html#income-data-in-eu-silc",
+    "title": "    The economics of inequality",
+    "section": "Income data in EU-SILC",
+    "text": "Income data in EU-SILC\n\n\nIndividual level:\n\nemployee cash or near cash income\ncash benefits or losses from self-employment\npension from individual private plans\nunemployment benefits\nold-age benefits\nsurvivor benefits\nsickness benefits\ndisability benefits\neducation-related allowances\n\n\nHousehold level:\n\nincome from rental of a property or land\nfamily/children related allowances\nsocial exclusion not elsewhere classified\nhousing allowances\nregular inter-household cash transfers received\nalimonies received\ninterest, dividends, profit from capital investments in incorporated business\nincome received by people aged under 16\n\n\n\n\n\nNote: Variables that use administrative data are highlighted."
+  },
+  {
+    "objectID": "slides/02_data/index.html#administrative-versus-survey-data",
+    "href": "slides/02_data/index.html#administrative-versus-survey-data",
+    "title": "    The economics of inequality",
+    "section": "Administrative versus survey data",
+    "text": "Administrative versus survey data\n\n\n\n\n\n\nImpact on response behavior:\n\nSocial desirability\nSociodemographic characteristics\nSurvey design\nLearning effect\n\n\n\n\n\n\n\n\n\nSource: Angel et al. (2019)"
+  },
+  {
+    "objectID": "slides/02_data/index.html#mean-reverting-errors",
+    "href": "slides/02_data/index.html#mean-reverting-errors",
+    "title": "    The economics of inequality",
+    "section": "Mean reverting errors",
+    "text": "Mean reverting errors\n\n\n\nSource: Angel et al. (2019)"
+  },
+  {
+    "objectID": "slides/02_data/index.html#how-do-we-explain-the-mismatch",
+    "href": "slides/02_data/index.html#how-do-we-explain-the-mismatch",
+    "title": "    The economics of inequality",
+    "section": "How do we explain the mismatch?",
+    "text": "How do we explain the mismatch?\n\n\n\nSource: Angel et al. (2019)"
+  },
+  {
+    "objectID": "slides/02_data/index.html#what-about-capital-income",
+    "href": "slides/02_data/index.html#what-about-capital-income",
+    "title": "    The economics of inequality",
+    "section": "What about capital income?",
+    "text": "What about capital income?\n\n\n\n\n\n\nSource: Ertl et al. (2022)"
+  },
+  {
+    "objectID": "slides/02_data/index.html#common-properties-of-inequality-measures",
+    "href": "slides/02_data/index.html#common-properties-of-inequality-measures",
+    "title": "    The economics of inequality",
+    "section": "Common properties of inequality measures",
+    "text": "Common properties of inequality measures\n\n\n\n\n\nAnonymity principle: it does not matter who earns the income\nPopulation principle: the absolute population size does not matter, only proportions do\nRelative income (or scale) principle: Relative incomes matter, not the absolute levels\nDalton (or transfer) principle: A regressive transfer within the distribution increases inequality\n\n\n\n\n\n\nAnonymity principle: In an economy composed of two people, Mr. Smith and Mrs. Jones, where one of them has 60% of the income and the other 40%, the inequality metric should be the same whether it is Mr. Smith or Mrs. Jones who has the 40% share\nPopulation independence: The income inequality metric should not depend on whether an economy has a large or small population. An economy with only a few people should not be automatically judged by the metric as being more equal than a large economy with lots of people.\nScale principle: If every person’s income in an economy is doubled (or multiplied by any positive constant) then the overall metric of inequality should not change.\nDalton principle: In its weak form it says that if some income is transferred from a rich person to a poor person, while still preserving the order of income ranks, then the measured inequality should not increase. In its strong form, the measured level of inequality should decrease.\n\n\n\nReading recommenation: Cowell (2011)"
+  },
+  {
+    "objectID": "slides/02_data/index.html#lorenz-curve-and-gini-coefficient",
+    "href": "slides/02_data/index.html#lorenz-curve-and-gini-coefficient",
+    "title": "    The economics of inequality",
+    "section": "Lorenz curve and Gini coefficient",
+    "text": "Lorenz curve and Gini coefficient\n\n\n\n\nGini coefficient: \\[\\frac{A}{(A+B)} \\in (0, 1)\\]  Alternative: Half of the relative mean absolute difference \\[G= \\frac{\\sum_{i=1}^{n}\\sum_{j=1}^{n}|y_i - y_j|}{2n^2\\bar{y}}\\]"
+  },
+  {
+    "objectID": "slides/02_data/index.html#alternative-inequality-measures",
+    "href": "slides/02_data/index.html#alternative-inequality-measures",
+    "title": "    The economics of inequality",
+    "section": "Alternative inequality measures",
+    "text": "Alternative inequality measures\n\n\nShares\nRatios (point or share ratios, e.g. Palma ratio)\nGeneral Entropy (GE) measures:\n\nDecomposable\nDetermine distance parameter \\(\\alpha\\) (lower values put more weight on changes in lower tail; higher values at the top;)\n\\(\\alpha = 0\\): Theil‘s L (mean log deviation)\n\\(\\alpha = 1\\): Theil‘s T: \\(\\frac{1}{N} \\sum_{i=1}^{N}\\frac{y_i}{\\bar{y}} ln\\left(\\frac{y_i}{\\bar{y}}\\right) \\in (0; ln(N))\\)\n\\(\\alpha = 2\\): Half the squared Coefficient of Variation (ratio of std. deviation to mean)"
+  },
+  {
+    "objectID": "slides/02_data/index.html#national-accounts",
+    "href": "slides/02_data/index.html#national-accounts",
+    "title": "    The economics of inequality",
+    "section": "National Accounts",
+    "text": "National Accounts"
+  },
+  {
+    "objectID": "slides/02_data/index.html#institutional-sectors-in-the-sna",
+    "href": "slides/02_data/index.html#institutional-sectors-in-the-sna",
+    "title": "    The economics of inequality",
+    "section": "Institutional sectors in the SNA",
+    "text": "Institutional sectors in the SNA\n\n\n\n\n\n\n\n\n\n\n\n\nOwnership\n(S.11)  Non-financial corporations\n(S.12)  Financial corporations\n(S.13)  General government\n(S.14)  Households\n(S.15)  NPIs serving households\n\n\n\n\nPublic sector\nPublic non-financial corporations\nPublic financial corporations\nAll government units and government NPIs\n\n\n\n\nNational private sector\nNational private non-financial corporations\nNational private financial corporations\n\nAll households\nAll NPIs serving households\n\n\nForeign-controlled sector\nForeign-controlled non-financial corporations\nForeign-controlled financial corporations\n\n\n\n\n\n\n\n\nNote: The sectors presented in this table are domestic sectors (S.1). S.2 accounts for the rest of the world (RoW)."
+  },
+  {
+    "objectID": "slides/02_data/index.html#income-accounts-in-the-sna",
+    "href": "slides/02_data/index.html#income-accounts-in-the-sna",
+    "title": "    The economics of inequality",
+    "section": "Income accounts in the SNA",
+    "text": "Income accounts in the SNA\n\n\n\n\n\n\n\n\nIncome accounts\n\n\n\n\n\nGross domestic product (GDP) at market prices (I)\n\n\n\n- Consumption of fixed capital\n\n\n\n= Net domestic product\n\n\n\n(I)\n\n\n\n+ Primary incomes receivable from the rest of world\nRest of world\n\n\n- Primary incomes payable to the rest of world\nRest of world\n\n\n= Gross national income (GNI) at market prices\n\n\n\n- Consumption of fixed capital\nDepreciation\n\n\n= Net national income at market prices\n\n\n\n- Taxes on products\nGovernment\n\n\n+ Subsidies on products\nGovernment\n\n\n= Net national income at factor cost\nProduction factors"
+  },
+  {
+    "objectID": "slides/02_data/index.html#data-for-austria-in-billion-euro",
+    "href": "slides/02_data/index.html#data-for-austria-in-billion-euro",
+    "title": "    The economics of inequality",
+    "section": "Data for Austria (in billion Euro)",
+    "text": "Data for Austria (in billion Euro)\n\n\n\n\n\n\nWage share = Compensation of Employees / Net national income at factor cost"
+  },
+  {
+    "objectID": "slides/02_data/index.html#bibliography",
+    "href": "slides/02_data/index.html#bibliography",
+    "title": "    The economics of inequality",
+    "section": "Bibliography",
+    "text": "Bibliography\n\n\n\n\n\n\nPI 2159 Special Topics in Economic Policy | Winter term 2022/23\n\n\n\nAngel, Stefan/Disslbacher, Franziska/Humer, Stefan/Schnetzer, Matthias (2019). What did you really earn last year?: Explaining measurement error in survey income data. Journal of the Royal Statistical Society: Series A (Statistics in Society). DOI: 10.1111/rssa.12463\n\n\nCowell, Frank (2011). Measuring inequality. Oxford University Press.\n\n\nErtl, Michael/Humer, Stefan/Moser, Mathias/Schnetzer, Matthias (2022). The micro-macro gap in property incomes: Consequences for household income inequality. Journal of Income Distribution.\n\n\nUnited Nations (2011). Canberra group handbook on household income statistics (2nd ed.). Geneva: United Nations."
+  },
+  {
+    "objectID": "essayposter.html",
+    "href": "essayposter.html",
+    "title": "Essay & Poster",
+    "section": "",
+    "text": "Poster\nYou will present your research idea to your colleagues in a poster session. Session 1 is taking place on January 13, 2023 and session 2 follows on January 20, 2023. Your time slot for the poster presentation is five minutes. Then we will have a brief Q&A. Posters should be printed on A0 (not hand-written). There are several guides and manuals for poster presentations on the web, e.g. here or here. A suggestion for the structure comprises\n\nTitle of the presentation\nName of the presenter\nBrief literature review (e.g. with 1 key figure)\nHighlights of your research proposal: research gap, research question, data, method\nConclusion: What do you expect? Why is your research policy-relevant?\nReferences\n\n\n\nTopics\nPlease choose on of the following topics and read the provided starting literature. It should give you enough inspiration to elaborate an own research question on a policy-relevant topic and to look out for suitable data.\n\n\n\n\n\n\n\n\n\n\n\n#\nTopic\nStarting literature\nSession\n\n\n\n\n1\nHistorical evolution of inequality\nAlvaredo et al. (2013); Milanovic et al. (2011)\n1\n\n\n2\nDevelopments in global inequality\nKanbur (2019); Bourguignon (2018); Milanovic (2013)\n1\n\n\n3\nDistributional National Accounts (DINA)\nGarbinti et al. (2018); Piketty et al. (2017)\n1\n\n\n4\nGender pay gaps\nChristofides et al. (2013); Redmond/Mcguinness (2018)\n1\n\n\n5\nThe distribution of wealth\nPfeffer/Waitkus (2021); Zucman (2019); Fessler/Schürz (2018)\n1\n\n\n6\nThe missing top in wealth data\nBach et al. (2019); Vermeulen (2018); Eckerstorfer et al. (2016)\n1\n\n\n7\nInheritances and wealth inequality\nAlvaredo et al. (2017); Adermon et al. (2018)\n1\n\n\n8\nIntergenerational mobility\nChetty et al. (2022); Chetty/Hendren (2018); Corak (2013)\n1\n\n\n9\nFunctional distribution and growth\nStockhammer/Stehrer (2011); Stockhammer (2017)\n2\n\n\n10\nRestrictive fiscal policy and inequality\nHope/Limberg (2022); Alpino et al. (2022); Savage et al. (2018)\n2\n\n\n11\nTaxation and tax evasion\nTørsløv et al. (2022); Diamond/Saez (2011); Alstadsæter et al. (2019)\n2\n\n\n12\nInequality and political elites\nLópez et al. (2022); Bonica et al. (2013); Gilens/Page (2014)\n2\n\n\n13\nInequality and preferences for redistribution\nAhrens (2022); Alesina et al. (2018); Kuziemko et al. (2015)\n2\n\n\n14\nPower in economics\nStansbury/Summers (2020); Dutt (2015); Rothschild (2002)\n2\n\n\n\n\n\n\n\n\n\n\nReferences\n\nAdermon, Adrian/Lindahl, Mikael/Waldenström, Daniel (2018). Intergenerational wealth mobility and the role of inheritance: Evidence from multiple generations. The Economic Journal, 128(612), F482–F513. DOI: 10.1111/ecoj.12535\n\n\nAhrens, Leo (2022). Unfair inequality and the demand for redistribution: Why not all inequality is equal. Socio-Economic Review, 20(2), 463–487. DOI: 10.1093/ser/mwaa051\n\n\nAlesina, Alberto/Stantcheva, Stefanie/Teso, Edoardo (2018). Intergenerational mobility and preferences for redistribution. American Economic Review, 108(2), 521–554. DOI: 10.1257/aer.20162015\n\n\nAlpino, Matteo/Asatryan, Zareh/Blesse, Sebastian/Wehrhöfer, Nils (2022). Austerity and distributional policy. Journal of Monetary Economics. DOI: 10.1016/j.jmoneco.2022.07.006\n\n\nAlstadsæter, Annette/Johannesen, Niels/Zucman, Gabriel (2019). Tax evasion and inequality. American Economic Review, 109(6), 2073–2103. DOI: 10.1257/aer.20172043\n\n\nAlvaredo, Facundo/Atkinson, Anthony B./Piketty, Thomas/Saez, Emmanuel (2013). The top 1 percent in international and historical perspective. Journal of Economic Perspectives, 27(3), 3–20. DOI: 10.1257/jep.27.3.3\n\n\nAlvaredo, Facundo/Garbinti, Bertrand/Piketty, Thomas (2017). On the share of inheritance in aggregate wealth: Europe and the USA, 1900-2010. Economica, 84(334), 239–260. DOI: 10.1111/ecca.12233\n\n\nBach, Stefan/Thiemann, Andreas/Zucco, Aline (2019). Looking for the missing rich: Tracing the top tail of the wealth distribution. International Tax and Public Finance, 26(6), 1234–1258. DOI: 10.1007/s10797-019-09578-1\n\n\nBonica, Adam/McCarty, Nolan/Poole, Keith T./Rosenthal, Howard (2013). Why hasn’t democracy slowed rising inequality? The Journal of Economic Perspectives, 27(3), 103–123. DOI: 10.1257/jep.27.3.103\n\n\nBourguignon, Francois (2018). World changes in inequality: An overview of facts, causes, consequences, and policies. CESifo Economic Studies, 64(3), 345–370. DOI: 10.1093/cesifo/ifx028\n\n\nChetty, Raj/Hendren, Nathaniel (2018). The impacts of neighborhoods on intergenerational mobility i: Childhood exposure effects. The Quarterly Journal of Economics, 133(3), 1107–1162. DOI: 10.1093/qje/qjy007\n\n\nChetty, Raj/Jackson, Matthew O./Kuchler, Theresa/Stroebel, Johannes/Hendren, Nathaniel/Fluegge, Robert B./… Wernerfelt, Nils (2022). Social capital i: Measurement and associations with economic mobility. Nature, 608(7921), 108–121. DOI: 10.1038/s41586-022-04996-4\n\n\nChristofides, Louis N./Polycarpou, Alexandros/Vrachimis, Konstantinos (2013). Gender wage gaps, “sticky floors” and “glass ceilings” in europe. Labour Economics, 21, 86–102. DOI: 10.1016/j.labeco.2013.01.003\n\n\nCorak, Miles (2013). Income inequality, equality of opportunity, and intergenerational mobility. Journal of Economic Perspectives, 27(3), 79–102. DOI: 10.1257/jep.27.3.79\n\n\nDiamond, Peter/Saez, Emmanuel (2011). The case for a progressive tax: From basic research to policy recommendation. Journal of Economic Perspectives, 25(4), 165–190. DOI: 10.1257/jep.25.4.165\n\n\nDutt, Amitava Krishna (2015). Uncertainty, power, institutions, and crisis: Implications for economic analysis and the future of capitalism. Review of Keynesian Economics, 3(1), 9–28. DOI: 10.4337/roke.2015.01.02\n\n\nEckerstorfer, Paul/Halak, Johannes/Kapeller, Jakob/Schütz, Bernhard/Springholz, Florian/Wildauer, Rafael (2016). Correcting for the missing rich: An application to wealth survey data. Review of Income and Wealth, 62(4), 605–627. DOI: 10.1111/roiw.12188\n\n\nFessler, Pirmin/Schürz, Martin (2018). Private wealth across european countries: The role of income, inheritance and the welfare state. Journal of Human Development and Capabilities, 19(4), 521–549. DOI: 10.1080/19452829.2018.1507422\n\n\nGarbinti, Bertrand/Goupille-Lebret, Jonathan/Piketty, Thomas (2018). Income inequality in france, 1900–2014: Evidence from distributional national accounts (DINA). Journal of Public Economics, 162, 63–77. DOI: 10.1016/j.jpubeco.2018.01.012\n\n\nGilens, Martin/Page, Benjamin I. (2014). Testing theories of american politics: Elites, interest groups, and average citizens. Perspectives on Politics, 12(3), 564–581. DOI: 10.1017/S1537592714001595\n\n\nHope, David/Limberg, Julian (2022). The economic consequences of major tax cuts for the rich. Socio-Economic Review, 20(2), 539–559. DOI: 10.1093/ser/mwab061\n\n\nKanbur, Ravi (2019). Inequality in a global perspective. Oxford Review of Economic Policy, 35(3), 431–444. DOI: 10.1093/oxrep/grz010\n\n\nKuziemko, Ilyana/Norton, Michael I./Saez, Emmanuel/Stantcheva, Stefanie (2015). How elastic are preferences for redistribution? Evidence from randomized survey experiments. American Economic Review, 105(4), 1478–1508. DOI: 10.1257/aer.20130360\n\n\nLópez, Matias/Silva, Graziella Moraes/Teeger, Chana/Marques, Pedro (2022). Economic and cultural determinants of elite attitudes toward redistribution. Socio-Economic Review, 20(2), 489–514. DOI: 10.1093/ser/mwaa015\n\n\nMilanovic, Branko (2013). Global income inequality in numbers: In history and now. Global Policy, 4(2), 198–208. DOI: 10.1111/1758-5899.12032\n\n\nMilanovic, Branko/Lindert, Peter H./Williamson, Jeffrey G. (2011). Pre-industrial inequality. The Economic Journal, 121(551), 255–272. DOI: 10.1111/j.1468-0297.2010.02403.x\n\n\nPfeffer, Fabian T./Waitkus, Nora (2021). The wealth inequality of nations. American Sociological Review, 86(4), 567–602. DOI: 10.1177/00031224211027800\n\n\nPiketty, Thomas/Saez, Emmanuel/Zucman, Gabriel (2017). Distributional national accounts: Methods and estimates for the united states. The Quarterly Journal of Economics, 133(2), 553–609. DOI: 10.1093/qje/qjx043\n\n\nRedmond, Paul/Mcguinness, Seamus (2018). The gender wage gap in europe: Job preferences, gender convergence and distributional effects. Oxford Bulletin of Economics and Statistics, 81(3), 564–587. DOI: 10.1111/obes.12282\n\n\nRothschild, Kurt W. (2002). The absence of power in contemporary economic theory. The Journal of Socio-Economics, 31(5), 433–442. DOI: 10.1016/S1053-5357(02)00207-X\n\n\nSavage, M./Callan, T./Nolan, B./Colgan, B. (2018). The great recession, austerity and inequality: Lessons from ireland. Review of Income and Wealth, 65(2), 312–336. DOI: 10.1111/roiw.12337\n\n\nStansbury, Anna/Summers, Lawrence (2020). Declining worker power and american economic performance. Brookings Papers on Economic Activity, Spring, 1–96.\n\n\nStockhammer, Engelbert (2017). Wage-led versus profit-led demand: What have we learned? A kaleckian-minskyan view. Review of Keynesian Economics, 5(1), 25–42. DOI: 10.4337/roke.2017.01.03\n\n\nStockhammer, Engelbert/Stehrer, Robert (2011). Goodwin or kalecki in demand? Functional income distribution and aggregate demand in the short run. Review of Radical Political Economics, 43(4), 506–522. DOI: 10.1177/0486613411402642\n\n\nTørsløv, Thomas/Wier, Ludvig/Zucman, Gabriel (2022). The missing profits of nations. The Review of Economic Studies. DOI: 10.1093/restud/rdac049\n\n\nVermeulen, Philip (2018). How fat is the top tail of the wealth distribution? Review of Income and Wealth, 64(2), 357–387. DOI: 10.1111/roiw.12279\n\n\nZucman, Gabriel (2019). Global wealth inequality. Annual Review of Economics, 11(1), 109–138. DOI: 10.1146/annurev-economics-080218-025852"
+  },
+  {
+    "objectID": "syllabus.html",
+    "href": "syllabus.html",
+    "title": "Syllabus",
+    "section": "",
+    "text": "Lecturer\n\n   Dr. Matthias Schnetzer\n   https://mschnetzer.github.io\n   mschnetz@wu.ac.at\n   matschnetzer\n\n\n\nDates\n\n   Mar 6, 2023 – Jun 26, 2023\n   Mondays\n   10:00–12:00\n   TC.4.15\n\n\n\nHighlights\n\n   max. 30 students\n   Engage in policy discussion\n    Improve your R coding skills\n   Create an own data visualization\n\n\n\n\nCourse design\nThe lecturer introduces into various fields of economic policy and provides examples of data visualizations that serve as starting point for discussions. As the graphic illustration of statistical data gains in importance in both the academic and the public discourse, students will learn best practices and gain insights into the visualization of data. Another take-away of the course is to strengthen the knowledge about the power and limitations of the underlying data. A part of each session is dedicated to the work with data. The lecturer provides R-code to produce figures in class. Studens are expected to recreate three charts at home. The main assignment is the production of a comprehensive data visualization on a selected topic of economic policy. Studens will present their chart in class and draft a report with a detailed description of the data, the code and the final visualization in RMarkdown.\nThe course offers a lot of room for discussion in order to permit students to assess various arguments and perspectives, form their own opinion, and argue in a group setting. The teaching is designed to encourage students to actively participate in the debates, raise questions, and gain experience in visualizing data for academic publications or the general debate.\n\n\nRecommended literature\n\n\n\n\n\n\n\n\n\nJonathan Schwabish  Better Data Visualizations: A Guide for Scholars, Researchers, and Wonks  Columbia University Press  ISBN-13: 9780231193115  Link\n\n\n\nDavid Spiegelhalter  The Art of Statistics Learning from Data  Penguin Books UK  ISBN-13: 9780241258767  Link\n\n\n\n\n\n\nLearning outcomes\nAfter completing this course, students will:\n\nknow key figures in various fields of economic policy\nbe aware of the potentials and limitations of available data for specific policy discussions\nshow improved programming skills in R and the ability to create a RMarkdown report\nhave basic knowledge of important principles of data visualization\nbe able to create simple charts to enrich their academic articles\n\n\n\nGrading\n\n\n\n\n\n\n\n\n\nAssignments: 30% (0-10 points for each visualization)\n\n\n\nChart presentation: 30% (0-20 points for the quality of the presentation, 0-10 for the preliminary chart)\n\n\n\nWritten report: 40% (0-40 points for the report and the final chart)\n\n\n\n\n   100-90: Excellent      89-80: Good      79-65: Satisfactory      64-50: Sufficient\nAll single tasks have to be passed (50% threshold each)."
+  },
+  {
+    "objectID": "schedule.html",
+    "href": "schedule.html",
+    "title": "Schedule",
+    "section": "",
+    "text": "In this table you find the dates and contents of all classes.\n\n\n\n\n \n  \n    Date \n    Time \n    Room \n    Content \n    Slides \n    Code \n    Assignment \n  \n \n\n  \n    Mar 06, 2023 \n    10:00-12:00 \n    TC.4.15 \n    Overview and administration \n     \n     \n     \n  \n  \n    Mar 13, 2023 \n    10:00-12:00 \n    TC.4.15 \n    Introduction into R \n     \n     \n     \n  \n  \n    Mar 20, 2023 \n    10:00-12:00 \n    TC.4.15 \n    Data sources and definitions \n     \n     \n     \n  \n  \n    Mar 27, 2023 \n    10:00-12:00 \n    D4.0.022 \n    Growth and development \n     \n     \n     \n  \n  \n    Apr 17, 2023 \n    10:00-12:00 \n    TC.3.07 \n    Inflation \n     \n     \n     \n  \n  \n    Apr 24, 2023 \n    10:30-12:30 \n    TC.3.06 \n    Labor market \n     \n     \n     \n  \n  \n    May 08, 2023 \n    10:00-12:00 \n    TC.3.11 \n    Income inequality \n     \n     \n     \n  \n  \n    May 15, 2023 \n    10:00-12:00 \n    D4.0.127 \n    Wealth inequality \n     \n     \n     \n  \n  \n    Jun 05, 2023 \n    10:00-12:00 \n    D4.0.127 \n    Intergenerational mobility \n     \n     \n     \n  \n  \n    Jun 12, 2023 \n    10:00-12:00 \n    TC.3.07 \n    Climate change \n     \n     \n     \n  \n  \n    Jun 19, 2023 \n    10:00-12:00 \n    D4.0.127 \n    Student presentations \n     \n     \n     \n  \n  \n    Jun 26, 2023 \n    10:00-12:00 \n    D4.0.127 \n    Student presentations \n     \n     \n     \n  \n\n\n\n\n\n\nAssignments\nAssignment [1] provides the setup of the R infrastructure that is required in this course. There are no points for this assignment. Assignments [2] to [4] are recreations of examplary figures provided below. These examples are related to figures that are discussed in class. Students should then try to reproduce the plots at home and improve their individual coding skills. The raw data for the figures are available as *.csv files below. The charts should then be uploaded to the learning platform. The submission deadline is 9 a.m. on the day of the respective teaching unit.\n\nHomework 1\n\n\n\n\n\n\n\n\n\n\n\nInstall the latest R version (v4.2.2)\nInstall the latest version of RStudio Desktop\nOpen RStudio, copy the following code into the console and execute: install.packages(c(\"tidyverse\", \"rmarkdown\")); sessionInfo()\nClick on Help > About RStudio\nMake sure that both the R version (Console) and the RStudio version are visible, take a screenshot and upload it to the learning platform before March 13, 2023 at 9 a.m.\n\n\n\n\n\nHomework 2\n\n\n\n\n\n\n\n\n\n\nPlease submit your chart before April 24, 2023 at 9 a.m. The data for this assignment is available here: \n\n\n\n\nHomework 3\n\n\n\n\n\n\n\n\n\n\nPlease submit your chart before May 15, 2023 at 9 a.m. The data for this assignment is available here: \n\n\n\n\nHomework 4\n\n\n\n\n\n\n\n\n\n\nPlease submit your chart before June 12, 2023 at 9 a.m. The data for this assignment is available here:"
+  },
+  {
+    "objectID": "slides/09_power/index.html",
+    "href": "slides/09_power/index.html",
+    "title": "    Economic Policy Visualization",
+    "section": "",
+    "text": "How does the fiscal multiplier work?\nHow to resolve the trade-off between unemployment and surplus production in a Keynesian framework?\nWhat is the effect of restrictive fiscal policy on inequality?\nWhat is the effect of expansive monetary policy on inequality?"
+  },
+  {
+    "objectID": "visualization.html",
+    "href": "visualization.html",
+    "title": "Chart & Report",
+    "section": "",
+    "text": "Data visualization\nYou will create a preliminary chart for a presentation in one of the two final sessions of the course. The presentation should provide an intuition of the research question you want to address, the underlying data of the chart and, most important, your considerations behind the style of the chart. Your time slot for the presentation is five minutes. Afterwards we will have a brief Q&A in class. The presentation should only have a small number of slides with little text to lead the audience through the process of chart creation, e.g.\n\nResearch question: What do you want to answer with your chart?\nData: What data did you use?\nChart: What does the chart show? What were your thoughts when choosing this style?\nConclusion: What can we learn from the data visualization for economic policy?\n\n\n\nRMarkdown report\nStudents are required to draft a short report around the chart, containing the most important information of chart creation and some economic policy background. The final version of the report is due on June 30, 2023. You should work with RMarkdown which is a handy and simple tool to compose reports based on R code. It is recommended to edit the document in RStudio and compile it as HTML file. The final report should be structured as follows:\n\nIntroduction: Explain why the topic you chose is important and interesting for the academic/public debate.\nResearch question: What is the specific research question that you want to address with your visualization?\nData: What data did you use? What are the limitations of the data? If helpful, you might want to include some descriptive statistics as a table.\nResult: Present and describe the chart that you have created.\nConclusion: What are the policy conclusions of your chart?\nCode: Provide the full code for your data visualization as a code block in the appendix of the report.\n\n\n\nCheatsheets"
+  }
+]
