@@ -1,0 +1,17 @@
+Parents,Children,Share,Total
+Compulsory school,Compulsory school,32.6,409900
+Compulsory school,Apprenticeship/Lower secondary,46.1,409900
+Compulsory school,Higher secondary,14.4,409900
+Compulsory school,Tertiary education,6.9,409900
+Apprenticeship/Lower secondary,Compulsory school,7.5,1241600
+Apprenticeship/Lower secondary,Apprenticeship/Lower secondary,59.3,1241600
+Apprenticeship/Lower secondary,Higher secondary,17.3,1241600
+Apprenticeship/Lower secondary,Tertiary education,15.9,1241600
+Higher secondary,Compulsory school,6,294100
+Higher secondary,Apprenticeship/Lower secondary,18.6,294100
+Higher secondary,Higher secondary,41.9,294100
+Higher secondary,Tertiary education,33.6,294100
+Tertiary education,Compulsory school,3.6,361200
+Tertiary education,Apprenticeship/Lower secondary,15.6,361200
+Tertiary education,Higher secondary,23.5,361200
+Tertiary education,Tertiary education,57.3,361200
