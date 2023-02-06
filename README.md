@@ -1,3 +1,3 @@
-# econpol
+# Advanced Economic Policy
 
-Website for course "Special Topics in Economic Policy" at [WU Vienna](https://wu.ac.at).
+Website for course "Economic Policy Visualization" at [WU Vienna](https://wu.ac.at).
