@@ -7,6 +7,13 @@
     "text": "Advanced Economic Policy\n        \n        \n            Economic Policy Visualization\n        \n        \n            PI 5620 • Summer term 2023  Vienna University of Economics and Business\n        \n    \n    \n          \n            \n            \n          \n        \n\n\n\n\n\nLecturer\n\n   Dr. Matthias Schnetzer\n   https://mschnetzer.github.io\n   mschnetz@wu.ac.at\n   matschnetzer\n\n\n\nCourse details\n\n   Mar 6, 2023 – Jun 26, 2023\n   Mondays\n   10:00–12:00\n   TC.4.15\n\n\n\nContact\nPlease contact me via e-mail and I will usually respond within a few days. Note that we use the learning platform learn.wu.ac.at for all assignments in this course.\n\n\n\nSummary\n“A picture is worth a thousand words”. This course approaches contemporary issues of economic policy by analyzing innovative or iconic data visualizations. Based on selected illustrations, we discuss the underlying data, the theoretical background and policy implications in various fields of empirical economics. In a second step, we will assemble plots in class and study the basics of data visualization. Students are required to recreate figures at home to improve their skills in coding. The main task is that students will design a comprehensive data visualization with the ggplot-Package in R and draft a report around that figure in RMarkdown (or Quarto). Student will need to bring their laptop to class and prior knowledge of data handling in R is beneficial.\n  \nTo sum up, students will gain:\n\n\nan overview of contemporary debates in economic policy based on recent empirical research\na basic understanding of principles of data visualization and the use of figures in economic policy debates\nknowledge how to enrich academic publications with informative graphs"
   },
   {
+    "objectID": "slides/04_growth/index.html#bibliography",
+    "href": "slides/04_growth/index.html#bibliography",
+    "title": "    Economic Policy Visualization",
+    "section": "Bibliography",
+    "text": "Bibliography\n\n\n\n\n\n\nPI 5620 Advanced Economic Policy | Summer term 2023"
+  },
+  {
     "objectID": "slides/01_introduction/index.html#course-info",
     "href": "slides/01_introduction/index.html#course-info",
     "title": "    Economic Policy Visualization",
@@ -32,7 +39,7 @@
     "href": "slides/01_introduction/index.html#schedule",
     "title": "    Economic Policy Visualization",
     "section": "Schedule",
-    "text": "Schedule\n\n\n\n\n \n  \n    Date \n    Time \n    Room \n    Content \n    Assignment \n  \n \n\n  \n    Mar 06, 2023 \n    10:00-12:00 \n    TC.4.15 \n    Overview and administration \n     \n  \n  \n    Mar 13, 2023 \n    10:00-12:00 \n    TC.4.15 \n    Introduction into R \n     \n  \n  \n    Mar 20, 2023 \n    10:00-12:00 \n    TC.4.15 \n    Data sources and definitions \n     \n  \n  \n    Mar 27, 2023 \n    10:00-12:00 \n    D4.0.022 \n    Growth and development \n     \n  \n  \n    Apr 17, 2023 \n    10:00-12:00 \n    TC.3.07 \n    Inflation \n     \n  \n  \n    Apr 24, 2023 \n    10:30-12:30 \n    TC.3.06 \n    Labor market \n     \n  \n  \n    May 08, 2023 \n    10:00-12:00 \n    TC.3.11 \n    Income inequality \n     \n  \n  \n    May 15, 2023 \n    10:00-12:00 \n    D4.0.127 \n    Wealth inequality \n     \n  \n  \n    Jun 05, 2023 \n    10:00-12:00 \n    D4.0.127 \n    Intergenerational mobility \n     \n  \n  \n    Jun 12, 2023 \n    10:00-12:00 \n    TC.3.07 \n    Climate change \n     \n  \n  \n    Jun 19, 2023 \n    10:00-12:00 \n    D4.0.127 \n    Student presentations \n     \n  \n  \n    Jun 26, 2023 \n    10:00-12:00 \n    D4.0.127 \n    Student presentations"
+    "text": "Schedule\n\n\n\n\n \n  \n    Date \n    Time \n    Room \n    Content \n    Assignment \n  \n \n\n  \n    Mar 06, 2023 \n    10:00-12:00 \n    TC.4.15 \n    Introduction \n     \n  \n  \n    Mar 13, 2023 \n    10:00-12:00 \n    TC.4.15 \n    Data \n     \n  \n  \n    Mar 20, 2023 \n    10:00-12:00 \n    TC.4.15 \n    Basics \n     \n  \n  \n    Mar 27, 2023 \n    10:00-12:00 \n    D4.0.022 \n    Growth \n     \n  \n  \n    Apr 17, 2023 \n    10:00-12:00 \n    TC.3.07 \n    Inflation \n     \n  \n  \n    Apr 24, 2023 \n    10:30-12:30 \n    TC.3.06 \n    Work \n     \n  \n  \n    May 08, 2023 \n    10:00-12:00 \n    TC.3.11 \n    Income \n     \n  \n  \n    May 15, 2023 \n    10:00-12:00 \n    D4.0.127 \n    Wealth \n     \n  \n  \n    Jun 05, 2023 \n    10:00-12:00 \n    D4.0.127 \n    Mobility \n     \n  \n  \n    Jun 12, 2023 \n    10:00-12:00 \n    TC.3.07 \n    Climate \n     \n  \n  \n    Jun 19, 2023 \n    10:00-12:00 \n    D4.0.127 \n    Student presentations \n     \n  \n  \n    Jun 26, 2023 \n    10:00-12:00 \n    D4.0.127 \n    Student presentations"
   },
   {
     "objectID": "slides/01_introduction/index.html#assignments",
@@ -70,18 +77,81 @@
     "text": "Recommended Literature\n\n\n\n\n\n\n\n\n\nJonathan Schwabish  Better Data Visualizations: A Guide for Scholars, Researchers, and Wonks  Columbia University Press  ISBN-13: 9780231193115\n\n\n\nDavid Spiegelhalter  The Art of Statistics Learning from Data  Penguin Books UK  ISBN-13: 9780241258767\n\n\n\n\n\n\n\nPI 5620 Advanced Economic Policy | Summer term 2023"
   },
   {
-    "objectID": "slides/02_data/index.html#section",
-    "href": "slides/02_data/index.html#section",
+    "objectID": "slides/02_data/index.html#anscombes-quartet",
+    "href": "slides/02_data/index.html#anscombes-quartet",
     "title": "    Economic Policy Visualization",
-    "section": "",
-    "text": "Has inequality been rising lately?\n\nWhat inequality do you mean exactly?\n\n \n\nIllustrations by https://openpeeps.com."
+    "section": "Anscombe’s quartet",
+    "text": "Anscombe’s quartet\n\n\n\n\n\n\n\n \n\n\nI\nII\nIII\nIV\n\n  \n    Obs. \n    X \n    Y \n    X \n    Y \n    X \n    Y \n    X \n    Y \n  \n \n\n  \n    1 \n    10.00 \n    8.04 \n    10.00 \n    9.14 \n    10.00 \n    7.46 \n    8.00 \n    6.58 \n  \n  \n    2 \n    8.00 \n    6.95 \n    8.00 \n    8.14 \n    8.00 \n    6.77 \n    8.00 \n    5.76 \n  \n  \n    3 \n    13.00 \n    7.58 \n    13.00 \n    8.74 \n    13.00 \n    12.74 \n    8.00 \n    7.71 \n  \n  \n    4 \n    9.00 \n    8.81 \n    9.00 \n    8.77 \n    9.00 \n    7.11 \n    8.00 \n    8.84 \n  \n  \n    5 \n    11.00 \n    8.33 \n    11.00 \n    9.26 \n    11.00 \n    7.81 \n    8.00 \n    8.47 \n  \n  \n    6 \n    14.00 \n    9.96 \n    14.00 \n    8.10 \n    14.00 \n    8.84 \n    8.00 \n    7.04 \n  \n  \n    7 \n    6.00 \n    7.24 \n    6.00 \n    6.13 \n    6.00 \n    6.08 \n    8.00 \n    5.25 \n  \n  \n    8 \n    4.00 \n    4.26 \n    4.00 \n    3.10 \n    4.00 \n    5.39 \n    19.00 \n    12.50 \n  \n  \n    9 \n    12.00 \n    10.84 \n    12.00 \n    9.13 \n    12.00 \n    8.15 \n    8.00 \n    5.56 \n  \n  \n    10 \n    7.00 \n    4.82 \n    7.00 \n    7.26 \n    7.00 \n    6.42 \n    8.00 \n    7.91 \n  \n  \n    11 \n    5.00 \n    5.68 \n    5.00 \n    4.74 \n    5.00 \n    5.73 \n    8.00 \n    6.89 \n  \n  \n    Mean \n    9.00 \n    7.50 \n    9.00 \n    7.50 \n    9.00 \n    7.50 \n    9.00 \n    7.50 \n  \n  \n    SD \n    3.32 \n    2.03 \n    3.32 \n    2.03 \n    3.32 \n    2.03 \n    3.32 \n    2.03 \n  \n  \n    Corr \n    0.82 \n     \n    0.82 \n     \n    0.82 \n     \n    0.82"
+  },
+  {
+    "objectID": "slides/02_data/index.html#what-do-we-learn-when-plotting-the-data",
+    "href": "slides/02_data/index.html#what-do-we-learn-when-plotting-the-data",
+    "title": "    Economic Policy Visualization",
+    "section": "What do we learn when plotting the data?",
+    "text": "What do we learn when plotting the data?"
+  },
+  {
+    "objectID": "slides/02_data/index.html#do-you-see-correlation",
+    "href": "slides/02_data/index.html#do-you-see-correlation",
+    "title": "    Economic Policy Visualization",
+    "section": "Do you see correlation?",
+    "text": "Do you see correlation?\n\n\n\n\nCorrelation: -0.07\n\nCorrelation: -0.07"
+  },
+  {
+    "objectID": "slides/02_data/index.html#same-same-but-different",
+    "href": "slides/02_data/index.html#same-same-but-different",
+    "title": "    Economic Policy Visualization",
+    "section": "Same same but different",
+    "text": "Same same but different"
+  },
+  {
+    "objectID": "slides/02_data/index.html#john-snow-and-the-broad-street-pump",
+    "href": "slides/02_data/index.html#john-snow-and-the-broad-street-pump",
+    "title": "    Economic Policy Visualization",
+    "section": "John Snow and the Broad Street Pump",
+    "text": "John Snow and the Broad Street Pump"
+  },
+  {
+    "objectID": "slides/02_data/index.html#w.e.b.-du-bois",
+    "href": "slides/02_data/index.html#w.e.b.-du-bois",
+    "title": "    Economic Policy Visualization",
+    "section": "W.E.B. Du Bois",
+    "text": "W.E.B. Du Bois"
+  },
+  {
+    "objectID": "slides/02_data/index.html#otto-neurath",
+    "href": "slides/02_data/index.html#otto-neurath",
+    "title": "    Economic Policy Visualization",
+    "section": "Otto Neurath",
+    "text": "Otto Neurath"
+  },
+  {
+    "objectID": "slides/02_data/index.html#charles-joseph-minard",
+    "href": "slides/02_data/index.html#charles-joseph-minard",
+    "title": "    Economic Policy Visualization",
+    "section": "Charles Joseph Minard",
+    "text": "Charles Joseph Minard"
+  },
+  {
+    "objectID": "slides/02_data/index.html#us-elections-results",
+    "href": "slides/02_data/index.html#us-elections-results",
+    "title": "    Economic Policy Visualization",
+    "section": "US elections results",
+    "text": "US elections results"
+  },
+  {
+    "objectID": "slides/02_data/index.html#five-guidelines-for-better-visualization",
+    "href": "slides/02_data/index.html#five-guidelines-for-better-visualization",
+    "title": "    Economic Policy Visualization",
+    "section": "Five guidelines for better visualization",
+    "text": "Five guidelines for better visualization\n\nShow the data\nReduce the clutter\nIntegrate graphics and text\nAvoid the spaghetti chart\nStart with gray"
   },
   {
     "objectID": "slides/02_data/index.html#income-concepts-according-to-canberra-group",
     "href": "slides/02_data/index.html#income-concepts-according-to-canberra-group",
     "title": "    Economic Policy Visualization",
     "section": "Income concepts according to Canberra Group",
-    "text": "Income concepts according to Canberra Group\n\n\n\n\n\n\n\n \n  \n    ID \n    Concept \n    Aggregate \n  \n \n\n  \n    1 \n    Income from employment \n    1a + 1b \n  \n  \n      1a \n    Employee income \n     \n  \n  \n      1b \n    Income from self-employment \n     \n  \n  \n    2 \n    Property income \n     \n  \n  \n    3 \n    Income from household production \n     \n  \n  \n    4 \n    Current transfers received \n     \n  \n  \n    5 \n    Income from production \n    1 + 3 \n  \n  \n    6 \n    Primary income \n    1 + 2 + 3 \n  \n  \n    7 \n    Current transfers paid (taxes, fees, etc.) \n     \n  \n  \n    8 \n    Disposable income \n    6 + 4 - 7 \n  \n\n\n\n\n\n\n\nSource: United Nations (2011), 11"
+    "text": "Income concepts according to Canberra Group\n\n\n\n\n \n  \n    ID \n    Concept \n    Aggregate \n  \n \n\n  \n    1 \n    Income from employment \n    1a + 1b \n  \n  \n      1a \n    Employee income \n     \n  \n  \n      1b \n    Income from self-employment \n     \n  \n  \n    2 \n    Property income \n     \n  \n  \n    3 \n    Income from household production \n     \n  \n  \n    4 \n    Current transfers received \n     \n  \n  \n    5 \n    Income from production \n    1 + 3 \n  \n  \n    6 \n    Primary income \n    1 + 2 + 3 \n  \n  \n    7 \n    Current transfers paid (taxes, fees, etc.) \n     \n  \n  \n    8 \n    Disposable income \n    6 + 4 - 7 \n  \n\n\n\n\n\n\n\nSource: United Nations (2011), 11"
   },
   {
     "objectID": "slides/02_data/index.html#system-of-national-accounts-sna",
@@ -151,7 +221,7 @@
     "href": "visualization.html",
     "title": "Chart & Report",
     "section": "",
-    "text": "Data visualization\nYou will create a preliminary chart for a presentation in one of the two final sessions of the course. The presentation should provide an intuition of the research question you want to address, the underlying data of the chart and, most important, your considerations behind the style of the chart. Your time slot for the presentation is five minutes. Afterwards we will have a brief Q&A in class. The presentation should only have a small number of slides with little text to lead the audience through the process of chart creation, e.g.\n\nResearch question: What do you want to answer with your chart?\nData: What data did you use?\nChart: What does the chart show? What were your thoughts when choosing this style?\nConclusion: What can we learn from the data visualization for economic policy?\n\n\n\nRMarkdown report\nStudents are required to draft a short report around the chart, containing the most important information of chart creation and some economic policy background. The final version of the report is due on June 30, 2023. You should work with RMarkdown (or Quarto) which is a handy and simple tool to compose reports based on R code. It is recommended to edit the document in RStudio and compile it as HTML file. The final report should be structured as follows:\n\nIntroduction: Explain why the topic you chose is important and interesting for the academic/public debate.\nResearch question: What is the specific research question that you want to address with your visualization?\nData: What data did you use? What are the limitations of the data? If helpful, you might want to include some descriptive statistics as a table.\nResult: Present and describe the chart that you have created.\nConclusion: What are the policy conclusions of your chart?\nCode: Provide the full code for your data visualization as a code block in the appendix of the report.\n\n\n\nCheatsheets"
+    "text": "Data visualization\nYou will create a preliminary chart for a presentation in one of the two final sessions of the course. The presentation should provide an intuition of the research question you want to address, the underlying data of the chart and, most important, your considerations behind the style of the chart. Your time slot for the presentation is five minutes. Afterwards we will have a brief Q&A in class. The presentation should only have a small number of slides with little text to lead the audience through the process of chart creation, e.g.\n\nResearch question: What do you want to answer with your chart?\nData: What data did you use?\nChart: What does the chart show? What were your thoughts when choosing this style?\nConclusion: What can we learn from the data visualization for economic policy?\n\n\n\nRMarkdown report\nStudents are required to draft a short report around the chart, containing the most important information of chart creation and some economic policy background. The final version of the report is due on June 30, 2023. You should work with RMarkdown (or Quarto) which is a handy and simple tool to compose reports based on R code. It is recommended to edit the document in RStudio and compile it as HTML file. The final report should be structured as follows:\n\nIntroduction: Explain why the topic you chose is important and interesting for the academic/public debate.\nResearch question: What is the specific research question that you want to address with your visualization?\nData: What data did you use? What are the limitations of the data? If helpful, you might want to include some descriptive statistics as a table.\nResult: Present and describe the chart that you have created.\nConclusion: What are the policy conclusions of your chart?\nCode: Provide the full code for your data visualization as a code block in the appendix of the report.\n\n\n\nCheatsheets\n   \n\n\nAdditional resources\n\n\n\n\n\n\n\n\n\nClaus O. Wilke  Fundamentals of Data Visualization  A Primer on Making Informative and Compelling Figures  Link\n\n\n\nJack Dougherty and Ilya Ilyankou  Hands-On Data Visualization  Interactive Storytelling from Spreadsheets to Code  Link"
   },
   {
     "objectID": "syllabus.html",
@@ -165,6 +235,6 @@
     "href": "schedule.html",
     "title": "Schedule",
     "section": "",
-    "text": "In this table you find the dates and contents of all classes.\n\n\n\n\n \n  \n    Date \n    Time \n    Room \n    Content \n    Slides \n    Code \n    Assignment \n  \n \n\n  \n    Mar 06, 2023 \n    10:00-12:00 \n    TC.4.15 \n    Overview and administration \n    \n \n     \n     \n  \n  \n    Mar 13, 2023 \n    10:00-12:00 \n    TC.4.15 \n    Introduction into R \n     \n     \n     \n  \n  \n    Mar 20, 2023 \n    10:00-12:00 \n    TC.4.15 \n    Data sources and definitions \n     \n     \n     \n  \n  \n    Mar 27, 2023 \n    10:00-12:00 \n    D4.0.022 \n    Growth and development \n     \n     \n     \n  \n  \n    Apr 17, 2023 \n    10:00-12:00 \n    TC.3.07 \n    Inflation \n     \n     \n     \n  \n  \n    Apr 24, 2023 \n    10:30-12:30 \n    TC.3.06 \n    Labor market \n     \n     \n     \n  \n  \n    May 08, 2023 \n    10:00-12:00 \n    TC.3.11 \n    Income inequality \n     \n     \n     \n  \n  \n    May 15, 2023 \n    10:00-12:00 \n    D4.0.127 \n    Wealth inequality \n     \n     \n     \n  \n  \n    Jun 05, 2023 \n    10:00-12:00 \n    D4.0.127 \n    Intergenerational mobility \n     \n     \n     \n  \n  \n    Jun 12, 2023 \n    10:00-12:00 \n    TC.3.07 \n    Climate change \n     \n     \n     \n  \n  \n    Jun 19, 2023 \n    10:00-12:00 \n    D4.0.127 \n    Student presentations \n     \n     \n     \n  \n  \n    Jun 26, 2023 \n    10:00-12:00 \n    D4.0.127 \n    Student presentations \n     \n     \n     \n  \n\n\n\n\n\n\nAssignments\nAssignment [1] provides the setup of the R infrastructure that is required in this course. There are no points for this assignment. Assignments [2] to [4] are recreations of examplary figures provided below. These examples are related to figures that are discussed in class. Students should then try to reproduce the plots at home and improve their individual coding skills. The raw data for the figures are available as *.csv files below. The charts should then be uploaded to the learning platform. The submission deadline is 9 a.m. on the day of the respective teaching unit.\n\nHomework 1\n\n\n\n\n\n\n\n\n\n\n\nInstall the latest R version (v4.2.2)\nInstall the latest version of RStudio Desktop\nOpen RStudio, copy the following code into the console and execute: install.packages(c(\"tidyverse\", \"rmarkdown\")); sessionInfo()\nClick on Help > About RStudio\nMake sure that both the R version (Console) and the RStudio version are visible, take a screenshot and upload it to the learning platform before March 13, 2023 at 9 a.m.\n\n\n\n\n\nHomework 2\n\n\n\n\n\n\n\n\n\n\nPlease submit your chart before April 24, 2023 at 9 a.m. The data for this assignment is available here: \n\n\n\n\nHomework 3\n\n\n\n\n\n\n\n\n\n\nPlease submit your chart before May 15, 2023 at 9 a.m. The data for this assignment is available here: \n\n\n\n\nHomework 4\n\n\n\n\n\n\n\n\n\n\nPlease submit your chart before June 12, 2023 at 9 a.m. The data for this assignment is available here:"
+    "text": "In this table you find the dates and contents of all classes.\n\n\n\n\n \n  \n    Date \n    Time \n    Room \n    Content \n    Slides \n    Code \n    Assignment \n  \n \n\n  \n    Mar 06, 2023 \n    10:00-12:00 \n    TC.4.15 \n    Introduction \n    \n \n     \n     \n  \n  \n    Mar 13, 2023 \n    10:00-12:00 \n    TC.4.15 \n    Data \n    \n \n     \n     \n  \n  \n    Mar 20, 2023 \n    10:00-12:00 \n    TC.4.15 \n    Basics \n     \n    \n \n     \n  \n  \n    Mar 27, 2023 \n    10:00-12:00 \n    D4.0.022 \n    Growth \n     \n     \n     \n  \n  \n    Apr 17, 2023 \n    10:00-12:00 \n    TC.3.07 \n    Inflation \n     \n     \n     \n  \n  \n    Apr 24, 2023 \n    10:30-12:30 \n    TC.3.06 \n    Work \n     \n     \n     \n  \n  \n    May 08, 2023 \n    10:00-12:00 \n    TC.3.11 \n    Income \n     \n     \n     \n  \n  \n    May 15, 2023 \n    10:00-12:00 \n    D4.0.127 \n    Wealth \n     \n     \n     \n  \n  \n    Jun 05, 2023 \n    10:00-12:00 \n    D4.0.127 \n    Mobility \n     \n     \n     \n  \n  \n    Jun 12, 2023 \n    10:00-12:00 \n    TC.3.07 \n    Climate \n     \n     \n     \n  \n  \n    Jun 19, 2023 \n    10:00-12:00 \n    D4.0.127 \n    Student presentations \n     \n     \n     \n  \n  \n    Jun 26, 2023 \n    10:00-12:00 \n    D4.0.127 \n    Student presentations \n     \n     \n     \n  \n\n\n\n\n\n\nAssignments\nAssignment [1] provides the setup of the R infrastructure that is required in this course. There are no points for this assignment. Assignments [2] to [4] are recreations of examplary figures provided below. These examples are related to figures that are discussed in class. Students should then try to reproduce the plots at home and improve their individual coding skills. The raw data for the figures are available as *.csv files below.\n\nHomework 1\n\n\n\n\n\n\n\n\n\n\n\nInstall the latest R version (v4.2.2)\nInstall the latest version of RStudio Desktop\nOpen RStudio, copy the following code into the console and execute: install.packages(c(\"tidyverse\", \"rmarkdown\")); sessionInfo()\nClick on Help > About RStudio\nMake sure that both the R version (Console) and the RStudio version are visible, take a screenshot and upload it to the learning platform before March 20, 2023 at 9 a.m.\n\n\n\n\n\nHomework 2\n\n\n\n\n\n\n\n\n\n\nPlease submit your chart before April 24, 2023 at 9 a.m. The data for this assignment is available here: \n\n\n\n\nHomework 3\n\n\n\n\n\n\n\n\n\n\nPlease submit your chart before May 15, 2023 at 9 a.m. The data for this assignment is available here: \n\n\n\n\nHomework 4\n\n\n\n\n\n\n\n\n\n\nPlease submit your chart before June 12, 2023 at 9 a.m. The data for this assignment is available here:"
   }
 ]

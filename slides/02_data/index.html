@@ -13,7 +13,7 @@
   <meta name="generator" content="quarto-1.2.335">
 
   <meta name="author" content="Dr.&nbsp;Matthias Schnetzer">
-  <meta name="dcterms.date" content="2022-10-21">
+  <meta name="dcterms.date" content="2023-03-13">
   <title>PI 5620 Advanced Economic Policy -     Economic Policy Visualization</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -265,6 +265,7 @@
     }
     .reveal .slide:not(.center) {
       height: 100%;
+      overflow-y: auto;
     }
     .reveal .slide.scrollable {
       overflow-y: auto;
@@ -352,7 +353,7 @@
 
 <section id="title-slide" class="quarto-title-block center">
   <h1 class="title"><p><span class="fa-stack course-icon"> <i class="fas fa-comment fa-stack-2x blue"></i> <i class="fas fa-chart-column fa-stack-1x fa-inverse" style="margin-top:-5pt"></i> </span><br> Economic Policy Visualization</p></h1>
-  <p class="subtitle">Data sources and definitions</p>
+  <p class="subtitle">Data</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -362,22 +363,11 @@ Dr.&nbsp;Matthias Schnetzer
 </div>
 </div>
 
-  <p class="date">10/21/22</p>
-</section>
-<section id="section" class="slide level2 smaller">
-<h2></h2>
-<p><span class="bubble bubble-bottom-left absolute" style="--bubcol: var(--bubcol-blue);top: 5%; left: 18%; ">Has inequality been rising lately?</span></p>
-<div class="fragment fade-in">
-<p><span class="bubble bubble-bottom-right absolute" style="--bubcol: var(--bubcol-red);top: 20%; right: 18%; ">What inequality do you mean exactly?</span></p>
-</div>
-<p><img data-src="img/discuss1.png" class="absolute" style="left: 5%; bottom: 0px; width: 300px; "> <img data-src="img/discuss2.png" class="absolute" style="transform: rotateY(180deg);bottom: 0px; right: 5%; width: 300px; "></p>
-<div class="footer">
-<p>Illustrations by <a href="https://openpeeps.com">https://openpeeps.com</a>.</p>
-</div>
+  <p class="date">March 13, 2023</p>
 </section>
 <section>
-<section id="how-is-income-defined-and-how-do-we-measure-it" class="title-slide slide level1 center">
-<h1>How is income defined and how do we measure it?</h1>
+<section id="why-should-we-plot-data" class="title-slide slide level1 center">
+<h1>Why should we plot data?</h1>
 <div class="absolute" style="top: 90%; left: 30%; width: 400px; height: 336px; ">
 <p><img data-src="../../data/img/avatar_shrug.png"></p>
 </div>
@@ -385,11 +375,293 @@ Dr.&nbsp;Matthias Schnetzer
 
 </div>
 </section>
-<section id="income-concepts-according-to-canberra-group" class="slide level2 smaller">
-<h2>Income concepts according to Canberra Group</h2>
+<section id="anscombes-quartet" class="slide level2">
+<h2>Anscombe’s quartet</h2>
 <div class="cell">
 
 </div>
+<div class="cell">
+<div class="cell-output-display">
+
+<table class=" lightable-classic" style="font-family: &quot;Arial Narrow&quot;, &quot;Source Sans Pro&quot;, sans-serif; width: auto !important; margin-left: auto; margin-right: auto;">
+ <thead>
+<tr>
+<th style="empty-cells: hide;border-bottom:hidden;" colspan="1"></th>
+<th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2"><div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">I</div></th>
+<th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2"><div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">II</div></th>
+<th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2"><div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">III</div></th>
+<th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2"><div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">IV</div></th>
+</tr>
+  <tr>
+   <th style="text-align:right;"> Obs. </th>
+   <th style="text-align:center;"> X </th>
+   <th style="text-align:center;"> Y </th>
+   <th style="text-align:center;"> X </th>
+   <th style="text-align:center;"> Y </th>
+   <th style="text-align:center;"> X </th>
+   <th style="text-align:center;"> Y </th>
+   <th style="text-align:center;"> X </th>
+   <th style="text-align:center;"> Y </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:right;font-weight: bold;border-right:1px solid;"> 1 </td>
+   <td style="text-align:center;"> 10.00 </td>
+   <td style="text-align:center;border-right:1px solid;"> 8.04 </td>
+   <td style="text-align:center;"> 10.00 </td>
+   <td style="text-align:center;border-right:1px solid;"> 9.14 </td>
+   <td style="text-align:center;"> 10.00 </td>
+   <td style="text-align:center;border-right:1px solid;"> 7.46 </td>
+   <td style="text-align:center;"> 8.00 </td>
+   <td style="text-align:center;"> 6.58 </td>
+  </tr>
+  <tr>
+   <td style="text-align:right;font-weight: bold;border-right:1px solid;"> 2 </td>
+   <td style="text-align:center;"> 8.00 </td>
+   <td style="text-align:center;border-right:1px solid;"> 6.95 </td>
+   <td style="text-align:center;"> 8.00 </td>
+   <td style="text-align:center;border-right:1px solid;"> 8.14 </td>
+   <td style="text-align:center;"> 8.00 </td>
+   <td style="text-align:center;border-right:1px solid;"> 6.77 </td>
+   <td style="text-align:center;"> 8.00 </td>
+   <td style="text-align:center;"> 5.76 </td>
+  </tr>
+  <tr>
+   <td style="text-align:right;font-weight: bold;border-right:1px solid;"> 3 </td>
+   <td style="text-align:center;"> 13.00 </td>
+   <td style="text-align:center;border-right:1px solid;"> 7.58 </td>
+   <td style="text-align:center;"> 13.00 </td>
+   <td style="text-align:center;border-right:1px solid;"> 8.74 </td>
+   <td style="text-align:center;"> 13.00 </td>
+   <td style="text-align:center;border-right:1px solid;"> 12.74 </td>
+   <td style="text-align:center;"> 8.00 </td>
+   <td style="text-align:center;"> 7.71 </td>
+  </tr>
+  <tr>
+   <td style="text-align:right;font-weight: bold;border-right:1px solid;"> 4 </td>
+   <td style="text-align:center;"> 9.00 </td>
+   <td style="text-align:center;border-right:1px solid;"> 8.81 </td>
+   <td style="text-align:center;"> 9.00 </td>
+   <td style="text-align:center;border-right:1px solid;"> 8.77 </td>
+   <td style="text-align:center;"> 9.00 </td>
+   <td style="text-align:center;border-right:1px solid;"> 7.11 </td>
+   <td style="text-align:center;"> 8.00 </td>
+   <td style="text-align:center;"> 8.84 </td>
+  </tr>
+  <tr>
+   <td style="text-align:right;font-weight: bold;border-right:1px solid;"> 5 </td>
+   <td style="text-align:center;"> 11.00 </td>
+   <td style="text-align:center;border-right:1px solid;"> 8.33 </td>
+   <td style="text-align:center;"> 11.00 </td>
+   <td style="text-align:center;border-right:1px solid;"> 9.26 </td>
+   <td style="text-align:center;"> 11.00 </td>
+   <td style="text-align:center;border-right:1px solid;"> 7.81 </td>
+   <td style="text-align:center;"> 8.00 </td>
+   <td style="text-align:center;"> 8.47 </td>
+  </tr>
+  <tr>
+   <td style="text-align:right;font-weight: bold;border-right:1px solid;"> 6 </td>
+   <td style="text-align:center;"> 14.00 </td>
+   <td style="text-align:center;border-right:1px solid;"> 9.96 </td>
+   <td style="text-align:center;"> 14.00 </td>
+   <td style="text-align:center;border-right:1px solid;"> 8.10 </td>
+   <td style="text-align:center;"> 14.00 </td>
+   <td style="text-align:center;border-right:1px solid;"> 8.84 </td>
+   <td style="text-align:center;"> 8.00 </td>
+   <td style="text-align:center;"> 7.04 </td>
+  </tr>
+  <tr>
+   <td style="text-align:right;font-weight: bold;border-right:1px solid;"> 7 </td>
+   <td style="text-align:center;"> 6.00 </td>
+   <td style="text-align:center;border-right:1px solid;"> 7.24 </td>
+   <td style="text-align:center;"> 6.00 </td>
+   <td style="text-align:center;border-right:1px solid;"> 6.13 </td>
+   <td style="text-align:center;"> 6.00 </td>
+   <td style="text-align:center;border-right:1px solid;"> 6.08 </td>
+   <td style="text-align:center;"> 8.00 </td>
+   <td style="text-align:center;"> 5.25 </td>
+  </tr>
+  <tr>
+   <td style="text-align:right;font-weight: bold;border-right:1px solid;"> 8 </td>
+   <td style="text-align:center;"> 4.00 </td>
+   <td style="text-align:center;border-right:1px solid;"> 4.26 </td>
+   <td style="text-align:center;"> 4.00 </td>
+   <td style="text-align:center;border-right:1px solid;"> 3.10 </td>
+   <td style="text-align:center;"> 4.00 </td>
+   <td style="text-align:center;border-right:1px solid;"> 5.39 </td>
+   <td style="text-align:center;"> 19.00 </td>
+   <td style="text-align:center;"> 12.50 </td>
+  </tr>
+  <tr>
+   <td style="text-align:right;font-weight: bold;border-right:1px solid;"> 9 </td>
+   <td style="text-align:center;"> 12.00 </td>
+   <td style="text-align:center;border-right:1px solid;"> 10.84 </td>
+   <td style="text-align:center;"> 12.00 </td>
+   <td style="text-align:center;border-right:1px solid;"> 9.13 </td>
+   <td style="text-align:center;"> 12.00 </td>
+   <td style="text-align:center;border-right:1px solid;"> 8.15 </td>
+   <td style="text-align:center;"> 8.00 </td>
+   <td style="text-align:center;"> 5.56 </td>
+  </tr>
+  <tr>
+   <td style="text-align:right;font-weight: bold;border-right:1px solid;"> 10 </td>
+   <td style="text-align:center;"> 7.00 </td>
+   <td style="text-align:center;border-right:1px solid;"> 4.82 </td>
+   <td style="text-align:center;"> 7.00 </td>
+   <td style="text-align:center;border-right:1px solid;"> 7.26 </td>
+   <td style="text-align:center;"> 7.00 </td>
+   <td style="text-align:center;border-right:1px solid;"> 6.42 </td>
+   <td style="text-align:center;"> 8.00 </td>
+   <td style="text-align:center;"> 7.91 </td>
+  </tr>
+  <tr>
+   <td style="text-align:right;font-weight: bold;border-right:1px solid;border-bottom: 3px solid"> 11 </td>
+   <td style="text-align:center;border-bottom: 3px solid"> 5.00 </td>
+   <td style="text-align:center;border-right:1px solid;border-bottom: 3px solid"> 5.68 </td>
+   <td style="text-align:center;border-bottom: 3px solid"> 5.00 </td>
+   <td style="text-align:center;border-right:1px solid;border-bottom: 3px solid"> 4.74 </td>
+   <td style="text-align:center;border-bottom: 3px solid"> 5.00 </td>
+   <td style="text-align:center;border-right:1px solid;border-bottom: 3px solid"> 5.73 </td>
+   <td style="text-align:center;border-bottom: 3px solid"> 8.00 </td>
+   <td style="text-align:center;border-bottom: 3px solid"> 6.89 </td>
+  </tr>
+  <tr>
+   <td style="text-align:right;font-weight: bold;border-right:1px solid;"> Mean </td>
+   <td style="text-align:center;"> 9.00 </td>
+   <td style="text-align:center;border-right:1px solid;"> 7.50 </td>
+   <td style="text-align:center;"> 9.00 </td>
+   <td style="text-align:center;border-right:1px solid;"> 7.50 </td>
+   <td style="text-align:center;"> 9.00 </td>
+   <td style="text-align:center;border-right:1px solid;"> 7.50 </td>
+   <td style="text-align:center;"> 9.00 </td>
+   <td style="text-align:center;"> 7.50 </td>
+  </tr>
+  <tr>
+   <td style="text-align:right;font-weight: bold;border-right:1px solid;"> SD </td>
+   <td style="text-align:center;"> 3.32 </td>
+   <td style="text-align:center;border-right:1px solid;"> 2.03 </td>
+   <td style="text-align:center;"> 3.32 </td>
+   <td style="text-align:center;border-right:1px solid;"> 2.03 </td>
+   <td style="text-align:center;"> 3.32 </td>
+   <td style="text-align:center;border-right:1px solid;"> 2.03 </td>
+   <td style="text-align:center;"> 3.32 </td>
+   <td style="text-align:center;"> 2.03 </td>
+  </tr>
+  <tr>
+   <td style="text-align:right;font-weight: bold;border-right:1px solid;"> Corr </td>
+   <td style="text-align:center;"> 0.82 </td>
+   <td style="text-align:center;border-right:1px solid;">  </td>
+   <td style="text-align:center;"> 0.82 </td>
+   <td style="text-align:center;border-right:1px solid;">  </td>
+   <td style="text-align:center;"> 0.82 </td>
+   <td style="text-align:center;border-right:1px solid;">  </td>
+   <td style="text-align:center;"> 0.82 </td>
+   <td style="text-align:center;">  </td>
+  </tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</section>
+<section id="what-do-we-learn-when-plotting-the-data" class="slide level2">
+<h2>What do we learn when plotting the data?</h2>
+
+<img data-src="index_files/figure-revealjs/anscombe-1.png" width="960" class="r-stretch"></section>
+<section id="do-you-see-correlation" class="slide level2">
+<h2>Do you see correlation?</h2>
+
+<img data-src="index_files/figure-revealjs/datasaurus-1.png" width="960" class="r-stretch quarto-figure-center"><div class="fragment">
+<div class="columns">
+<div class="column" style="text-align:center;">
+<p><span class="secfont" style="font-size:1.5rem;color:#C32402;">Correlation: -0.07</span></p>
+</div><div class="column" style="text-align:center;">
+<p><span class="secfont" style="font-size:1.5rem;color:#0234C3;">Correlation: -0.07</span></p>
+</div>
+</div>
+</div>
+</section>
+<section id="same-same-but-different" class="slide level2">
+<h2>Same same but different</h2>
+
+<img data-src="index_files/figure-revealjs/dinolpots-1.png" width="960" class="r-stretch quarto-figure-center"></section></section>
+<section>
+<section id="the-pioneers-of-data-visualization" class="title-slide slide level1 center">
+<h1>The pioneers of data visualization</h1>
+<div class="absolute" style="top: 90%; left: 30%; width: 400px; height: 336px; ">
+<p><img data-src="../../data/img/avatar_sakko.png"></p>
+</div>
+<div class="footer">
+
+</div>
+</section>
+<section id="john-snow-and-the-broad-street-pump" class="slide level2">
+<h2>John Snow and the Broad Street Pump</h2>
+<div class="columns">
+<div class="column" style="width:60%;">
+<p><img data-src="img/cholera_large.jpg" style="border: 1px solid;" height="450"></p>
+</div><div class="column" style="width:35%;">
+<p><img data-src="img/cholera_detail.png" style="border: 1px solid;" height="450"></p>
+</div>
+</div>
+</section>
+<section id="w.e.b.-du-bois" class="slide level2">
+<h2>W.E.B. Du Bois</h2>
+<div class="columns">
+<div class="column">
+<p><img data-src="img/dubois1.png" style="border: 1px solid;" height="500"></p>
+</div><div class="column">
+<p><img data-src="img/dubois2.png" style="border: 1px solid;" height="500"></p>
+</div>
+</div>
+</section>
+<section id="otto-neurath" class="slide level2">
+<h2>Otto Neurath</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/neurath.png" height="500"></p>
+</figure>
+</div>
+</section>
+<section id="charles-joseph-minard" class="slide level2">
+<h2>Charles Joseph Minard</h2>
+
+<img data-src="img/minard.png" class="r-stretch quarto-figure-center"></section>
+<section id="us-elections-results" class="slide level2">
+<h2>US elections results</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><img data-src="img/trumptweet.png" height="450"></p>
+</div><div class="column" style="width:50%;">
+<div class="fragment">
+<p><br> <img data-src="img/voting-election.gif" style="border: 1px solid;"></p>
+</div>
+</div>
+</div>
+</section>
+<section id="five-guidelines-for-better-visualization" class="slide level2">
+<h2>Five guidelines for better visualization</h2>
+<ul>
+<li>Show the data</li>
+<li>Reduce the clutter</li>
+<li>Integrate graphics and text</li>
+<li>Avoid the spaghetti chart</li>
+<li>Start with gray</li>
+</ul>
+</section></section>
+<section>
+<section id="be-careful-with-data" class="title-slide slide level1 center">
+<h1>Be careful with data!</h1>
+<div class="absolute" style="top: 90%; left: 30%; width: 400px; height: 336px; ">
+<p><img data-src="../../data/img/avatar_finger.png"></p>
+</div>
+<div class="footer">
+
+</div>
+</section>
+<section id="income-concepts-according-to-canberra-group" class="slide level2 smaller">
+<h2>Income concepts according to Canberra Group</h2>
 <div class="tbl-larger">
 <div class="cell-output-display">
 
