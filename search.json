@@ -105,6 +105,13 @@
     "text": "Same same but different"
   },
   {
+    "objectID": "slides/02_data/index.html#use-adequate-plotting-style-for-your-data",
+    "href": "slides/02_data/index.html#use-adequate-plotting-style-for-your-data",
+    "title": "    Economic Policy Visualization",
+    "section": "Use adequate plotting style for your data",
+    "text": "Use adequate plotting style for your data"
+  },
+  {
     "objectID": "slides/02_data/index.html#john-snow-and-the-broad-street-pump",
     "href": "slides/02_data/index.html#john-snow-and-the-broad-street-pump",
     "title": "    Economic Policy Visualization",
@@ -133,18 +140,39 @@
     "text": "Charles Joseph Minard"
   },
   {
-    "objectID": "slides/02_data/index.html#us-elections-results",
-    "href": "slides/02_data/index.html#us-elections-results",
+    "objectID": "slides/02_data/index.html#show-the-data",
+    "href": "slides/02_data/index.html#show-the-data",
     "title": "    Economic Policy Visualization",
-    "section": "US elections results",
-    "text": "US elections results"
+    "section": "1. Show the data",
+    "text": "1. Show the data"
   },
   {
-    "objectID": "slides/02_data/index.html#five-guidelines-for-better-visualization",
-    "href": "slides/02_data/index.html#five-guidelines-for-better-visualization",
+    "objectID": "slides/02_data/index.html#reduce-the-clutter",
+    "href": "slides/02_data/index.html#reduce-the-clutter",
     "title": "    Economic Policy Visualization",
-    "section": "Five guidelines for better visualization",
-    "text": "Five guidelines for better visualization\n\nShow the data\nReduce the clutter\nIntegrate graphics and text\nAvoid the spaghetti chart\nStart with gray"
+    "section": "2. Reduce the clutter",
+    "text": "2. Reduce the clutter"
+  },
+  {
+    "objectID": "slides/02_data/index.html#integrate-graphics-and-text",
+    "href": "slides/02_data/index.html#integrate-graphics-and-text",
+    "title": "    Economic Policy Visualization",
+    "section": "3. Integrate graphics and text",
+    "text": "3. Integrate graphics and text"
+  },
+  {
+    "objectID": "slides/02_data/index.html#avoid-the-spaghetti-chart",
+    "href": "slides/02_data/index.html#avoid-the-spaghetti-chart",
+    "title": "    Economic Policy Visualization",
+    "section": "4. Avoid the spaghetti chart",
+    "text": "4. Avoid the spaghetti chart"
+  },
+  {
+    "objectID": "slides/02_data/index.html#start-with-gray",
+    "href": "slides/02_data/index.html#start-with-gray",
+    "title": "    Economic Policy Visualization",
+    "section": "5. Start with gray",
+    "text": "5. Start with gray"
   },
   {
     "objectID": "slides/02_data/index.html#income-concepts-according-to-canberra-group",
@@ -173,13 +201,6 @@
     "title": "    Economic Policy Visualization",
     "section": "Income data sources in Austria",
     "text": "Income data sources in Austria\n\n\n\n\n\n\n\n\n\n\nIncome Type\nAggregate time series\nLong-term distribution\nShort-term distribution\n\n\n\n\nEmployee income\nWTD SSD\nWTD SSD\nWTD SSD SES EU-SILC HFCS\n\n\nSelf-employed\nITD (IWITD)\n\nITD (IWITD) EU-SILC HFCS\n\n\nProperty income\nCGT (ITD)\n\nEU-SILC HFCS\n\n\nTransfers\nVarious admin. sources\n\nEU-SILC HFCS\n\n\nDisposable household income\nSNA\n\nHBS EU-SILC HFCS\n\n\n\n\n\nAdministrative and survey data sources: Wage tax data (WTD), Income tax data (ITD), Integrated wage and income tax data (IWITD), Social security data (SSD), Capital gains tax data (CGT), System of National Accounts (SNA), European Survey of Income and Living Conditions (EU-SILC), Household Finance and Consumption Survey (HFCS), Household Budgetary Survey (HBS), Structure of Earnings Survey (SES)"
-  },
-  {
-    "objectID": "slides/02_data/index.html#what-is-eu-silc",
-    "href": "slides/02_data/index.html#what-is-eu-silc",
-    "title": "    Economic Policy Visualization",
-    "section": "What is EU-SILC?",
-    "text": "What is EU-SILC?\n\nEuropean Union Statistics on Income and Living Conditions (by Eurostat)\nHarmonized sample survey in private households\nReplaced European Community Household Panel (1994-2001) in 2003\nConducted in all EU member states and Switzerland, Norway, Iceland, Turkey, Serbia and Macedonia\nSample:\n\n🇦🇹 Stratified random sample from population register with approx. 6,000 households annually\n🇪🇺 approx. 135,000 households (use weights!)\n\nInterview mode: CAPI/CATI\nRotating 4 year panel; Ad-hoc modules\nStandard documentation for Austria:"
   },
   {
     "objectID": "slides/02_data/index.html#income-data-in-eu-silc",
