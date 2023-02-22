@@ -2,10 +2,36 @@
 ## 03 DATA VISUALIZATION ##
 ###########################
 
+# Load general packages
 library(tidyverse)
+library(lubridate) # for dates and times
+library(scales) # for scale layouts (breaks and labels)
+
+##############
+## PENGUINS ##
+##############
+
+# Load and assign data
+library(palmerpenguins)
+data <- penguins
+
+# Take brief look
+head(data)
+
+data |> ggplot(aes(x = bill_length_mm, y = bill_depth_mm, color = species)) +
+  geom_point(size = 1.5, alpha = 0.5) +
+  scale_x_continuous(labels = scales::number_format(suffix="mm")) +
+  scale_y_continuous(labels = scales::number_format(suffix="mm", accuracy = 1)) +
+  theme_minimal()
+  
+
+
+
+##############
+## EUROSTAT ##
+##############
+
 library(eurostat)
-library(lubridate)
-library(scales)
 
 retdata <- get_eurostat("sts_trtu_m", filters = list(indic_bt = "TOVV", s_adj = "CA", unit = "PCH_SM", nace_r2 = "G47", geo = c("AT","DE","FR","ES","IT","PT")), time_format = "date", select_time = "M", type = "code")
 
