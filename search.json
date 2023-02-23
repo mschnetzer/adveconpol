@@ -53,21 +53,35 @@
     "href": "slides/03_visualization/index.html#choose-the-adequate-type-of-graph",
     "title": "    Economic Policy Visualization",
     "section": "1. Choose the adequate type of graph",
-    "text": "1. Choose the adequate type of graph\n\n\nBad:   Good: \n\n\nChoose a chart type with respect to your data (numeric, categorical, ranking, time series etc.)\nTo help you find the adequate type from a myriad of alternatives, you can also take a look at https://www.data-to-viz.com and https://datavizproject.com\nPrioritize data accuracy, clarity, and integrity (see figures on the left)\n\n\n\n\n\nSource: Dougherty/Ilyankou (2021)"
+    "text": "1. Choose the adequate type of graph\n\n\nBad:\n\n\n\n\n\n Good:\n\n\n\n\n\n\n\nChoose a chart type with respect to your data (numeric, categorical, ranking, time series etc.)\nWhat would you like to show: comparison, distribution, composition, relationship?\nTo help you find the adequate type from a myriad of alternatives, you can also take a look at https://www.data-to-viz.com and https://datavizproject.com"
   },
   {
     "objectID": "slides/03_visualization/index.html#a-simple-decision-tree-of-chart-types",
     "href": "slides/03_visualization/index.html#a-simple-decision-tree-of-chart-types",
     "title": "    Economic Policy Visualization",
     "section": "A simple decision tree of chart types",
-    "text": "A simple decision tree of chart types\n\n\n\n\n\n\n\nSource: Scherer (2022)"
+    "text": "A simple decision tree of chart types"
+  },
+  {
+    "objectID": "slides/03_visualization/index.html#visualize-data-accurately-and-faithfully",
+    "href": "slides/03_visualization/index.html#visualize-data-accurately-and-faithfully",
+    "title": "    Economic Policy Visualization",
+    "section": "2. Visualize data accurately and faithfully",
+    "text": "2. Visualize data accurately and faithfully\n\n\nBad:   Good: \n\n\nPrioritize data accuracy, clarity, and integrity\nAvoid misleading the reader by truncating the y-axis, using two different y-axis, cherry-picking data, not providing context, etc.\nA good story based on data visualization does not involve deceptive manipulation of the data!\n\n\n\n\n\nSource: Dougherty/Ilyankou (2021)"
+  },
+  {
+    "objectID": "slides/03_visualization/index.html#example",
+    "href": "slides/03_visualization/index.html#example",
+    "title": "    Economic Policy Visualization",
+    "section": "Example",
+    "text": "Example\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSource: Patient"
   },
   {
     "objectID": "slides/03_visualization/index.html#integrate-graphics-and-text",
     "href": "slides/03_visualization/index.html#integrate-graphics-and-text",
     "title": "    Economic Policy Visualization",
-    "section": "2. Integrate graphics and text",
-    "text": "2. Integrate graphics and text\n\n\nBad:   Good: \n\n\nDon’t make people turn their head to read labels\nThink about a logical order of the chart (alphabetical, values)\nAdd direct labels rather than a legend\nChoose a meaningful title that focuses on your message\n\n\n\n\n\nSource: Dougherty/Ilyankou (2021)"
+    "section": "3. Integrate graphics and text",
+    "text": "3. Integrate graphics and text\n\n\nBad:   Good: \n\n\nDon’t make people turn their head to read labels\nThink about a logical order of the chart (alphabetical, values)\nAdd direct labels rather than a legend\nChoose a meaningful title that focuses on your message\n\n\n\n\n\nSource: Dougherty/Ilyankou (2021)"
   },
   {
     "objectID": "slides/03_visualization/index.html#best-practice",
@@ -80,8 +94,8 @@
     "objectID": "slides/03_visualization/index.html#reduce-the-clutter",
     "href": "slides/03_visualization/index.html#reduce-the-clutter",
     "title": "    Economic Policy Visualization",
-    "section": "3. Reduce the clutter",
-    "text": "3. Reduce the clutter\n\n\nBad:   Good: \n\n\nUnnecessary visual elements distract the readers from the central data\nAvoid elements that do not contain information!\nBasic elements like heavy tick marks or gridlines should be removed\nThink carefully which visual elements are really needed to read the chart\n\n\n\n\n\nSource: Dougherty/Ilyankou (2021)"
+    "section": "4. Reduce the clutter",
+    "text": "4. Reduce the clutter\n\n\nBad:   Good: \n\n\nUnnecessary visual elements distract the readers from the central data\nAvoid elements that do not contain information!\nBasic elements like heavy tick marks or gridlines should be removed\nThink carefully which visual elements are really needed to read the chart\n\n\n\n\n\nSource: Dougherty/Ilyankou (2021)"
   },
   {
     "objectID": "slides/03_visualization/index.html#best-practice-1",
@@ -89,13 +103,6 @@
     "title": "    Economic Policy Visualization",
     "section": "Best practice",
     "text": "Best practice\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSources: BlueGranite"
-  },
-  {
-    "objectID": "slides/03_visualization/index.html#do-not-overload-your-chart",
-    "href": "slides/03_visualization/index.html#do-not-overload-your-chart",
-    "title": "    Economic Policy Visualization",
-    "section": "4. Do not overload your chart",
-    "text": "4. Do not overload your chart\n\n\nBad:   Good: \n\n\nTTT\n\n\n\n\n\nSource: Dougherty/Ilyankou (2021)"
   },
   {
     "objectID": "slides/03_visualization/index.html#start-with-gray-and-use-colors-wisely",
