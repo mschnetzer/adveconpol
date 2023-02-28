@@ -31,6 +31,25 @@
       margin: 0 0.8em 0.2em -1.6em;
       vertical-align: middle;
     }
+    div.csl-bib-body { }
+    div.csl-entry {
+      clear: both;
+    }
+    .hanging div.csl-entry {
+      margin-left:2em;
+      text-indent:-2em;
+    }
+    div.csl-left-margin {
+      min-width:2em;
+      float:left;
+    }
+    div.csl-right-inline {
+      margin-left:2em;
+      padding-left:1em;
+    }
+    div.csl-indent {
+      margin-left: 2em;
+    }
   </style>
   <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto.css" id="theme">
   <link href="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -330,7 +349,7 @@
 
 <section id="title-slide" class="quarto-title-block center">
   <h1 class="title"><p><span class="fa-stack course-icon"> <i class="fas fa-comment fa-stack-2x blue"></i> <i class="fas fa-chart-column fa-stack-1x fa-inverse" style="margin-top:-5pt"></i> </span><br> Economic Policy Visualization</p></h1>
-  <p class="subtitle">Growth</p>
+  <p class="subtitle">Growth · Geometries</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -342,7 +361,194 @@ Dr.&nbsp;Matthias Schnetzer
 
   <p class="date">March 27, 2023</p>
 </section>
-<section id="bibliography" class="slide level2 bibstyle">
+<section id="growth-in-economic-policy" class="slide level2 medium">
+<h2>Growth in economic policy</h2>
+<div class="blockquote">
+<p>In recent years economic growth has come to occupy an exalted position in the hierarchy of goals of government policy […] At least in professional economic discussion, we need to give a definite and distinctive meaning to growth as a policy objective. Let it be neither a new synonym for good things in general nor a fashionable way to describe other economic objectives. Let growth be something it is possible to oppose as well as to favor, depending on judgments of social priorities and opportunities.</p>
+</div>
+<div style="font-size:1.2rem;text-align:right;font-family:'Roboto Slab';">
+<p>James <span class="citation" data-cites="tobin:1964">Tobin (<a href="#/bibliography" role="doc-biblioref" onclick="">1964</a>)</span></p>
+</div>
+</section>
+<section id="the-growth-imperative" class="slide level2 medium">
+<h2>The growth imperative</h2>
+<div class="columns">
+<div class="column" style="width:20%;">
+<p><img data-src="img/sdg8.png"></p>
+</div><div class="column" style="width:80%;">
+<ul>
+<li>Growth is an important goal in economic policy</li>
+<li><em>Magic square of economic policy</em> promotes high GDP growth (besides low inflation, high emplpoyment, and balanced trade)</li>
+<li>SDG 8: “Promote inclusive and sustainable economic growth, employment and decent work for all”</li>
+<li>SDG 8.1: “Sustain per capita economic growth in accordance with national circumstances and, in particular, <span class="hl hl-dred">at least 7 per cent</span> gross domestic product growth per annum in the least developed countries”</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="rule-of-70" class="slide level2 medium">
+<h2>Rule of 70</h2>
+<p>We often underestimate the power of growth! How long does it take for a variable <span class="hl hl-dred">to double</span>? The rule of 70 is a good approximation. Just divide 70 by the annual growth rate:</p>
+<p><span class="math display">\[ \Delta = \frac{70}{g} \]</span></p>
+<p>Even with a moderate growth rate of 2%, total GDP doubles in 35 years. An annual growth rate of 7% would mean a doubling of production in only 10 years.</p>
+</section>
+<section id="china-has-grown-14.12-times-in-size-since-1989" class="slide level2 medium">
+<h2>China has grown 14.12 times in size since 1989</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/growth_china.jpg" height="500"></p>
+</figure>
+</div>
+
+<aside><div>
+<p>Source: <a href="https://howmuch.net/articles/chinas-economic-growth-perspective">howmuch.net</a></p>
+</div></aside></section>
+<section id="reeeally-long-term-growth-of-gdp" class="slide level2 medium">
+<h2>Reeeally long-term growth of GDP</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/gdp_growth_long.png" height="500"></p>
+</figure>
+</div>
+
+<aside><div>
+<p>Source: <a href="https://ourworldindata.org/economic-growth">Our world in data</a></p>
+</div></aside></section>
+<section id="which-chart-describes-best-what-you-want-to-show" class="slide level2 medium">
+<h2>Which chart describes best what you want to show?</h2>
+<div class="columns">
+<div class="column">
+<div class="cell">
+<div class="cell-output-display">
+<p><img data-src="index_files/figure-revealjs/abs-1.png" width="576"></p>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<p><img data-src="index_files/figure-revealjs/rates-1.png" width="576"></p>
+</div>
+</div>
+</div><div class="column fragment">
+<div class="cell">
+<div class="cell-output-display">
+<p><img data-src="index_files/figure-revealjs/base-1.png" width="576"></p>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<p><img data-src="index_files/figure-revealjs/bars-1.png" width="576"></p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section>
+<section id="show-me-your-geometries" class="title-slide slide level1 center">
+<h1>Show me your geometries!</h1>
+<div class="absolute" style="top: 90%; left: 30%; width: 400px; height: 336px; ">
+<p><img data-src="../../data/img/avatar_break.png"></p>
+</div>
+<div class="footer">
+
+</div>
+</section>
+<section id="selected-geometries-in-ggplot" class="slide level2 smaller">
+<h2>Selected geometries in {ggplot}</h2>
+<div class="tbl-classic tbl-smaller">
+<table>
+<colgroup>
+<col style="width: 5%">
+<col style="width: 22%">
+<col style="width: 73%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th>Geometry</th>
+<th>Explanation</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><img data-src="img/geom_ribbon.png" style="vertical-align:middle;padding:0;margin:0;" height="35"></td>
+<td>area, ribbon</td>
+<td>An area plot is the continuous analogue of a stacked bar chart.</td>
+</tr>
+<tr class="even">
+<td><img data-src="img/geom_bar.png" style="vertical-align:middle;padding:0;margin:0;" height="35"></td>
+<td>bar, col</td>
+<td>Bar charts may be proportional (bar) or with absolute values (col).</td>
+</tr>
+<tr class="odd">
+<td><img data-src="img/geom_boxplot.png" style="vertical-align:middle;padding:0;margin:0;" height="35"></td>
+<td>boxplot</td>
+<td>The boxplot compactly displays the distribution of a continuous variable.</td>
+</tr>
+<tr class="even">
+<td><img data-src="img/geom_density.png" style="vertical-align:middle;padding:0;margin:0;" height="35"></td>
+<td>density, histogram</td>
+<td>Kernel density plot, which is a smoothed version of the histogram.</td>
+</tr>
+<tr class="odd">
+<td><img data-src="img/geom_abline.png" style="vertical-align:middle;padding:0;margin:0;" height="35"></td>
+<td>hline, vline, abline</td>
+<td>Draws a horizontal or vertical line with an intercept or a line with a slope.</td>
+</tr>
+<tr class="even">
+<td><img data-src="img/geom_line.png" style="vertical-align:middle;padding:0;margin:0;" height="35"></td>
+<td>line, path</td>
+<td>Line between observations in order of variable (line) or appearance (path)</td>
+</tr>
+<tr class="odd">
+<td><img data-src="img/geom_errorbar.png" style="vertical-align:middle;padding:0;margin:0;" height="35"></td>
+<td>linerange, errorbar</td>
+<td>Various ways of representing a vertical interval defined by x, ymin and ymax.</td>
+</tr>
+<tr class="even">
+<td><img data-src="img/geom_point.png" style="vertical-align:middle;padding:0;margin:0;" height="35"></td>
+<td>point, jitter</td>
+<td>The point geom is used to create scatterplots and jitter avoids overplotting.</td>
+</tr>
+<tr class="odd">
+<td><img data-src="img/geom_curve.png" style="vertical-align:middle;padding:0;margin:0;" height="35"></td>
+<td>segment, curve</td>
+<td>Draws a straight or curved line between points (x,y) and (xend, yend).</td>
+</tr>
+<tr class="even">
+<td><img data-src="img/geom_smooth.png" style="vertical-align:middle;padding:0;margin:0;" height="35"></td>
+<td>smooth</td>
+<td>Smoothed line with standard error bounds across a scatterplot.</td>
+</tr>
+<tr class="odd">
+<td><img data-src="img/geom_violin.png" style="vertical-align:middle;padding:0;margin:0;" height="35"></td>
+<td>violin</td>
+<td>A violin plot is a compact display of a continuous distribution.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="additional-geometries" class="slide level2 smaller">
+<h2>Additional geometries</h2>
+<div class="columns center" style="font-size:1.3rem;">
+<div class="column" style="width:33%;">
+<p><span class="secfont">ggstream::geom_stream()</span> <img data-src="img/geom_stream.png" height="200"></p>
+</div><div class="column fragment" style="width:33%;">
+<p><span class="secfont">waffle::geom_waffle()</span> <img data-src="img/geom_waffle.png" height="200"></p>
+</div><div class="column fragment" style="width:33%;">
+<p><span class="secfont">ggchicklet::geom_chicklet()</span> <img data-src="img/geom_chicklet.png" height="200"></p>
+</div>
+</div>
+<div class="columns center" style="font-size:1.3rem;">
+<div class="column fragment" style="width:33%;">
+<p><span class="secfont">ggridges::geom_density_ridges()</span> <img data-src="img/geom_ridges.png" height="200"></p>
+</div><div class="column fragment" style="width:33%;">
+<p><span class="secfont">ggsankey::geom_sankey()</span> <img data-src="img/geom_sankey.png" height="200"></p>
+</div><div class="column fragment" style="width:33%;">
+<p><span class="secfont">ggbump::geom_bump()</span> <img data-src="img/geom_bump.png" height="200"></p>
+</div>
+</div>
+</section>
+<section id="bibliography" class="slide level2 bibstyle smaller scrollable">
 <h2>Bibliography</h2>
 <div class="footer">
 
@@ -352,7 +558,12 @@ Dr.&nbsp;Matthias Schnetzer
 <img src="../../data/img/wu-logo-simple.png" class="slide-logo r-stretch"><div class="footer footer-default">
 <p>PI 5620 Advanced Economic Policy | Summer term 2023</p>
 </div>
-</section>
+<div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography">
+<div id="ref-tobin:1964" class="csl-entry" role="doc-biblioentry">
+Tobin, James (1964). Economic growth as an objective of government policy. <em>American Economic Review</em>, <em>54</em>(3), 1–20.
+</div>
+</div>
+</section></section>
     </div>
   </div>
 
@@ -507,7 +718,7 @@ Dr.&nbsp;Matthias Schnetzer
         hideCursorTime: 5000,
 
         // Opens links in an iframe preview overlay
-        previewLinks: true,
+        previewLinks: false,
 
         // Transition style (none/fade/slide/convex/concave/zoom)
         transition: 'fade',
@@ -564,6 +775,44 @@ Dr.&nbsp;Matthias Schnetzer
         ]
       });
     </script>
+    
+    <script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script>
+
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const toggleBodyColorMode = (bsSheetEl) => {

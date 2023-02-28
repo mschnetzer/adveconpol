@@ -7,11 +7,123 @@
     "text": "Advanced Economic Policy\n        \n        \n            Economic Policy Visualization\n        \n        \n            PI 5620 • Summer term 2023  Vienna University of Economics and Business\n        \n    \n    \n          \n            \n            \n          \n        \n\n\n\n\n\nLecturer\n\n   Dr. Matthias Schnetzer\n   https://mschnetzer.github.io\n   mschnetz@wu.ac.at\n   matschnetzer\n\n\n\nCourse details\n\n   Mar 6, 2023 – Jun 26, 2023\n   Mondays\n   10:00–12:00\n   TC.4.15\n\n\n\nContact\nPlease contact me via e-mail and I will usually respond within a few days. Note that we use the learning platform learn.wu.ac.at for all assignments in this course.\n\n\n\nSummary\n“A picture is worth a thousand words”. This course approaches contemporary issues of economic policy by analyzing innovative or iconic data visualizations. Based on selected illustrations, we discuss the underlying data, the theoretical background and policy implications in various fields of empirical economics. In a second step, we will assemble plots in class and study the basics of data visualization. Students are required to recreate figures at home to improve their skills in coding. The main task is that students will design a comprehensive data visualization with the ggplot-Package in R and draft a report around that figure in RMarkdown (or Quarto). Student will need to bring their laptop to class and prior knowledge of data handling in R is beneficial.\n  \nTo sum up, students will gain:\n\n\nan overview of contemporary debates in economic policy based on recent empirical research\na basic understanding of principles of data visualization and the use of figures in economic policy debates\nknowledge how to enrich academic publications with informative graphs"
   },
   {
+    "objectID": "slides/05_inflation/index.html#colors-in-r",
+    "href": "slides/05_inflation/index.html#colors-in-r",
+    "title": "    Economic Policy Visualization",
+    "section": "Colors in R",
+    "text": "Colors in R\nYou can assign colors by names\n\n“red”, “green”, “chocolate”, “cadetblue”, etc.\nSee a complete list of the 657 colors typing colors()\n\n\n\n\n [1] \"white\"         \"aliceblue\"     \"antiquewhite\"  \"antiquewhite1\"\n [5] \"antiquewhite2\" \"antiquewhite3\" \"antiquewhite4\" \"aquamarine\"   \n [9] \"aquamarine1\"   \"aquamarine2\"   \"aquamarine3\"   \"aquamarine4\"  \n\n\n\n\n Alternatively, you can use hex color codes\n\n#F8766D, #00BA38, #619CFF, etc.\nUse color picker to get hex code, e.g. https://htmlcolorcodes.com"
+  },
+  {
+    "objectID": "slides/05_inflation/index.html#color-palettes-of-rcolorbrewer",
+    "href": "slides/05_inflation/index.html#color-palettes-of-rcolorbrewer",
+    "title": "    Economic Policy Visualization",
+    "section": "Color palettes of {RColorBrewer}",
+    "text": "Color palettes of {RColorBrewer}\n\n\nSequential\nUse to encode numerical information with order\n\n\n\n\n\n\nDiverging\nUse to encode numerical information with critical midpoint\n\n\n\n\n\n\nQualitative\nUse to encode categorical information\n\n\n\n\n\n\n\n\n\nSource: Scherer (2022)"
+  },
+  {
+    "objectID": "slides/05_inflation/index.html#color-blindness",
+    "href": "slides/05_inflation/index.html#color-blindness",
+    "title": "    Economic Policy Visualization",
+    "section": "Color blindness",
+    "text": "Color blindness\n\n\nYou may check whether the color scale works for people who can distinguish fewer colours than others with {colorBlindness}.\n\n\n\n\n\n\nThe viridis color scale is discriminable under the most common forms of colour blindness, and reproduces well in greyscale."
+  },
+  {
+    "objectID": "slides/05_inflation/index.html#fancy-palettes",
+    "href": "slides/05_inflation/index.html#fancy-palettes",
+    "title": "    Economic Policy Visualization",
+    "section": "Fancy palettes",
+    "text": "Fancy palettes\n\n\n{MetBrewer}\n\n\n\n\n\n\n{wesanderson}"
+  },
+  {
+    "objectID": "slides/05_inflation/index.html#color-scales-in-ggplot",
+    "href": "slides/05_inflation/index.html#color-scales-in-ggplot",
+    "title": "    Economic Policy Visualization",
+    "section": "Color scales in {ggplot}",
+    "text": "Color scales in {ggplot}\n\nscale_color_*  scale_fill_*\n\n\n\nContinuous:\n\ncontinuous(type)\ndistiller(palette)\ngradient(high, low)\ngradient2(high, mid, low)\ngradientn(colours)\nviridis_c(option)\n\n\nDiscrete:\n\nmanual(values)\nbrewer(palette)\ngrey(start, end)\nviridis_d(option)"
+  },
+  {
+    "objectID": "slides/05_inflation/index.html#bibliography",
+    "href": "slides/05_inflation/index.html#bibliography",
+    "title": "    Economic Policy Visualization",
+    "section": "Bibliography",
+    "text": "Bibliography\n\n\n\n\n\n\nPI 5620 Advanced Economic Policy | Summer term 2023\n\n\n\nScherer, Cédric (2022). Graphic design with ggplot2. https://rstudio-conf-2022.github.io/ggplot2-graphic-design/"
+  },
+  {
+    "objectID": "slides/08_wealth/index.html#bibliography",
+    "href": "slides/08_wealth/index.html#bibliography",
+    "title": "    Economic Policy Visualization",
+    "section": "Bibliography",
+    "text": "Bibliography\n\n\n\n\n\n\nPI 5620 Advanced Economic Policy | Summer term 2023"
+  },
+  {
+    "objectID": "slides/06_labour/index.html#bibliography",
+    "href": "slides/06_labour/index.html#bibliography",
+    "title": "    Economic Policy Visualization",
+    "section": "Bibliography",
+    "text": "Bibliography\n\n\n\n\n\n\nPI 5620 Advanced Economic Policy | Summer term 2023"
+  },
+  {
+    "objectID": "slides/04_growth/index.html#growth-in-economic-policy",
+    "href": "slides/04_growth/index.html#growth-in-economic-policy",
+    "title": "    Economic Policy Visualization",
+    "section": "Growth in economic policy",
+    "text": "Growth in economic policy\n\nIn recent years economic growth has come to occupy an exalted position in the hierarchy of goals of government policy […] At least in professional economic discussion, we need to give a definite and distinctive meaning to growth as a policy objective. Let it be neither a new synonym for good things in general nor a fashionable way to describe other economic objectives. Let growth be something it is possible to oppose as well as to favor, depending on judgments of social priorities and opportunities.\n\n\nJames Tobin (1964)"
+  },
+  {
+    "objectID": "slides/04_growth/index.html#the-growth-imperative",
+    "href": "slides/04_growth/index.html#the-growth-imperative",
+    "title": "    Economic Policy Visualization",
+    "section": "The growth imperative",
+    "text": "The growth imperative\n\n\n\n\n\nGrowth is an important goal in economic policy\nMagic square of economic policy promotes high GDP growth (besides low inflation, high emplpoyment, and balanced trade)\nSDG 8: “Promote inclusive and sustainable economic growth, employment and decent work for all”\nSDG 8.1: “Sustain per capita economic growth in accordance with national circumstances and, in particular, at least 7 per cent gross domestic product growth per annum in the least developed countries”"
+  },
+  {
+    "objectID": "slides/04_growth/index.html#rule-of-70",
+    "href": "slides/04_growth/index.html#rule-of-70",
+    "title": "    Economic Policy Visualization",
+    "section": "Rule of 70",
+    "text": "Rule of 70\nWe often underestimate the power of growth! How long does it take for a variable to double? The rule of 70 is a good approximation. Just divide 70 by the annual growth rate:\n\\[ \\Delta = \\frac{70}{g} \\]\nEven with a moderate growth rate of 2%, total GDP doubles in 35 years. An annual growth rate of 7% would mean a doubling of production in only 10 years."
+  },
+  {
+    "objectID": "slides/04_growth/index.html#china-has-grown-14.12-times-in-size-since-1989",
+    "href": "slides/04_growth/index.html#china-has-grown-14.12-times-in-size-since-1989",
+    "title": "    Economic Policy Visualization",
+    "section": "China has grown 14.12 times in size since 1989",
+    "text": "China has grown 14.12 times in size since 1989\n\n\n\n\n\n\n\nSource: howmuch.net"
+  },
+  {
+    "objectID": "slides/04_growth/index.html#reeeally-long-term-growth-of-gdp",
+    "href": "slides/04_growth/index.html#reeeally-long-term-growth-of-gdp",
+    "title": "    Economic Policy Visualization",
+    "section": "Reeeally long-term growth of GDP",
+    "text": "Reeeally long-term growth of GDP\n\n\n\n\n\n\n\nSource: Our world in data"
+  },
+  {
+    "objectID": "slides/04_growth/index.html#which-chart-describes-best-what-you-want-to-show",
+    "href": "slides/04_growth/index.html#which-chart-describes-best-what-you-want-to-show",
+    "title": "    Economic Policy Visualization",
+    "section": "Which chart describes best what you want to show?",
+    "text": "Which chart describes best what you want to show?"
+  },
+  {
+    "objectID": "slides/04_growth/index.html#selected-geometries-in-ggplot",
+    "href": "slides/04_growth/index.html#selected-geometries-in-ggplot",
+    "title": "    Economic Policy Visualization",
+    "section": "Selected geometries in {ggplot}",
+    "text": "Selected geometries in {ggplot}\n\n\n\n\n\n\n\n\n\n\nGeometry\nExplanation\n\n\n\n\n\narea, ribbon\nAn area plot is the continuous analogue of a stacked bar chart.\n\n\n\nbar, col\nBar charts may be proportional (bar) or with absolute values (col).\n\n\n\nboxplot\nThe boxplot compactly displays the distribution of a continuous variable.\n\n\n\ndensity, histogram\nKernel density plot, which is a smoothed version of the histogram.\n\n\n\nhline, vline, abline\nDraws a horizontal or vertical line with an intercept or a line with a slope.\n\n\n\nline, path\nLine between observations in order of variable (line) or appearance (path)\n\n\n\nlinerange, errorbar\nVarious ways of representing a vertical interval defined by x, ymin and ymax.\n\n\n\npoint, jitter\nThe point geom is used to create scatterplots and jitter avoids overplotting.\n\n\n\nsegment, curve\nDraws a straight or curved line between points (x,y) and (xend, yend).\n\n\n\nsmooth\nSmoothed line with standard error bounds across a scatterplot.\n\n\n\nviolin\nA violin plot is a compact display of a continuous distribution."
+  },
+  {
+    "objectID": "slides/04_growth/index.html#additional-geometries",
+    "href": "slides/04_growth/index.html#additional-geometries",
+    "title": "    Economic Policy Visualization",
+    "section": "Additional geometries",
+    "text": "Additional geometries\n\n\nggstream::geom_stream() \n\nwaffle::geom_waffle() \n\nggchicklet::geom_chicklet() \n\n\n\n\nggridges::geom_density_ridges() \n\nggsankey::geom_sankey() \n\nggbump::geom_bump()"
+  },
+  {
     "objectID": "slides/04_growth/index.html#bibliography",
     "href": "slides/04_growth/index.html#bibliography",
     "title": "    Economic Policy Visualization",
     "section": "Bibliography",
-    "text": "Bibliography\n\n\n\n\n\n\nPI 5620 Advanced Economic Policy | Summer term 2023"
+    "text": "Bibliography\n\n\n\n\n\n\nPI 5620 Advanced Economic Policy | Summer term 2023\n\n\n\nTobin, James (1964). Economic growth as an objective of government policy. American Economic Review, 54(3), 1–20."
   },
   {
     "objectID": "slides/03_visualization/index.html#john-snow-and-the-broad-street-pump",
@@ -77,6 +189,20 @@
     "text": "Example\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSource: Patient"
   },
   {
+    "objectID": "slides/03_visualization/index.html#another-example",
+    "href": "slides/03_visualization/index.html#another-example",
+    "title": "    Economic Policy Visualization",
+    "section": "Another example",
+    "text": "Another example"
+  },
+  {
+    "objectID": "slides/03_visualization/index.html#a-third-example",
+    "href": "slides/03_visualization/index.html#a-third-example",
+    "title": "    Economic Policy Visualization",
+    "section": "A third example",
+    "text": "A third example\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSource: The Correspondent"
+  },
+  {
     "objectID": "slides/03_visualization/index.html#integrate-graphics-and-text",
     "href": "slides/03_visualization/index.html#integrate-graphics-and-text",
     "title": "    Economic Policy Visualization",
@@ -105,18 +231,25 @@
     "text": "Best practice\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSources: BlueGranite"
   },
   {
-    "objectID": "slides/03_visualization/index.html#start-with-gray-and-use-colors-wisely",
-    "href": "slides/03_visualization/index.html#start-with-gray-and-use-colors-wisely",
+    "objectID": "slides/03_visualization/index.html#avoid-the-spaghetti-chart-and-start-with-gray",
+    "href": "slides/03_visualization/index.html#avoid-the-spaghetti-chart-and-start-with-gray",
     "title": "    Economic Policy Visualization",
-    "section": "5. Start with gray and use colors wisely",
-    "text": "5. Start with gray and use colors wisely"
+    "section": "5. Avoid the spaghetti chart and start with gray",
+    "text": "5. Avoid the spaghetti chart and start with gray\n\n\nBad:\n\n\n\n\n\n Good:\n\n\n\n\n\n\n\nWhen the graph contains too much information, it looks like spaghetti\nTry to break overloaded single charts into smaller parts (facets, small multiples) or highlight the relevant information\nStart with gray: you are forced to be strategic in the use of color, labels, etc."
   },
   {
     "objectID": "slides/03_visualization/index.html#best-practice-2",
     "href": "slides/03_visualization/index.html#best-practice-2",
     "title": "    Economic Policy Visualization",
     "section": "Best practice",
-    "text": "Best practice"
+    "text": "Best practice\n\n\n\n\n\n\n\n\n\nSource: Schwabish (2014)"
+  },
+  {
+    "objectID": "slides/03_visualization/index.html#what-are-the-gestalt-principles",
+    "href": "slides/03_visualization/index.html#what-are-the-gestalt-principles",
+    "title": "    Economic Policy Visualization",
+    "section": "What are the Gestalt Principles?",
+    "text": "What are the Gestalt Principles?\nGestalt Principles describe how humans group similar elements, recognize patterns and simplify complex images. “Gestalt” is German for “unified whole”.\n\n\n\n\n\nThe question is how humans typically gain meaningful perceptions from the chaotic stimuli around them. The idea is that the mind “informs” what the eye sees by perceiving a series of individual elements as a whole."
   },
   {
     "objectID": "slides/03_visualization/index.html#which-chart-is-random-and-which-has-structure-in-it",
@@ -126,13 +259,6 @@
     "text": "Which chart is random and which has structure in it?\n\n\n\n\n\n\n\n\n\nSource: Healy (2018)"
   },
   {
-    "objectID": "slides/03_visualization/index.html#our-brains-look-for-structure",
-    "href": "slides/03_visualization/index.html#our-brains-look-for-structure",
-    "title": "    Economic Policy Visualization",
-    "section": "Our brains look for structure",
-    "text": "Our brains look for structure\n\n\n\n\n\n\n\nSource: Healy (2018)"
-  },
-  {
     "objectID": "slides/03_visualization/index.html#gestalt-rules",
     "href": "slides/03_visualization/index.html#gestalt-rules",
     "title": "    Economic Policy Visualization",
@@ -140,11 +266,11 @@
     "text": "Gestalt rules\n\nProximity Things that are spatially near to one another seem to be related.\nSimilarity Things that look alike seem to be related.\nConnection Things that are visually tied to one another seem to be related.\nContinuity Partially hidden objects are completed into familiar shapes.\nClosure Incomplete shapes are perceived as complete.\nFigure and Ground Visual elements are taken to be either in the foreground or the background.\nCommon Fate Elements sharing a direction of movement are perceived as a unit.\n\n\n\nSource: Healy (2018)"
   },
   {
-    "objectID": "slides/03_visualization/index.html#use-adequate-plotting-style-for-your-data",
-    "href": "slides/03_visualization/index.html#use-adequate-plotting-style-for-your-data",
+    "objectID": "slides/03_visualization/index.html#our-brains-look-for-structure",
+    "href": "slides/03_visualization/index.html#our-brains-look-for-structure",
     "title": "    Economic Policy Visualization",
-    "section": "Use adequate plotting style for your data",
-    "text": "Use adequate plotting style for your data"
+    "section": "Our brains look for structure",
+    "text": "Our brains look for structure\n\n\n\n\n\n\n\nSource: Healy (2018)"
   },
   {
     "objectID": "slides/03_visualization/index.html#the-grammar-of-ggplot",
@@ -158,14 +284,84 @@
     "href": "slides/03_visualization/index.html#geometries-and-aesthetic-mapping",
     "title": "    Economic Policy Visualization",
     "section": "Geometries and aesthetic mapping",
-    "text": "Geometries and aesthetic mapping\n\ndata + \n  ggplot(aes(x = year, y = value, color = category)) +\n  geom_point(alpha = 0.5, shape = 21) +\n  scale_color_manual(values = c(\"red\", \"blue\", \"yellow\"))\n\n\n\n\n\n\n\n\n\n\n\n\nGeometries\nAesthetics\nScales\nDimensions\n\n\n\n\npoints\npositions (x, y)\nscale_x_*(), scale_y_*()\nposition (continuous, discrete, reverse, log10, sqrt, date)\n\n\nlines\ncolors (color, fill)\nscale_color_*(),  scale_fill_*()\ncolors (continuous, discrete, manual, gradient, gradient2, brewer)\n\n\npolygons\nshapes (shape, linetype)\nscale_shape_*(), scale_linetype_*()\nshapes (continuous, discrete, manual, ordinal)\n\n\ntext labels\nsize (size)\nscale_size_*(), scale_radius_*()\nsizes (continuous, discrete, manual, ordinal, area, date)\n\n\n\ntransparency (alpha)\nscale_alpha_*()\ntransparency (continuous, discrete, manual, ordinal, date)\n\n\n\ngroupings (group)\n\n\n\n\n\n\n\n\nSource: Scherer (2022)"
+    "text": "Geometries and aesthetic mapping\n\ndata + \n  ggplot(aes(x = year, y = value, color = category)) +\n  geom_point(alpha = 0.5, shape = 21) +\n  scale_color_manual(values = c(\"red\", \"blue\", \"yellow\"))\n\n\n\n\n\n\n\n\n\n\n\n\nGeometries\nAesthetics\nScales\nDimensions\n\n\n\n\npoints\npositions (x, y)\nscale_x_*(), scale_y_*()\nposition (continuous, discrete, reverse, log10, sqrt, date)\n\n\nlines\ncolors (color, fill)\nscale_color_*(),  scale_fill_*()\ncolors (continuous, discrete, manual, gradient, gradient2, brewer)\n\n\npolygons\nshapes (shape, linetype)\nscale_shape_*(), scale_linetype_*()\nshapes (continuous, discrete, manual, ordinal)\n\n\ntext\nsize (size)\nscale_size_*(), scale_radius_*()\nsizes (continuous, discrete, manual, ordinal, area, date)\n\n\nboxplot\ntransparency (alpha)\nscale_alpha_*()\ntransparency (continuous, discrete, manual, ordinal, date)\n\n\n…many more!\ngroupings (group)\n\n\n\n\n\n\n\n\nSource: Scherer (2022)"
+  },
+  {
+    "objectID": "slides/03_visualization/index.html#first-steps",
+    "href": "slides/03_visualization/index.html#first-steps",
+    "title": "    Economic Policy Visualization",
+    "section": "First steps",
+    "text": "First steps\n\n\ndata |> ggplot(aes(x = bill_length_mm, \n                  y = bill_depth_mm)) +\n  geom_point(size = 1.5, alpha = 0.5)"
+  },
+  {
+    "objectID": "slides/03_visualization/index.html#colors",
+    "href": "slides/03_visualization/index.html#colors",
+    "title": "    Economic Policy Visualization",
+    "section": "Colors",
+    "text": "Colors\n\n\ndata |> ggplot(aes(x = bill_length_mm, \n                  y = bill_depth_mm, \n                  color = species)) +\n  geom_point(size = 1.5, alpha = 0.5) +\n  theme_minimal()"
+  },
+  {
+    "objectID": "slides/03_visualization/index.html#scales",
+    "href": "slides/03_visualization/index.html#scales",
+    "title": "    Economic Policy Visualization",
+    "section": "Scales",
+    "text": "Scales\n\n\ndata |> ggplot(aes(x = bill_length_mm, \n                  y = bill_depth_mm, \n                  color = species)) +\n  geom_point(size = 1.5, alpha = 0.5) +\n  scale_color_manual(values = MetBrewer::met.brewer(\"Lakota\")) +\n  scale_x_continuous(limits = c(30,60), breaks = seq(30,60,10)) +\n  scale_y_continuous(limits = c(12,21), breaks = seq(12,21,3)) +\n  theme_minimal()"
+  },
+  {
+    "objectID": "slides/03_visualization/index.html#labels",
+    "href": "slides/03_visualization/index.html#labels",
+    "title": "    Economic Policy Visualization",
+    "section": "Labels",
+    "text": "Labels\n\n\ndata |> ggplot(aes(x = bill_length_mm, \n                  y = bill_depth_mm, \n                  color = species)) +\n  geom_point(size = 1.5, alpha = 0.5) +\n  scale_color_manual(values = MetBrewer::met.brewer(\"Lakota\")) +\n  scale_x_continuous(limits = c(30,60), breaks = seq(30,60,10)) +\n  scale_y_continuous(limits = c(12,21), breaks = seq(12,21,3)) +\n  labs(x = \"Bill length (in mm)\", y = \"Bill depth (in mm)\",\n      title = \"Penguins are awesome\",\n      subtitle = \"Depth and length of bills\") +\n  theme_minimal()"
+  },
+  {
+    "objectID": "slides/03_visualization/index.html#annotation-rather-than-legend",
+    "href": "slides/03_visualization/index.html#annotation-rather-than-legend",
+    "title": "    Economic Policy Visualization",
+    "section": "Annotation rather than legend",
+    "text": "Annotation rather than legend\n\n\ndata |> ggplot(aes(x = bill_length_mm, \n                  y = bill_depth_mm, \n                  color = species)) +\n  geom_point(size = 1.5, alpha = 0.5) +\n  scale_color_manual(values = MetBrewer::met.brewer(\"Lakota\")) +\n  scale_x_continuous(limits = c(30,60), breaks = seq(30,60,10)) +\n  scale_y_continuous(limits = c(12,21), breaks = seq(12,21,3)) +\n  annotate(\"text\", x = c(34.7, 55.7, 50.7), y = c(20.7, 19, 13.6), \n  color = MetBrewer::met.brewer(\"Lakota\")[1:3], \n  label = c(\"Adélie\",\"Chinstrap\",\"Gentoo\"), fontface = \"bold\", size = 4) +\n  labs(x = \"Bill length (in mm)\", y = \"Bill depth (in mm)\",\n      title = \"Penguins are awesome\",\n      subtitle = \"Depth and length of bills\") +\n  theme_minimal() +\n  theme(legend.position = \"none\")"
+  },
+  {
+    "objectID": "slides/03_visualization/index.html#themes",
+    "href": "slides/03_visualization/index.html#themes",
+    "title": "    Economic Policy Visualization",
+    "section": "Themes",
+    "text": "Themes\n\n\ndata |> ggplot(aes(x = bill_length_mm, \n                  y = bill_depth_mm, \n                  color = species)) +\n  geom_point(size = 1.5, alpha = 0.5) +\n  scale_color_manual(values = MetBrewer::met.brewer(\"Lakota\")) +\n  scale_x_continuous(limits = c(30,60), breaks = seq(30,60,10)) +\n  scale_y_continuous(limits = c(12,21), breaks = seq(12,21,3)) +\n  annotate(\"text\", x = c(34.7, 55.7, 50.7), y = c(20.7, 19, 13.6), \n  color = MetBrewer::met.brewer(\"Lakota\")[1:3], \n  label = c(\"Adélie\",\"Chinstrap\",\"Gentoo\"), fontface = \"bold\", size = 4) +\n  labs(x = \"Bill length (in mm)\", y = \"Bill depth (in mm)\",\n      title = \"Penguins are awesome\",\n      subtitle = \"Depth and length of bills\") +\n  theme_minimal() +\n  theme(legend.position = \"none\",\n  plot.title.position = \"plot\",\n  plot.title = element_text(size = 16, face=\"bold\"),\n  plot.subtitle = element_text(size = 13),\n  panel.grid.minor = element_blank())"
+  },
+  {
+    "objectID": "slides/03_visualization/index.html#calculate-median-and-standard-deviation",
+    "href": "slides/03_visualization/index.html#calculate-median-and-standard-deviation",
+    "title": "    Economic Policy Visualization",
+    "section": "Calculate median and standard deviation",
+    "text": "Calculate median and standard deviation\n\ndata_summary <- data |>\n  group_by(species) |>\n  summarise(across(c(bill_length_mm, bill_depth_mm),\n  list(median = ~median(., na.rm = TRUE), \n       sd = ~sd(., na.rm = TRUE))))\n\ndata_summary\n\n\n\n# A tibble: 3 × 5\n  species   bill_length_mm_median bill_length_mm_sd bill_depth_mm_median bill_…¹\n  <fct>                     <dbl>             <dbl>                <dbl>   <dbl>\n1 Adelie                     38.8              2.66                 18.4   1.22 \n2 Chinstrap                  49.6              3.34                 18.4   1.14 \n3 Gentoo                     47.3              3.08                 15     0.981\n# … with abbreviated variable name ¹​bill_depth_mm_sd"
+  },
+  {
+    "objectID": "slides/03_visualization/index.html#median",
+    "href": "slides/03_visualization/index.html#median",
+    "title": "    Economic Policy Visualization",
+    "section": "Median",
+    "text": "Median\n\n\ndata |> ggplot(aes(x = bill_length_mm, \n                  y = bill_depth_mm, \n                  color = species)) +\n  geom_point(size = 1.5, alpha = 0.5) +\n  geom_errorbar(\n    data = data_summary,\n    aes(x = bill_length_mm_median,\n      ymin = bill_depth_mm_median - bill_depth_mm_sd,\n      ymax = bill_depth_mm_median + bill_depth_mm_sd,\n      color = species,\n      color = after_scale(colorspace::darken(color, .2, space = \"combined\"))), \n      inherit.aes = FALSE, width = .5, size = .8) +\n  geom_errorbar(\n    data = data_summary,\n    aes(y = bill_depth_mm_median,\n      xmin = bill_length_mm_median - bill_length_mm_sd,\n      xmax = bill_length_mm_median + bill_length_mm_sd,\n      color = species,\n      color = after_scale(colorspace::darken(color, .2, space = \"combined\"))), \n      inherit.aes = FALSE, width = .25, size = .8) +\n  scale_color_manual(values = MetBrewer::met.brewer(\"Lakota\")) +\n  scale_x_continuous(limits = c(30,60), breaks = seq(30,60,10)) +\n  scale_y_continuous(limits = c(12,21), breaks = seq(12,21,3)) +\n  annotate(\"text\", x = c(34.7, 55.7, 50.7), y = c(20.7, 19, 13.6), color = MetBrewer::met.brewer(\"Lakota\")[1:3], label = c(\"Adélie\",\"Chinstrap\",\"Gentoo\"), fontface = \"bold\", size = 4) +\n  labs(x = \"Bill length (in mm)\", y = \"Bill depth (in mm)\",\n      title = \"Penguins are awesome\",\n      subtitle = \"Depth and length of bills\") +\n  theme_minimal() +\n  theme(legend.position = \"none\",\n  plot.title.position = \"plot\",\n  plot.title = element_text(size = 16, face=\"bold\"),\n  plot.subtitle = element_text(size = 13),\n  panel.grid.minor = element_blank())"
+  },
+  {
+    "objectID": "slides/03_visualization/index.html#final-plot",
+    "href": "slides/03_visualization/index.html#final-plot",
+    "title": "    Economic Policy Visualization",
+    "section": "Final plot",
+    "text": "Final plot"
   },
   {
     "objectID": "slides/03_visualization/index.html#bibliography",
     "href": "slides/03_visualization/index.html#bibliography",
     "title": "    Economic Policy Visualization",
     "section": "Bibliography",
-    "text": "Bibliography\n\n\n\n\n\n\nPI 5620 Advanced Economic Policy | Summer term 2023\n\n\n\nDougherty, Jack/Ilyankou, Ilya (2021). Hands-on data visualization: Interactive storytelling from spreadsheets to code. O’Reilly Media.\n\n\nHealy, Kieran (2018). Data visualization: A practical introduction. Princeton University Press.\n\n\nScherer, Cédric (2022). Graphic design with ggplot2. https://rstudio-conf-2022.github.io/ggplot2-graphic-design/"
+    "text": "Bibliography\n\n\n\n\n\n\nPI 5620 Advanced Economic Policy | Summer term 2023\n\n\n\nDougherty, Jack/Ilyankou, Ilya (2021). Hands-on data visualization: Interactive storytelling from spreadsheets to code. O’Reilly Media.\n\n\nHealy, Kieran (2018). Data visualization: A practical introduction. Princeton University Press.\n\n\nScherer, Cédric (2022). Graphic design with ggplot2. https://rstudio-conf-2022.github.io/ggplot2-graphic-design/\n\n\nSchwabish, Jonathan A. (2014). An economist’s guide to visualizing data. Journal of Economic Perspectives, 28(1), 209–234. DOI: 10.1257/jep.28.1.209"
+  },
+  {
+    "objectID": "slides/10_climate/index.html#bibliography",
+    "href": "slides/10_climate/index.html#bibliography",
+    "title": "    Economic Policy Visualization",
+    "section": "Bibliography",
+    "text": "Bibliography\n\n\n\n\n\n\nPI 5620 Advanced Economic Policy | Summer term 2023"
   },
   {
     "objectID": "slides/01_introduction/index.html#course-info",
@@ -193,7 +389,7 @@
     "href": "slides/01_introduction/index.html#schedule",
     "title": "    Economic Policy Visualization",
     "section": "Schedule",
-    "text": "Schedule\n\n\n\n\n \n  \n    Date \n    Time \n    Room \n    Content \n    Assignment \n  \n \n\n  \n    Mar 06, 2023 \n    10:00-12:00 \n    TC.4.15 \n    Introduction \n     \n  \n  \n    Mar 13, 2023 \n    10:00-12:00 \n    TC.4.15 \n    Data \n     \n  \n  \n    Mar 20, 2023 \n    10:00-12:00 \n    TC.4.15 \n    Visualization \n     \n  \n  \n    Mar 27, 2023 \n    10:00-12:00 \n    D4.0.022 \n    Growth · Geometries \n     \n  \n  \n    Apr 17, 2023 \n    10:00-12:00 \n    TC.3.07 \n    Inflation · Colors \n     \n  \n  \n    Apr 24, 2023 \n    10:30-12:30 \n    TC.3.06 \n    Labour · Labels \n     \n  \n  \n    May 08, 2023 \n    10:00-12:00 \n    TC.3.11 \n    Income · Themes \n     \n  \n  \n    May 15, 2023 \n    10:00-12:00 \n    D4.0.127 \n    Wealth · Scales \n     \n  \n  \n    Jun 05, 2023 \n    10:00-12:00 \n    D4.0.127 \n    Mobility · Waffles \n     \n  \n  \n    Jun 12, 2023 \n    10:00-12:00 \n    TC.3.07 \n    Climate · Facets \n     \n  \n  \n    Jun 19, 2023 \n    10:00-12:00 \n    D4.0.127 \n    Student presentations \n     \n  \n  \n    Jun 26, 2023 \n    10:00-12:00 \n    D4.0.127 \n    Student presentations"
+    "text": "Schedule\n\n\n\n\n \n  \n    Date \n    Time \n    Room \n    Content \n    Assignment \n  \n \n\n  \n    Mar 06, 2023 \n    10:00-12:00 \n    TC.4.15 \n    Introduction \n     \n  \n  \n    Mar 13, 2023 \n    10:00-12:00 \n    TC.4.15 \n    Data \n     \n  \n  \n    Mar 20, 2023 \n    10:00-12:00 \n    TC.4.15 \n    Visualization \n     \n  \n  \n    Mar 27, 2023 \n    10:00-12:00 \n    D4.0.022 \n    Growth · Geometries \n     \n  \n  \n    Apr 17, 2023 \n    10:00-12:00 \n    TC.3.07 \n    Inflation · Colors \n     \n  \n  \n    Apr 24, 2023 \n    10:30-12:30 \n    TC.3.06 \n    Labour · Labels \n     \n  \n  \n    May 08, 2023 \n    10:00-12:00 \n    TC.3.11 \n    Income · Themes \n     \n  \n  \n    May 15, 2023 \n    10:00-12:00 \n    D4.0.127 \n    Wealth · Scales \n     \n  \n  \n    Jun 05, 2023 \n    10:00-12:00 \n    D4.0.127 \n    Mobility · Waffles \n     \n  \n  \n    Jun 12, 2023 \n    10:00-12:00 \n    TC.3.07 \n    Climate · Maps \n     \n  \n  \n    Jun 19, 2023 \n    10:00-12:00 \n    D4.0.127 \n    Student presentations \n     \n  \n  \n    Jun 26, 2023 \n    10:00-12:00 \n    D4.0.127 \n    Student presentations"
   },
   {
     "objectID": "slides/01_introduction/index.html#assignments",
@@ -229,6 +425,13 @@
     "title": "    Economic Policy Visualization",
     "section": "Recommended Literature",
     "text": "Recommended Literature\n\n\n\n\n\n\n\n\n\nJonathan Schwabish  Better Data Visualizations: A Guide for Scholars, Researchers, and Wonks  Columbia University Press  ISBN-13: 9780231193115\n\n\n\nDavid Spiegelhalter  The Art of Statistics: Learning from Data  Penguin Books UK  ISBN-13: 9780241258767\n\n\n\n\n\n\n\nPI 5620 Advanced Economic Policy | Summer term 2023"
+  },
+  {
+    "objectID": "slides/07_income/index.html#bibliography",
+    "href": "slides/07_income/index.html#bibliography",
+    "title": "    Economic Policy Visualization",
+    "section": "Bibliography",
+    "text": "Bibliography\n\n\n\n\n\n\nPI 5620 Advanced Economic Policy | Summer term 2023"
   },
   {
     "objectID": "slides/02_data/index.html#the-era-of-evidence-in-economics",
@@ -378,6 +581,13 @@
     "text": "Bibliography\n\n\n\n\n\n\nPI 5620 Advanced Economic Policy | Summer term 2023\n\n\n\nAngel, Stefan/Disslbacher, Franziska/Humer, Stefan/Schnetzer, Matthias (2019). What did you really earn last year?: Explaining measurement error in survey income data. Journal of the Royal Statistical Society: Series A (Statistics in Society). DOI: 10.1111/rssa.12463\n\n\nAngrist, Joshua/Azoulay, Pierre/Ellison, Glenn/Hill, Ryan/Lu, Susan Feng (2017). Economic research evolves: Fields and styles. American Economic Review, 107(5), 293–297. DOI: 10.1257/aer.p20171117\n\n\nBrice, Brandon D./Montesinos-Yufa, Hugo M. (2019). The era of empirical evidence. Mimeo.\n\n\nDisslbacher, Franziska/Ertl, Michael/List, Emanuel/Mokre, Patrick/Schnetzer, Matthias (2020). On top of the top - adjusting wealth distributions using national rich lists (Working Paper Series No. 20). INEQ.\n\n\nGorman, Kristen B./Williams, Tony D./Fraser, William R. (2014). Ecological sexual dimorphism and environmental variability within a community of antarctic penguins (genus pygoscelis). PLoS ONE, 9(3), e90081. DOI: 10.1371/journal.pone.0090081\n\n\nUnited Nations (2011). Canberra group handbook on household income statistics (2nd ed.). Geneva: United Nations."
   },
   {
+    "objectID": "slides/09_mobility/index.html#bibliography",
+    "href": "slides/09_mobility/index.html#bibliography",
+    "title": "    Economic Policy Visualization",
+    "section": "Bibliography",
+    "text": "Bibliography\n\n\n\n\n\n\nPI 5620 Advanced Economic Policy | Summer term 2023"
+  },
+  {
     "objectID": "visualization.html",
     "href": "visualization.html",
     "title": "Chart & Report",
@@ -396,6 +606,6 @@
     "href": "schedule.html",
     "title": "Schedule",
     "section": "",
-    "text": "In this table you find the dates and contents of all classes.\n\n\n\n\n \n  \n    Date \n    Time \n    Room \n    Content \n    Slides \n    Code \n    Assignment \n  \n \n\n  \n    Mar 06, 2023 \n    10:00-12:00 \n    TC.4.15 \n    Introduction \n    \n \n     \n     \n  \n  \n    Mar 13, 2023 \n    10:00-12:00 \n    TC.4.15 \n    Data \n    \n \n    \n \n     \n  \n  \n    Mar 20, 2023 \n    10:00-12:00 \n    TC.4.15 \n    Visualization \n    \n \n    \n \n     \n  \n  \n    Mar 27, 2023 \n    10:00-12:00 \n    D4.0.022 \n    Growth · Geometries \n     \n     \n     \n  \n  \n    Apr 17, 2023 \n    10:00-12:00 \n    TC.3.07 \n    Inflation · Colors \n     \n     \n     \n  \n  \n    Apr 24, 2023 \n    10:30-12:30 \n    TC.3.06 \n    Labour · Labels \n     \n     \n     \n  \n  \n    May 08, 2023 \n    10:00-12:00 \n    TC.3.11 \n    Income · Themes \n     \n     \n     \n  \n  \n    May 15, 2023 \n    10:00-12:00 \n    D4.0.127 \n    Wealth · Scales \n     \n     \n     \n  \n  \n    Jun 05, 2023 \n    10:00-12:00 \n    D4.0.127 \n    Mobility · Waffles \n     \n     \n     \n  \n  \n    Jun 12, 2023 \n    10:00-12:00 \n    TC.3.07 \n    Climate · Facets \n     \n     \n     \n  \n  \n    Jun 19, 2023 \n    10:00-12:00 \n    D4.0.127 \n    Student presentations \n     \n     \n     \n  \n  \n    Jun 26, 2023 \n    10:00-12:00 \n    D4.0.127 \n    Student presentations \n     \n     \n     \n  \n\n\n\n\n\n\nAssignments\nAssignment [1] provides the setup of the R infrastructure that is required in this course. There are no points for this assignment. Assignments [2] to [4] are recreations of examplary figures provided below. These examples are related to figures that are discussed in class. Students should then try to reproduce the plots at home and improve their individual coding skills. The raw data for the figures are available as *.csv files below.\n\nHomework 1\n\n\n\n\n\n\n\n\n\n\n\nInstall the latest R version (v4.2.2)\nInstall the latest version of RStudio Desktop\nOpen RStudio, copy the following code into the console and execute: install.packages(c(\"tidyverse\", \"rmarkdown\")); sessionInfo()\nClick on Help > About RStudio\nMake sure that both the R version (Console) and the RStudio version are visible, take a screenshot and upload it to the learning platform before March 13, 2023 at 9 a.m.\n\n\n\n\n\nHomework 2\n\n\n\n\n\n\n\n\n\n\nPlease submit your chart before April 24, 2023 at 9 a.m. The data for this assignment is available here: \n\n\n\n\nHomework 3\n\n\n\n\n\n\n\n\n\n\nPlease submit your chart before May 15, 2023 at 9 a.m. The data for this assignment is available here: \n\n\n\n\nHomework 4\n\n\n\n\n\n\n\n\n\n\nPlease submit your chart before June 12, 2023 at 9 a.m. The data for this assignment is available here:"
+    "text": "In this table you find the dates and contents of all classes.\n\n\n\n\n \n  \n    Date \n    Time \n    Room \n    Content \n    Slides \n    Code \n    Assignment \n  \n \n\n  \n    Mar 06, 2023 \n    10:00-12:00 \n    TC.4.15 \n    Introduction \n    \n \n     \n     \n  \n  \n    Mar 13, 2023 \n    10:00-12:00 \n    TC.4.15 \n    Data \n    \n \n    \n \n     \n  \n  \n    Mar 20, 2023 \n    10:00-12:00 \n    TC.4.15 \n    Visualization \n    \n \n    \n \n     \n  \n  \n    Mar 27, 2023 \n    10:00-12:00 \n    D4.0.022 \n    Growth · Geometries \n    \n \n    \n \n     \n  \n  \n    Apr 17, 2023 \n    10:00-12:00 \n    TC.3.07 \n    Inflation · Colors \n    \n \n     \n     \n  \n  \n    Apr 24, 2023 \n    10:30-12:30 \n    TC.3.06 \n    Labour · Labels \n     \n     \n     \n  \n  \n    May 08, 2023 \n    10:00-12:00 \n    TC.3.11 \n    Income · Themes \n     \n     \n     \n  \n  \n    May 15, 2023 \n    10:00-12:00 \n    D4.0.127 \n    Wealth · Scales \n     \n     \n     \n  \n  \n    Jun 05, 2023 \n    10:00-12:00 \n    D4.0.127 \n    Mobility · Waffles \n     \n     \n     \n  \n  \n    Jun 12, 2023 \n    10:00-12:00 \n    TC.3.07 \n    Climate · Maps \n     \n     \n     \n  \n  \n    Jun 19, 2023 \n    10:00-12:00 \n    D4.0.127 \n    Student presentations \n     \n     \n     \n  \n  \n    Jun 26, 2023 \n    10:00-12:00 \n    D4.0.127 \n    Student presentations \n     \n     \n     \n  \n\n\n\n\n\n\nAssignments\nAssignment [1] provides the setup of the R infrastructure that is required in this course. There are no points for this assignment. Assignments [2] to [4] are recreations of examplary figures provided below. These examples are related to figures that are discussed in class. Students should then try to reproduce the plots at home and improve their individual coding skills. The raw data for the figures are available as *.csv files below.\n\nHomework 1\n\n\n\n\n\n\n\n\n\n\n\nInstall the latest R version (v4.2.2)\nInstall the latest version of RStudio Desktop\nOpen RStudio, copy the following code into the console and execute: install.packages(c(\"tidyverse\", \"rmarkdown\", \"scales\", \"lubridate\", \"colorspace\", \"devtools\")); sessionInfo()\nClick on Help > About RStudio\nMake sure that both the R version (Console) and the RStudio version are visible, take a screenshot and upload it to the learning platform before March 13, 2023 at 9 a.m.\n\n\n\n\n\nHomework 2\n\n\n\n\n\n\n\n\n\n\nPlease submit your chart before April 24, 2023 at 9 a.m. The data for this assignment is available here: \n\n\n\n\nHomework 3\n\n\n\n\n\n\n\n\n\n\nPlease submit your chart before May 15, 2023 at 9 a.m. The data for this assignment is available here: \n\n\n\n\nHomework 4\n\n\n\n\n\n\n\n\n\n\nPlease submit your chart before June 12, 2023 at 9 a.m. The data for this assignment is available here:"
   }
 ]

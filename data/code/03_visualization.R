@@ -18,11 +18,50 @@ data <- penguins
 # Take brief look
 head(data)
 
-data |> ggplot(aes(x = bill_length_mm, y = bill_depth_mm, color = species)) +
+data_summary <- data |>
+  group_by(species) |>
+  summarise(across(c(bill_length_mm, bill_depth_mm),
+                   list(median = ~median(., na.rm = TRUE), 
+                        sd = ~sd(., na.rm = TRUE))))
+
+data |> ggplot(aes(x = bill_length_mm, 
+                   y = bill_depth_mm, 
+                   color = species)) +
+  geom_errorbar(
+    data = data_summary,
+    aes(x = bill_length_mm_median,
+        ymin = bill_depth_mm_median - bill_depth_mm_sd,
+        ymax = bill_depth_mm_median + bill_depth_mm_sd,
+        color = species, 
+        color = after_scale(colorspace::darken(color, .2, space = "combined"))
+    ),
+    inherit.aes = F, width = .8, size = .8
+  ) +
+  geom_errorbar(
+    data = data_summary,
+    aes(y = bill_depth_mm_median,
+        xmin = bill_length_mm_median - bill_length_mm_sd,
+        xmax = bill_length_mm_median + bill_length_mm_sd,
+        color = species, 
+        color = after_scale(colorspace::darken(color, .2, space = "combined"))
+    ),
+    inherit.aes = F, width = .8, size = .8
+  ) +
   geom_point(size = 1.5, alpha = 0.5) +
+  scale_color_manual(name = NULL,
+                     values = MetBrewer::met.brewer("Lakota")) +
   scale_x_continuous(labels = scales::number_format(suffix="mm")) +
   scale_y_continuous(labels = scales::number_format(suffix="mm", accuracy = 1)) +
-  theme_minimal()
+  annotate("text", x = c(34.7, 55.7, 50.7), y = c(20.7, 19, 13.6), color = MetBrewer::met.brewer("Lakota")[1:3], label = c("Adélie","Chinstrap","Gentoo"), fontface = "bold", size = 4) +
+  labs(x = "Bill length", y = "Bill depth",
+       title = "Penguins are awesome",
+       subtitle = "Depth and length of bills") +
+  theme_minimal() +
+  theme(legend.position = "none",
+        plot.title.position = "plot",
+        plot.title = element_text(size = 15, family="Roboto"),
+        plot.subtitle = element_text(size = 13, family="Roboto"),
+        panel.grid.minor = element_blank())
   
 
 

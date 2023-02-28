@@ -12,7 +12,7 @@
   <meta name="generator" content="quarto-1.2.335">
 
   <meta name="author" content="Dr.&nbsp;Matthias Schnetzer">
-  <meta name="dcterms.date" content="2023-03-06">
+  <meta name="dcterms.date" content="2023-04-17">
   <title>PI 5620 Advanced Economic Policy -     Economic Policy Visualization</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -30,6 +30,25 @@
       width: 0.8em;
       margin: 0 0.8em 0.2em -1.6em;
       vertical-align: middle;
+    }
+    div.csl-bib-body { }
+    div.csl-entry {
+      clear: both;
+    }
+    .hanging div.csl-entry {
+      margin-left:2em;
+      text-indent:-2em;
+    }
+    div.csl-left-margin {
+      min-width:2em;
+      float:left;
+    }
+    div.csl-right-inline {
+      margin-left:2em;
+      padding-left:1em;
+    }
+    div.csl-indent {
+      margin-left: 2em;
     }
   </style>
   <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto.css" id="theme">
@@ -322,9 +341,6 @@
       margin-right: 0; 
     }
   </style>
-  
-  <script src="../../site_libs/kePrint-0.0.1/kePrint.js"></script>
-  <link href="../../site_libs/lightable-0.0.1/lightable.css" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet">
 </head>
 <body class="quarto-light">
@@ -333,7 +349,7 @@
 
 <section id="title-slide" class="quarto-title-block center">
   <h1 class="title"><p><span class="fa-stack course-icon"> <i class="fas fa-comment fa-stack-2x blue"></i> <i class="fas fa-chart-column fa-stack-1x fa-inverse" style="margin-top:-5pt"></i> </span><br> Economic Policy Visualization</p></h1>
-  <p class="subtitle">Introduction</p>
+  <p class="subtitle">Inflation · Colors</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -343,250 +359,158 @@ Dr.&nbsp;Matthias Schnetzer
 </div>
 </div>
 
-  <p class="date">March 6, 2023</p>
+  <p class="date">April 17, 2023</p>
 </section>
-<section id="course-info" class="slide level2 smaller">
-<h2>Course info</h2>
+<section>
+<section id="all-colours-are-beautiful" class="title-slide slide level1 center">
+<h1>All colours are beautiful</h1>
+<div class="absolute" style="top: 90%; left: 30%; width: 400px; height: 336px; ">
+<p><img data-src="../../data/img/avatar_sweatshirt.png"></p>
+</div>
+<div class="footer">
+
+</div>
+</section>
+<section id="colors-in-r" class="slide level2 medium">
+<h2>Colors in R</h2>
+<p>You can assign colors by <span class="hl hl-dred">names</span></p>
+<ul>
+<li>“red”, “green”, “chocolate”, “cadetblue”, etc.</li>
+<li>See a complete list of the 657 colors typing <span class="secfont">colors()</span></li>
+</ul>
+<div class="fragment">
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code> [1] "white"         "aliceblue"     "antiquewhite"  "antiquewhite1"
+ [5] "antiquewhite2" "antiquewhite3" "antiquewhite4" "aquamarine"   
+ [9] "aquamarine1"   "aquamarine2"   "aquamarine3"   "aquamarine4"  </code></pre>
+</div>
+</div>
+</div>
+<div class="fragment">
+<p><br> Alternatively, you can use <span class="hl hl-dred">hex color codes</span></p>
+<ul>
+<li>#F8766D, #00BA38, #619CFF, etc.</li>
+<li>Use color picker to get hex code, e.g.&nbsp;<a href="https://htmlcolorcodes.com">https://htmlcolorcodes.com</a></li>
+</ul>
+</div>
+</section>
+<section id="color-palettes-of-rcolorbrewer" class="slide level2 smaller">
+<h2>Color palettes of {RColorBrewer}</h2>
 <div class="columns">
-<div class="column" style="width:30%;">
-<p><img data-src="img/profile-pic.jpg" class="absolute" style="display: inline-block; width: 150px; height: 150px;border-radius:50%;top: 20%; left: 7%; "></p>
-<div class="absolute" style="display: block; font-size: 5.5rem;top: 60%; left: 5%; ">
-<p><span class="fa-stack"> <i class="fas fa-comment fa-stack-2x blue"></i> <i class="fas fa-chart-column fa-stack-1x fa-inverse" style="margin-top:-5pt"></i> </span></p>
-</div>
-</div><div class="column iconlist" style="width:70%;">
-<div class="absolute" style="top: 120px; ">
-<ul>
-<li><i class="fa-solid fa-user icon"></i> Matthias Schnetzer</li>
-<li><i class="fa-solid fa-building icon"></i> Vienna Chamber of Labour &amp; WU Vienna</li>
-<li><i class="fa-solid fa-envelope icon"></i> <a href="mailto:mschnetz@wu.ac.at">mschnetz@wu.ac.at</a></li>
-<li><i class="fa-solid fa-globe icon"></i> <a href="https://mschnetzer.github.io">https://mschnetzer.github.io</a></li>
-<li><i class="fa-brands fa-twitter icon"></i> <a href="https://www.twitter.com/matschnetzer">matschnetzer</a></li>
-</ul>
-<div>
-<br>
-</div>
-<ul>
-<li><i class="fa-solid fa-calendar-alt icon"></i> Mar 6, 2023 – Jun 26, 2023</li>
-<li><i class="fa-solid fa-clock icon"></i> 10:00–12:00</li>
-<li><i class="fa-solid fa-location-dot icon"></i> TC.4.15</li>
-<li><i class="fa-solid fa-link icon"></i> <a href="https://mschnetzer.github.io/adveconpol">https://mschnetzer.github.io/adveconpol</a></li>
-</ul>
-</div>
-</div>
-</div>
-</section>
-<section id="about-this-course" class="slide level2 medium">
-<h2>About this course</h2>
-<div class="secfont" style="font-size:2.3rem;text-align:center;">
-<p>“A picture is worth a thousand words”</p>
-</div>
-<p>This course approaches contemporary issues of economic policy by analyzing innovative or iconic data visualizations. We analyse selected illustrations, discuss the underlying data, the theoretical background and policy implications. We will assemble plots in class and study the basics of data visualization.</p>
-<p>You will gain:</p>
-<ul>
-<li>an overview of <span class="marker-hl">contemporary debates in economic policy</span></li>
-<li>a basic understanding of <span class="marker-hl">principles of data visualization</span></li>
-<li>knowledge how to <span class="marker-hl">enrich academic publications</span> with informative graphs</li>
-</ul>
-</section>
-<section id="who-are-you" class="slide level2">
-<h2>Who are you?</h2>
-<p><img data-src="img/group3.png" class="absolute" style="left: 0%; bottom: 0%; height: 400px; "> <img data-src="img/group2.png" class="absolute" style="left: 15%; bottom: 0%; height: 400px; "> <img data-src="img/group1.png" class="absolute" style="left: 33%; bottom: 0%; height: 400px; "> <img data-src="img/group4.png" class="absolute" style="left: 50%; bottom: 0%; height: 400px; "></p>
-<p><span class="bubble bubble-bottom-right absolute" style="max-width:400px;--bubcol: var(--bubcol-dred); font-size:1.8rem;top: 15%; right: 0%; ">What do you expect of this course? Do you already have some coding experience in R?</span></p>
-</section>
-<section id="schedule" class="slide level2">
-<h2>Schedule</h2>
-<div class="schedule-table">
+<div class="column center" style="width:33%;">
+<p>Sequential</p>
+<p><span style="font-size:1.3rem;">Use to encode numerical information <em>with order</em></span></p>
+<div class="cell">
 <div class="cell-output-display">
+<p><img data-src="index_files/figure-revealjs/seq-1.png" width="576"></p>
+</div>
+</div>
+</div><div class="column center fragment" style="width:33%;">
+<p>Diverging</p>
+<p><span style="font-size:1.3rem;">Use to encode numerical information with <em>critical midpoint</em></span></p>
+<div class="cell">
+<div class="cell-output-display">
+<p><img data-src="index_files/figure-revealjs/div-1.png" width="576"></p>
+</div>
+</div>
+</div><div class="column center fragment" style="width:33%;">
+<p>Qualitative</p>
+<p><span style="font-size:1.3rem;">Use to encode <em>categorical</em> information</span></p>
+<div class="cell">
+<div class="cell-output-display">
+<p><img data-src="index_files/figure-revealjs/qual-1.png" width="576"></p>
+</div>
+</div>
+</div>
+</div>
 
-<table class="schedule-table table" style="margin-left: auto; margin-right: auto;">
- <thead>
-  <tr>
-   <th style="text-align:center;"> Date </th>
-   <th style="text-align:center;"> Time </th>
-   <th style="text-align:center;"> Room </th>
-   <th style="text-align:left;"> Content </th>
-   <th style="text-align:center;"> Assignment </th>
-  </tr>
- </thead>
-<tbody>
-  <tr>
-   <td style="text-align:center;width: 15%; "> Mar 06, 2023 </td>
-   <td style="text-align:center;width: 15%; "> 10:00-12:00 </td>
-   <td style="text-align:center;width: 15%; "> TC.4.15 </td>
-   <td style="text-align:left;width: 30%; "> Introduction </td>
-   <td style="text-align:center;width: 15%; "> <i class="fa-solid fa-pen fa-lg grey200"></i> </td>
-  </tr>
-  <tr>
-   <td style="text-align:center;width: 15%; "> Mar 13, 2023 </td>
-   <td style="text-align:center;width: 15%; "> 10:00-12:00 </td>
-   <td style="text-align:center;width: 15%; "> TC.4.15 </td>
-   <td style="text-align:left;width: 30%; "> Data </td>
-   <td style="text-align:center;width: 15%; "> <i class="fa-solid fa-pen fa-lg red"></i> </td>
-  </tr>
-  <tr>
-   <td style="text-align:center;width: 15%; "> Mar 20, 2023 </td>
-   <td style="text-align:center;width: 15%; "> 10:00-12:00 </td>
-   <td style="text-align:center;width: 15%; "> TC.4.15 </td>
-   <td style="text-align:left;width: 30%; "> Visualization </td>
-   <td style="text-align:center;width: 15%; "> <i class="fa-solid fa-pen fa-lg grey200"></i> </td>
-  </tr>
-  <tr>
-   <td style="text-align:center;width: 15%; "> Mar 27, 2023 </td>
-   <td style="text-align:center;width: 15%; "> 10:00-12:00 </td>
-   <td style="text-align:center;width: 15%; "> D4.0.022 </td>
-   <td style="text-align:left;width: 30%; "> Growth · Geometries </td>
-   <td style="text-align:center;width: 15%; "> <i class="fa-solid fa-pen fa-lg grey200"></i> </td>
-  </tr>
-  <tr>
-   <td style="text-align:center;width: 15%; "> Apr 17, 2023 </td>
-   <td style="text-align:center;width: 15%; "> 10:00-12:00 </td>
-   <td style="text-align:center;width: 15%; "> TC.3.07 </td>
-   <td style="text-align:left;width: 30%; "> Inflation · Colors </td>
-   <td style="text-align:center;width: 15%; "> <i class="fa-solid fa-pen fa-lg grey200"></i> </td>
-  </tr>
-  <tr>
-   <td style="text-align:center;width: 15%; "> Apr 24, 2023 </td>
-   <td style="text-align:center;width: 15%; "> 10:30-12:30 </td>
-   <td style="text-align:center;width: 15%; "> TC.3.06 </td>
-   <td style="text-align:left;width: 30%; "> Labour · Labels </td>
-   <td style="text-align:center;width: 15%; "> <i class="fa-solid fa-pen fa-lg red"></i> </td>
-  </tr>
-  <tr>
-   <td style="text-align:center;width: 15%; "> May 08, 2023 </td>
-   <td style="text-align:center;width: 15%; "> 10:00-12:00 </td>
-   <td style="text-align:center;width: 15%; "> TC.3.11 </td>
-   <td style="text-align:left;width: 30%; "> Income · Themes </td>
-   <td style="text-align:center;width: 15%; "> <i class="fa-solid fa-pen fa-lg grey200"></i> </td>
-  </tr>
-  <tr>
-   <td style="text-align:center;width: 15%; "> May 15, 2023 </td>
-   <td style="text-align:center;width: 15%; "> 10:00-12:00 </td>
-   <td style="text-align:center;width: 15%; "> D4.0.127 </td>
-   <td style="text-align:left;width: 30%; "> Wealth · Scales </td>
-   <td style="text-align:center;width: 15%; "> <i class="fa-solid fa-pen fa-lg red"></i> </td>
-  </tr>
-  <tr>
-   <td style="text-align:center;width: 15%; "> Jun 05, 2023 </td>
-   <td style="text-align:center;width: 15%; "> 10:00-12:00 </td>
-   <td style="text-align:center;width: 15%; "> D4.0.127 </td>
-   <td style="text-align:left;width: 30%; "> Mobility · Waffles </td>
-   <td style="text-align:center;width: 15%; "> <i class="fa-solid fa-pen fa-lg grey200"></i> </td>
-  </tr>
-  <tr>
-   <td style="text-align:center;width: 15%; "> Jun 12, 2023 </td>
-   <td style="text-align:center;width: 15%; "> 10:00-12:00 </td>
-   <td style="text-align:center;width: 15%; "> TC.3.07 </td>
-   <td style="text-align:left;width: 30%; "> Climate · Maps </td>
-   <td style="text-align:center;width: 15%; "> <i class="fa-solid fa-pen fa-lg red"></i> </td>
-  </tr>
-  <tr>
-   <td style="text-align:center;width: 15%; "> Jun 19, 2023 </td>
-   <td style="text-align:center;width: 15%; "> 10:00-12:00 </td>
-   <td style="text-align:center;width: 15%; "> D4.0.127 </td>
-   <td style="text-align:left;width: 30%; "> Student presentations </td>
-   <td style="text-align:center;width: 15%; "> <i class="fa-solid fa-pen fa-lg grey200"></i> </td>
-  </tr>
-  <tr>
-   <td style="text-align:center;width: 15%; "> Jun 26, 2023 </td>
-   <td style="text-align:center;width: 15%; "> 10:00-12:00 </td>
-   <td style="text-align:center;width: 15%; "> D4.0.127 </td>
-   <td style="text-align:left;width: 30%; "> Student presentations </td>
-   <td style="text-align:center;width: 15%; "> <i class="fa-solid fa-pen fa-lg grey200"></i> </td>
-  </tr>
-</tbody>
-</table>
-
-</div>
-</div>
-</section>
-<section id="assignments" class="slide level2 medium">
-<h2>Assignments</h2>
-<p>Assignment 1 provides the setup of the R infrastructure that is required in this course. There are no points for this assignment.</p>
-<p>Assignments 2 to 4 are recreations of examplary figures. These examples are related to figures that are discussed in class. Students should then try to <span class="marker-hl">reproduce the plots at home</span> and improve their individual coding skills.</p>
-<p>The raw data for the figures are available as CSV files. The charts should then be uploaded to the <a href="https://learn.wu.ac.at">learning platform</a> <span class="marker-hl"><strong>before 9 a.m.</strong></span> on the day of the deadline.</p>
-</section>
-<section id="chart-report" class="slide level2 smaller">
-<h2>Chart &amp; Report</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<h3 id="chart-presentation">Chart presentation</h3>
-<div class="altlist">
-<ul>
-<li>Research question <span style="font-size:1.3rem">Which economic policy question do you want to answer with your chart?</span></li>
-<li>Data</li>
-<li>Chart</li>
-<li>Conclusion <span style="font-size:1.3rem">What can we learn from the data visualization for economic policy?</span></li>
-</ul>
-</div>
-<p><span class="marker-hl"><strong>Deadline: Date of the presentation</strong></span></p>
-</div><div class="column" style="width:50%;">
-<h3 id="rmarkdown-or-quarto-report">RMarkdown (or Quarto) Report</h3>
-<div class="altlist">
-<ul>
-<li>Title</li>
-<li>Author</li>
-<li>Introduction</li>
-<li>Research question</li>
-<li>Data</li>
-<li>Result</li>
-<li>Conclusion</li>
-<li>Code</li>
-</ul>
-</div>
-<p><span class="marker-hl"><strong>Deadline: June 30, 2023</strong></span></p>
-</div>
-</div>
-</section>
-<section id="grading" class="slide level2 medium">
-<h2>Grading</h2>
-<p><br> <i class="fa-solid fa-home icon"></i> Assignments: 30% <span class="grey600" style="font-size:1.5rem;">(0-10 points for each visualization)</span> <br> <br></p>
-<div class="fragment">
-<p><i class="fa-solid fa-person-chalkboard icon"></i> Chart presentation: 30% <span class="grey600" style="font-size:1.5rem;">(0-20 points for the quality of the presentation, 0-10 for the preliminary chart)</span> <br> <br></p>
-</div>
-<div class="fragment">
-<p><i class="fa-solid fa-file-pen icon"></i> Written report: 40% <span class="grey600" style="font-size:1.5rem;">(0-40 points for the report and the final chart)</span></p>
-
-</div>
 <aside><div>
-<div style="font-size:1.5rem">
-<p><i class="fa-regular fa-face-grin-stars" aria-label="face-grin-stars"></i> &nbsp; 100-90: Excellent   <i class="fa-regular fa-face-smile" aria-label="face-smile"></i> &nbsp; 89-80: Good   <i class="fa-regular fa-face-meh" aria-label="face-meh"></i> &nbsp; 79-65: Satisfactory   <i class="fa-regular fa-face-rolling-eyes" aria-label="face-rolling-eyes"></i> &nbsp; 64-50: Sufficient <br> <span class="marker-hl">All single tasks have to be passed</span> (50% threshold each).</p>
-</div>
+<p>Source: <span class="citation" data-cites="scherer:2022">Scherer (<a href="#/bibliography" role="doc-biblioref" onclick="">2022</a>)</span></p>
 </div></aside></section>
-<section id="feedback-cooperation-and-help" class="slide level2 smaller">
-<h2>Feedback, cooperation and help</h2>
-<p>Let me know your <span class="marker-hl">feedback</span> on the course anytime. If possible, I will try to incorporate your feedback immediately. At least, I will consider it for future courses.</p>
-<p>As some of you might already have advanced coding skills in R, please support each other and collaborate. This does not mean that one person does all the coding and shares with all colleagues. Students should have an intrinsic motivation to improve their coding skills but <span class="marker-hl">cooperate to learn from each other</span>.</p>
-<p>There is a forum on the learning platform for exchange among students. Please also consult support platforms like <a href="https://stackoverflow.com">Stack Overflow</a> or take a look at the cheatsheets:</p>
-<div style="text-align:center;">
-<p><a href="https://posit.co/wp-content/uploads/2022/10/tidyr.pdf"><img data-src="../../data/img/tidyr.png" width="140"></a> <a href="https://posit.co/wp-content/uploads/2022/10/data-transformation-1.pdf"><img data-src="../../data/img/dplyr.png" width="140"></a> <a href="https://posit.co/wp-content/uploads/2022/10/data-visualization-1.pdf"><img data-src="../../data/img/ggplot2.png" width="140"></a> <a href="https://posit.co/wp-content/uploads/2022/10/rmarkdown-1.pdf"><img data-src="../../data/img/rmarkdown.png" width="140"></a></p>
+<section id="color-blindness" class="slide level2 smaller">
+<h2>Color blindness</h2>
+<div class="columns">
+<div class="column">
+<p>You may check whether the color scale works for people who can distinguish fewer colours than others with <span class="secfont">{colorBlindness}</span>.</p>
+<div class="cell">
+<div class="cell-output-display">
+<p><img data-src="index_files/figure-revealjs/cblind-1.png" width="576"></p>
+</div>
+</div>
+</div><div class="column fragment">
+<p>The <span class="secfont">viridis</span> color scale is discriminable under the most common forms of colour blindness, and reproduces well in greyscale.</p>
+<div class="cell">
+<div class="cell-output-display">
+<p><img data-src="index_files/figure-revealjs/viridis-1.png" width="576"></p>
+</div>
+</div>
+</div>
 </div>
 </section>
-<section id="recommended-literature" class="slide level2">
-<h2>Recommended Literature</h2>
-<div class="tbl-larger recommended-lit">
-<table>
-<colgroup>
-<col style="width: 20%">
-<col style="width: 80%">
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><img data-src="../../data/img/schwabish.jpg"></td>
-<td><strong>Jonathan Schwabish</strong> <br> <em>Better Data Visualizations: A Guide for Scholars, Researchers, and Wonks</em> <br> Columbia University Press <br> ISBN-13: 9780231193115</td>
-</tr>
-<tr class="even">
-<td><img data-src="../../data/img/spiegelhalter.jpeg"></td>
-<td><strong>David Spiegelhalter</strong> <br> <em>The Art of Statistics: Learning from Data</em> <br> Penguin Books UK <br> ISBN-13: 9780241258767</td>
-</tr>
-</tbody>
-</table>
+<section id="fancy-palettes" class="slide level2 medium">
+<h2>Fancy palettes</h2>
+<div class="columns">
+<div class="column center">
+<p><a href="https://github.com/BlakeRMills/MetBrewer"><span class="secfont">{MetBrewer}</span></a></p>
+<div class="cell">
+<div class="cell-output-display">
+<p><img data-src="index_files/figure-revealjs/met-1.png" width="576"></p>
+</div>
+</div>
+</div><div class="column center">
+<p><a href="https://github.com/karthik/wesanderson"><span class="secfont">{wesanderson}</span></a></p>
+<div class="cell">
+<div class="cell-output-display">
+<p><img data-src="index_files/figure-revealjs/wes-1.png" width="576"></p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="color-scales-in-ggplot" class="slide level2 smaller">
+<h2>Color scales in {ggplot}</h2>
+<div class="center secfont" style="font-size:2.5rem;">
+<p>scale_color_* <br> scale_fill_*</p>
+</div>
+<div class="columns">
+<div class="column center">
+<p>Continuous:</p>
+<ul>
+<li><span class="secfont">continuous(type)</span></li>
+<li><span class="secfont">distiller(palette)</span></li>
+<li><span class="secfont">gradient(high, low)</span></li>
+<li><span class="secfont">gradient2(high, mid, low)</span></li>
+<li><span class="secfont">gradientn(colours)</span></li>
+<li><span class="secfont">viridis_c(option)</span></li>
+</ul>
+</div><div class="column center">
+<p>Discrete:</p>
+<ul>
+<li><span class="secfont">manual(values)</span></li>
+<li><span class="secfont">brewer(palette)</span></li>
+<li><span class="secfont">grey(start, end)</span></li>
+<li><span class="secfont">viridis_d(option)</span></li>
+</ul>
+</div>
+</div>
+</section>
+<section id="bibliography" class="slide level2 bibstyle smaller scrollable">
+<h2>Bibliography</h2>
+<div class="footer">
+
 </div>
 
-<p><img src="../../data/img/wu-logo-simple.png" class="slide-logo"></p>
-<div class="footer footer-default">
+
+<img src="../../data/img/wu-logo-simple.png" class="slide-logo r-stretch"><div class="footer footer-default">
 <p>PI 5620 Advanced Economic Policy | Summer term 2023</p>
 </div>
-</section>
+<div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography">
+<div id="ref-scherer:2022" class="csl-entry" role="doc-biblioentry">
+Scherer, Cédric (2022). Graphic design with ggplot2. <a href="https://rstudio-conf-2022.github.io/ggplot2-graphic-design/">https://rstudio-conf-2022.github.io/ggplot2-graphic-design/</a>
+</div>
+</div>
+</section></section>
     </div>
   </div>
 
