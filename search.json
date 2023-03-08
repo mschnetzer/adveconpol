@@ -7,6 +7,34 @@
     "text": "Advanced Economic Policy\n        \n        \n            Economic Policy Visualization\n        \n        \n            PI 5620 • Summer term 2023  Vienna University of Economics and Business\n        \n    \n    \n          \n            \n            \n          \n        \n\n\n\n\n\nLecturer\n\n   Dr. Matthias Schnetzer\n   https://mschnetzer.github.io\n   mschnetz@wu.ac.at\n   matschnetzer\n\n\n\nCourse details\n\n   Mar 6, 2023 – Jun 26, 2023\n   Mondays\n   10:00–12:00\n   TC.4.15\n\n\n\nContact\nPlease contact me via e-mail and I will usually respond within a few days. Note that we use the learning platform learn.wu.ac.at for all assignments in this course.\n\n\n\nSummary\n“A picture is worth a thousand words”. This course approaches contemporary issues of economic policy by analyzing innovative or iconic data visualizations. Based on selected illustrations, we discuss the underlying data, the theoretical background and policy implications in various fields of empirical economics. In a second step, we will assemble plots in class and study the basics of data visualization. Students are required to recreate figures at home to improve their skills in coding. The main task is that students will design a comprehensive data visualization with the ggplot-Package in R and draft a report around that figure in RMarkdown (or Quarto). Student will need to bring their laptop to class and prior knowledge of data handling in R is beneficial.\n  \nTo sum up, students will gain:\n\n\nan overview of contemporary debates in economic policy based on recent empirical research\na basic understanding of principles of data visualization and the use of figures in economic policy debates\nknowledge how to enrich academic publications with informative graphs"
   },
   {
+    "objectID": "slides/05_inflation/index.html#what-is-inflation",
+    "href": "slides/05_inflation/index.html#what-is-inflation",
+    "title": "    Economic Policy Visualization",
+    "section": "What is inflation?",
+    "text": "What is inflation?"
+  },
+  {
+    "objectID": "slides/05_inflation/index.html#how-do-we-calculate-inflation",
+    "href": "slides/05_inflation/index.html#how-do-we-calculate-inflation",
+    "title": "    Economic Policy Visualization",
+    "section": "How do we calculate inflation?",
+    "text": "How do we calculate inflation?"
+  },
+  {
+    "objectID": "slides/05_inflation/index.html#what-is-coicop",
+    "href": "slides/05_inflation/index.html#what-is-coicop",
+    "title": "    Economic Policy Visualization",
+    "section": "What is COICOP?",
+    "text": "What is COICOP?"
+  },
+  {
+    "objectID": "slides/05_inflation/index.html#is-there-a-trade-off-between-inflation-and-unemployment",
+    "href": "slides/05_inflation/index.html#is-there-a-trade-off-between-inflation-and-unemployment",
+    "title": "    Economic Policy Visualization",
+    "section": "Is there a trade-off between inflation and unemployment?",
+    "text": "Is there a trade-off between inflation and unemployment?"
+  },
+  {
     "objectID": "slides/05_inflation/index.html#colors-in-r",
     "href": "slides/05_inflation/index.html#colors-in-r",
     "title": "    Economic Policy Visualization",
@@ -74,28 +102,35 @@
     "href": "slides/04_growth/index.html#the-growth-imperative",
     "title": "    Economic Policy Visualization",
     "section": "The growth imperative",
-    "text": "The growth imperative\n\n\n\n\n\nGrowth is an important goal in economic policy\nMagic square of economic policy promotes high GDP growth (besides low inflation, high emplpoyment, and balanced trade)\nSDG 8: “Promote inclusive and sustainable economic growth, employment and decent work for all”\nSDG 8.1: “Sustain per capita economic growth in accordance with national circumstances and, in particular, at least 7 per cent gross domestic product growth per annum in the least developed countries”"
+    "text": "The growth imperative\n\n\n\n\n\nGrowth is an important goal in economic policy\nMagic square of economic policy promotes high GDP growth (besides low inflation, high emplpoyment, and balanced trade)\nUN Sustainable Development Goals (SDG): “Promote inclusive and sustainable economic growth, employment and decent work for all”\nMore specifically, “sustain per capita economic growth in accordance with national circumstances and, in particular, at least 7 per cent gross domestic product growth per annum in the least developed countries”"
   },
   {
     "objectID": "slides/04_growth/index.html#rule-of-70",
     "href": "slides/04_growth/index.html#rule-of-70",
     "title": "    Economic Policy Visualization",
     "section": "Rule of 70",
-    "text": "Rule of 70\nWe often underestimate the power of growth! How long does it take for a variable to double? The rule of 70 is a good approximation. Just divide 70 by the annual growth rate:\n\\[ \\Delta = \\frac{70}{g} \\]\nEven with a moderate growth rate of 2%, total GDP doubles in 35 years. An annual growth rate of 7% would mean a doubling of production in only 10 years."
+    "text": "Rule of 70\nWe often underestimate the power of growth! How long does it take for a variable to double with a specific growth rate? The rule of 70 is a good approximation. Just divide 70 by the annual growth rate:\n\\[ \\Delta = \\frac{70}{g} \\]\nEven with a moderate growth rate of 2%, total GDP doubles in 35 years. An annual growth rate of 7% would mean a doubling of production in only 10 years."
   },
   {
-    "objectID": "slides/04_growth/index.html#china-has-grown-14.12-times-in-size-since-1989",
-    "href": "slides/04_growth/index.html#china-has-grown-14.12-times-in-size-since-1989",
+    "objectID": "slides/04_growth/index.html#gdp-growth-across-the-globe",
+    "href": "slides/04_growth/index.html#gdp-growth-across-the-globe",
     "title": "    Economic Policy Visualization",
-    "section": "China has grown 14.12 times in size since 1989",
-    "text": "China has grown 14.12 times in size since 1989\n\n\n\n\n\n\n\nSource: howmuch.net"
+    "section": "GDP growth across the globe",
+    "text": "GDP growth across the globe\n\n\nLinear scale (1989 = 1)\n\n\n\n\n\n\nLogarithmic scale (1989 = 1)\n\n\n\n\n\n\n\n\n\nSource: World Bank"
   },
   {
     "objectID": "slides/04_growth/index.html#reeeally-long-term-growth-of-gdp",
     "href": "slides/04_growth/index.html#reeeally-long-term-growth-of-gdp",
     "title": "    Economic Policy Visualization",
     "section": "Reeeally long-term growth of GDP",
-    "text": "Reeeally long-term growth of GDP\n\n\n\n\n\n\n\nSource: Our world in data"
+    "text": "Reeeally long-term growth of GDP\n\n\nLinear scale  \n\nLogarithmic scale  \n\n\n\n\nSource: Our world in data"
+  },
+  {
+    "objectID": "slides/04_growth/index.html#population-growth-and-productivity",
+    "href": "slides/04_growth/index.html#population-growth-and-productivity",
+    "title": "    Economic Policy Visualization",
+    "section": "Population growth and productivity",
+    "text": "Population growth and productivity\nGDP = GDPpc \\(\\times\\) Pop.\n\nExpressed as percentage change, GDP growth equals population growth plus growth in per capita GDP"
   },
   {
     "objectID": "slides/04_growth/index.html#which-chart-describes-best-what-you-want-to-show",
