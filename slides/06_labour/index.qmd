@@ -1,0 +1,154 @@
+---
+metadata-files: 
+    - ../../_variables.yml
+title: |
+    <span class='fa-stack course-icon'>
+        <i class='fas {{< var course.icon-bg >}} fa-stack-2x blue'></i>
+        <i class='fas {{< var course.icon >}} fa-stack-1x fa-inverse' style='margin-top:-5pt'></i>
+      </span><br>
+    {{< var course.subtitle >}}
+author: "{{< var instructor.name >}}"  
+subtitle: Labour · Labels
+date: April 24, 2023
+date-format: long
+from: markdown+emoji
+bibliography: ../../data/lit/wipol_advanced.bib
+csl: ../../data/lit/wipol.csl
+execute:
+  freeze: auto
+  echo: true
+  fig-width: 6
+  fig-height: 5
+format:
+  revealjs:
+    theme: ../econpol_slides.scss
+    footer: '{{< var course.number >}} {{< var course.title >}} | {{< var course.semester >}}'
+    logo: ../../data/img/wu-logo-simple.png
+    header-includes: |
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet"/>
+    slide-number: true
+    show-slide-number: all
+    transition: fade
+    progress: true
+    multiplex: false
+    scrollable: true
+    preview-links: false
+    hide-inactive-cursor: true
+    highlight-style: printing
+    pause: true
+---
+
+
+# Labels and Fonts
+
+::: {.absolute top="90%" left="30%" width="400px" height="336px"}
+![](../../data/img/avatar_read.png)
+:::
+
+::: footer
+:::
+
+## Serif and sans-serif fonts {.medium}
+
+![](img/serif.png){height="500" fig-align="center"}
+
+::: {.aside}
+Source: [Datawrapper](https://blog.datawrapper.de/fonts-for-data-visualization/)
+:::
+
+## Sans-serif fonts are better for reading charts {.medium}
+
+![](img/roboto_compare.png){height="500" fig-align="center"}
+
+::: {.aside}
+Source: [Datawrapper](https://blog.datawrapper.de/fonts-for-data-visualization/)
+:::
+
+## Use a font with lining and tabular numbers {.medium}
+
+::: {style="text-align:center;"}
+![](img/numbers_lining.png){height="230"}
+<br>
+![](img/numbers_tabular.png){height="230"}
+:::
+
+::: {.aside}
+Source: [Datawrapper](https://blog.datawrapper.de/fonts-for-data-visualization/)
+:::
+
+## Use bold fonts only for emphasis {.medium}
+
+![](img/bold.png){height="500" fig-align="center"}
+
+::: {.aside}
+Source: [Datawrapper](https://blog.datawrapper.de/fonts-for-data-visualization/)
+:::
+
+## But don't use too thin font, either {.medium}
+
+![](img/thin.png){height="500" fig-align="center"}
+
+::: {.aside}
+Source: [Datawrapper](https://blog.datawrapper.de/fonts-for-data-visualization/)
+:::
+
+## Choose an adequate size for your annotations {.medium}
+
+![](img/size.png){height="500" fig-align="center"}
+
+::: {.aside}
+Source: [Datawrapper](https://blog.datawrapper.de/fonts-for-data-visualization/)
+:::
+
+## Use uppercase fonts wisely {.medium}
+
+![](img/uppercase.png){height="500" fig-align="center"}
+
+::: {.aside}
+Source: [Datawrapper](https://blog.datawrapper.de/fonts-for-data-visualization/)
+:::
+
+## There are condensed and wide fonts {.medium}
+
+![](img/condensed.png){height="450" fig-align="center"}
+
+::: {.aside}
+Source: [Datawrapper](https://blog.datawrapper.de/fonts-for-data-visualization/)
+:::
+
+## Don't be too narrow, but neither too wide {.medium}
+
+![](img/narrow.png){height="500" fig-align="center"}
+
+::: {.aside}
+Source: [Datawrapper](https://blog.datawrapper.de/fonts-for-data-visualization/)
+:::
+
+## Some examples {.medium}
+
+::: {.columns style="text-align:center;"}
+::: {.column}
+![Economist](img/economist.png){width="450" style="border:0.5px solid;"}
+<br>
+![New York Times](img/nyt.png){width="450" style="border:0.5px solid;"}
+<br>
+![Politico](img/politico.png){width="450" style="border:0.5px solid;"}
+:::
+::: {.column}
+![Guardian](img/guardian.png){width="450" style="border:0.5px solid;"}
+<br>
+![Spiegel](img/spiegel.png){width="450" style="border:0.5px solid;"}
+<br>
+![Fivethirtyeight](img/538.png){width="450" style="border:0.5px solid;"}
+:::
+:::
+
+::: {.aside}
+Source: [Datawrapper](https://blog.datawrapper.de/fonts-for-data-visualization/)
+:::
+
+
+## Bibliography {.bibstyle}
+
+:::footer
+:::

@@ -45,7 +45,7 @@ format:
 
 #### Summary
 
-"A picture is worth a thousand words". This course approaches contemporary issues of economic policy by analyzing innovative or iconic data visualizations. Based on selected illustrations, we discuss the underlying data, the theoretical background and policy implications in various fields of empirical economics. In a second step, we will assemble plots in class and study the basics of data visualization. Students are required to recreate figures at home to improve their skills in coding. The main task is that students will design a comprehensive data visualization with the [ggplot-Package](https://ggplot2.tidyverse.org/index.html) in R and draft a report around that figure in [RMarkdown](https://rmarkdown.rstudio.com). Student will need to bring their laptop to class and prior knowledge of data handling in R is beneficial.
+"A picture is worth a thousand words". This course approaches contemporary issues of economic policy by analyzing innovative or iconic data visualizations. Based on selected illustrations, we discuss the underlying data, the theoretical background and policy implications in various fields of empirical economics. In a second step, we will assemble plots in class and study the basics of data visualization. Students are required to recreate figures at home to improve their skills in coding. The main task is that students will design a comprehensive data visualization with the [ggplot-Package](https://ggplot2.tidyverse.org/index.html) in R and draft a report around that figure in [RMarkdown](https://rmarkdown.rstudio.com) (or [Quarto](https://quarto.org)). Student will need to bring their laptop to class and prior knowledge of data handling in R is beneficial.
 
 <br>
 ![](data/img/energy.png)

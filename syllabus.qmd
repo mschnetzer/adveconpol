@@ -48,7 +48,7 @@ The course offers a lot of room for discussion in order to permit students to as
 |   |   |
 |--------|--------|
 | ![](data/img/schwabish.jpg) | **Jonathan Schwabish** <br> *Better Data Visualizations: A Guide for Scholars, Researchers, and Wonks* <br> Columbia University Press <br> ISBN-13: 9780231193115 <br> [Link](https://cup.columbia.edu/book/better-data-visualizations/9780231193115) |
-| ![](data/img/spiegelhalter.jpeg) | **David Spiegelhalter** <br> *The Art of Statistics Learning from Data* <br> Penguin Books UK <br> ISBN-13: 9780241258767 <br> [Link](https://www.penguin.co.uk/books/294857/the-art-of-statistics-by-spiegelhalter-david/9780241258767) |
+| ![](data/img/spiegelhalter.jpeg) | **David Spiegelhalter** <br> *The Art of Statistics: Learning from Data* <br> Penguin Books UK <br> ISBN-13: 9780241258767 <br> [Link](https://www.penguin.co.uk/books/294857/the-art-of-statistics-by-spiegelhalter-david/9780241258767) |
 : {tbl-colwidths="[15,85]"}
 :::
 

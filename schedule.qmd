@@ -26,7 +26,7 @@ schedule %>% arrange(Date) %>% select(-c(Chart)) %>%
              <i class="fa-solid fa-display fa-lg"></i></a>'),
         glue('<font color="#e9ecef"><i class="fa-solid fa-display fa-lg"></i></font>')), 
         Code = ifelse(!is.na(Code),
-        glue('<a href="code/{Code}/" target = "_blank">
+        glue('<a href="data/code/{Code}" target = "_blank">
              <i class="fa-solid fa-code fa-lg"></i></a>'),
         glue('<font color="#e9ecef"><i class="fa-solid fa-code fa-lg"></i></font>')),
         Assignment = ifelse(!is.na(Assignment),
@@ -43,7 +43,7 @@ schedule %>% arrange(Date) %>% select(-c(Chart)) %>%
 
 #### Assignments
 
-Assignment [[1]](#h1) provides the setup of the R infrastructure that is required in this course. There are no points for this assignment. Assignments [[2]](#h2) to [[4]](#h4) are recreations of examplary figures provided below. These examples are related to figures that are discussed in class. Students should then try to reproduce the plots at home and improve their individual coding skills. The raw data for the figures are available as `*.csv` files below. The charts should then be uploaded to the [learning platform](https://learn.wu.ac.at). The submission deadline is **9 a.m. on the day of the respective teaching unit**.
+Assignment [[1]](#h1) provides the setup of the R infrastructure that is required in this course. There are no points for this assignment. Assignments [[2]](#h2) to [[4]](#h4) are recreations of examplary figures provided below. These examples are related to figures that are discussed in class. Students should then try to reproduce the plots at home and improve their individual coding skills. The raw data for the figures are available as `*.csv` files below.  
 
 ##### Homework 1{#h1}
 
@@ -68,7 +68,7 @@ assignvars <- schedule %>% filter(!is.na(Assignment)) %>%
 2. Install the latest version of [RStudio Desktop](https://posit.co/download/rstudio-desktop/)
 
 3. Open RStudio, copy the following code into the console and execute:
-`install.packages(c("tidyverse", "rmarkdown")); sessionInfo()`
+`install.packages(c("tidyverse", "rmarkdown", "scales", "lubridate", "colorspace", "devtools")); sessionInfo()`
 
 4. Click on `Help > About RStudio`
 

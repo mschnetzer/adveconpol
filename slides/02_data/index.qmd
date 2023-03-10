@@ -8,12 +8,12 @@ title: |
       </span><br>
     {{< var course.subtitle >}}
 author: "{{< var instructor.name >}}"  
-subtitle: Data sources and definitions
-date: October 21, 2022
+subtitle: Data
+date: March 13, 2023
+date-format: long
 from: markdown+emoji
-bibliography: ../../data/lit/wipol_spec.bib
+bibliography: ../../data/lit/wipol_advanced.bib
 csl: ../../data/lit/wipol.csl
-prefer-html: true
 execute:
   echo: true
 format:
@@ -28,43 +28,123 @@ format:
     transition: fade
     progress: true
     multiplex: false
-    scrollable: false
-    preview-links: true
+    scrollable: true
+    preview-links: false
     hide-inactive-cursor: true
     highlight-style: printing
     pause: true
 ---
 
-## {.smaller}
+## The era of evidence in economics {.smaller}
 
-[Has inequality been rising lately?]{.bubble .bubble-bottom-left .absolute top="5%" left="18%" style="--bubcol: var(--bubcol-blue);"}
+![](img/era_of_evidence.png){fig-align="center" height="390"}
 
-::: {.fragment .fade-in}
-[What inequality do you mean exactly?]{.bubble .bubble-bottom-right .absolute top="20%" right="18%" style="--bubcol: var(--bubcol-red);"}
+::: {style="font-size:1.5rem;font-weight:100;" .secfont}
+The figure shows the evolution of economics literature by text mining the 500 most-cited titles in top journals by decade. There is a shift from advancing theory towards [empirical evidence]{.hl .hl-dred}.
 :::
 
-![](img/discuss1.png){.absolute bottom="0" left="5%" width="300px"}
-![](img/discuss2.png){.absolute bottom="0" right="5%" width="300px" style="transform: rotateY(180deg);"}
-
-:::footer
-Illustrations by [https://openpeeps.com](https://openpeeps.com).
+::: {.aside}
+Source: @brice:2019
 :::
 
-# How is income defined and how do we measure it?
+## The rise of empirical articles {.smaller}
+
+::: {.tbl-larger .recommended-lit}
+|   |   |
+|---|---|
+| ![](img/empirical.png) | There is a distinct [rise of empirical papers]{.hl .hl-dred} in economics. In the 1980s, around one third of publications was empirical. Today, it's more than half. This trend is present in all sub-fields of the discipline (labor, finance, macro, etc.). <br><br> The analyis is based on 134,892 papers published in 80 journals between 1980 and 2015. Papers are labeled as empirical if they use data to estimate economically meaningful parameters. |
+: {tbl-colwidths="[50,50]"}
+:::
+
+::: {.aside}
+Source: @angrist:2017
+:::
+
+## Evidence-based economic policy {.smaller}
+
+::: {.incremental}
+- [Data collection:]{.secfont .hl .hl-blue} Collection of relevant and high-quality data (administrative data, surveys, interviews, observations, etc.). Researchers should be aware of the qualities but also of the flaws of the data.
+- [Data analysis:]{.secfont .hl .hl-blue} The design and type of analysis depends on the question being asked and resources available. The methods range from qualitative to quantitative analysis. The choice of application might unwittingly involve normative reflections by the researcher.
+- [Policy suggestions:]{.secfont .hl .hl-blue} A major goal of empirical economics is to serve and improve policy making. The findings should, however, be carefully interpreted with regard to the limitations of empirical analyis. Economic policy, even if it's evidence-based, is affected by norms, beliefs, etc.
+:::
+
+# Mind the (data) gap!
 
 ::: {.absolute top="90%" left="30%" width="400px" height="336px"}
-![](../../data/img/avatar_shrug.png)
+![](../../data/img/avatar_finger.png)
 :::
 
 ::: footer
 :::
 
-## Income concepts according to Canberra Group {.smaller}
+## The limits of data {.medium}
+
+::: {.columns}
+::: {.column width=30%}
+![](img/bias.png)
+:::
+::: {.column width=70%}
+- Data is never a perfect reflection of the world!
+- It's only a subset: not crime but [reported]{.hl .hl-dred} crime
+- Information is collected by humans and processed by machines: imprecisions and errors are [inevitable]{.hl .hl-blue}!
+- Be aware of potential (cognitive and statistical) biases!
+:::
+:::
+
+::: {.aside}
+Source: [XKCD](https://xkcd.com/2618/)
+:::
+
+## Invisible women
+
+::: {.tbl-larger .recommended-lit}
+|   |   |
+|---|---|
+| ![](img/perez.jpg) | **Caroline Criado Perez** <br> *Exposing Data Bias in a World Designed for Men* <br> Random House Uk <br> ISBN: 978-1-78470-628-9 <br><br> The world we live in is built around male data, preferences, and assumptions. There are numerous examples of how the [gender data gap]{.hl .hl-dred} has led to women being overlooked and undervalued in areas ranging from medicine to urban planning. To create a more just and equal society, we need to take into account the different experiences and needs of women and other marginalized groups in our data collection and decision-making processes. |
+: {tbl-colwidths="[20,80]"}
+:::
+
+## Invisible rich {.smaller}
+
+::: {.tbl-larger .recommended-lit}
+|   |   |
+|---|---|
+| ![](img/rlmap_col.png) | Survey data are based on representative samples drawn from total population. However, the probability of drawing one of the few very rich households into the sample is infinitesimal. Moreover, participation in surveys is mostly voluntary and there is a higher refusal rate at the top. This [poor coverage of the top]{.hl .hl-dred} in wealth and income surveys conceals the extent of inequality. <br><br> The figure shows the gap between the richest observation in wealth survey data (HFCS) and the "poorest" observation in national rich lists created by magazines. |
+: {tbl-colwidths="[50,50]"}
+:::
+
+::: {.aside}
+Source: @disslbacher:2020
+:::
+
+## Discuss with your neighbour {.smaller}
+
+[What other potential flaws and challenges of data collection come to your mind?]{.bubble .bubble-bottom-left .absolute top="20%" left="25%" style="max-width:500px;--bubcol: var(--bubcol-blue);font-size:1.5rem;"}
+
+[How could these flaws be tackled by the researcher?]{.bubble .bubble-bottom-right .absolute top="40%" left="35%" style="max-width:350px;--bubcol: var(--bubcol-dred);font-size:1.5rem;"}
+
+![](img/discuss1.png){.absolute bottom="0px" left="5%" height="450px"}
+![](img/discuss2.png){.absolute bottom="0px" right="5%" height="450px" style="transform: rotateY(180deg);"}
+
+::: footer
+Illustrations by [https://openpeeps.com](https://openpeeps.com).
+:::
+
+# From conceptual disparities to data
+
+::: {.absolute top="90%" left="30%" width="400px" height="336px"}
+![](../../data/img/avatar_laptop.png)
+:::
+
+::: footer
+:::
+
+## Income according to Canberra Group {.smaller}
 
 ```{r packages}
 #| echo: false
 #| warning: false
-librarian::shelf(tidyverse, knitr, kableExtra)
+librarian::shelf(tidyverse, knitr, kableExtra, msthemes, datasauRus)
 options(knitr.kable.NA = '')
 ```
 
@@ -94,7 +174,7 @@ kable_classic(full_width = F)
 Source: @un:2011, 11
 :::
 
-## System of National Accounts (SNA)
+## Income according to the National Accounts
 
 ::: {.tbl-larger}
 ```{r sna}
@@ -119,7 +199,7 @@ kable_classic(full_width = F)
 ```
 :::
 
-## Austrian tax law
+## Income according to the Austrian tax law
 
 ::: {.tbl-larger}
 ```{r tax}
@@ -158,18 +238,15 @@ kable_classic(full_width = F)
 [Administrative]{.hl .hl-dred} and [survey]{.hl .hl-blue} data sources: Wage tax data (WTD), Income tax data (ITD), Integrated wage and income tax data (IWITD), Social security data (SSD), Capital gains tax data (CGT), System of National Accounts (SNA), European Survey of Income and Living Conditions (EU-SILC), Household Finance and Consumption Survey (HFCS), Household Budgetary Survey (HBS), Structure of Earnings Survey (SES)
 :::
 
-## What is EU-SILC? {.smaller}
 
-- European Union Statistics on Income and Living Conditions (by Eurostat)
-- Harmonized sample survey in private households
-- Replaced [European Community Household Panel]{.secfont} (1994-2001) in 2003
-- Conducted in all EU member states and Switzerland, Norway, Iceland, Turkey, Serbia and Macedonia
-- Sample:
-    - :austria: Stratified random sample from population register with approx. 6,000 households annually 
-    - :eu: approx. 135,000 households ([use weights!]{.circle-hl})
-- Interview mode: CAPI/CATI
-- Rotating 4 year panel; Ad-hoc modules
-- Standard documentation for Austria: [{{< fa file-pdf >}}](https://www.statistik.at/fileadmin/shared/QM/Standarddokumentationen/B/std_b_eu-silc-2020.pdf) 
+# Be aware of differences between data sources!
+
+::: {.absolute top="90%" left="30%" width="369" height="400"}
+![](../../data/img/avatar_read.png)
+:::
+
+::: footer
+:::
 
 ## Income data in EU-SILC {.smaller}
 
@@ -204,15 +281,6 @@ kable_classic(full_width = F)
 
 ::: aside
 Note: Variables that use [administrative data]{.hl .hl-blue} are highlighted.
-:::
-
-# Do income data from various sources fit together?
-
-::: {.absolute top="90%" left="30%" width="369" height="400"}
-![](../../data/img/avatar_laptop.png)
-:::
-
-::: footer
 :::
 
 ## Administrative versus survey data {.smaller}
@@ -257,6 +325,151 @@ Source: @angel:2019
 
 ::: aside
 Source: @angel:2019
+:::
+
+# Why should we plot data?
+
+::: {.absolute top="90%" left="30%" width="400px" height="336px"}
+![](../../data/img/avatar_shrug.png)
+:::
+
+::: footer
+:::
+
+
+## Anscombe's quartet
+
+```{r anscomedata}
+#| echo: false
+anscombe_m <- data.frame()
+
+for(i in 1:4) {
+  anscombe_m <- rbind(anscombe_m, data.frame(x=anscombe[,i], y=anscombe[,i+4]))}
+  
+anscombe_m <- anscombe_m |> 
+  mutate(set = c(rep("I",11),rep("II",11),rep("III",11),rep("IV",11)))
+
+means <- anscombe |> 
+  select(x1,y1,x2,y2,x3,y3,x4,y4) |> 
+  summarise(across(everything(), mean))
+
+sd <- anscombe |> 
+  select(x1,y1,x2,y2,x3,y3,x4,y4) |> 
+  summarise(across(everything(), sd))
+
+cor <- anscombe |>
+  summarise(x1=cor(x1,y1), x2=cor(x2,y2), x3=cor(x3,y3), x4=cor(x4,y4))
+
+anscombe |> 
+  mutate(obs = as.character(1:n())) |> 
+  select(obs,x1,y1,x2,y2,x3,y3,x4,y4) |>
+  add_row(obs="Mean",round(means,2)) |>
+  add_row(obs="SD",round(sd,2)) |>
+  add_row(obs="Corr",round(cor,2)) |>
+  kbl(escape = FALSE, col.names = c("Obs.", rep(c("X","Y"),4)), align="rcccccccc") |>
+  column_spec(1, border_right = T, bold = T) |>
+  column_spec(seq(3,7,2), border_right = T) |>
+  row_spec(11, extra_css = "border-bottom: 3px solid") |>
+  add_header_above(c(" " = 1, "I" = 2, "II"=2, "III"=2, "IV"=2)) |>
+  kable_classic(full_width = F)
+```
+
+
+## What do we learn when plotting the data?
+
+```{r anscombe}
+#| echo: false
+ggplot(anscombe_m, aes(x, y)) +  
+geom_text(aes(x = 15, y = 5, label=set), family = "Alfa Slab One", size=36, color = "gray95") + 
+geom_smooth(method="lm", fill=NA, fullrange=TRUE, color = "black", linewidth=0.5) + 
+geom_point(size=3.5, color="black", fill="red", alpha=0.8, shape=21) +
+facet_wrap(~set, ncol=2, scales = "free") +
+scale_x_continuous(limits = c(0,20)) +
+scale_y_continuous(limits = c(0,15)) +
+labs(x = NULL, y = NULL) +
+coord_cartesian(expand = F) +
+theme_ms() +
+theme(strip.text = element_blank(),
+axis.text = element_blank(),
+panel.border = element_rect(linewidth = 0.1, fill = NA))
+```
+
+## Do you see correlation?
+
+```{r datasaurus}
+#| echo: false
+#| fig-align: center
+datasaurus_dozen |>
+  filter(dataset %in% c("slant_down", "dino")) |>
+  mutate(dataset = ifelse(dataset == "dino", "B", "A")) |>
+  ggplot(aes(x = x, y = y, colour = dataset))+
+  geom_point() +
+  scale_color_manual(values = c("#C32402", "#0234C3")) +
+  facet_wrap(~dataset, ncol = 2) +
+  labs(x=NULL, y=NULL) +
+  theme_ms() +
+  theme(legend.position = "none",
+  strip.text = element_blank(),
+  panel.border = element_rect(linewidth = 0.1, fill = NA))
+```
+
+. . .
+
+::: {.columns}
+::: {.column style="text-align:center;"}
+[Correlation: -0.07]{.secfont style="font-size:1.5rem;color:#C32402;"}
+:::
+::: {.column style="text-align:center;"}
+[Correlation: -0.07]{.secfont style="font-size:1.5rem;color:#0234C3;"}
+:::
+:::
+
+
+## Same same but different
+
+```{r dinolpots}
+#| echo: false
+#| fig-align: center
+datasaurus_dozen |>
+  filter(!dataset == "dino") |>
+  ggplot(aes(x = x, y = y, colour = dataset))+
+  geom_point() +
+  geom_text(aes(x = 50, y = -10, label = glue::glue("Cor.: {round(cor(x,y),2)}")), hjust = 0.5) +
+  facet_wrap(~dataset, nrow = 2) +
+  labs(x=NULL, y=NULL) +
+  theme_ms() +
+  theme(legend.position = "none",
+  strip.text = element_blank(),
+  axis.text = element_blank(),
+  panel.border = element_rect(linewidth = 0.1, fill = NA))
+```
+
+# Let's start coding with the penguins
+
+::: {.absolute top="90%" left="40%"}
+![](img/penguins.png)
+:::
+
+::: footer
+:::
+
+## The Palmer Penguins {.smaller}
+
+::: {.columns}
+::: {.column}
+![](img/penguins1.png)
+:::
+::: {.column}
+![](img/penguins2.png)
+:::
+:::
+
+::: {style="font-size:1.5rem;font-weight:100;" .secfont}
+The [data](https://allisonhorst.github.io/palmerpenguins/index.html) was collected from 2007-2009 by Dr. Kristen Gorman with the Palmer Station Long Term Ecological Research Program. The dataset contains data for 344 penguins. There are 3 different species of penguins, collected from 3 islands in the Palmer Archipelago, Antarctica.
+:::
+
+::: {.aside}
+Source: @gorman:2014
 :::
 
 ## Bibliography {.bibstyle}

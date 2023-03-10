@@ -19,5 +19,29 @@
   },
   "slides/02_data/index.qmd": {
     "index.html": "a0057e0a"
+  },
+  "slides/04_growth/index.qmd": {
+    "index.html": "53882ae0"
+  },
+  "slides/03_visualization/index.qmd": {
+    "index.html": "d279d56a"
+  },
+  "slides/05_inflation/index.qmd": {
+    "index.html": "e33305c4"
+  },
+  "slides/08_wealth/index.qmd": {
+    "index.html": "d81e4891"
+  },
+  "slides/06_labour/index.qmd": {
+    "index.html": "16203625"
+  },
+  "slides/10_climate/index.qmd": {
+    "index.html": "e792259f"
+  },
+  "slides/07_income/index.qmd": {
+    "index.html": "238a3b32"
+  },
+  "slides/09_mobility/index.qmd": {
+    "index.html": "f982f506"
   }
 }

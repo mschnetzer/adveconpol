@@ -77,9 +77,12 @@ $presentation-font-medium: 0.8;
 .blue { color: $blue; }
 .red { color: $red }
 .dred { color : $dred }
+.green { color: $green }
+.brown { color: $brown }
 .grey200 { color: $grey200 }
 .grey600 { color: $grey600 }
 .secfont { font-family: $secfont;}
+.center { text-align: center; }
 
 .icon {
     color: $dred;
@@ -181,6 +184,7 @@ lord-icon.large {
 .hl-yellow { background-color: $yellow; }
 .hl-green { background-color: $green; }
 .hl-brown { background-color: $brown; }
+.hl-grey { background-color: $grey200; }
 
 /* Slides standards */
 
@@ -295,6 +299,11 @@ h1.title {
 .tbl-larger td, tr, th, tbody {
     font-size: 1.5rem !important;
   }
+
+.recommended-lit td, tr, th, tbody {
+  border: none !important;
+  vertical-align: top;
+}
 
 .tbl-smaller th, td, tr, tbody {
     font-size: 1.2rem !important;

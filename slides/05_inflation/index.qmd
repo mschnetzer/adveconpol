@@ -1,0 +1,207 @@
+---
+metadata-files: 
+    - ../../_variables.yml
+title: |
+    <span class='fa-stack course-icon'>
+        <i class='fas {{< var course.icon-bg >}} fa-stack-2x blue'></i>
+        <i class='fas {{< var course.icon >}} fa-stack-1x fa-inverse' style='margin-top:-5pt'></i>
+      </span><br>
+    {{< var course.subtitle >}}
+author: "{{< var instructor.name >}}"  
+subtitle: Inflation · Colors
+date: April 17, 2023
+date-format: long
+from: markdown+emoji
+bibliography: ../../data/lit/wipol_advanced.bib
+csl: ../../data/lit/wipol.csl
+execute:
+  freeze: auto
+  echo: true
+  fig-width: 6
+  fig-height: 5
+format:
+  revealjs:
+    theme: ../econpol_slides.scss
+    footer: '{{< var course.number >}} {{< var course.title >}} | {{< var course.semester >}}'
+    logo: ../../data/img/wu-logo-simple.png
+    header-includes: |
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet"/>
+    slide-number: true
+    show-slide-number: all
+    transition: fade
+    progress: true
+    multiplex: false
+    scrollable: true
+    preview-links: false
+    hide-inactive-cursor: true
+    highlight-style: printing
+    pause: true
+---
+
+## What exactly is inflation?
+
+## How do we calculate inflation?
+
+## What is COICOP?
+
+## Is there a trade-off between inflation and unemployment?
+
+
+
+# All colours are beautiful
+
+::: {.absolute top="90%" left="30%" width="400px" height="336px"}
+![](../../data/img/avatar_sweatshirt.png)
+:::
+
+::: footer
+:::
+
+## Colors in R {.medium}
+
+You can assign colors by [names]{.hl .hl-dred} 
+
+- "red", "green", "chocolate", "cadetblue", etc.
+- See a complete list of the 657 colors typing [colors()]{.secfont}
+
+. . .
+
+```{r colors}
+#| echo: false
+head(colors(), 12)
+```
+
+. . .
+
+<br> 
+Alternatively, you can use [hex color codes]{.hl .hl-dred}
+
+- #F8766D, #00BA38, #619CFF, etc.
+- Use color picker to get hex code, e.g. [https://htmlcolorcodes.com](https://htmlcolorcodes.com)
+
+
+## Color palettes of {RColorBrewer} {.smaller}
+
+::: {.columns}
+::: {.column width="33%" .center}
+Sequential
+
+[Use to encode numerical information *with order*]{style="font-size:1.3rem;"}
+```{r seq}
+#| echo: false
+#| fig-height: 7
+library(RColorBrewer)
+display.brewer.all(type = "seq")
+```
+:::
+::: {.column width="33%" .center .fragment}
+Diverging
+
+[Use to encode numerical information with *critical midpoint*]{style="font-size:1.3rem;"}
+```{r div}
+#| echo: false
+#| fig-height: 7
+display.brewer.all(type = "div")
+```
+:::
+::: {.column width="33%" .center .fragment}
+Qualitative
+
+[Use to encode *categorical* information]{style="font-size:1.3rem;"}
+```{r qual}
+#| echo: false
+#| fig-height: 7
+display.brewer.all(type = "qual")
+```
+:::
+:::
+
+::: {.aside}
+Source: @scherer:2022
+:::
+
+## Color blindness {.smaller}
+
+::: {.columns}
+::: {.column}
+You may check whether the color scale works for people who can distinguish fewer colours than others with [{colorBlindness}]{.secfont}.
+
+```{r cblind}
+#| echo: false
+#| fig-height: 4
+library(colorBlindness)
+colorBlindness::displayAllColors(rainbow(6))
+```
+:::
+::: {.column .fragment}
+The [viridis]{.secfont} color scale is discriminable under the most common forms of colour blindness, and reproduces well in greyscale.
+
+```{r viridis}
+#| echo: false
+#| fig-height: 4
+colorBlindness::displayAllColors(viridis::viridis(6))
+```
+:::
+:::
+
+## Fancy palettes {.medium}
+
+::: {.columns}
+::: {.column .center}
+[[{MetBrewer}]{.secfont}](https://github.com/BlakeRMills/MetBrewer)
+```{r met}
+#| echo: false
+library(MetBrewer)
+library(unikn)
+unikn::seecol(list(met.brewer("Tiepolo"), met.brewer("Homer1"), met.brewer("Austria"), 
+met.brewer("Lakota"), met.brewer("Navajo")),
+pal_names = c("Tiepolo","Homer1","Austria","Lakota","Navajo"),
+title = "", grid=F)
+```
+:::
+::: {.column .center}
+[[{wesanderson}]{.secfont}](https://github.com/karthik/wesanderson)
+```{r wes}
+#| echo: false
+library(wesanderson)
+unikn::seecol(list(wes_palette("Zissou1"), wes_palette("Darjeeling1"), 
+wes_palette("Cavalcanti1"), wes_palette("FantasticFox1"), wes_palette("Moonrise3")),
+pal_names = c("Zissou1","Darjeeling1","Cavalcanti1","FantasticFox1","Moonrise3"),
+title = "", grid=F)
+```
+:::
+:::
+
+
+## Color scales in {ggplot} {.smaller}
+
+::: {.center .secfont style="font-size:2.5rem;"}
+scale_color_\* <br> scale_fill_\*
+:::
+
+::: {.columns}
+::: {.column .center}
+Continuous: 
+
+- [ continuous(type)]{.secfont}
+- [distiller(palette)]{.secfont}
+- [gradient(high, low)]{.secfont}
+- [gradient2(high, mid, low)]{.secfont}
+- [gradientn(colours)]{.secfont}
+- [viridis_c(option)]{.secfont}
+:::
+::: {.column .center}
+Discrete:
+
+- [manual(values)]{.secfont}
+- [brewer(palette)]{.secfont}
+- [grey(start, end)]{.secfont}
+- [viridis_d(option)]{.secfont}
+:::
+:::
+
+
+## Bibliography {.bibstyle}
+
+:::footer
+:::

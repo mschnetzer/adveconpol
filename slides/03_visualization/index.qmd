@@ -1,0 +1,743 @@
+---
+metadata-files: 
+    - ../../_variables.yml
+title: |
+    <span class='fa-stack course-icon'>
+        <i class='fas {{< var course.icon-bg >}} fa-stack-2x blue'></i>
+        <i class='fas {{< var course.icon >}} fa-stack-1x fa-inverse' style='margin-top:-5pt'></i>
+      </span><br>
+    {{< var course.subtitle >}}
+author: "{{< var instructor.name >}}"  
+subtitle: Visualization
+date: March 20, 2023
+date-format: long
+from: markdown+emoji
+bibliography: ../../data/lit/wipol_advanced.bib
+csl: ../../data/lit/wipol.csl
+execute:
+  freeze: auto
+  echo: true
+  fig-width: 6
+  fig-height: 5
+format:
+  revealjs:
+    theme: ../econpol_slides.scss
+    footer: '{{< var course.number >}} {{< var course.title >}} | {{< var course.semester >}}'
+    logo: ../../data/img/wu-logo-simple.png
+    header-includes: |
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet"/>
+    slide-number: true
+    show-slide-number: all
+    transition: fade
+    progress: true
+    multiplex: false
+    scrollable: true
+    preview-links: false
+    hide-inactive-cursor: true
+    highlight-style: printing
+    pause: true
+---
+
+
+# The pioneers of data visualization
+
+::: {.absolute top="90%" left="30%" width="400px" height="336px"}
+![](../../data/img/avatar_sakko.png)
+:::
+
+::: footer
+:::
+
+
+## John Snow and the Broad Street Pump
+
+::: {.columns}
+::: {.column width=60%}
+![](img/cholera_large.jpg){height="450" style="border: 1px solid;"}
+:::
+
+::: {.column width=35%}
+![](img/cholera_detail.png){height="450" style="border: 1px solid;"}
+:::
+:::
+
+## W.E.B. Du Bois
+
+::: {.columns}
+::: {.column}
+![](img/dubois1.png){height="500" style="border: 1px solid;"}
+:::
+
+::: {.column}
+![](img/dubois2.png){height="500" style="border: 1px solid;"}
+:::
+:::
+
+## Otto Neurath
+
+![](img/neurath.png){height="500" fig-align="center"}
+
+## Charles Joseph Minard
+
+![](img/minard.png){fig-align="center"}
+
+## William Playfair
+
+![](img/playfair.png){height="500" fig-align="center"}
+
+
+# Five guidelines for better visualization
+
+::: {.absolute top="90%" left="30%" width="400px" height="336px"}
+![](../../data/img/avatar_laptop.png)
+:::
+
+::: footer
+:::
+
+## 1. Choose the adequate type of graph {.medium}
+
+::: {.columns}
+::: {.column width=30%}
+[Bad:]{.hl .hl-dred .secfont style="font-size:1.3rem;"}
+<div style= "float:right;position:relative;vertical-align:top;">
+```{r}
+#| echo: false
+#| results: 'asis'
+#| fig.width: 2.2
+#| fig.height: 2.4
+library(tidyverse)
+salesdata <- tribble(
+  ~department, ~sales,
+  "A",950,
+  "B",1350,
+  "C",490,
+  "D",2000,
+  "E",100,
+  "F",100
+)
+salesdata |> ggplot(aes(x=department, y=sales, group=1)) +
+geom_point() +
+geom_line() +
+labs(x=NULL, y=NULL, title = "Travel expenses by department") +
+theme_minimal() +
+theme(plot.title = element_text(size=10),
+plot.title.position = "plot")
+```
+</div>
+<br><br><br><br><br><br><br>
+[Good:]{.hl .hl-green .secfont style="font-size:1.3rem;"}
+<div style= "float:right;position:relative;vertical-align:top;">
+```{r}
+#| echo: false
+#| results: 'asis'
+#| fig.width: 2.2
+#| fig.height: 2.4
+salesdata |> ggplot(aes(x=department, y=sales)) +
+geom_bar(stat="identity", width = 0.6) +
+scale_y_continuous(labels = scales::dollar) +
+labs(x=NULL, y=NULL, title = "Travel expenses by department") +
+theme_minimal() +
+theme(plot.title = element_text(size=10),
+plot.title.position = "plot",
+panel.grid.major.x = element_blank(),
+panel.grid.minor.y = element_blank())
+```
+</div>
+:::
+::: {.column width=70%}
+- Choose a chart type with respect to your data (numeric, categorical, ranking, time series etc.)
+- What would you like to show: comparison, distribution, composition, relationship?
+- To help you find the adequate type from a myriad of alternatives, you can also take a look at [https://www.data-to-viz.com](https://www.data-to-viz.com) and [https://datavizproject.com](https://datavizproject.com)
+:::
+:::
+
+## A simple decision tree of chart types {.medium}
+
+![](img/charttypes.webp){fig-align="center" height="530"}
+
+
+## 2. Visualize data accurately and faithfully {.medium}
+
+::: {.columns}
+::: {.column width=30%}
+[Bad:]{.hl .hl-dred .secfont style="font-size:1.3rem;"}
+![](img/princ2a.png){height=230 style="vertical-align:top;"}
+<br>
+[Good:]{.hl .hl-green .secfont style="font-size:1.3rem;"}
+![](img/princ2b.png){height=230 style="vertical-align:top;"}
+:::
+::: {.column width=70%}
+- Prioritize data accuracy, clarity, and integrity
+- Avoid misleading the reader by truncating the y-axis, using two different y-axis, cherry-picking data, not providing context, etc.
+- A good story based on data visualization does not involve deceptive manipulation of the data!
+:::
+:::
+
+::: {.aside}
+Source: @dougherty:2021
+:::
+
+## Example {.medium}
+
+::: {.columns}
+::: {.column}
+![](img/accuracy1.jpeg){height="450" fig-align="center"}
+:::
+::: {.column .fragment}
+![](img/accuracy2.jpg){height="450" fig-align="center"}
+:::
+:::
+
+::: {.aside}
+Source: [Patient](https://patient.info/news-and-features/whats-the-average-height-for-men)
+:::
+
+## Another example {.medium}
+
+::: {.columns}
+::: {.column width=50%}
+![](img/trumptweet.png){height="450"}
+:::
+::: {.column width=50% .fragment}
+<br>
+![](img/voting-election.gif){style="border: 1px solid;"}
+:::
+:::
+
+## A third example {.medium}
+
+::: {.columns}
+::: {.column}
+![](img/migration1.png){height="450" fig-align="center"}
+:::
+::: {.column .fragment}
+![](img/migration2.png){height="450" fig-align="center"}
+:::
+:::
+
+::: {.aside}
+Source: [The Correspondent](https://thecorrespondent.com/664/how-maps-in-the-media-make-us-more-negative-about-migrants/738023272448-bac255ba)
+:::
+
+## 3. Integrate graphics and text {.medium}
+
+::: {.columns}
+::: {.column width=30%}
+[Bad:]{.hl .hl-dred .secfont style="font-size:1.3rem;"}
+![](img/princ3a.png){height=250 style="vertical-align:top;"}
+<br>
+[Good:]{.hl .hl-green .secfont style="font-size:1.3rem;"}
+![](img/princ3b.png){style="vertical-align:top;"}
+:::
+::: {.column width=70%}
+- Don't make people turn their head to read labels
+- Think about a logical order of the chart (alphabetical, values)
+- Add direct labels rather than a legend
+- Choose a meaningful title that focuses on your message
+:::
+:::
+
+::: {.aside}
+Source: @dougherty:2021
+:::
+
+## Best practice {.medium}
+
+::: {.columns}
+::: {.column}
+![](img/annotation1.jpeg)
+:::
+::: {.column .fragment}
+![](img/annotation2.jpeg)
+:::
+:::
+
+::: {.aside}
+Sources: [Washington Post](https://www.washingtonpost.com/business/2019/06/06/why-crowded-meetings-conference-rooms-make-you-so-so-tired/), [chezVoila](https://twitter.com/chezVoila/status/1136631524919513088?s=20)
+:::
+
+
+## 4. Reduce the clutter {.medium}
+
+::: {.columns}
+::: {.column width=30%}
+[Bad:]{.hl .hl-dred .secfont style="font-size:1.3rem;"}
+![](img/principle4a.png){height=230 style="vertical-align:top;"}
+<br>
+[Good:]{.hl .hl-green .secfont style="font-size:1.3rem;"}
+![](img/principle4b.png){height=230 style="vertical-align:top;"}
+:::
+::: {.column width=70%}
+- Unnecessary visual elements distract the readers from the central data
+- Avoid elements that do not contain information!
+- Basic elements like heavy tick marks or gridlines should be removed
+- Think carefully which visual elements are really needed to read the chart
+:::
+:::
+
+::: {.aside}
+Source: @dougherty:2021
+:::
+
+## Best practice {.medium}
+
+
+::: {.columns}
+::: {.column}
+![](img/clutter1.png)
+:::
+::: {.column .fragment}
+![](img/clutter2.png){height="400"}
+:::
+:::
+
+::: {.fragment .absolute top="15%" left="50%"}
+```{r clutter}
+#| echo: false
+#| fig.width: 6
+#| fig.height: 5
+library(tidyverse)
+data <- tribble(~area, ~inflation,
+"St. Louis", 3.2,
+"Seattle", 3.1,
+"Atlanta", 2.9,
+"Chicago", 2.8,
+"Detroit", 2.4,
+"Houston", 2.4,
+"Los Angeles", 2.2,
+"New York", 1.8,
+"Anchorage", 1.1,
+"Pittsburgh", 0.8)
+data |> ggplot(aes(x = reorder(area, inflation), y = inflation)) +
+geom_hline(yintercept = 2.4, linewidth=0.3) +
+geom_bar(stat = "identity", width=0.7, aes(fill = inflation > 2.4)) +
+annotate("text",y=2.45,x=1, label="National\nAverage: 2.4%", hjust = 0, family="Roboto", size=3) +
+geom_text(aes(y = 0.05, label = paste0(inflation,"%")), size = 3, family = "Roboto", hjust=0, color="white", fontface="bold") +
+scale_fill_manual(values = c(MetBrewer::met.brewer("Lakota")[c(1,3)])) +
+coord_flip() +
+labs(x = NULL, y = NULL,
+title = "Highest food price inflation in St. Louis and Seattle",
+subtitle = "Annual grocery store inflation, 2014") +
+theme_minimal() +
+theme(panel.grid = element_blank(),
+axis.text.y = element_text(family="Roboto", face="bold",size=10),
+axis.text.x = element_blank(),
+legend.position="none",
+plot.title = element_text(family="Roboto", face="bold"),
+plot.subtitle = element_text(family="Roboto"),
+plot.title.position = "plot")
+```
+:::
+
+::: {.aside}
+Sources: [BlueGranite](https://www.bluegranite.com/blog/data-visualization-remove-chart-clutter-and-focus-on-the-insights)
+:::
+
+
+## 5. Avoid the spaghetti chart and start with gray {.medium}
+
+::: {.columns}
+::: {.column width=30%}
+[Bad:]{.hl .hl-dred .secfont style="font-size:1.3rem;"}
+<div style= "float:right;position:relative;vertical-align:top;">
+```{r}
+#| echo: false
+#| results: 'asis'
+#| fig.width: 2.3
+#| fig.height: 2.4
+set.seed(10)
+simdat <- tibble(name=LETTERS[1:15], `2000`=sample(1:20,15), `2010`=sample(1:20,15), `2020`=sample(1:20,15)) |> pivot_longer(-name, names_to="years",values_to="value")
+simdat |>
+  ggplot(aes(x=years, y=value, group=name, color=name)) +
+  geom_line() +
+  geom_text(aes(label=name), hjust=-0.3, data = simdat |> filter(years==2020), size = 2.5) +
+  scale_x_discrete(expand = c(0.07,0)) +
+  labs(x = NULL, y = NULL) +
+  theme_minimal() +
+  theme(legend.position = "none")
+```
+</div>
+<br><br><br><br><br><br><br>
+[Good:]{.hl .hl-green .secfont style="font-size:1.3rem;"}
+<div style= "float:right;position:relative;vertical-align:top;">
+```{r}
+#| echo: false
+#| results: 'asis'
+#| fig.width: 2.2
+#| fig.height: 2.4
+simdat |>
+  ggplot(aes(x=years, y=value, group=name, color = name)) +
+  geom_line(size = 0.3) +
+  geom_line(data = simdat |> filter(name %in% c("A","O")), size = 1.2) +
+  geom_text(aes(label=name), hjust=-0.3, data = simdat |> filter(years==2020), size = 2.5) +
+  scale_color_manual(values = c("red", rep("gray80",13), "olivedrab")) +
+  scale_x_discrete(expand = c(0.07,0)) +
+  labs(x = NULL, y = NULL) +
+  theme_minimal() +
+  theme(legend.position = "none",
+  panel.grid.minor.y = element_blank())
+```
+</div>
+:::
+::: {.column width=70%}
+- When the graph contains too much information, it looks like spaghetti
+- Try to break overloaded single charts into smaller parts (facets, small multiples) or highlight the relevant information
+- Start with gray: you are forced to be strategic in the use of color, labels, etc.
+:::
+:::
+
+
+## Best practice {.medium}
+
+::: {.columns}
+::: {.column}
+![](img/spaghetti1.png)
+:::
+::: {.column .fragment}
+![](img/spaghetti2.png)
+:::
+:::
+
+::: {.aside}
+Source: @schwabish:2014
+:::
+
+# The Gestalt Principles
+
+::: {.absolute top="90%" left="30%" width="400px" height="336px"}
+![](../../data/img/avatar_finger.png)
+:::
+
+::: footer
+:::
+
+## What are the Gestalt Principles? {.smaller}
+
+Gestalt Principles describe how humans group similar elements, recognize patterns and simplify complex images. "Gestalt" is German for "unified whole". 
+
+![](img/gestalt_header2.png){height="250" fig-align="center"}
+
+The question is how humans typically gain meaningful perceptions from the chaotic stimuli around them. The idea is that the mind "informs" what the eye sees by perceiving a series of individual elements as a whole.
+
+## Which chart is random and which has structure in it? {.medium}
+
+::: {.columns}
+::: {.column}
+![](img/random1.png)
+:::
+::: {.column}
+![](img/random2.png)
+:::
+:::
+
+::: {.aside}
+Source: @healy:2018
+:::
+
+## Gestalt rules {.smaller}
+
+- [Proximity]{.hl .hl-dred .secfont} Things that are spatially near to one another seem to be related.
+- [Similarity]{.hl .hl-blue .secfont} Things that look alike seem to be related.
+- [Connection]{.hl .hl-dred .secfont} Things that are visually tied to one another seem to be related.
+- [Continuity]{.hl .hl-blue .secfont} Partially hidden objects are completed into familiar shapes.
+- [Closure]{.hl .hl-dred .secfont} Incomplete shapes are perceived as complete.
+- [Figure and Ground]{.hl .hl-blue .secfont} Visual elements are taken to be either in the foreground or the background.
+- [Common Fate]{.hl .hl-dred .secfont} Elements sharing a direction of movement are perceived as a unit.
+
+::: {.aside}
+Source: @healy:2018
+:::
+
+## Our brains look for structure {.medium}
+
+![](img/gestalt.png){fig-align="center" height=500}
+
+::: {.aside}
+Source: @healy:2018
+:::
+
+
+# Let's start with {ggplot}
+
+::: {.absolute top="90%" left="30%" width="400px" height="336px"}
+![](../../data/img/avatar_cool.png)
+:::
+
+::: footer
+:::
+
+## The grammar of {ggplot} {.smaller}
+
+::: {.tbl-classic .tbl-larger}
+| Component | Function | Explanation |
+|-----------|----------|-------------|
+| Data | ggplot(data) | The raw data that you want to visualise. |
+| Aesthetics | aes() | Aesthetic mappings between variables and visual properties. |
+| Geometries | geom_*() | The geometric shapes representing the data. |
+| Statistics | stat_*() | The statistical transformations applied to the data. |
+| Scales | scale_*() | Maps between the data and the aesthetic dimensions. |
+| Coordinate System	| coord_*() | Maps data into the plane of the data rectangle. |
+| Facets | facet_*() | The arrangement of the data into a grid of plots. |
+| Visual Themes | theme() | The overall visual defaults of a plot. |
+: {tbl-colwidths="[25,20,55]"}
+:::
+
+::: {.aside}
+Source: @scherer:2022
+:::
+
+## Geometries and aesthetic mapping {.medium}
+
+```{r}
+#| eval: false
+#| echo: true
+#| code-line-numbers: "1|2|3|4"
+data + 
+  ggplot(aes(x = year, y = value, color = category)) +
+  geom_point(alpha = 0.5, shape = 21) +
+  scale_color_manual(values = c("red", "blue", "yellow"))
+```
+
+<br>
+
+::: {.tbl-classic .tbl-smaller}
+| Geometries | Aesthetics | Scales | Dimensions |
+|------------|------------|--------|------------|
+| points | positions (x, y) | scale_x_\*(), scale_y_\*() | position (continuous, discrete, reverse, log10, sqrt, date) |
+| lines | colors (color, fill) | scale_color_\*(), <br> scale_fill_\*() | colors (continuous, discrete, manual, gradient, gradient2, brewer) |
+| polygons | shapes (shape, linetype) | scale_shape_\*(), scale_linetype_\*() | shapes (continuous, discrete, manual, ordinal) |
+| text | size (size) | scale_size_\*(), scale_radius_\*() | sizes (continuous, discrete, manual, ordinal, area, date) |
+| boxplot | transparency (alpha) | scale_alpha_\*() | transparency (continuous, discrete, manual, ordinal, date) |
+| ...many more! | groupings (group) | | |
+: {tbl-colwidths="[15,20,25,40]"}
+:::
+
+::: {.aside}
+Source: @scherer:2022
+:::
+
+## First steps {.smaller}
+
+```{r}
+#| label: load-packages
+#| include: false
+#| purl: false
+library(tidyverse)
+library(lubridate)
+library(scales)
+library(colorspace)
+library(palmerpenguins)
+data <- penguins
+```
+
+```{r}
+#| label: facet-setup
+#| output-location: column
+data |> ggplot(aes(x = bill_length_mm, 
+                  y = bill_depth_mm)) +
+  geom_point(size = 1.5, alpha = 0.5)
+```
+
+## Colors {.smaller}
+
+```{r}
+#| label: colors
+#| output-location: column
+#| code-line-numbers: "3,5"
+data |> ggplot(aes(x = bill_length_mm, 
+                  y = bill_depth_mm, 
+                  color = species)) +
+  geom_point(size = 1.5, alpha = 0.5) +
+  theme_minimal()
+```
+
+## Scales {.smaller}
+
+```{r}
+#| label: scales
+#| output-location: column
+#| code-line-numbers: "5,6,7"
+data |> ggplot(aes(x = bill_length_mm, 
+                  y = bill_depth_mm, 
+                  color = species)) +
+  geom_point(size = 1.5, alpha = 0.5) +
+  scale_color_manual(values = MetBrewer::met.brewer("Lakota")) +
+  scale_x_continuous(limits = c(30,60), breaks = seq(30,60,10)) +
+  scale_y_continuous(limits = c(12,21), breaks = seq(12,21,3)) +
+  theme_minimal()
+```
+
+## Labels {.smaller}
+
+```{r}
+#| label: labels
+#| output-location: column
+#| code-line-numbers: "8,9,10"
+data |> ggplot(aes(x = bill_length_mm, 
+                  y = bill_depth_mm, 
+                  color = species)) +
+  geom_point(size = 1.5, alpha = 0.5) +
+  scale_color_manual(values = MetBrewer::met.brewer("Lakota")) +
+  scale_x_continuous(limits = c(30,60), breaks = seq(30,60,10)) +
+  scale_y_continuous(limits = c(12,21), breaks = seq(12,21,3)) +
+  labs(x = "Bill length (in mm)", y = "Bill depth (in mm)",
+      title = "Penguins are awesome",
+      subtitle = "Depth and length of bills") +
+  theme_minimal()
+```
+
+## Annotation rather than legend {.smaller}
+
+```{r}
+#| label: annotation
+#| output-location: column
+#| code-line-numbers: "8,9,10,15"
+data |> ggplot(aes(x = bill_length_mm, 
+                  y = bill_depth_mm, 
+                  color = species)) +
+  geom_point(size = 1.5, alpha = 0.5) +
+  scale_color_manual(values = MetBrewer::met.brewer("Lakota")) +
+  scale_x_continuous(limits = c(30,60), breaks = seq(30,60,10)) +
+  scale_y_continuous(limits = c(12,21), breaks = seq(12,21,3)) +
+  annotate("text", x = c(34.7, 55.7, 50.7), y = c(20.7, 19, 13.6), 
+  color = MetBrewer::met.brewer("Lakota")[1:3], 
+  label = c("Adélie","Chinstrap","Gentoo"), fontface = "bold", size = 4) +
+  labs(x = "Bill length (in mm)", y = "Bill depth (in mm)",
+      title = "Penguins are awesome",
+      subtitle = "Depth and length of bills") +
+  theme_minimal() +
+  theme(legend.position = "none")
+```
+
+## Themes {.smaller}
+
+```{r}
+#| label: addthemes
+#| output-location: column
+#| code-line-numbers: "16,17,18,19"
+data |> ggplot(aes(x = bill_length_mm, 
+                  y = bill_depth_mm, 
+                  color = species)) +
+  geom_point(size = 1.5, alpha = 0.5) +
+  scale_color_manual(values = MetBrewer::met.brewer("Lakota")) +
+  scale_x_continuous(limits = c(30,60), breaks = seq(30,60,10)) +
+  scale_y_continuous(limits = c(12,21), breaks = seq(12,21,3)) +
+  annotate("text", x = c(34.7, 55.7, 50.7), y = c(20.7, 19, 13.6), 
+  color = MetBrewer::met.brewer("Lakota")[1:3], 
+  label = c("Adélie","Chinstrap","Gentoo"), fontface = "bold", size = 4) +
+  labs(x = "Bill length (in mm)", y = "Bill depth (in mm)",
+      title = "Penguins are awesome",
+      subtitle = "Depth and length of bills") +
+  theme_minimal() +
+  theme(legend.position = "none",
+  plot.title.position = "plot",
+  plot.title = element_text(size = 16, face="bold"),
+  plot.subtitle = element_text(size = 13),
+  panel.grid.minor = element_blank())
+```
+
+## Calculate median and standard deviation {.smaller}
+
+```{r}
+#| label: calcmed
+#| output-location: fragment
+data_summary <- data |>
+  group_by(species) |>
+  summarise(across(c(bill_length_mm, bill_depth_mm),
+  list(median = ~median(., na.rm = TRUE), 
+       sd = ~sd(., na.rm = TRUE))))
+
+data_summary
+```
+
+## Median {.smaller}
+
+```{r}
+#| label: addmedian
+#| output-location: column
+#| code-line-numbers: "5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20"
+data |> ggplot(aes(x = bill_length_mm, 
+                  y = bill_depth_mm, 
+                  color = species)) +
+  geom_point(size = 1.5, alpha = 0.5) +
+  geom_errorbar(
+    data = data_summary,
+    aes(x = bill_length_mm_median,
+      ymin = bill_depth_mm_median - bill_depth_mm_sd,
+      ymax = bill_depth_mm_median + bill_depth_mm_sd,
+      color = species,
+      color = after_scale(colorspace::darken(color, .2, space = "combined"))), 
+      inherit.aes = FALSE, width = .5, size = .8) +
+  geom_errorbar(
+    data = data_summary,
+    aes(y = bill_depth_mm_median,
+      xmin = bill_length_mm_median - bill_length_mm_sd,
+      xmax = bill_length_mm_median + bill_length_mm_sd,
+      color = species,
+      color = after_scale(colorspace::darken(color, .2, space = "combined"))), 
+      inherit.aes = FALSE, width = .25, size = .8) +
+  scale_color_manual(values = MetBrewer::met.brewer("Lakota")) +
+  scale_x_continuous(limits = c(30,60), breaks = seq(30,60,10)) +
+  scale_y_continuous(limits = c(12,21), breaks = seq(12,21,3)) +
+  annotate("text", x = c(34.7, 55.7, 50.7), y = c(20.7, 19, 13.6), color = MetBrewer::met.brewer("Lakota")[1:3], label = c("Adélie","Chinstrap","Gentoo"), fontface = "bold", size = 4) +
+  labs(x = "Bill length (in mm)", y = "Bill depth (in mm)",
+      title = "Penguins are awesome",
+      subtitle = "Depth and length of bills") +
+  theme_minimal() +
+  theme(legend.position = "none",
+  plot.title.position = "plot",
+  plot.title = element_text(size = 16, face="bold"),
+  plot.subtitle = element_text(size = 13),
+  panel.grid.minor = element_blank())
+```
+
+## Final plot {.smaller}
+
+::: {.absolute left=15%}
+```{r}
+#| label: final
+#| echo: false
+#| fig-width: 7
+#| fig-height: 5.5
+data |> ggplot(aes(x = bill_length_mm, 
+                  y = bill_depth_mm, 
+                  color = species)) +
+  geom_errorbar(
+    data = data_summary,
+    aes(x = bill_length_mm_median,
+      ymin = bill_depth_mm_median - bill_depth_mm_sd,
+      ymax = bill_depth_mm_median + bill_depth_mm_sd,
+      color = species,
+      color = after_scale(colorspace::darken(color, .2, space = "combined"))), 
+      inherit.aes = FALSE, width = .5, size = .8) +
+  geom_errorbar(
+    data = data_summary,
+    aes(y = bill_depth_mm_median,
+      xmin = bill_length_mm_median - bill_length_mm_sd,
+      xmax = bill_length_mm_median + bill_length_mm_sd,
+      color = species,
+      color = after_scale(colorspace::darken(color, .2, space = "combined"))), 
+      inherit.aes = FALSE, width = .25, size = .8) +
+  geom_point(size = 1.5, alpha = 0.5) +
+  scale_color_manual(name = NULL,
+                    values = MetBrewer::met.brewer("Lakota")) +
+  scale_x_continuous(limits = c(30,60), breaks = seq(30,60,10)) +
+  scale_y_continuous(limits = c(12,21), breaks = seq(12,21,3)) +
+  annotate("text", x = c(34.7, 55.7, 50.7), y = c(20.7, 19, 13.6), color = MetBrewer::met.brewer("Lakota")[1:3], label = c("Adélie","Chinstrap","Gentoo"), fontface = "bold", size = 4) +
+  labs(x = "Bill length (in mm)", y = "Bill depth (in mm)",
+      title = "Penguins are awesome",
+      subtitle = "Depth and length of bills") +
+  theme_minimal() +
+  theme(legend.position = "none",
+  plot.title.position = "plot",
+  plot.title = element_text(size = 16, face="bold"),
+  plot.subtitle = element_text(size = 13),
+  panel.grid.minor = element_blank())
+```
+:::
+
+## Bibliography {.bibstyle}
+
+:::footer
+:::

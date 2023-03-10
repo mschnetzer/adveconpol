@@ -9,9 +9,10 @@ title: |
     {{< var course.subtitle >}}
 author: "{{< var instructor.name >}}"  
 subtitle: Introduction
-date: October 14, 2022
+date: March 06, 2023
+date-format: long
 from: markdown+emoji
-bibliography: ../../data/lit/wipol_spec.bib
+bibliography: ../../data/lit/wipol_advanced.bib
 csl: ../../data/lit/wipol.csl
 execute:
   echo: true
@@ -28,7 +29,7 @@ format:
     progress: true
     multiplex: false
     scrollable: true
-    preview-links: true
+    preview-links: false
     hide-inactive-cursor: true
     highlight-style: printing
     pause: true
@@ -65,6 +66,20 @@ format:
 :::
 :::
 
+## About this course {.medium}
+
+::: {.secfont style="font-size:2.3rem;text-align:center;"}
+"A picture is worth a thousand words"
+:::
+
+This course approaches contemporary issues of economic policy by analyzing innovative or iconic data visualizations. We analyse selected illustrations, discuss the underlying data, the theoretical background and policy implications. We will assemble plots in class and study the basics of data visualization.
+
+You will gain:
+
+- an overview of [contemporary debates in economic policy]{.marker-hl} 
+- a basic understanding of [principles of data visualization]{.marker-hl}
+- knowledge how to [enrich academic publications]{.marker-hl} with informative graphs
+
 ## Who are you?
 
 ![](img/group3.png){.absolute bottom="0%" left="0%" height="400px"}
@@ -72,7 +87,7 @@ format:
 ![](img/group1.png){.absolute bottom="0%" left="33%" height="400px"}
 ![](img/group4.png){.absolute bottom="0%" left="50%" height="400px"}
 
-[What do you already know about inequality and what do you expect of this course?]{.bubble .bubble-bottom-right .absolute top="15%" right="0%" style="max-width:400px;--bubcol: var(--bubcol-dred); font-size:1.8rem;"}
+[What do you expect of this course? Do you already have some coding experience in R?]{.bubble .bubble-bottom-right .absolute top="15%" right="0%" style="max-width:400px;--bubcol: var(--bubcol-dred); font-size:1.8rem;"}
 
 ## Schedule
 
@@ -92,157 +107,75 @@ schedule <- read_xlsx("../../data/schedule/schedule.xlsx")
 ```{r table}
 #| echo: false
 #| results: 'asis'
-schedule %>% arrange(Date) %>% select(-c(Chart)) %>%
+schedule %>% arrange(Date) %>% select(-c(Chart,Slides,Code)) %>%
   mutate(Assignment = ifelse(!is.na(Assignment),
         glue('<i class="fa-solid fa-pen fa-lg red"></i>'),
         glue('<i class="fa-solid fa-pen fa-lg grey200"></i>')),
         Date = format(Date, '%b %d, %Y')) %>%
-  kbl(escape = FALSE, align = "cclcc", table.attr = 'class="schedule-table"') %>% 
+  kbl(escape = FALSE, align = "ccclc", table.attr = 'class="schedule-table"') %>% 
   kable_styling() %>% 
-  column_spec(1:2, width = "15%") %>% 
-  column_spec(3, width = "40%") %>% 
-  column_spec(4:5, width = "15%")
+  column_spec(1:3, width = "15%") %>% 
+  column_spec(4, width = "30%") %>% 
+  column_spec(5, width = "15%")
 ```
 :::
 
-## Assignments {.smaller}
+## Assignments {.medium}
 
-While assignments 1 [@piketty:2014] and 3 [@stockhammer:2013] are mandatory, students may choose between 2 [@milanovic:2015] and 4 [@atkinson:2014]. Please write a summary of the provided paper with a [**limit of 400 words**]{.marker-hl} and upload it on the [learning platform](https://learn.wu.ac.at).
+Assignment 1 provides the setup of the R infrastructure that is required in this course. There are no points for this assignment. 
 
-The submission deadline is [**9 a.m. on the day of the respective teaching unit**]{.marker-hl}. You can structure your text around the following questions:
+Assignments 2 to 4 are recreations of examplary figures. These examples are related to figures that are discussed in class. Students should then try to [reproduce the plots at home]{.marker-hl} and improve their individual coding skills. 
 
-- What is the research question?
-- Why is this question interesting?
-- How does the author approach and answer this question? 
-- What are the main findings? 
-- Is the paper credible? Why? Why not? 
+The raw data for the figures are available as CSV files. The charts should then be uploaded to the [learning platform](https://learn.wu.ac.at) [**before 9 a.m.**]{.marker-hl} on the day of the deadline.
 
-## Essays & Posters {.smaller}
+
+## Chart & Report {.smaller}
 
 ::: columns
 ::: {.column width="50%"}
-### Research Proposal
+### Chart presentation
 ::: {.altlist}
-- Introduction
-- Literature review
-- [Research question]{.circle-hl} and hypotheses
-- Methodology
+- Research question [Which economic policy question do you want to answer with your chart?]{style="font-size:1.3rem"}
 - Data
-- Conclusion
-- Bibliography
+- Chart 
+- Conclusion [What can we learn from the data visualization for economic policy?]{style="font-size:1.3rem"}
 :::
-[**Deadline: January 31, 2023**]{.marker-hl}
+[**Deadline: Date of the presentation**]{.marker-hl}
 :::
 
 ::: {.column width="50%"}
-### Poster
+### RMarkdown (or Quarto) Report
 ::: {.altlist}
 - Title 
 - Author 
-- Brief literature review
-- Highlights of your research proposal [research gap, research question, data, method]{style="font-size:1.3rem"} 
-- Conclusion [What do you expect? Why is your research policy-relevant?]{style="font-size:1.3rem"}
-- References
+- Introduction
+- Research question
+- Data
+- Result
+- Conclusion
+- Code
 :::
-[**Deadline: Date of the poster session**]{.marker-hl}
+[**Deadline: June 30, 2023**]{.marker-hl}
 :::
-:::
-
-## Poster Session I {.medium}
-```{r readbib}
-#| include: false
-#| cache: false
-library(tidyverse)
-library(knitr)
-library(kableExtra)
-library(janitor)
-library(bib2df)
-bibfile <- bib2df("../../data/lit/wipol_spec.bib") %>%
-  clean_names() %>% select(bibtexkey, keywords)
-
-bibtable <- bibfile %>% 
-  mutate(topic = case_when(
-    keywords == "taxation" ~ "Taxation and tax evasion",
-    keywords == "global" ~ "Developments in global inequality",
-    keywords == "gpg" ~ "Gender pay gaps",
-    keywords == "wealthgap" ~ "Gender and migrant wealth gaps",
-    keywords == "wageled" ~ "Functional distribution and growth",
-    keywords == "fiscal" ~ "Restrictive fiscal policy and inequality",
-    keywords == "intgen" ~ "Intergenerational mobility",
-    keywords == "dina" ~ "Distributional National Accounts (DINA)",
-    keywords == "wealth" ~ "The distribution of wealth",
-    keywords == "inherit" ~ "Inheritances and wealth inequality",
-    keywords == "redist" ~ "Inequality and preferences for redistribution",
-    keywords == "climate" ~ "Inequality and climate crisis",
-    keywords == "history" ~ "Historical evolution of inequality",
-    keywords == "pareto" ~ "The missing top in wealth data",
-    keywords == "elites" ~ "Inequality and political elites",
-    keywords == "power" ~ "Power in economics"),
-    bibtexkey = paste0("@",bibtexkey))  %>% 
-  mutate(keywords = factor(keywords, levels = c("history", "global", "dina", "gpg", "wealth", "wealthgap", "pareto", "inherit", "intgen", "wageled", "fiscal", "taxation", "climate", "elites", "redist", "power"))) %>%   
-  filter(!is.na(topic)) %>%
-  arrange(keywords)
-
-printtab <- bibtable %>% group_by(keywords, topic) %>%
-  summarise(papers =paste(bibtexkey, collapse = "; ")) %>% ungroup() %>%
-  mutate(rank = row_number(),
-         session = ifelse(rank < 9, 1, 2))
-```
-
-::: {.poster-table}
-```{r postertable1}
-#| echo: false
-#| warning: false
-#| cache: false
-#| results: 'asis'
-printtab %>% arrange(rank) %>% select(rank, topic, papers, session) %>% 
-  filter(session == 1) %>%
-  kable(align = "cllc", format = "markdown", table.attr = 'class="poster-table"',
-      col.names = c("#","Topic","Starting literature","Session")) %>% 
-  kable_styling() %>%
-  column_spec(1, width = "5%") %>% 
-  column_spec(2, width = "35%") %>% 
-  column_spec(3, width = "50%") %>% 
-  column_spec(4, width = "10%")
-```
 :::
 
-## Poster Session II {.smaller}
 
-::: {.poster-table}
-```{r postertable2}
-#| echo: false
-#| warning: false
-#| cache: false
-#| results: 'asis'
-printtab %>% arrange(rank) %>% select(rank, topic, papers, session) %>% 
-  filter(session == 2) %>%
-  kable(align = "cllc", format = "markdown", table.attr = 'class="poster-table"',
-      col.names = c("#","Topic","Starting literature","Session")) %>% 
-  kable_styling() %>%
-  column_spec(1, width = "5%") %>% 
-  column_spec(2, width = "35%") %>% 
-  column_spec(3, width = "50%") %>% 
-  column_spec(4, width = "10%")
-```
-:::
-
-## Grading
+## Grading {.medium}
 
 <br>
-<i class="fa-solid fa-home icon"></i> Assignments: 30\% [(0-10 points for each homework)]{.grey600 style="font-size:1.8rem;"}
+<i class="fa-solid fa-home icon"></i> Assignments: 30\% [(0-10 points for each visualization)]{.grey600 style="font-size:1.5rem;"}
 <br>
 <br>
 
 . . .
 
-<i class="fa-solid fa-person-chalkboard icon"></i>  Poster presentation: 30\% [(0-20 points for the quality of the presentation, 0-10 for the poster style and structure)]{.grey600 style="font-size:1.8rem;"} 
+<i class="fa-solid fa-person-chalkboard icon"></i>  Chart presentation: 30\% [(0-20 points for the quality of the presentation, 0-10 for the preliminary chart)]{.grey600 style="font-size:1.5rem;"} 
 <br>
 <br>
 
 . . .
 
-<i class="fa-solid fa-file-pen icon"></i> Essay/Research proposal: 40\% [(0-40 points for the essay)]{.grey600 style="font-size:1.8rem;"}
+<i class="fa-solid fa-file-pen icon"></i> Written report: 40\% [(0-40 points for the report and the final chart)]{.grey600 style="font-size:1.5rem;"}
 
 
 ::: aside
@@ -255,14 +188,24 @@ printtab %>% arrange(rank) %>% select(rank, topic, papers, session) %>%
 :::
 :::
 
-## Feedback and Evaluation {.medium}
+## Feedback, cooperation and help {.smaller}
 
-Let me know your [feedback]{.marker-hl} on the course anytime. If possible, I will try to incorporate your feedback immediately. At least, I will consider it for future courses.
+Let me know your [feedback]{.marker-hl} on the course anytime. If possible, I will try to incorporate your feedback immediately. At least, I will consider it for future courses. 
 
-Additionally, there will be an anonymous [online evaluation]{.marker-hl} at the end of semester. You are asked to fill in the evaluation in class in one of the two January sessions. Please take part in the online evaluation even if you cannot be present in these session.
+As some of you might already have advanced coding skills in R, please support each other and collaborate. This does not mean that one person does all the coding and shares with all colleagues. Students should have an intrinsic motivation to improve their coding skills but [cooperate to learn from each other]{.marker-hl}. 
 
+There is a forum on the learning platform for exchange among students. Please also consult support platforms like [Stack Overflow](https://stackoverflow.com) or take a look at the cheatsheets:
 
-## Bibliography {.bibstyle}
+::: {style="text-align:center;"}
+[![](../../data/img/tidyr.png){width=140}](https://posit.co/wp-content/uploads/2022/10/tidyr.pdf) [![](../../data/img/dplyr.png){width=140}](https://posit.co/wp-content/uploads/2022/10/data-transformation-1.pdf) [![](../../data/img/ggplot2.png){width=140}](https://posit.co/wp-content/uploads/2022/10/data-visualization-1.pdf) [![](../../data/img/rmarkdown.png){width=140}](https://posit.co/wp-content/uploads/2022/10/rmarkdown-1.pdf)
+:::
 
-:::footer
+## Recommended Literature
+
+::: {.tbl-larger .recommended-lit}
+|   |   |
+|---|---|
+| ![](../../data/img/schwabish.jpg) | **Jonathan Schwabish** <br> *Better Data Visualizations: A Guide for Scholars, Researchers, and Wonks* <br> Columbia University Press <br> ISBN-13: 9780231193115 |
+| ![](../../data/img/spiegelhalter.jpeg) | **David Spiegelhalter** <br> *The Art of Statistics: Learning from Data* <br> Penguin Books UK <br> ISBN-13: 9780241258767 |
+: {tbl-colwidths="[20,80]"}
 :::

@@ -8,14 +8,14 @@ css: layout/css/adveconpol.scss
 
 You will create a preliminary chart for a presentation in one of the two final sessions of the course. The presentation should provide an intuition of the research question you want to address, the underlying data of the chart and, most important, your considerations behind the style of the chart. **Your time slot for the presentation is five minutes.** Afterwards we will have a brief Q&A in class. The presentation should only have a small number of slides with little text to lead the audience through the process of chart creation, e.g.
 
-- Research question: What do you want to answer with your chart? 
-- Data: What data did you use?
-- Chart: What does the chart show? What were your thoughts when choosing this style?
-- Conclusion: What can we learn from the data visualization for economic policy?
+- *Research question*: What do you want to answer with your chart? 
+- *Data*: What data did you use?
+- *Chart*: What does the chart show? What were your thoughts when choosing this style?
+- *Conclusion*: What can we learn from the data visualization for economic policy?
 
 #### RMarkdown report
 
-Students are required to draft a short report around the chart, containing the most important information of chart creation and some economic policy background. **The final version of the report is due on June 30, 2023.** You should work with [RMarkdown](https://rmarkdown.rstudio.com/index.html) which is a handy and simple tool to compose reports based on R code. It is recommended to edit the document in [RStudio](https://posit.co) and compile it as HTML file. The final report should be structured as follows:
+Students are required to draft a short report around the chart, containing the most important information of chart creation and some economic policy background. **The final version of the report is due on June 30, 2023.** You should work with [RMarkdown](https://rmarkdown.rstudio.com/index.html) (or [Quarto](https://quarto.org)) which is a handy and simple tool to compose reports based on R code. It is recommended to edit the document in [RStudio](https://posit.co) and compile it as HTML file. The final report should be structured as follows:
 
 - *Introduction:* Explain why the topic you chose is important and interesting for the academic/public debate.
 - *Research question:* What is the specific research question that you want to address with your visualization?
@@ -26,4 +26,15 @@ Students are required to draft a short report around the chart, containing the m
 
 #### Cheatsheets
 
-[![](data/img/dplyr.png){width=120}](data/cheatsheets/dplyr.pdf) [![](data/img/ggplot2.png){width=120}](data/cheatsheets/ggplot.pdf) [![](data/img/rmarkdown.png){width=120}](data/cheatsheets/rmarkdown.pdf)
+[![](data/img/tidyr.png){width=120}](data/cheatsheets/tidyr.pdf) [![](data/img/dplyr.png){width=120}](data/cheatsheets/dplyr.pdf) [![](data/img/ggplot2.png){width=120}](data/cheatsheets/ggplot.pdf) [![](data/img/rmarkdown.png){width=120}](data/cheatsheets/rmarkdown.pdf)
+
+#### Additional online resources
+
+::: {.recommended-lit }
+|   |   |
+|--------|--------|
+| ![](data/img/healy.jpg){style="border: 0.5px solid black"} | **Kieran Healy** <br> *Data Visualization: A Practical Introduction* <br> Princeton University Press <br> ISBN-13: 9780691181622 <br> [Link](https://socviz.co/index.html#preface) |
+| ![](data/img/wilke.png){style="border: 0.5px solid black"} | **Claus O. Wilke** <br> *Fundamentals of Data Visualization: A Primer on Making Informative and Compelling Figures* <br> O'Reilly Media <br> ISBN-13: 9781492031086 <br> [Link](https://clauswilke.com/dataviz/) |
+| ![](data/img/dougherty.jpg){style="border: 0.5px solid black"} | **Jack Dougherty and Ilya Ilyankou** <br> *Hands-On Data Visualization: Interactive Storytelling from Spreadsheets to Code* <br> O'Reilly Media <br> ISBN-13: 9781492086000 <br> [Link](https://handsondataviz.org) |
+: {tbl-colwidths="[15,85]"}
+:::

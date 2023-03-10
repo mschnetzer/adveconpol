@@ -1,0 +1,291 @@
+---
+metadata-files: 
+    - ../../_variables.yml
+title: |
+    <span class='fa-stack course-icon'>
+        <i class='fas {{< var course.icon-bg >}} fa-stack-2x blue'></i>
+        <i class='fas {{< var course.icon >}} fa-stack-1x fa-inverse' style='margin-top:-5pt'></i>
+      </span><br>
+    {{< var course.subtitle >}}
+author: "{{< var instructor.name >}}"  
+subtitle: Growth · Geometries
+date: March 27, 2023
+date-format: long
+from: markdown+emoji
+bibliography: ../../data/lit/wipol_advanced.bib
+csl: ../../data/lit/wipol.csl
+execute:
+  freeze: auto
+  echo: true
+  fig-width: 6
+  fig-height: 5
+format:
+  revealjs:
+    theme: ../econpol_slides.scss
+    footer: '{{< var course.number >}} {{< var course.title >}} | {{< var course.semester >}}'
+    logo: ../../data/img/wu-logo-simple.png
+    header-includes: |
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet"/>
+    slide-number: true
+    show-slide-number: all
+    transition: fade
+    progress: true
+    multiplex: false
+    scrollable: true
+    preview-links: false
+    hide-inactive-cursor: true
+    highlight-style: printing
+    pause: true
+---
+
+## Growth in economic policy {.medium}
+
+::: {.blockquote}
+In recent years economic growth has come to occupy an exalted position in the hierarchy of goals of government policy [...] At least in professional economic discussion, we need to give a definite and distinctive meaning to growth as a policy objective. Let it be neither a new synonym for good things in general nor a fashionable way to describe other economic objectives. Let growth be something it is possible to oppose as well as to favor, depending on judgments of social priorities and opportunities.
+:::
+
+::: {style="font-size:1.2rem;text-align:right;font-family:'Roboto Slab';"}
+James @tobin:1964
+:::
+
+## The growth imperative {.medium}
+
+::: {.columns}
+::: {.column width="20%"}
+![](img/sdg8.png)
+:::
+::: {.column width="80%"}
+- Growth is an important goal in economic policy
+- *Magic square of economic policy* promotes high GDP growth (besides low inflation, high emplpoyment, and balanced trade)
+- UN Sustainable Development Goals (SDG): "Promote inclusive and sustainable economic growth, employment and decent work for all"
+- More specifically, "sustain per capita economic growth in accordance with national circumstances and, in particular, [at least 7 per cent]{.hl .hl-dred} gross domestic product growth per annum in the least developed countries"
+:::
+:::
+
+## Rule of 70 {.medium}
+
+We often underestimate the power of growth! How long does it take for a variable [to double]{.hl .hl-dred} with a specific growth rate? The rule of 70 is a good approximation. Just divide 70 by the annual growth rate:
+
+$$ \Delta = \frac{70}{g} $$
+
+Even with a moderate growth rate of 2%, total GDP doubles in 35 years. An annual growth rate of 7% would mean a doubling of production in only 10 years.
+
+## GDP growth across the globe {.smaller}
+
+```{r worldbank}
+#| echo: false
+#| results: 'asis'
+library(tidyverse)
+library(MetBrewer)
+load("data/worldbank.RData")
+
+# Create 7% p.a. series
+synt <- data.frame(country = "7% growth p.a.", year = 1989:2021, value = 1) |> 
+  mutate(index = 1 * 1.07 ^ (row_number() - 1))
+
+# Create index (1989 = 1)
+plotdat <- gdp |> 
+  mutate(index = NY.GDP.MKTP.KD / NY.GDP.MKTP.KD[year == 1989], .by = country) |>  
+  bind_rows(synt) |>
+  mutate(country = fct_reorder2(country, year, index))
+
+p1 <- plotdat |> 
+  ggplot(aes(x = year, y = index, group = country, color = country)) + 
+  geom_line(size =0.9) +
+  geom_point(data = plotdat |> filter(country == "China", year %in% c(1996,2004,2011,2019)), shape = 21, size = 3, show.legend = F) + 
+  geom_text(data = plotdat |> filter(country == "China", year %in% c(1996,2004,2011,2019)), size = 3, vjust = -1, hjust = 1, show.legend = F, aes(label = glue::glue("{year}: >{round(index,0)}x"))) + 
+  scale_color_met_d("Archambault") +
+  labs(x = NULL, y = NULL) +
+  theme_minimal() +
+  theme(legend.title = element_blank(),
+  legend.background = element_rect(fill = "white", color = NA),
+  legend.position = c(0.2, 0.75),
+  panel.grid.minor = element_blank())
+```
+
+::: {.columns}
+::: {.column}
+[Linear scale (1989 = 1)]{.secfont}
+```{r linear}
+#| echo: false
+p1 + scale_y_continuous(labels = scales::number_format(suffix = "x"),
+breaks = c(1, 2, seq(4,16,4)))
+```
+:::
+::: {.column .fragment}
+[Logarithmic scale (1989 = 1)]{.secfont}
+```{r log}
+#| echo: false
+p1 + scale_y_log10(labels = scales::number_format(suffix = "x"),
+breaks = c(1, 2, seq(4,16,4)))
+```
+:::
+:::
+
+::: {.aside}
+Source: World Bank
+:::
+
+
+## Reeeally long-term growth of GDP {.smaller}
+
+::: {.columns}
+::: {.column}
+[Linear scale]{.secfont}
+<br><br>
+![](img/gdp_growth_long.png){fig-align="center"}
+:::
+::: {.column}
+[Logarithmic scale]{.secfont}
+<br><br>
+![](img/gdp_growth_long_log.png){fig-align="center"}
+:::
+:::
+
+::: {.aside}
+Source: [Our world in data](https://ourworldindata.org/economic-growth)
+:::
+
+
+## Which chart describes best what you want to show? {.medium}
+
+::: {.columns}
+::: {.column}
+```{r abs}
+#| echo: false
+#| fig-height: 2.9
+library(tidyverse)
+library(MetBrewer)
+library(scales)
+load("data/gdp.RData")
+
+gdp |> filter(unit == "Chain linked volumes (2010), euro per capita") |> 
+  ggplot(aes(x = time, y = values, group = geo, color = geo)) +
+  geom_line(size = 1) +
+  scale_color_manual(name = NULL, values = met.brewer("Juarez")) +
+  scale_y_continuous(labels = scales::number_format(prefix = "€", big.mark = ",")) +
+  labs(x = NULL, y = NULL,  title = "GDP per capita in €") +
+  theme_minimal() +
+  theme(panel.grid.minor = element_blank(),
+        legend.position = "bottom")
+```
+
+```{r rates}
+#| echo: false
+#| fig-height: 2.9
+gdp |> filter(str_detect(unit, "percentage")) |> 
+  ggplot(aes(x = time, y = values, group = geo, color = geo)) +
+  geom_line(linewidth = 0.8) +
+  geom_point(size = 0.2) +
+  scale_color_manual(name = NULL, values = met.brewer("Juarez")) +
+  scale_y_continuous(labels = scales::percent_format(scale = 1)) +
+  labs(x = NULL, y = NULL, title = "Growth rates of per capita GDP") +
+  theme_minimal() +
+  theme(panel.grid.major.x = element_blank(),
+        panel.grid.minor.y = element_blank(),
+        legend.position = "bottom")
+```
+
+:::
+::: {.column .fragment}
+```{r base}
+#| echo: false
+#| fig-height: 2.9
+gdp |> filter(unit == "Chain linked volumes (2010), euro per capita") |> 
+  mutate(base = values / values[time == 2000] * 100, .by = geo) |> 
+  ggplot(aes(x = time, y = base, group = geo, color = geo)) +
+  geom_hline(yintercept = 100, color = "black", size = 0.5) +
+  geom_line(size = 0.8) +
+  scale_color_manual(name = NULL, values = met.brewer("Juarez")) +
+  labs(x = NULL, y = NULL, title = "GDP per capita with anchor (2000 = 100)") +
+  theme_minimal() +
+  theme(legend.position = "bottom")
+```
+```{r bars}
+#| echo: false
+#| fig-height: 2.9
+gdp |> filter(str_detect(unit, "percentage")) |> 
+  ggplot(aes(x = time, y = values, fill = geo)) + 
+  geom_bar(stat = "identity") +
+  coord_flip() +
+  facet_wrap(~geo, ncol = 5) +
+  scale_fill_manual(values = met.brewer("Juarez")) +
+  scale_y_continuous(labels = scales::percent_format(scale = 1)) +
+  scale_x_reverse() +
+  labs(x = NULL, y = NULL, title = "GDP growth rates from 2000 to 2021") +
+  theme_minimal() +
+  theme(legend.position = "none",
+        axis.text.x = element_text(size = 7),
+        panel.border = element_rect(size = 0.1, fill = "transparent"),
+        panel.grid.minor = element_blank(),
+        plot.title.position = "plot")
+```
+:::
+:::
+
+# Show me your geometries!
+
+::: {.absolute top="90%" left="30%" width="400px" height="336px"}
+![](../../data/img/avatar_break.png)
+:::
+
+::: footer
+:::
+
+## Selected geometries in {ggplot} {.smaller}
+
+::: {.tbl-classic .tbl-smaller}
+|  | Geometry | Explanation |
+|--|----------|-------------|
+| ![](img/geom_ribbon.png){height="35" style="vertical-align:middle;padding:0;margin:0;"} | area, ribbon | An area plot is the continuous analogue of a stacked bar chart. |
+| ![](img/geom_bar.png){height="35" style="vertical-align:middle;padding:0;margin:0;"} | bar, col | Bar charts may be proportional (bar) or with absolute values (col). |
+| ![](img/geom_boxplot.png){height="35" style="vertical-align:middle;padding:0;margin:0;"} | boxplot | The boxplot compactly displays the distribution of a continuous variable.|
+| ![](img/geom_density.png){height="35" style="vertical-align:middle;padding:0;margin:0;"} | density, histogram | Kernel density plot, which is a smoothed version of the histogram. |
+| ![](img/geom_abline.png){height="35" style="vertical-align:middle;padding:0;margin:0;"} | hline, vline, abline | Draws a horizontal or vertical line with an intercept or a line with a slope. |
+| ![](img/geom_line.png){height="35" style="vertical-align:middle;padding:0;margin:0;"} | line, path | Line between observations in order of variable (line) or appearance (path) |
+| ![](img/geom_errorbar.png){height="35" style="vertical-align:middle;padding:0;margin:0;"} | linerange, errorbar | Various ways of representing a vertical interval defined by x, ymin and ymax. |
+| ![](img/geom_point.png){height="35" style="vertical-align:middle;padding:0;margin:0;"} | point, jitter | The point geom is used to create scatterplots and jitter avoids overplotting. |
+| ![](img/geom_curve.png){height="35" style="vertical-align:middle;padding:0;margin:0;"} | segment, curve | Draws a straight or curved line between points (x,y) and (xend, yend). |
+| ![](img/geom_smooth.png){height="35" style="vertical-align:middle;padding:0;margin:0;"} | smooth | Smoothed line with standard error bounds across a scatterplot. |
+| ![](img/geom_violin.png){height="35" style="vertical-align:middle;padding:0;margin:0;"} | violin | A violin plot is a compact display of a continuous distribution. |
+
+: {tbl-colwidths="[5,22,73]"}
+:::
+
+
+## Additional geometries {.smaller}
+
+::: {.columns .center style="font-size:1.3rem;"}
+::: {.column width="33%"}
+[ggstream::geom_stream()]{.secfont}
+![](img/geom_stream.png){height="200"}
+:::
+::: {.column width="33%" .fragment}
+[waffle::geom_waffle()]{.secfont}
+![](img/geom_waffle.png){height="200"}
+:::
+::: {.column width="33%" .fragment}
+[ggchicklet::geom_chicklet()]{.secfont}
+![](img/geom_chicklet.png){height="200"}
+:::
+:::
+
+::: {.columns .center style="font-size:1.3rem;"}
+::: {.column width="33%" .fragment}
+[ggridges::geom_density_ridges()]{.secfont}
+![](img/geom_ridges.png){height="200"}
+:::
+::: {.column width="33%" .fragment}
+[ggsankey::geom_sankey()]{.secfont}
+![](img/geom_sankey.png){height="200"}
+:::
+::: {.column width="33%" .fragment}
+[ggbump::geom_bump()]{.secfont}
+![](img/geom_bump.png){height="200"}
+:::
+:::
+
+## Bibliography {.bibstyle}
+
+:::footer
+:::

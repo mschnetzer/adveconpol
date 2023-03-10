@@ -7,7 +7,7 @@ format:
       - litera
       - layout/css/adveconpol.scss
 
-bibliography: data/lit/wipol_spec.bib
+bibliography: data/lit/wipol_advanced.bib
 csl: data/lit/wipol.csl
 
 website:
