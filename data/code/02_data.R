@@ -31,7 +31,7 @@ sd(data$bill_length_mm, na.rm = T)
 ## What is the mean flipper length?
 
 
-# This does even work for factor variables
+# The summary command even works for factor variables
 summary(data$species)
 
 ## How many penguins were recorded on Torgersen island?
@@ -78,6 +78,10 @@ data |> summarise(median = median(body_mass_g, na.rm = T),
 data |> summarise(across(c(bill_length_mm, bill_depth_mm), ~mean(., na.rm = T)))
 data |> summarise(across(where(is.numeric), ~mean(., na.rm = T)))
 
+# Control with nice select function
+data |> select(contains("length")) # other options: starts_with; ends_with
+data |> summarise(across(contains("length"), ~mean(., na.rm = T)))
+
 # Drop observations with missing values (and save)
 data <- data |> drop_na()
 
@@ -85,9 +89,6 @@ data <- data |> drop_na()
 data <- data |> mutate(totallength = bill_length_mm + flipper_length_mm)
 data <- data |> mutate(color = case_when(sex == "male" ~ "darkgreen",
                                          sex == "female" ~ "darkred"))
-
-# Control with nice select function
-data |> select(contains("length")) # other options: starts_with; ends_with
 
 # Arrange data by column in descending order
 data |> arrange(desc(bill_length_mm))
