@@ -75,7 +75,6 @@ library(eurostat)
 retdata <- get_eurostat("sts_trtu_m", filters = list(indic_bt = "TOVV", s_adj = "CA", unit = "PCH_SM", nace_r2 = "G47", geo = c("AT","DE","FR","ES","IT","PT")), time_format = "date", select_time = "M", type = "code")
 
 plotdat <- retdata |> 
-  mutate(time = ym(time)) |> 
   slice_max(time, n = 10, by = geo) |> 
   label_eurostat(dic = "geo", lang = "en") |> 
   mutate(geo = case_when(str_detect(geo, "Germany") ~ "Germany", TRUE ~ geo))
