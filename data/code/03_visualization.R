@@ -18,15 +18,19 @@ data <- penguins
 # Take brief look
 head(data)
 
+# Calculate median and standard deviation for bill length and depth
 data_summary <- data |>
   group_by(species) |>
   summarise(across(c(bill_length_mm, bill_depth_mm),
                    list(median = ~median(., na.rm = TRUE), 
                         sd = ~sd(., na.rm = TRUE))))
 
+# Scatter plot with error bars by species
 data |> ggplot(aes(x = bill_length_mm, 
                    y = bill_depth_mm, 
                    color = species)) +
+  # Error bars at the median with the standard deviations
+  # Attention: we take other data here with new aesthetics, so inherit.aes = F
   geom_errorbar(
     data = data_summary,
     aes(x = bill_length_mm_median,
@@ -52,7 +56,10 @@ data |> ggplot(aes(x = bill_length_mm,
                      values = MetBrewer::met.brewer("Lakota")) +
   scale_x_continuous(labels = scales::number_format(suffix="mm")) +
   scale_y_continuous(labels = scales::number_format(suffix="mm", accuracy = 1)) +
-  annotate("text", x = c(34.7, 55.7, 50.7), y = c(20.7, 19, 13.6), color = MetBrewer::met.brewer("Lakota")[1:3], label = c("Adélie","Chinstrap","Gentoo"), fontface = "bold", size = 4) +
+  # Add labels in the plot rather than in legend
+  annotate("text", x = c(34.7, 55.7, 50.7), y = c(20.7, 19, 13.6), 
+           color = MetBrewer::met.brewer("Lakota")[1:3], 
+           label = c("Adélie","Chinstrap","Gentoo"), fontface = "bold", size = 4) +
   labs(x = "Bill length", y = "Bill depth",
        title = "Penguins are awesome",
        subtitle = "Depth and length of bills") +
