@@ -79,8 +79,13 @@ data |> ggplot(aes(x = bill_length_mm,
 
 library(eurostat)
 
+# Get monthly retail sales data from Eurostat
 retdata <- get_eurostat("sts_trtu_m", filters = list(indic_bt = "TOVV", s_adj = "CA", unit = "PCH_SM", nace_r2 = "G47", geo = c("AT","DE","FR","ES","IT","PT")), time_format = "date", select_time = "M", type = "code")
 
+# Alternatively, load local RData file
+# load("03_visualization.RData")
+
+# Subset of latest 10 months and edit labels
 plotdat <- retdata |> 
   slice_max(time, n = 10, by = geo) |> 
   label_eurostat(dic = "geo", lang = "en") |> 
@@ -88,11 +93,15 @@ plotdat <- retdata |>
 
 plotdat |> 
   ggplot(aes(x = time, y = values)) +
+  # Different colors for positive and negative values (with ifelse statement)
   geom_segment(aes(y = 0, yend = values, xend = time, 
                    color = ifelse(values < 0, "green", "red"))) +
+  # Horizontal zero line
   geom_hline(yintercept = 0) +
   geom_point(aes(color = ifelse(values < 0, "green", "red"))) + 
+  # Create small multiples by country
   facet_wrap(~geo) +
+  # Axis labels as percentages
   scale_y_continuous(labels = scales::percent_format(scale = 1)) +
   scale_x_date(date_labels = "%b %y", date_breaks = "3 months") +
   theme_minimal() +

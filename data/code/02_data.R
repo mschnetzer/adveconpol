@@ -113,14 +113,17 @@ library(eurostat)
 search_eurostat("GDP") |> View()
 
 # Download the complete national accounts dataset
-gdp <- get_eurostat("nama_10_gdp", time_format = "num", type = "label")
+gdp <- get_eurostat("nama_10_gdp", time_format = "num", type = "label",
+                    filters = list(geo = "AT"))
+
+# Alternatively, load local RData file
+# load("02_data.RData")
 
 # Let's take a look at all the components
 unique(gdp$na_item)
 unique(gdp$unit)
 
-gdpat <- gdp |> filter(geo == "Austria", 
-                       unit == "Current prices, million euro",
+gdpat <- gdp |> filter(unit == "Current prices, million euro",
                        na_item %in% c("Gross domestic product at market prices",
                                       "Compensation of employees"))
 
