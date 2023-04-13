@@ -35,11 +35,11 @@
     "text": "How do we measure inflation?\nThe most important measure is the Consumer prices index (CPI), which is based on a weighted average market basket of consumer goods and services purchased by households\nFor international comparison of price levels, Eurostat provides the Harmonised Indices of Consumer Prices (HICP) and the OECD calculates Purchasing Power Parities (PPP)\nOther important indices include the Wholesale Price Index (WPI) and Producer Price Index (PPI).\nApart from price indices, the GDP deflator measures the general price level of all domestically produced goods and services."
   },
   {
-    "objectID": "slides/05_inflation/index.html#how-to-construct-a-cpi-in-austria",
-    "href": "slides/05_inflation/index.html#how-to-construct-a-cpi-in-austria",
+    "objectID": "slides/05_inflation/index.html#how-to-construct-the-cpi-in-austria",
+    "href": "slides/05_inflation/index.html#how-to-construct-the-cpi-in-austria",
     "title": "    Economic Policy Visualization",
-    "section": "How to construct a CPI in Austria?",
-    "text": "How to construct a CPI in Austria?\n\nHousehold Budgetary Survey: survey on household consumption; every five years with roughly 7,000 households\nConsumer basket: 1958 only 197 goods and surveys, today 757 index positions\nCOICOP: “Classification of Individual Consumption by Purpose” with 12 main groups\nPrice information directly from companies (scanner data since 2022, cigarettes, etc.) and from inquiries in retail shops\nMore than 38,000 prices surveyed monthly in 19 cities and 4,200 shops"
+    "section": "How to construct the CPI in Austria?",
+    "text": "How to construct the CPI in Austria?\n\nHousehold Budgetary Survey: survey on household consumption; every five years with roughly 7,000 households\nConsumer basket: 1958 only 197 goods and surveys, today 757 index positions\nCOICOP: “Classification of Individual Consumption by Purpose” with 12 main groups\nPrice information directly from companies (scanner data since 2022, cigarettes, etc.) and from inquiries in retail shops\nMore than 38,000 prices surveyed monthly in 19 cities and 4,200 shops"
   },
   {
     "objectID": "slides/05_inflation/index.html#changes-in-the-cpi-in-selected-european-countries",
@@ -102,7 +102,7 @@
     "href": "slides/05_inflation/index.html#bibliography",
     "title": "    Economic Policy Visualization",
     "section": "Bibliography",
-    "text": "Bibliography\n\n\n\n\n\n\nPI 5620 Advanced Economic Policy | Summer term 2023\n\n\n\nScherer, Cédric (2022). Graphic design with ggplot2. https://rstudio-conf-2022.github.io/ggplot2-graphic-design/\n\n\nWeber, Isabella M./Wasner, Evan (2023). Sellers’ inflation, profits and conflict: Why can large firms hike prices in an emergency? (Economics Department Working Paper Series ). University of Massachusetts Amherst."
+    "text": "Bibliography\n\n\n\n\n\n\nPI 5620 Advanced Economic Policy | Summer term 2023\n\n\n\nScherer, Cédric (2022). Graphic design with ggplot2. https://rstudio-conf-2022.github.io/ggplot2-graphic-design/\n\n\nWeber, Isabella M./Wasner, Evan (2023). Sellers’ inflation, profits and conflict: Why can large firms hike prices in an emergency? (Economics Department Working Paper Series). University of Massachusetts Amherst."
   },
   {
     "objectID": "slides/08_wealth/index.html#bibliography",
@@ -110,6 +110,48 @@
     "title": "    Economic Policy Visualization",
     "section": "Bibliography",
     "text": "Bibliography\n\n\n\n\n\n\nPI 5620 Advanced Economic Policy | Summer term 2023"
+  },
+  {
+    "objectID": "slides/06_labour/index.html#full-employment-as-economic-policy-goal",
+    "href": "slides/06_labour/index.html#full-employment-as-economic-policy-goal",
+    "title": "    Economic Policy Visualization",
+    "section": "Full employment as economic policy goal",
+    "text": "Full employment as economic policy goal\n\n\n\n\n\nUN SDG 8.5: “By 2030, achieve full and productive employment and decent work for all women and men, including for young people and persons with disabilities, and equal pay for work of equal value.”\nFull employment is desirable since the individual, economic, and social costs of unemployment are high (Young, 2012): risk of poverty, health issues, decreasing human and social capital, stigmatization, rising government expenditure, etc.\nHowever, full employment affects the industrial relations between capital and labour and might thus not be favoured by capital owners (Kalecki, 1943)"
+  },
+  {
+    "objectID": "slides/06_labour/index.html#opposing-views-on-the-labour-market",
+    "href": "slides/06_labour/index.html#opposing-views-on-the-labour-market",
+    "title": "    Economic Policy Visualization",
+    "section": "Opposing views on the labour market",
+    "text": "Opposing views on the labour market\n\n\nNeoclassical view\n\nLabour market is one among many other markets\nPrice (i.e. real wage) brings labour supply and labour demand into equilibrium\nFull employment is achieved in the labour market equilibrium, while unemployment is voluntary due to specific labour-leisure choices\nInvoluntary unemployment is a result of third-party intervention into the labour market\n\n\n\n\n(Post-)Keynesian view\n\nLabour market is posterior (downstream) to production\nDemand for labour is determined by effective demand on the goods market\nFull employment is reached when effective demand equals full capacity utilization\nInvoluntary unemployment is a consequence of lacking aggregate demand by private and public sector."
+  },
+  {
+    "objectID": "slides/06_labour/index.html#goods-and-labour-market-in-the-keynesian-cross",
+    "href": "slides/06_labour/index.html#goods-and-labour-market-in-the-keynesian-cross",
+    "title": "    Economic Policy Visualization",
+    "section": "Goods and labour market in the Keynesian cross",
+    "text": "Goods and labour market in the Keynesian cross"
+  },
+  {
+    "objectID": "slides/06_labour/index.html#a-classification-of-unemployment",
+    "href": "slides/06_labour/index.html#a-classification-of-unemployment",
+    "title": "    Economic Policy Visualization",
+    "section": "A classification of unemployment",
+    "text": "A classification of unemployment\n\n\n\n\n\n\n\n\n\n\nMacroeconomy\nSpecific sectors\n\n\n\n\nShort-term\nfrictional:  people voluntarily leaving their job need some time to find new employment. Unemployment is thus interim and even present in an economy with full employment.\nseasonal:  Seasonal jobs are limited to a certain time period, leaving people in those industries without employment after the season ends (e.g. tourism, construction).\n\n\nMid- and long-term\ncyclical:  the number of unemployed workers varies during cycles of economic ups and downs. Business cycles on average last 5-6 years and typically affect the whole economy.\nstructural:  caused by fundamental change in the economy such as evolving technology. While jobs are available, people who could fill those roles either don’t have the right skills or aren’t in the right location."
+  },
+  {
+    "objectID": "slides/06_labour/index.html#policies-against-unemployment",
+    "href": "slides/06_labour/index.html#policies-against-unemployment",
+    "title": "    Economic Policy Visualization",
+    "section": "Policies against unemployment",
+    "text": "Policies against unemployment\n\n\n\nActive labour market policy (ALMP)\n\nAim: integration of the unemployed into the labour market (Card et al., 2017)\nExamples: coaching, training, subsidies for secondary labour market, assistance for personal issues (homelessness, addiction)\n\nPassive labour market policy (PLMP)\n\nAim: social security for the unemployed\nExamples: unemployment benefits, income support, etc.\n\n\n\n\n\n\nActivating policies\n\nAim: ALMP paid from funds for PLMP\nExamples: part-time work for the elderly, training allowances\n\nJob guarantee\n\nAim: Public sector as amployer of the last resort\nExamples: India (Ravi/Engler, 2015), Marienthal in Austria (Kasy/Lehner, 2022)"
+  },
+  {
+    "objectID": "slides/06_labour/index.html#the-measurement-of-unemployment",
+    "href": "slides/06_labour/index.html#the-measurement-of-unemployment",
+    "title": "    Economic Policy Visualization",
+    "section": "The measurement of unemployment",
+    "text": "The measurement of unemployment\n\nInternational definition (ILO/Eurostat)\n\nData: Labour Force Survey (LFS) - 23,000 household per quarter in 🇦🇹\nUnemployed: if not worked at least 1 hour in the reference week\nRate: \\[\\frac{\\texttt{unemployed (15-74 years old)}}{\\texttt{labour force (employed + unemployed, 15-74 years old)}}\\]\n\nNational definition\n\nData: Public Employment Service (AMS)\nUnemployed: officially registered at AMS\nRate: \\[\\frac{\\texttt{registered unemployed}}{\\texttt{labour force (employed + unemployed)}}\\]"
   },
   {
     "objectID": "slides/06_labour/index.html#serif-and-sans-serif-fonts",
@@ -168,11 +210,11 @@
     "text": "There are condensed and wide fonts\n\n\n\n\n\n\n\nSource: Datawrapper"
   },
   {
-    "objectID": "slides/06_labour/index.html#dont-be-too-narrow-but-neither-too-wide",
-    "href": "slides/06_labour/index.html#dont-be-too-narrow-but-neither-too-wide",
+    "objectID": "slides/06_labour/index.html#dont-be-too-narrow-but-too-wide-neither",
+    "href": "slides/06_labour/index.html#dont-be-too-narrow-but-too-wide-neither",
     "title": "    Economic Policy Visualization",
-    "section": "Don’t be too narrow, but neither too wide",
-    "text": "Don’t be too narrow, but neither too wide\n\n\n\n\n\n\n\nSource: Datawrapper"
+    "section": "Don’t be too narrow, but too wide neither",
+    "text": "Don’t be too narrow, but too wide neither\n\n\n\n\n\n\n\nSource: Datawrapper"
   },
   {
     "objectID": "slides/06_labour/index.html#some-examples",
@@ -186,7 +228,7 @@
     "href": "slides/06_labour/index.html#bibliography",
     "title": "    Economic Policy Visualization",
     "section": "Bibliography",
-    "text": "Bibliography\n\n\n\n\n\n\nPI 5620 Advanced Economic Policy | Summer term 2023"
+    "text": "Bibliography\n\n\n\n\n\n\nPI 5620 Advanced Economic Policy | Summer term 2023\n\n\n\nCard, David/Kluve, Jochen/Weber, Andrea (2017). What works? A meta analysis of recent active labor market program evaluations. Journal of the European Economic Association, 16(3), 894–931. DOI: 10.1093/jeea/jvx028\n\n\nKalecki, Michal (1943). Political aspects of full employment. The Political Quarterly, 14(4), 322–330. DOI: 10.1111/j.1467-923x.1943.tb01016.x\n\n\nKasy, Maximilian/Lehner, Lukas (2022). Employing the unemployed of marienthal: Evaluation of a guaranteed job program (Working Paper No. 2022-29). INET Oxford.\n\n\nRavi, Shamika/Engler, Monika (2015). Workfare as an effective way to fight poverty: The case of india’s NREGS. World Development, 67, 57–71. DOI: 10.1016/j.worlddev.2014.09.029\n\n\nYoung, Cristobal (2012). Losing a job: The nonpecuniary cost of unemployment in the united states. Social Forces, 91(2), 609–634. DOI: 10.1093/sf/sos071"
   },
   {
     "objectID": "slides/04_growth/index.html#growth-in-economic-policy",
@@ -788,6 +830,6 @@
     "href": "schedule.html",
     "title": "Schedule",
     "section": "",
-    "text": "In this table you find the dates and contents of all classes.\n\n\n\n\n \n  \n    Date \n    Time \n    Room \n    Content \n    Slides \n    Code \n    Data \n    Assignment \n  \n \n\n  \n    Mar 06, 2023 \n    10:00-12:00 \n    TC.4.15 \n    Introduction \n    \n \n     \n     \n     \n  \n  \n    Mar 13, 2023 \n    10:00-12:00 \n    TC.4.15 \n    Data \n    \n \n    \n \n    \n \n     \n  \n  \n    Mar 20, 2023 \n    10:00-12:00 \n    TC.4.15 \n    Visualization \n    \n \n    \n \n    \n \n     \n  \n  \n    Mar 27, 2023 \n    10:00-12:00 \n    D4.0.022 \n    Growth · Geometries \n    \n \n    \n \n    \n \n     \n  \n  \n    Apr 17, 2023 \n    10:00-12:00 \n    TC.3.07 \n    Inflation · Colors \n    \n \n    \n \n    \n \n     \n  \n  \n    Apr 24, 2023 \n    10:30-12:30 \n    TC.3.06 \n    Labour · Labels \n     \n     \n     \n     \n  \n  \n    May 08, 2023 \n    10:00-12:00 \n    TC.3.11 \n    Income · Scales \n     \n     \n     \n     \n  \n  \n    May 15, 2023 \n    10:00-12:00 \n    D4.0.127 \n    Wealth · Themes \n     \n     \n     \n     \n  \n  \n    Jun 05, 2023 \n    10:00-12:00 \n    D4.0.127 \n    Mobility · Maps \n     \n     \n     \n     \n  \n  \n    Jun 12, 2023 \n    10:00-12:00 \n    TC.3.07 \n    Climate · Facets \n     \n     \n     \n     \n  \n  \n    Jun 19, 2023 \n    10:00-12:00 \n    D4.0.127 \n    Student presentations \n     \n     \n     \n     \n  \n  \n    Jun 26, 2023 \n    10:00-12:00 \n    D4.0.127 \n    Student presentations \n     \n     \n     \n     \n  \n\n\n\n\n\n\nAssignments\nAssignment [1] provides the setup of the R infrastructure that is required in this course. There are no points for this assignment. Assignments [2] to [4] are recreations of examplary figures provided below. These examples are related to figures that are discussed in class. Students should then try to reproduce the plots at home and improve their individual coding skills. The raw data for the figures are available as *.csv files below.\n\nHomework 1\n\n\n\n\n\n\n\n\n\n\n\nInstall the latest R version (v4.2.2)\nInstall the latest version of RStudio Desktop\nOpen RStudio, copy the following code into the console and execute: install.packages(c(\"tidyverse\", \"rmarkdown\", \"scales\", \"lubridate\", \"colorspace\", \"devtools\")); sessionInfo()\nClick on Help > About RStudio\nMake sure that both the R version (Console) and the RStudio version are visible, take a screenshot and upload it to the learning platform before March 13, 2023 at 9 a.m.\n\n\n\n\n\nHomework 2\n\n\n\n\n\n\n\n\n\n\nPlease submit your chart before April 24, 2023 at 9 a.m. The data for this assignment is available here: \n\n\n\n\nHomework 3\n\n\n\n\n\n\n\n\n\n\nPlease submit your chart before May 15, 2023 at 9 a.m. The data for this assignment is available here: \n\n\n\n\nHomework 4\n\n\n\n\n\n\n\n\n\n\nPlease submit your chart before June 12, 2023 at 9 a.m. The data for this assignment is available here:"
+    "text": "In this table you find the dates and contents of all classes.\n\n\n\n\n \n  \n    Date \n    Time \n    Room \n    Content \n    Slides \n    Code \n    Data \n    Assignment \n  \n \n\n  \n    Mar 06, 2023 \n    10:00-12:00 \n    TC.4.15 \n    Introduction \n    \n \n     \n     \n     \n  \n  \n    Mar 13, 2023 \n    10:00-12:00 \n    TC.4.15 \n    Data \n    \n \n    \n \n    \n \n     \n  \n  \n    Mar 20, 2023 \n    10:00-12:00 \n    TC.4.15 \n    Visualization \n    \n \n    \n \n    \n \n     \n  \n  \n    Mar 27, 2023 \n    10:00-12:00 \n    D4.0.022 \n    Growth · Geometries \n    \n \n    \n \n    \n \n     \n  \n  \n    Apr 17, 2023 \n    10:00-12:00 \n    TC.3.07 \n    Inflation · Colors \n    \n \n    \n \n    \n \n     \n  \n  \n    Apr 24, 2023 \n    10:30-12:30 \n    TC.3.06 \n    Labour · Labels \n    \n \n     \n     \n     \n  \n  \n    May 08, 2023 \n    10:00-12:00 \n    TC.3.11 \n    Income · Scales \n     \n     \n     \n     \n  \n  \n    May 15, 2023 \n    10:00-12:00 \n    D4.0.127 \n    Wealth · Themes \n     \n     \n     \n     \n  \n  \n    Jun 05, 2023 \n    10:00-12:00 \n    D4.0.127 \n    Mobility · Maps \n     \n     \n     \n     \n  \n  \n    Jun 12, 2023 \n    10:00-12:00 \n    TC.3.07 \n    Climate · Facets \n     \n     \n     \n     \n  \n  \n    Jun 19, 2023 \n    10:00-12:00 \n    D4.0.127 \n    Student presentations \n     \n     \n     \n     \n  \n  \n    Jun 26, 2023 \n    10:00-12:00 \n    D4.0.127 \n    Student presentations \n     \n     \n     \n     \n  \n\n\n\n\n\n\nAssignments\nAssignment [1] provides the setup of the R infrastructure that is required in this course. There are no points for this assignment. Assignments [2] to [4] are recreations of examplary figures provided below. These examples are related to figures that are discussed in class. Students should then try to reproduce the plots at home and improve their individual coding skills. The raw data for the figures are available as *.csv files below.\n\nHomework 1\n\n\n\n\n\n\n\n\n\n\n\nInstall the latest R version (v4.2.2)\nInstall the latest version of RStudio Desktop\nOpen RStudio, copy the following code into the console and execute: install.packages(c(\"tidyverse\", \"rmarkdown\", \"scales\", \"lubridate\", \"colorspace\", \"devtools\")); sessionInfo()\nClick on Help > About RStudio\nMake sure that both the R version (Console) and the RStudio version are visible, take a screenshot and upload it to the learning platform before March 13, 2023 at 9 a.m.\n\n\n\n\n\nHomework 2\n\n\n\n\n\n\n\n\n\n\nPlease submit your chart before April 24, 2023 at 9 a.m. The data for this assignment is available here: \n\n\n\n\nHomework 3\n\n\n\n\n\n\n\n\n\n\nPlease submit your chart before May 15, 2023 at 9 a.m. The data for this assignment is available here: \n\n\n\n\nHomework 4\n\n\n\n\n\n\n\n\n\n\nPlease submit your chart before June 12, 2023 at 9 a.m. The data for this assignment is available here:"
   }
 ]
