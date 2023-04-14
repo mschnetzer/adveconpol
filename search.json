@@ -154,6 +154,27 @@
     "text": "The measurement of unemployment\n\nInternational definition (ILO/Eurostat)\n\nData: Labour Force Survey (LFS) - 23,000 household per quarter in 🇦🇹\nUnemployed: if not worked at least 1 hour in the reference week\nRate: \\[\\frac{\\texttt{unemployed (15-74 years old)}}{\\texttt{labour force (employed + unemployed, 15-74 years old)}}\\]\n\nNational definition\n\nData: Public Employment Service (AMS)\nUnemployed: officially registered at AMS\nRate: \\[\\frac{\\texttt{registered unemployed}}{\\texttt{labour force (employed + unemployed)}}\\]"
   },
   {
+    "objectID": "slides/06_labour/index.html#unemployment-rates-across-europe",
+    "href": "slides/06_labour/index.html#unemployment-rates-across-europe",
+    "title": "    Economic Policy Visualization",
+    "section": "Unemployment rates across Europe",
+    "text": "Unemployment rates across Europe"
+  },
+  {
+    "objectID": "slides/06_labour/index.html#evolution-of-work-time",
+    "href": "slides/06_labour/index.html#evolution-of-work-time",
+    "title": "    Economic Policy Visualization",
+    "section": "Evolution of work time",
+    "text": "Evolution of work time"
+  },
+  {
+    "objectID": "slides/06_labour/index.html#labour-market-participation-of-parents-in-austria",
+    "href": "slides/06_labour/index.html#labour-market-participation-of-parents-in-austria",
+    "title": "    Economic Policy Visualization",
+    "section": "Labour market participation of parents in Austria",
+    "text": "Labour market participation of parents in Austria"
+  },
+  {
     "objectID": "slides/06_labour/index.html#serif-and-sans-serif-fonts",
     "href": "slides/06_labour/index.html#serif-and-sans-serif-fonts",
     "title": "    Economic Policy Visualization",

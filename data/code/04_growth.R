@@ -116,3 +116,44 @@ gdpgrowth |> ggplot(aes(x = time, y = values)) +
         panel.grid.minor = element_blank(),
         panel.grid.major = element_line(linewidth = 0.3),
         plot.title = element_text(hjust = .5, size = 20))
+
+# 6. Bump plot
+#remotes::install_github('rensa/ggflags')
+library(ggbump)
+library(ggflags)
+library(futurevisions)
+library(colorspace)
+library(countrycode)
+
+growthrank <- gdpgrowth |> 
+  mutate(rank = rank(-values, ties.method = "random"), .by = time) |> 
+  filter(time >= 2015) |> 
+  left_join(countrycode::codelist |> select(country.name.en, iso2c),
+            by = c("geo" = "country.name.en"))
+
+growthrank |> 
+  ggplot(aes(x = time, y = rank, color = geo)) +
+  geom_point(size = 4) +
+  geom_bump(linewidth = 2) +
+  geom_text(data = growthrank |> slice_max(time, n=1),
+            aes(x = time + 0.2, label = geo), size = 4.5, hjust = 0, fontface = "bold") +
+  geom_flag(data = growthrank |> slice_min(time, n=1), 
+            aes(x = 2015, y = rank, country = tolower(iso2c)), size = 8) +
+  scale_color_manual(values = lighten(futurevisions("mars"), .3)) +
+  scale_size_continuous(range = c(2, 6)) +
+  scale_x_continuous(breaks = seq(2015, 2021, 2), limits = c(2015, 2021.7)) +
+  scale_y_reverse() +
+  labs(x = NULL, y = NULL,
+       title = toupper("Ranking of GDP per capita growth rates")) +
+  theme_minimal() +
+  theme(plot.background = element_rect(fill = "black", color = NA),
+        plot.title = element_text(size = 20, hjust = 0.5, margin = margin(b = 1, unit = "lines")),
+        plot.subtitle = element_text(hjust = 0.5, size = 11, margin = margin(b=15, unit="pt")),
+        plot.title.position = "plot",
+        legend.position = "none",
+        panel.grid = element_blank(),
+        text = element_text(color = "white"),
+        axis.text.y = element_blank(),
+        axis.text.x = element_text(color = "white", size = 10))
+
+ggsave("~/Desktop/bipbump.png", width = 8, height = 4, dpi = 320) 
