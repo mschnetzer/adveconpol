@@ -110,3 +110,40 @@ baseplot + scale_fill_manual(values = viridis(n=6, option = "D",  direction = -1
                              name = "", guide = guide_legend(reverse = TRUE, keywidth = 0.5))
 
 ggsave("inflation.png", width = 6, height = 8, dpi=320)
+
+
+## Now, let's create a line chart with inflation rates across Europe
+
+# remotes::install_github("https://github.com/jimjam-slam/ggflags")
+library(ggflags)
+library(gghighlight)
+
+euinfdata |> filter(time >= "2020-01-01") |> 
+  ggplot(aes(x = time, y= values, color = geo.de)) +
+  geom_hline(yintercept = 0, linewidth = 0.1, color = "gray40") +
+  geom_line(linewidth = 0.8, aes(group = geo)) +
+  gghighlight(unhighlighted_params = list(color = "gray80", linewidth = 0.2), use_direct_label = F) +
+  geom_label(data = euinfdata |> slice_max(time, n=1), size = 2.7, family = "Roboto Condensed",
+             aes(label = glue::glue("{round(values,1)}%")), nudge_y = -0.5,
+             nudge_x = 20, label.padding = unit(0.15,"lines"), fill = "gray98") +
+  geom_label(data = euinfdata |> slice_max(values, n=1, with_ties = F ,by = geo), size = 2.7,
+             aes(label = glue::glue("{round(values,1)}%")), family = "Roboto Condensed",
+             nudge_y = 1, label.padding = unit(0.15,"lines"), fill = "gray98") +
+  geom_flag(data = euinfdata |> slice_min(time, n=1), size = 6,
+            aes(x = as.Date("2020-04-01"), y = 5, country = tolower(iso2c))) +
+  geom_text(data = euinfdata |> slice_min(time, n=1), size = 4, hjust = 0, family = "Roboto Condensed",
+            aes(x = as.Date("2020-06-01"), y = 5, label = toupper(geo))) +
+  scale_y_continuous(labels = scales::percent_format(scale = 1)) +
+  scale_color_manual(values = met.brewer("Tiepolo")) +
+  facet_wrap(~geo.de) +
+  labs(x = NULL, y = NULL) +
+  theme_minimal() +
+  theme(legend.position = "none",
+        strip.text = element_text(family = "Roboto Condensed"),
+        strip.background = element_blank(),
+        strip.text.x = element_blank(),
+        axis.text = element_text(family = "Roboto Condensed"),
+        panel.grid.minor = element_blank(),
+        panel.grid.major = element_line(linewidth = 0.2),
+        panel.spacing.x = unit(1.5, "lines"),
+        panel.spacing.y = unit(1, "lines"))
