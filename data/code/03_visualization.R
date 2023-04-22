@@ -66,8 +66,8 @@ data |> ggplot(aes(x = bill_length_mm,
   theme_minimal() +
   theme(legend.position = "none",
         plot.title.position = "plot",
-        plot.title = element_text(size = 15, family="Roboto"),
-        plot.subtitle = element_text(size = 13, family="Roboto"),
+        plot.title = element_text(size = 15),
+        plot.subtitle = element_text(size = 13),
         panel.grid.minor = element_blank())
   
 

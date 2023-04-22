@@ -46,7 +46,7 @@
     "href": "slides/05_inflation/index.html#changes-in-the-cpi-in-selected-european-countries",
     "title": "    Economic Policy Visualization",
     "section": "Changes in the CPI in selected European countries",
-    "text": "Changes in the CPI in selected European countries"
+    "text": "Changes in the CPI in selected European countries\n\n\n\n\n\n\n\n\n\n\n\nFurther reading: WuG Editorial board (2022), Zuckerstätter et al. (2022)"
   },
   {
     "objectID": "slides/05_inflation/index.html#inflation-in-austria-by-selected-coicop-groups",
@@ -102,7 +102,7 @@
     "href": "slides/05_inflation/index.html#bibliography",
     "title": "    Economic Policy Visualization",
     "section": "Bibliography",
-    "text": "Bibliography\n\n\n\n\n\n\nPI 5620 Advanced Economic Policy | Summer term 2023\n\n\n\nScherer, Cédric (2022). Graphic design with ggplot2. https://rstudio-conf-2022.github.io/ggplot2-graphic-design/\n\n\nWeber, Isabella M./Wasner, Evan (2023). Sellers’ inflation, profits and conflict: Why can large firms hike prices in an emergency? (Economics Department Working Paper Series). University of Massachusetts Amherst."
+    "text": "Bibliography\n\n\n\n\n\n\nPI 5620 Advanced Economic Policy | Summer term 2023\n\n\n\nScherer, Cédric (2022). Graphic design with ggplot2. https://rstudio-conf-2022.github.io/ggplot2-graphic-design/\n\n\nWeber, Isabella M./Wasner, Evan (2023). Sellers’ inflation, profits and conflict: Why can large firms hike prices in an emergency? (Economics Department Working Paper Series). University of Massachusetts Amherst.\n\n\nWuG Editorial board (2022). How to tackle the inflation crisis? Learnings from european case studies. Wirtschaft Und Gesellschaft, 48(4), 497–518.\n\n\nZuckerstätter, Sepp/Kafenda, Lukas/Muckenhuber, Mattias/Russinger, Reinhold (2022). Austria: Policies dealing with the inflation crisis. Wirtschaft Und Gesellschaft, 48(4), 578–598."
   },
   {
     "objectID": "slides/08_wealth/index.html#bibliography",
@@ -634,7 +634,7 @@
     "href": "slides/01_introduction/index.html#schedule",
     "title": "    Economic Policy Visualization",
     "section": "Schedule",
-    "text": "Schedule\n\n\n\n\n \n  \n    Date \n    Time \n    Room \n    Content \n    Data \n    Assignment \n  \n \n\n  \n    Mar 06, 2023 \n    10:00-12:00 \n    TC.4.15 \n    Introduction \n    NA \n     \n  \n  \n    Mar 13, 2023 \n    10:00-12:00 \n    TC.4.15 \n    Data \n    02_data.RData \n     \n  \n  \n    Mar 20, 2023 \n    10:00-12:00 \n    TC.4.15 \n    Visualization \n    03_visualization.RData \n     \n  \n  \n    Mar 27, 2023 \n    10:00-12:00 \n    D4.0.022 \n    Growth · Geometries \n    04_growth.RData \n     \n  \n  \n    Apr 17, 2023 \n    10:00-12:00 \n    TC.3.07 \n    Inflation · Colors \n    05_inflation.RData \n     \n  \n  \n    Apr 24, 2023 \n    10:30-12:30 \n    TC.3.06 \n    Labour · Labels \n    06_labour.RData \n     \n  \n  \n    May 08, 2023 \n    10:00-12:00 \n    TC.3.11 \n    Income · Scales \n    NA \n     \n  \n  \n    May 15, 2023 \n    10:00-12:00 \n    D4.0.127 \n    Wealth · Themes \n    NA \n     \n  \n  \n    Jun 05, 2023 \n    10:00-12:00 \n    D4.0.127 \n    Mobility · Maps \n    NA \n     \n  \n  \n    Jun 12, 2023 \n    10:00-12:00 \n    TC.3.07 \n    Climate · Facets \n    NA \n     \n  \n  \n    Jun 19, 2023 \n    10:00-12:00 \n    D4.0.127 \n    Student presentations \n    NA \n     \n  \n  \n    Jun 26, 2023 \n    10:00-12:00 \n    D4.0.127 \n    Student presentations \n    NA"
+    "text": "Schedule\n\n\n\n\n \n  \n    Date \n    Time \n    Room \n    Content \n    Data \n    Assignment \n  \n \n\n  \n    Mar 06, 2023 \n    10:00-12:00 \n    TC.4.15 \n    Introduction \n    NA \n     \n  \n  \n    Mar 13, 2023 \n    10:00-12:00 \n    TC.4.15 \n    Data \n    02_data.RData \n     \n  \n  \n    Mar 20, 2023 \n    10:00-12:00 \n    TC.4.15 \n    Visualization \n    03_visualization.RData \n     \n  \n  \n    Mar 27, 2023 \n    10:00-12:00 \n    D4.0.022 \n    Growth · Geometries \n    04_growth.RData \n     \n  \n  \n    Apr 17, 2023 \n    10:00-12:00 \n    TC.3.07 \n    Inflation · Colors \n    05_inflation.RData \n     \n  \n  \n    Apr 24, 2023 \n    10:30-12:30 \n    TC.3.06 \n    Labour · Labels \n    06_labour.RData \n     \n  \n  \n    May 08, 2023 \n    10:00-12:00 \n    TC.3.11 \n    Income · Scales \n    07_income.RData \n     \n  \n  \n    May 15, 2023 \n    10:00-12:00 \n    D4.0.127 \n    Wealth · Themes \n    NA \n     \n  \n  \n    Jun 05, 2023 \n    10:00-12:00 \n    D4.0.127 \n    Mobility · Maps \n    NA \n     \n  \n  \n    Jun 12, 2023 \n    10:00-12:00 \n    TC.3.07 \n    Climate · Facets \n    NA \n     \n  \n  \n    Jun 19, 2023 \n    10:00-12:00 \n    D4.0.127 \n    Student presentations \n    NA \n     \n  \n  \n    Jun 26, 2023 \n    10:00-12:00 \n    D4.0.127 \n    Student presentations \n    NA"
   },
   {
     "objectID": "slides/01_introduction/index.html#assignments",
@@ -672,11 +672,88 @@
     "text": "Recommended Literature\n\n\n\n\n\n\n\n\n\nJonathan Schwabish  Better Data Visualizations: A Guide for Scholars, Researchers, and Wonks  Columbia University Press  ISBN-13: 9780231193115\n\n\n\nDavid Spiegelhalter  The Art of Statistics: Learning from Data  Penguin Books UK  ISBN-13: 9780241258767\n\n\n\n\n\n\n\nPI 5620 Advanced Economic Policy | Summer term 2023"
   },
   {
+    "objectID": "slides/07_income/index.html#income-inequality-in-economic-policy",
+    "href": "slides/07_income/index.html#income-inequality-in-economic-policy",
+    "title": "    Economic Policy Visualization",
+    "section": "Income inequality in economic policy",
+    "text": "Income inequality in economic policy\n\n\n\n\n\nUN SDG 10.1: “By 2030, progressively achieve and sustain income growth of the bottom 40 per cent of the population at a rate higher than the national average.”\nEconomists focus on the economic origins and implications of inequality rather than the social and ecological context.\nIn neoclassical economics, income inequality arises from differences in marginal productivity and might stimulate economic growth due to differential savings rates, investment and incentives for effort (Josifidis/Supic, 2018).\nIn (Post-)Keynesian economics, income inequality is the result of institutional settings, power relations, etc. Inequality harms economic growth in most of these models due to detrimental effects on aggregate demand (Kurz/Salvadori, 2010)."
+  },
+  {
+    "objectID": "slides/07_income/index.html#functional-distribution",
+    "href": "slides/07_income/index.html#functional-distribution",
+    "title": "    Economic Policy Visualization",
+    "section": "Functional distribution",
+    "text": "Functional distribution\nIncome accounts in the System of National Accounts show primary (from production) and secondary (from redistribution) income flows. It is also the base for functional distribution:\n\n\nGross domestic product (GDP) at market prices  \\(+\\) Primary incomes receivable from the rest of world  \\(-\\) Primary incomes payable to the rest of world\n\n\\(=\\) Gross national income (GNI) at market prices  \\(-\\) Consumption of fixed capital\n\n\\(=\\) Net national income at market prices  \\(-\\) Taxes on products  \\(+\\) Subsidies on products\n\n\\(=\\) Net national income at factor cost\n\n\n\n ← Rest of World ← Depreciation ← Government ← Production factors"
+  },
+  {
+    "objectID": "slides/07_income/index.html#income-accounts-for-austria-2021",
+    "href": "slides/07_income/index.html#income-accounts-for-austria-2021",
+    "title": "    Economic Policy Visualization",
+    "section": "Income accounts for Austria, 2021",
+    "text": "Income accounts for Austria, 2021\n\n\n\n\n\n\nWage share = Compensation of Employees / Net national income at factor cost"
+  },
+  {
+    "objectID": "slides/07_income/index.html#the-wage-share-in-austria",
+    "href": "slides/07_income/index.html#the-wage-share-in-austria",
+    "title": "    Economic Policy Visualization",
+    "section": "The wage share in Austria",
+    "text": "The wage share in Austria"
+  },
+  {
+    "objectID": "slides/07_income/index.html#functional-income-distribution-in-continental-europe",
+    "href": "slides/07_income/index.html#functional-income-distribution-in-continental-europe",
+    "title": "    Economic Policy Visualization",
+    "section": "Functional income distribution in Continental Europe",
+    "text": "Functional income distribution in Continental Europe"
+  },
+  {
+    "objectID": "slides/07_income/index.html#functional-distribution-in-anglosaxon-countries",
+    "href": "slides/07_income/index.html#functional-distribution-in-anglosaxon-countries",
+    "title": "    Economic Policy Visualization",
+    "section": "Functional distribution in Anglosaxon countries",
+    "text": "Functional distribution in Anglosaxon countries"
+  },
+  {
+    "objectID": "slides/07_income/index.html#factors-influencing-the-wage-share",
+    "href": "slides/07_income/index.html#factors-influencing-the-wage-share",
+    "title": "    Economic Policy Visualization",
+    "section": "Factors influencing the wage share",
+    "text": "Factors influencing the wage share\n\nLabour market\n\nOrganization (e.g. collective bargaining, workers councils)\nLeverage (e.g. unemployment rate, strength of unions)\n\nProduct markets\n\nGlobalization\nTechnological change\n\nPolitics\n\nInfluence of capital income earners\n\n\n\n\n Reading recommendation: Stockhammer (2015)"
+  },
+  {
+    "objectID": "slides/07_income/index.html#historical-development-of-global-personal-inequality-3-views",
+    "href": "slides/07_income/index.html#historical-development-of-global-personal-inequality-3-views",
+    "title": "    Economic Policy Visualization",
+    "section": "Historical development of global personal inequality: 3 views",
+    "text": "Historical development of global personal inequality: 3 views\n\n\n\n\n\nSimon Kuznets\n\n\n\n\n\n\n\nThomas Piketty\n\n\n\n\n\n\n\n\n\nBranko Milanovic"
+  },
+  {
+    "objectID": "slides/07_income/index.html#global-inequality-1820-2020",
+    "href": "slides/07_income/index.html#global-inequality-1820-2020",
+    "title": "    Economic Policy Visualization",
+    "section": "Global inequality 1820-2020",
+    "text": "Global inequality 1820-2020\n\n\n\n\n\n\n\nSource: Chancel et al. (2022)"
+  },
+  {
+    "objectID": "slides/07_income/index.html#decomposition-of-global-inequality",
+    "href": "slides/07_income/index.html#decomposition-of-global-inequality",
+    "title": "    Economic Policy Visualization",
+    "section": "Decomposition of global inequality",
+    "text": "Decomposition of global inequality\n\n\n\n\n\n\n\nSource: Chancel et al. (2022)"
+  },
+  {
+    "objectID": "slides/07_income/index.html#disposable-net-income-in-europe",
+    "href": "slides/07_income/index.html#disposable-net-income-in-europe",
+    "title": "    Economic Policy Visualization",
+    "section": "Disposable net income in Europe",
+    "text": "Disposable net income in Europe"
+  },
+  {
     "objectID": "slides/07_income/index.html#bibliography",
     "href": "slides/07_income/index.html#bibliography",
     "title": "    Economic Policy Visualization",
     "section": "Bibliography",
-    "text": "Bibliography\n\n\n\n\n\n\nPI 5620 Advanced Economic Policy | Summer term 2023"
+    "text": "Bibliography\n\n\n\n\n\n\nPI 5620 Advanced Economic Policy | Summer term 2023\n\n\n\nChancel, Lucas/Piketty, Thomas/Saez, Emmanuel/Zucman, Gabriel (2022). World inequality report 2022. World Inequality Lab.\n\n\nJosifidis, Kosta/Supic, Novica (2018). Institutionalist versus neoclassical view on income distribution and economic progress: The OECD panel evidence. Panoeconomicus, 65(3), 319–337. DOI: 10.2298/pan1803319j\n\n\nKurz, Heinz D./Salvadori, Neri (2010). The post-keynesian theories of growth and distribution: A survey. In Setterfield, Mark (Ed.), Handbook of alternative theories of economic growth. Edward Elgar Publishing. DOI: 10.4337/9781849805582.00010\n\n\nStockhammer, Engelbert (2015). Determinants of the wage share: A panel analysis of advanced and developing economies. British Journal of Industrial Relations, 55(1), 3–33. DOI: 10.1111/bjir.12165"
   },
   {
     "objectID": "slides/02_data/index.html#the-era-of-evidence-in-economics",
@@ -847,10 +924,17 @@
     "text": "Lecturer\n\n   Dr. Matthias Schnetzer\n   https://mschnetzer.github.io\n   mschnetz@wu.ac.at\n   matschnetzer\n\n\n\nDates\n\n   Mar 6, 2023 – Jun 26, 2023\n   Mondays\n   10:00–12:00\n   TC.4.15\n\n\n\nHighlights\n\n   max. 30 students\n   Engage in policy discussion\n    Improve your R coding skills\n   Create an own data visualization\n\n\n\n\nCourse design\nThe lecturer introduces into various fields of economic policy and provides examples of data visualizations that serve as starting point for discussions. As the graphic illustration of statistical data gains in importance in both the academic and the public discourse, students will learn best practices and gain insights into the visualization of data. Another take-away of the course is to strengthen the knowledge about the power and limitations of the underlying data. A part of each session is dedicated to the work with data. The lecturer provides R-code to produce figures in class. Studens are expected to recreate three charts at home. The main assignment is the production of a comprehensive data visualization on a selected topic of economic policy. Studens will present their chart in class and draft a report with a detailed description of the data, the code and the final visualization in RMarkdown.\nThe course offers a lot of room for discussion in order to permit students to assess various arguments and perspectives, form their own opinion, and argue in a group setting. The teaching is designed to encourage students to actively participate in the debates, raise questions, and gain experience in visualizing data for academic publications or the general debate.\n\n\nRecommended literature\n\n\n\n\n\n\n\n\n\nJonathan Schwabish  Better Data Visualizations: A Guide for Scholars, Researchers, and Wonks  Columbia University Press  ISBN-13: 9780231193115  Link\n\n\n\nDavid Spiegelhalter  The Art of Statistics: Learning from Data  Penguin Books UK  ISBN-13: 9780241258767  Link\n\n\n\n\n\n\nLearning outcomes\nAfter completing this course, students will:\n\nknow key figures in various fields of economic policy\nbe aware of the potentials and limitations of available data for specific policy discussions\nshow improved programming skills in R and the ability to create a RMarkdown report\nhave basic knowledge of important principles of data visualization\nbe able to create simple charts to enrich their academic articles\n\n\n\nGrading\n\n\n\n\n\n\n\n\n\nAssignments: 30% (0-10 points for each visualization)\n\n\n\nChart presentation: 30% (0-20 points for the quality of the presentation, 0-10 for the preliminary chart)\n\n\n\nWritten report: 40% (0-40 points for the report and the final chart)\n\n\n\n\n   100-90: Excellent      89-80: Good      79-65: Satisfactory      64-50: Sufficient\nAll single tasks have to be passed (50% threshold each)."
   },
   {
+    "objectID": "data/code/07_income.html",
+    "href": "data/code/07_income.html",
+    "title": "The functional distribution of income",
+    "section": "",
+    "text": "Wage share in Austria\nThe wage share in Austria has been decreasing since the 1970s. In the wake of the global financial crisis that erupted in 2008, the wage share increased due to a sharp decline in profits.\n\n\n\n\n\n\n\nWage shares in selected international countries\nWe can plot the wage shares for selected countries and emphasize the data for Austria with gghighlight. We can also improve the axis labels with scales.\n\n\n\n\n\n\n\nCode for the figure\nHere is the clean code for the figure on the functional distribution.\n\nlibrary(gghighlight)\nwsdata |>\n  ggplot(aes(x = year, y = value, group = country, color = country)) +\n  geom_line(linewidth = 1.2) +\n  gghighlight(country == \"Austria\", unhighlighted_params = list(color = \"gray80\", alpha = 0.5),\n              line_label_type = \"label_path\", label_key = country, use_group_by = F,\n              label_params = list(size = 3, hjust = 0.94)) +\n  scale_color_manual(name = NULL, values = met.brewer(\"Austria\"),) +\n  scale_x_date(breaks= seq(min(wsdata$year),max(wsdata$year), by = \"10 years\"), date_labels = \"%Y\") +\n  scale_y_continuous(limits = c(55,80), labels = scales::percent_format(scale = 1)) +\n  labs(y = \"Wage share in % of GDP at factor cost\", x = NULL, \n      caption = \"Data: Ameco.\") +\n  theme_minimal() + \n  theme(legend.text = element_text(size = 14),\n        legend.position = c(0.8,0.8),\n        plot.caption = element_text(size = 10, margin = margin(t = 1, unit = \"lines\")),\n        axis.title = element_text(size = 14),\n        axis.text = element_text(size = 12))"
+  },
+  {
     "objectID": "schedule.html",
     "href": "schedule.html",
     "title": "Schedule",
     "section": "",
-    "text": "In this table you find the dates and contents of all classes.\n\n\n\n\n \n  \n    Date \n    Time \n    Room \n    Content \n    Slides \n    Code \n    Data \n    Assignment \n  \n \n\n  \n    Mar 06, 2023 \n    10:00-12:00 \n    TC.4.15 \n    Introduction \n    \n \n     \n     \n     \n  \n  \n    Mar 13, 2023 \n    10:00-12:00 \n    TC.4.15 \n    Data \n    \n \n    \n \n    \n \n     \n  \n  \n    Mar 20, 2023 \n    10:00-12:00 \n    TC.4.15 \n    Visualization \n    \n \n    \n \n    \n \n     \n  \n  \n    Mar 27, 2023 \n    10:00-12:00 \n    D4.0.022 \n    Growth · Geometries \n    \n \n    \n \n    \n \n     \n  \n  \n    Apr 17, 2023 \n    10:00-12:00 \n    TC.3.07 \n    Inflation · Colors \n    \n \n    \n \n    \n \n     \n  \n  \n    Apr 24, 2023 \n    10:30-12:30 \n    TC.3.06 \n    Labour · Labels \n    \n \n    \n \n    \n \n     \n  \n  \n    May 08, 2023 \n    10:00-12:00 \n    TC.3.11 \n    Income · Scales \n     \n     \n     \n     \n  \n  \n    May 15, 2023 \n    10:00-12:00 \n    D4.0.127 \n    Wealth · Themes \n     \n     \n     \n     \n  \n  \n    Jun 05, 2023 \n    10:00-12:00 \n    D4.0.127 \n    Mobility · Maps \n     \n     \n     \n     \n  \n  \n    Jun 12, 2023 \n    10:00-12:00 \n    TC.3.07 \n    Climate · Facets \n     \n     \n     \n     \n  \n  \n    Jun 19, 2023 \n    10:00-12:00 \n    D4.0.127 \n    Student presentations \n     \n     \n     \n     \n  \n  \n    Jun 26, 2023 \n    10:00-12:00 \n    D4.0.127 \n    Student presentations \n     \n     \n     \n     \n  \n\n\n\n\n\n\nAssignments\nAssignment [1] provides the setup of the R infrastructure that is required in this course. There are no points for this assignment. Assignments [2] to [4] are recreations of examplary figures provided below. These examples are related to figures that are discussed in class. Students should then try to reproduce the plots at home and improve their individual coding skills. The raw data for the figures are available as *.csv files below.\n\nHomework 1\n\n\n\n\n\n\n\n\n\n\n\nInstall the latest R version (v4.2.2)\nInstall the latest version of RStudio Desktop\nOpen RStudio, copy the following code into the console and execute: install.packages(c(\"tidyverse\", \"rmarkdown\", \"scales\", \"lubridate\", \"colorspace\", \"devtools\")); sessionInfo()\nClick on Help > About RStudio\nMake sure that both the R version (Console) and the RStudio version are visible, take a screenshot and upload it to the learning platform before March 13, 2023 at 9 a.m.\n\n\n\n\n\nHomework 2\n\n\n\n\n\n\n\n\n\n\nPlease submit your chart before April 24, 2023 at 9 a.m. The data for this assignment is available here: \n\n\n\n\nHomework 3\n\n\n\n\n\n\n\n\n\n\nPlease submit your chart before May 15, 2023 at 9 a.m. The data for this assignment is available here: \n\n\n\n\nHomework 4\n\n\n\n\n\n\n\n\n\n\nPlease submit your chart before June 12, 2023 at 9 a.m. The data for this assignment is available here:"
+    "text": "In this table you find the dates and contents of all classes.\n\n\n\n\n \n  \n    Date \n    Time \n    Room \n    Content \n    Slides \n    Code \n    Data \n    Assignment \n  \n \n\n  \n    Mar 06, 2023 \n    10:00-12:00 \n    TC.4.15 \n    Introduction \n    \n \n     \n     \n     \n  \n  \n    Mar 13, 2023 \n    10:00-12:00 \n    TC.4.15 \n    Data \n    \n \n    \n \n    \n \n     \n  \n  \n    Mar 20, 2023 \n    10:00-12:00 \n    TC.4.15 \n    Visualization \n    \n \n    \n \n    \n \n     \n  \n  \n    Mar 27, 2023 \n    10:00-12:00 \n    D4.0.022 \n    Growth · Geometries \n    \n \n    \n \n    \n \n     \n  \n  \n    Apr 17, 2023 \n    10:00-12:00 \n    TC.3.07 \n    Inflation · Colors \n    \n \n    \n \n    \n \n     \n  \n  \n    Apr 24, 2023 \n    10:30-12:30 \n    TC.3.06 \n    Labour · Labels \n    \n \n    \n \n    \n \n     \n  \n  \n    May 08, 2023 \n    10:00-12:00 \n    TC.3.11 \n    Income · Scales \n    \n \n    \n \n    \n \n     \n  \n  \n    May 15, 2023 \n    10:00-12:00 \n    D4.0.127 \n    Wealth · Themes \n     \n     \n     \n     \n  \n  \n    Jun 05, 2023 \n    10:00-12:00 \n    D4.0.127 \n    Mobility · Maps \n     \n     \n     \n     \n  \n  \n    Jun 12, 2023 \n    10:00-12:00 \n    TC.3.07 \n    Climate · Facets \n     \n     \n     \n     \n  \n  \n    Jun 19, 2023 \n    10:00-12:00 \n    D4.0.127 \n    Student presentations \n     \n     \n     \n     \n  \n  \n    Jun 26, 2023 \n    10:00-12:00 \n    D4.0.127 \n    Student presentations \n     \n     \n     \n     \n  \n\n\n\n\n\n\nAssignments\nAssignment [1] provides the setup of the R infrastructure that is required in this course. There are no points for this assignment. Assignments [2] to [4] are recreations of examplary figures provided below. These examples are related to figures that are discussed in class. Students should then try to reproduce the plots at home and improve their individual coding skills. The raw data for the figures are available as *.csv files below.\n\nHomework 1\n\n\n\n\n\n\n\n\n\n\n\nInstall the latest R version (v4.2.2)\nInstall the latest version of RStudio Desktop\nOpen RStudio, copy the following code into the console and execute: install.packages(c(\"tidyverse\", \"rmarkdown\", \"scales\", \"lubridate\", \"colorspace\", \"devtools\")); sessionInfo()\nClick on Help > About RStudio\nMake sure that both the R version (Console) and the RStudio version are visible, take a screenshot and upload it to the learning platform before March 13, 2023 at 9 a.m.\n\n\n\n\n\nHomework 2\n\n\n\n\n\n\n\n\n\n\nPlease submit your chart before April 24, 2023 at 9 a.m. The data for this assignment is available here: \n\n\n\n\nHomework 3\n\n\n\n\n\n\n\n\n\n\nPlease submit your chart before May 15, 2023 at 9 a.m. The data for this assignment is available here: \n\n\n\n\nHomework 4\n\n\n\n\n\n\n\n\n\n\nPlease submit your chart before June 12, 2023 at 9 a.m. The data for this assignment is available here:"
   }
 ]
