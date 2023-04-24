@@ -12,7 +12,7 @@
   <meta name="generator" content="quarto-1.2.335">
 
   <meta name="author" content="Dr.&nbsp;Matthias Schnetzer">
-  <meta name="dcterms.date" content="2023-04-24">
+  <meta name="dcterms.date" content="2023-05-08">
   <title>PI 5620 Advanced Economic Policy -     Economic Policy Visualization</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -30,6 +30,89 @@
       width: 0.8em;
       margin: 0 0.8em 0.2em -1.6em;
       vertical-align: middle;
+    }
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+      }
+    pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+    div.sourceCode
+      { color: #000000; background-color: #ffffff; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #000000; } /* Normal */
+    code span.al { color: #bf0303; background-color: #f7e6e6; font-weight: bold; } /* Alert */
+    code span.an { color: #ca60ca; } /* Annotation */
+    code span.at { color: #0057ae; } /* Attribute */
+    code span.bn { color: #b08000; } /* BaseN */
+    code span.bu { color: #644a9b; } /* BuiltIn */
+    code span.cf { color: #000000; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #924c9d; } /* Char */
+    code span.cn { color: #aa5500; } /* Constant */
+    code span.co { color: #898887; } /* Comment */
+    code span.cv { color: #0095ff; } /* CommentVar */
+    code span.do { color: #607880; } /* Documentation */
+    code span.dt { color: #0057ae; } /* DataType */
+    code span.dv { color: #b08000; } /* DecVal */
+    code span.er { color: #bf0303; text-decoration: underline; } /* Error */
+    code span.ex { color: #0095ff; font-weight: bold; } /* Extension */
+    code span.fl { color: #b08000; } /* Float */
+    code span.fu { color: #644a9b; } /* Function */
+    code span.im { color: #644a9b; } /* Import */
+    code span.in { color: #b08000; } /* Information */
+    code span.kw { color: #000000; font-weight: bold; } /* Keyword */
+    code span.op { color: #000000; } /* Operator */
+    code span.ot { color: #006e28; } /* Other */
+    code span.pp { color: #006e28; } /* Preprocessor */
+    code span.re { color: #0057ae; background-color: #e0e9f8; } /* RegionMarker */
+    code span.sc { color: #ff5500; } /* SpecialChar */
+    code span.ss { color: #ff5500; } /* SpecialString */
+    code span.st { color: #bf0303; } /* String */
+    code span.va { color: #0057ae; } /* Variable */
+    code span.vs { color: #bf0303; } /* VerbatimString */
+    code span.wa { color: #bf0303; } /* Warning */
+    div.csl-bib-body { }
+    div.csl-entry {
+      clear: both;
+    }
+    .hanging div.csl-entry {
+      margin-left:2em;
+      text-indent:-2em;
+    }
+    div.csl-left-margin {
+      min-width:2em;
+      float:left;
+    }
+    div.csl-right-inline {
+      margin-left:2em;
+      padding-left:1em;
+    }
+    div.csl-indent {
+      margin-left: 2em;
     }
   </style>
   <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto.css" id="theme">
@@ -245,7 +328,6 @@
     }
     .reveal .slide:not(.center) {
       height: 100%;
-      overflow-y: auto;
     }
     .reveal .slide.scrollable {
       overflow-y: auto;
@@ -322,6 +404,11 @@
       margin-right: 0; 
     }
   </style>
+  <script src="../../site_libs/htmlwidgets-1.6.2/htmlwidgets.js"></script>
+  <script src="../../site_libs/d3-4.9.1/d3.min.js"></script>
+  <script src="../../site_libs/sankey-1/sankey.js"></script>
+  <script src="../../site_libs/sankeyNetworkDefinition-1/sankeyNetworkDefinition.js"></script>
+  <script src="../../site_libs/sankeyNetwork-binding-0.5.0/sankeyNetwork.js"></script>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet">
 </head>
 <body class="quarto-light">
@@ -330,7 +417,7 @@
 
 <section id="title-slide" class="quarto-title-block center">
   <h1 class="title"><p><span class="fa-stack course-icon"> <i class="fas fa-comment fa-stack-2x blue"></i> <i class="fas fa-chart-column fa-stack-1x fa-inverse" style="margin-top:-5pt"></i> </span><br> Economic Policy Visualization</p></h1>
-  <p class="subtitle">Labour · Labels</p>
+  <p class="subtitle">Income · Scales</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -340,19 +427,275 @@ Dr.&nbsp;Matthias Schnetzer
 </div>
 </div>
 
-  <p class="date">April 24, 2023</p>
+  <p class="date">May 8, 2023</p>
 </section>
+<section id="income-inequality-in-economic-policy" class="slide level2 smaller">
+<h2>Income inequality in economic policy</h2>
+<div class="columns">
+<div class="column" style="width:20%;">
+<p><img data-src="img/sdg10.png"></p>
+</div><div class="column" style="width:80%;">
+<ul>
+<li>UN SDG 10.1: “By 2030, progressively achieve and sustain income growth of the bottom 40 per cent of the population at a rate higher than the national average.”</li>
+<li>Economists focus on the economic origins and implications of inequality rather than the social and ecological context.</li>
+<li>In neoclassical economics, income inequality arises from differences in marginal productivity and might <span class="hl hl-dred">stimulate</span> economic growth due to differential savings rates, investment and incentives for effort <span class="citation" data-cites="josifidis:2018">(<a href="#/bibliography" role="doc-biblioref" onclick="">Josifidis/Supic, 2018</a>)</span>.</li>
+<li>In (Post-)Keynesian economics, income inequality is the result of institutional settings, power relations, etc. Inequality <span class="hl hl-blue">harms</span> economic growth in most of these models due to detrimental effects on aggregate demand <span class="citation" data-cites="kurz:2010">(<a href="#/bibliography" role="doc-biblioref" onclick="">Kurz/Salvadori, 2010</a>)</span>.</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="functional-distribution" class="slide level2 medium">
+<h2>Functional distribution</h2>
+<p>Income accounts in the System of National Accounts show primary (from production) and secondary (from redistribution) income flows. It is also the base for functional distribution:</p>
+<div class="columns secfont" style="font-size:1.5rem;">
+<div class="column" style="width:60%;">
+<p>Gross domestic product (GDP) at market prices <br> <span class="math inline">\(+\)</span> Primary incomes receivable from the rest of world <br> <span class="math inline">\(-\)</span> Primary incomes payable to the rest of world</p>
+<hr>
+<p><span class="math inline">\(=\)</span> Gross national income (GNI) at market prices <br> <span class="math inline">\(-\)</span> Consumption of fixed capital</p>
+<hr>
+<p><span class="math inline">\(=\)</span> Net national income <strong>at market prices</strong> <br> <span class="math inline">\(-\)</span> Taxes on products <br> <span class="math inline">\(+\)</span> Subsidies on products</p>
+<hr>
+<p><span class="math inline">\(=\)</span> Net national income <strong>at factor cost</strong></p>
+</div><div class="column" style="width:5%;">
+
+</div><div class="column" style="width:30%;">
+<p><br><br> <span class="hl hl-dred">← Rest of World</span><br><br><br> <span class="hl hl-blue">← Depreciation</span><br><br><br> <span class="hl hl-green">← Government</span><br><br> <span class="hl hl-brown">← Production factors</span></p>
+</div>
+</div>
+</section>
+<section id="income-accounts-for-austria-2021" class="slide level2 medium">
+<h2>Income accounts for Austria, 2021</h2>
+<div class="cell-output-display">
+<div id="htmlwidget-4c7e3d89eb2b05d7bea6" style="width:1000px;height:500px;" class="sankeyNetwork html-widget "></div>
+<script type="application/json" data-for="htmlwidget-4c7e3d89eb2b05d7bea6">{"x":{"links":{"source":[0,0,0,0,1,1,2,2,2,2],"target":[1,3,4,5,2,6,7,8,9,10],"value":[288.8,79.9,37.4,1.8,201.4,87.5,116.8,24.1,25.3,35.1],"group":["linkcol","linkcol","linkcol","linkcol","linkcol","linkcol","linkcol","linkcol","linkcol","linkcol"]},"nodes":{"name":["Gross domestic product  (MP)","Net national income (FC)","Compensation of employees","Consumption of fixed capital","Taxes on products – Subsidies","Primary income with rest of world (ROW)","Net operating surplus + mixed income","Net wages and salaries","Wage tax","Social security cont. Employees","Social security cont. Employers"],"group":["nocol","NNI","CE","nocol","nocol","nocol","nocol","nocol","nocol","nocol","nocol"]},"options":{"NodeID":"name","NodeGroup":"group","LinkGroup":"group","colourScale":"d3.scaleOrdinal() .domain([\"NNI\", \"CE\", \"nocol\", \"linkcol\"]) \n            .range([\"#d03161\", \"#5d8198\", \"#d4d4d4\", \"#e4e4e4\"])","fontSize":14,"fontFamily":"Roboto Slab","nodeWidth":15,"nodePadding":10,"units":"","margin":{"top":null,"right":null,"bottom":null,"left":null},"iterations":32,"sinksRight":false}},"evals":[],"jsHooks":{"render":[{"code":"\n  function(el) { \n    var nodeWidth = this.sankey.nodeWidth();\n    var links = this.sankey.links();\n        \n    links.forEach((d, i) => {\n      var startX = d.source.x + nodeWidth;\n      var endX = d.target.x;\n      \n      var startY = d.source.y + d.sy + d.dy / 2;\n      var endY = d.target.y + d.ty + d.dy / 2;\n      \n      d3.select(el).select(\"svg g\")\n        .append(\"text\")\n        .attr(\"text-anchor\", \"middle\")\n        .attr(\"alignment-baseline\", \"middle\")\n        .attr(\"font-size\", \"13\")\n        .attr(\"font-family\", \"Roboto Slab\")\n        .attr(\"x\", startX + ((endX - startX) / 2))\n        .attr(\"y\", startY + ((endY - startY) / 2))\n        .text(d.value);\n    })\n  }\n","data":null}]}}</script>
+</div>
+<div class="fragment">
+<div style="font-size:1.5rem;text-align:center;font-family:'Roboto Slab">
+<p>Wage share = <span class="hl hl-blue">Compensation of Employees</span> / <span class="hl hl-dred">Net national income at factor cost</span></p>
+</div>
+</div>
+</section>
+<section id="the-wage-share-in-austria" class="slide level2 medium">
+<h2>The wage share in Austria</h2>
+
+<img data-src="index_files/figure-revealjs/wsaut-1.png" width="960" class="r-stretch quarto-figure-center"></section>
+<section id="functional-income-distribution-in-continental-europe" class="slide level2 medium">
+<h2>Functional income distribution in Continental Europe</h2>
+
+<img data-src="index_files/figure-revealjs/wseur-1.png" width="960" class="r-stretch quarto-figure-center"></section>
+<section id="functional-distribution-in-anglosaxon-countries" class="slide level2 medium">
+<h2>Functional distribution in Anglosaxon countries</h2>
+
+<img data-src="index_files/figure-revealjs/wsanglo-1.png" width="3200" class="r-stretch quarto-figure-center"></section>
+<section id="factors-influencing-the-wage-share" class="slide level2 medium">
+<h2>Factors influencing the wage share</h2>
+<ul>
+<li><span class="marker-hl">Labour market</span>
+<ul>
+<li>Organization <span class="grey600" style="font-size:1.3rem">(e.g.&nbsp;collective bargaining, workers councils)</span></li>
+<li>Leverage <span class="grey600" style="font-size:1.3rem">(e.g.&nbsp;unemployment rate, strength of unions)</span></li>
+</ul></li>
+<li><span class="marker-hl">Product markets</span>
+<ul>
+<li>Globalization</li>
+<li>Technological change</li>
+</ul></li>
+<li><span class="marker-hl">Politics</span>
+<ul>
+<li>Influence of capital income earners</li>
+</ul></li>
+</ul>
+
+<aside><div>
+<p><i class="fa-solid fa-book"></i> Reading recommendation: <span class="citation" data-cites="stockhammer:2015">Stockhammer (<a href="#/bibliography" role="doc-biblioref" onclick="">2015</a>)</span></p>
+</div></aside></section>
+<section id="historical-development-of-global-personal-inequality-3-views" class="slide level2">
+<h2>Historical development of global personal inequality: 3 views</h2>
+<div class="dred quarto-layout-panel" style="font-size:1.5rem;text-align:center">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p></p><figcaption>Simon Kuznets</figcaption><p></p>
+<p><img data-src="img/kuznets.png" width="400"></p>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p></p><figcaption>Thomas Piketty</figcaption><p></p>
+<p><img data-src="img/piketty.png" width="400"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-cell" style="flex-basis: 100.0%;justify-content: center;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p></p><figcaption>Branko Milanovic</figcaption><p></p>
+<p><img data-src="img/milanovic.png" width="800"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="global-inequality-1820-2020" class="slide level2 smaller">
+<h2>Global inequality 1820-2020</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/globalineq1820_2020.png" height="500"></p>
+</figure>
+</div>
+
+<aside><div>
+<p>Source: <span class="citation" data-cites="wir:2022">Chancel et al. (<a href="#/bibliography" role="doc-biblioref" onclick="">2022</a>)</span></p>
+</div></aside></section>
+<section id="decomposition-of-global-inequality" class="slide level2 smaller">
+<h2>Decomposition of global inequality</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/theildecom.png" height="500"></p>
+</figure>
+</div>
+
+<aside><div>
+<p>Source: <span class="citation" data-cites="wir:2022">Chancel et al. (<a href="#/bibliography" role="doc-biblioref" onclick="">2022</a>)</span></p>
+</div></aside></section>
+<section id="disposable-net-income-in-europe" class="slide level2 medium">
+<h2>Disposable net income in Europe</h2>
+
+<img data-src="index_files/figure-revealjs/incmap-1.png" width="1920" class="r-stretch quarto-figure-center"></section>
 <section>
-<section id="labels-and-fonts" class="title-slide slide level1 center">
-<h1>Labels and Fonts</h1>
-<div class="absolute" style="top: 90%; left: 30%; width: 400px; height: 336px; ">
-<p><img data-src="../../data/img/avatar_read.png"></p>
+<section id="scales" class="title-slide slide level1 center">
+<h1>Scales</h1>
+<div class="absolute" style="top: 90%; left: 30%; width: 400px; ">
+<p><img data-src="../../data/img/avatar_point.png"></p>
 </div>
 <div class="footer">
 
 </div>
 </section>
-<section id="bibliography" class="slide level2 bibstyle">
+<section id="axes" class="slide level2 medium">
+<h2>Axes</h2>
+<p><span class="secfont">Continuous</span></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1" data-code-line-numbers="1,2|3,4,5,6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> life_expectancy, <span class="at">y =</span> poverty_rate)) <span class="sc">+</span></span>
+<span id="cb1-2"><a href="#cb1-2"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb1-3"><a href="#cb1-3"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">limits =</span> <span class="fu">c</span>(<span class="dv">40</span>, <span class="dv">100</span>),</span>
+<span id="cb1-4"><a href="#cb1-4"></a>                     <span class="at">breaks =</span> <span class="fu">seq</span>(<span class="dv">40</span>, <span class="dv">100</span>, <span class="dv">20</span>),</span>
+<span id="cb1-5"><a href="#cb1-5"></a>                     <span class="at">labels =</span> scales<span class="sc">::</span><span class="fu">number_format</span>(<span class="at">suffix =</span> <span class="st">"years"</span>)) <span class="sc">+</span></span>
+<span id="cb1-6"><a href="#cb1-6"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">labels =</span> scales<span class="sc">::</span>percent)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><span class="secfont">Dates</span></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> poverty_rate)) <span class="sc">+</span></span>
+<span id="cb2-2"><a href="#cb2-2"></a>  <span class="fu">geom_line</span>() <span class="sc">+</span></span>
+<span id="cb2-3"><a href="#cb2-3"></a>  <span class="fu">scale_x_date</span>(<span class="at">limits =</span> <span class="fu">c</span>(<span class="fu">as.Date</span>(<span class="st">"2020-01-01"</span>), <span class="fu">as.Date</span>(<span class="st">"2024-01-01"</span>)),</span>
+<span id="cb2-4"><a href="#cb2-4"></a>                <span class="at">breaks =</span> <span class="at">date_breaks =</span> <span class="st">"2 years"</span>,</span>
+<span id="cb2-5"><a href="#cb2-5"></a>                <span class="at">labels =</span> <span class="at">date_labels =</span> <span class="st">"%Y"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><span class="secfont">Others</span></p>
+<p><span class="secfont" style="font-size:1.5rem;">scale_x_log10(), scale_x_reverse(), scale_x_sqrt(), …</span></p>
+</section>
+<section id="colors" class="slide level2 smaller">
+<h2>Colors</h2>
+<p><span class="secfont">Manual</span></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> poverty_rate, <span class="at">color =</span> country)) <span class="sc">+</span></span>
+<span id="cb3-2"><a href="#cb3-2"></a>  <span class="fu">geom_line</span>() <span class="sc">+</span></span>
+<span id="cb3-3"><a href="#cb3-3"></a>  <span class="fu">scale_color_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"red"</span>, <span class="st">"blue"</span>, <span class="st">"green"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><span class="secfont">Gradient</span></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a><span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> gdp, <span class="at">y =</span> life_expectancy, <span class="at">color =</span> poverty_rate)) <span class="sc">+</span></span>
+<span id="cb4-2"><a href="#cb4-2"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb4-3"><a href="#cb4-3"></a>  <span class="fu">scale_color_gradient</span>(<span class="at">low =</span> <span class="st">"green"</span>, <span class="at">high =</span> <span class="st">"red"</span>, <span class="at">na.value =</span> <span class="st">"gray80"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><span class="secfont">Brewer</span></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a><span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> poverty_rate, <span class="at">fill =</span> country)) <span class="sc">+</span></span>
+<span id="cb5-2"><a href="#cb5-2"></a>  <span class="fu">geom_area</span>() <span class="sc">+</span></span>
+<span id="cb5-3"><a href="#cb5-3"></a>  <span class="fu">scale_fill_brewer</span>(<span class="at">palette =</span> <span class="st">"Set1"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><span class="secfont">Others</span></p>
+<p><span class="secfont" style="font-size:1.5rem;">scale_color_binned(), scale_color_distiller(), scale_color_grey(), …</span></p>
+</section>
+<section id="shape-size-and-alpha" class="slide level2 smaller">
+<h2>Shape, size and alpha</h2>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a><span class="fu">tribble</span>(<span class="sc">~</span>x, <span class="sc">~</span>y, <span class="sc">~</span>significance, <span class="sc">~</span>gdp, <span class="sc">~</span>continent,</span>
+<span id="cb6-2"><a href="#cb6-2"></a>        <span class="fl">0.5</span>, <span class="fl">0.5</span>, <span class="st">"yes"</span>, <span class="dv">140</span>, <span class="st">"Asia"</span>,</span>
+<span id="cb6-3"><a href="#cb6-3"></a>        <span class="fl">1.0</span>, <span class="fl">0.5</span>, <span class="st">"yes"</span>, <span class="dv">100</span>, <span class="st">"Africa"</span>,</span>
+<span id="cb6-4"><a href="#cb6-4"></a>        <span class="fl">1.5</span>, <span class="fl">0.5</span>, <span class="st">"no"</span>,  <span class="dv">250</span>, <span class="st">"Europe"</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb6-5"><a href="#cb6-5"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> x, <span class="at">y =</span> y)) <span class="sc">+</span></span>
+<span id="cb6-6"><a href="#cb6-6"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">alpha =</span> significance, <span class="at">size =</span> gdp, <span class="at">shape =</span> continent)) <span class="sc">+</span></span>
+<span id="cb6-7"><a href="#cb6-7"></a>  <span class="fu">scale_alpha_discrete</span>(<span class="at">range =</span> <span class="fu">c</span>(<span class="fl">0.5</span>, <span class="dv">1</span>), <span class="at">guide =</span> <span class="fu">guide_none</span>()) <span class="sc">+</span></span>
+<span id="cb6-8"><a href="#cb6-8"></a>  <span class="fu">scale_size_continuous</span>(<span class="at">range =</span> <span class="fu">c</span>(<span class="dv">5</span>, <span class="dv">12</span>), <span class="at">guide =</span> <span class="fu">guide_none</span>()) <span class="sc">+</span></span>
+<span id="cb6-9"><a href="#cb6-9"></a>  <span class="fu">scale_shape_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="dv">17</span>, <span class="dv">19</span>, <span class="dv">15</span>),</span>
+<span id="cb6-10"><a href="#cb6-10"></a>                     <span class="at">guide =</span> <span class="fu">guide_legend</span>(<span class="at">title =</span> <span class="st">"Continent"</span>, </span>
+<span id="cb6-11"><a href="#cb6-11"></a>                                          <span class="at">override.aes =</span> <span class="fu">list</span>(<span class="at">size =</span> <span class="dv">5</span>))) <span class="sc">+</span></span>
+<span id="cb6-12"><a href="#cb6-12"></a>  <span class="fu">theme_minimal</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+</div>
+<img data-src="index_files/figure-revealjs/alphaxmpl-1.png" width="576" class="r-stretch quarto-figure-center"></section>
+<section id="guides" class="slide level2 smaller">
+<h2>Guides</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a><span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> life_expectancy, <span class="at">y =</span> poverty_rate, <span class="at">color =</span> continent)) <span class="sc">+</span></span>
+<span id="cb7-2"><a href="#cb7-2"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb7-3"><a href="#cb7-3"></a>  <span class="fu">scale_color_viridis_d</span>(<span class="at">guide =</span> <span class="fu">guide_legend</span>(<span class="at">title.position =</span> <span class="st">"top"</span>,</span>
+<span id="cb7-4"><a href="#cb7-4"></a>                                             <span class="at">title.theme =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">2</span>),  </span>
+<span id="cb7-5"><a href="#cb7-5"></a>                                             <span class="at">title.hjust =</span> <span class="dv">0</span>, <span class="at">title.vjust =</span> <span class="fl">0.5</span>,</span>
+<span id="cb7-6"><a href="#cb7-6"></a>                                             <span class="at">label.position =</span> <span class="st">"bottom"</span>,</span>
+<span id="cb7-7"><a href="#cb7-7"></a>                                             <span class="at">label.hjust =</span> <span class="dv">0</span>, <span class="at">label.vjust =</span> <span class="fl">0.5</span>,</span>
+<span id="cb7-8"><a href="#cb7-8"></a>                                             <span class="at">keywidth =</span> <span class="dv">2</span>, <span class="at">keyheight =</span> <span class="dv">2</span>,</span>
+<span id="cb7-9"><a href="#cb7-9"></a>                                             <span class="at">direction =</span> <span class="st">"horizontal"</span>,</span>
+<span id="cb7-10"><a href="#cb7-10"></a>                                             <span class="at">override.aes =</span> <span class="fu">list</span>(<span class="at">size =</span> <span class="dv">4</span>),</span>
+<span id="cb7-11"><a href="#cb7-11"></a>                                             <span class="at">nrow =</span> <span class="dv">1</span>, <span class="at">ncol =</span> <span class="dv">4</span>,</span>
+<span id="cb7-12"><a href="#cb7-12"></a>                                             <span class="at">byrow =</span> <span class="cn">FALSE</span>, <span class="at">reverse =</span> <span class="cn">FALSE</span>, ...))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><br></p>
+<div class="tbl tbl-classic">
+<table style="width:70%;">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 20%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Scale type</th>
+<th>Default guide type</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>continuous scales for colour/fill aesthetics</td>
+<td>colourbar</td>
+</tr>
+<tr class="even">
+<td>binned scales for colour/fill aesthetics</td>
+<td>coloursteps</td>
+</tr>
+<tr class="odd">
+<td>position scales (continuous, binned and discrete)</td>
+<td>axis</td>
+</tr>
+<tr class="even">
+<td>discrete scales (except position scales)</td>
+<td>legend</td>
+</tr>
+<tr class="odd">
+<td>binned scales (except position/colour/fill scales)</td>
+<td>bins</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="bibliography" class="slide level2 bibstyle smaller scrollable">
 <h2>Bibliography</h2>
 <div class="footer">
 
@@ -361,6 +704,20 @@ Dr.&nbsp;Matthias Schnetzer
 
 <img src="../../data/img/wu-logo-simple.png" class="slide-logo r-stretch"><div class="footer footer-default">
 <p>PI 5620 Advanced Economic Policy | Summer term 2023</p>
+</div>
+<div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography">
+<div id="ref-wir:2022" class="csl-entry" role="doc-biblioentry">
+Chancel, Lucas/Piketty, Thomas/Saez, Emmanuel/Zucman, Gabriel (2022). <em>World inequality report 2022</em>. World Inequality Lab.
+</div>
+<div id="ref-josifidis:2018" class="csl-entry" role="doc-biblioentry">
+Josifidis, Kosta/Supic, Novica (2018). Institutionalist versus neoclassical view on income distribution and economic progress: The <span>OECD</span> panel evidence. <em>Panoeconomicus</em>, <em>65</em>(3), 319–337. DOI: <a href="https://doi.org/10.2298/pan1803319j">10.2298/pan1803319j</a>
+</div>
+<div id="ref-kurz:2010" class="csl-entry" role="doc-biblioentry">
+Kurz, Heinz D./Salvadori, Neri (2010). The post-keynesian theories of growth and distribution: A survey. In Setterfield, Mark (Ed.), <em>Handbook of alternative theories of economic growth</em>. Edward Elgar Publishing. DOI: <a href="https://doi.org/10.4337/9781849805582.00010">10.4337/9781849805582.00010</a>
+</div>
+<div id="ref-stockhammer:2015" class="csl-entry" role="doc-biblioentry">
+Stockhammer, Engelbert (2015). Determinants of the wage share: A panel analysis of advanced and developing economies. <em>British Journal of Industrial Relations</em>, <em>55</em>(1), 3–33. DOI: <a href="https://doi.org/10.1111/bjir.12165">10.1111/bjir.12165</a>
+</div>
 </div>
 </section></section>
     </div>
@@ -574,6 +931,44 @@ Dr.&nbsp;Matthias Schnetzer
         ]
       });
     </script>
+    
+    <script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script>
+
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const toggleBodyColorMode = (bsSheetEl) => {

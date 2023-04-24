@@ -39,17 +39,24 @@ format:
 ---
 
 
-# The pioneers of data visualization
+# Pioneers of data visualization
 
-::: {.absolute top="90%" left="30%" width="400px" height="336px"}
+::: {.absolute top="90%" left="30%" width="400px"}
 ![](../../data/img/avatar_sakko.png)
 :::
 
 ::: footer
 :::
 
+## William Playfair (1759-1823) {.medium}
 
-## John Snow and the Broad Street Pump
+![](img/playfair.png){height="500" fig-align="center"}
+
+::: {.aside}
+[created: 1786]
+:::
+
+## John Snow (1813-1858) {.medium}
 
 ::: {.columns}
 ::: {.column width=60%}
@@ -61,7 +68,19 @@ format:
 :::
 :::
 
-## W.E.B. Du Bois
+::: {.aside}
+[created: 1854]
+:::
+
+## Charles Joseph Minard (1781-1870) {.medium}
+
+![](img/minard.png){fig-align="center"}
+
+::: {.aside}
+[created: 1869]
+:::
+
+## W.E.B. Du Bois (1868-1963) {.medium}
 
 ::: {.columns}
 ::: {.column}
@@ -73,22 +92,21 @@ format:
 :::
 :::
 
-## Otto Neurath
+::: {.aside}
+[created: 1890]
+:::
+
+## Otto Neurath (1882-1945) {.medium}
 
 ![](img/neurath.png){height="500" fig-align="center"}
 
-## Charles Joseph Minard
-
-![](img/minard.png){fig-align="center"}
-
-## William Playfair
-
-![](img/playfair.png){height="500" fig-align="center"}
-
+::: {.aside}
+[created: 1943]
+:::
 
 # Five guidelines for better visualization
 
-::: {.absolute top="90%" left="30%" width="400px" height="336px"}
+::: {.absolute top="90%" left="30%" width="400px"}
 ![](../../data/img/avatar_laptop.png)
 :::
 
@@ -403,9 +421,57 @@ simdat |>
 Source: @schwabish:2014
 :::
 
+## Deceptive graphs {.medium}
+
+::: {.columns}
+::: {.column}
+![](img/deceptive_bar.png)
+:::
+::: {.column}
+![](img/deceptive_line.png)
+:::
+:::
+
+::: {.aside}
+Quelle: @lauer:2020
+:::
+
+## Deceptive graphs {.medium}
+
+::: {.columns}
+::: {.column}
+![](img/deceptive_pie.png)
+:::
+::: {.column}
+![](img/deceptive_bubble.png)
+:::
+:::
+
+::: {.aside}
+Quelle: @lauer:2020
+:::
+
+
+## Misleading titles {.medium}
+
+![](img/deceptive_title.png)
+
+::: {.aside}
+Quelle: @lauer:2020
+:::
+
+## Deceptive graphs meet their goal {.medium}
+
+![](img/deceptive_results.png)
+
+::: {.aside}
+Quelle: @lauer:2020
+:::
+
+
 # The Gestalt Principles
 
-::: {.absolute top="90%" left="30%" width="400px" height="336px"}
+::: {.absolute top="90%" left="30%" width="400px"}
 ![](../../data/img/avatar_finger.png)
 :::
 
@@ -460,7 +526,7 @@ Source: @healy:2018
 
 # Let's start with {ggplot}
 
-::: {.absolute top="90%" left="30%" width="400px" height="336px"}
+::: {.absolute top="90%" left="30%" width="400px"}
 ![](../../data/img/avatar_cool.png)
 :::
 

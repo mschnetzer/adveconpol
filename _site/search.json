@@ -11,28 +11,56 @@
     "href": "slides/05_inflation/index.html#what-exactly-is-inflation",
     "title": "    Economic Policy Visualization",
     "section": "What exactly is inflation?",
-    "text": "What exactly is inflation?"
+    "text": "What exactly is inflation?\nInflation is the increase of the general price level in an economy which is usually expressed as annual percentage change in a price index. Inflation implies a decrease in purchasing power. The causes of inflation include:\n\n\nKeynesian view\n\nDemand-pull inflation via increases of aggregate demand\nCost-push inflation via drop in aggregate supply (supply-shock inflation)\nBuilt-in inflation via adaptive expectations (i.e. price-wage/profit spiral), e.g. Weber/Wasner (2023)\n\n\n\n\nMonetarist view\n\nMoney supply controls inflation\nQuantity theory relates the quantity of money (\\(M\\)) to the price level (\\(P\\)): \\(M \\cdot V = P \\cdot Y\\), with the velocity of money (\\(V\\)) being stable in the short-run.\nRational expectations influence inflation"
   },
   {
-    "objectID": "slides/05_inflation/index.html#how-do-we-calculate-inflation",
-    "href": "slides/05_inflation/index.html#how-do-we-calculate-inflation",
+    "objectID": "slides/05_inflation/index.html#inflation-in-economic-policy",
+    "href": "slides/05_inflation/index.html#inflation-in-economic-policy",
     "title": "    Economic Policy Visualization",
-    "section": "How do we calculate inflation?",
-    "text": "How do we calculate inflation?"
+    "section": "Inflation in economic policy",
+    "text": "Inflation in economic policy\n\nPrice stability (i.e. low or even now inflation) is an important goal for economic policy.\nIt is also the main goal of the European Central Bank (ECB) which it aims to obtain with monetary policy. The ECB mid-term inflation target lies at 2% and is symmetric: meaning negative and positive deviations of inflation from the target are equally undesirable.\nMix of fiscal (government spending, taxation, subsidies, etc.) and monetary (interest rate, quantitative easing) policies affect inflation in “normal times”.\nPotential triggers of current inflation: war, supply shortages due to the pandemics, CO2 taxation"
   },
   {
-    "objectID": "slides/05_inflation/index.html#what-is-coicop",
-    "href": "slides/05_inflation/index.html#what-is-coicop",
+    "objectID": "slides/05_inflation/index.html#conflicting-economic-policy-goals-inflation-and-unemployment",
+    "href": "slides/05_inflation/index.html#conflicting-economic-policy-goals-inflation-and-unemployment",
     "title": "    Economic Policy Visualization",
-    "section": "What is COICOP?",
-    "text": "What is COICOP?"
+    "section": "Conflicting economic policy goals: Inflation and unemployment",
+    "text": "Conflicting economic policy goals: Inflation and unemployment\nA longstanding discussion in economic policy revolves around the (negative) relationship between inflation and unemployment. This has been expressed in the Phillips curve.\n\n\nKeynesian view \n\nMonetarist view"
   },
   {
-    "objectID": "slides/05_inflation/index.html#is-there-a-trade-off-between-inflation-and-unemployment",
-    "href": "slides/05_inflation/index.html#is-there-a-trade-off-between-inflation-and-unemployment",
+    "objectID": "slides/05_inflation/index.html#how-do-we-measure-inflation",
+    "href": "slides/05_inflation/index.html#how-do-we-measure-inflation",
     "title": "    Economic Policy Visualization",
-    "section": "Is there a trade-off between inflation and unemployment?",
-    "text": "Is there a trade-off between inflation and unemployment?"
+    "section": "How do we measure inflation?",
+    "text": "How do we measure inflation?\nThe most important measure is the Consumer prices index (CPI), which is based on a weighted average market basket of consumer goods and services purchased by households\nFor international comparison of price levels, Eurostat provides the Harmonised Indices of Consumer Prices (HICP) and the OECD calculates Purchasing Power Parities (PPP)\nOther important indices include the Wholesale Price Index (WPI) and Producer Price Index (PPI).\nApart from price indices, the GDP deflator measures the general price level of all domestically produced goods and services."
+  },
+  {
+    "objectID": "slides/05_inflation/index.html#how-to-construct-the-cpi-in-austria",
+    "href": "slides/05_inflation/index.html#how-to-construct-the-cpi-in-austria",
+    "title": "    Economic Policy Visualization",
+    "section": "How to construct the CPI in Austria?",
+    "text": "How to construct the CPI in Austria?\n\nHousehold Budgetary Survey: survey on household consumption; every five years with roughly 7,000 households\nConsumer basket: 1958 only 197 goods and surveys, today 757 index positions\nCOICOP: “Classification of Individual Consumption by Purpose” with 12 main groups\nPrice information directly from companies (scanner data since 2022, cigarettes, etc.) and from inquiries in retail shops\nMore than 38,000 prices surveyed monthly in 19 cities and 4,200 shops"
+  },
+  {
+    "objectID": "slides/05_inflation/index.html#changes-in-the-cpi-in-selected-european-countries",
+    "href": "slides/05_inflation/index.html#changes-in-the-cpi-in-selected-european-countries",
+    "title": "    Economic Policy Visualization",
+    "section": "Changes in the CPI in selected European countries",
+    "text": "Changes in the CPI in selected European countries\n\n\n\n\n\n\n\n\n\n\n\nFurther reading: WuG Editorial board (2022), Zuckerstätter et al. (2022)"
+  },
+  {
+    "objectID": "slides/05_inflation/index.html#inflation-in-austria-by-selected-coicop-groups",
+    "href": "slides/05_inflation/index.html#inflation-in-austria-by-selected-coicop-groups",
+    "title": "    Economic Policy Visualization",
+    "section": "Inflation in Austria by selected COICOP groups",
+    "text": "Inflation in Austria by selected COICOP groups"
+  },
+  {
+    "objectID": "slides/05_inflation/index.html#drivers-of-inflation-in-austria",
+    "href": "slides/05_inflation/index.html#drivers-of-inflation-in-austria",
+    "title": "    Economic Policy Visualization",
+    "section": "Drivers of inflation in Austria",
+    "text": "Drivers of inflation in Austria"
   },
   {
     "objectID": "slides/05_inflation/index.html#colors-in-r",
@@ -74,7 +102,7 @@
     "href": "slides/05_inflation/index.html#bibliography",
     "title": "    Economic Policy Visualization",
     "section": "Bibliography",
-    "text": "Bibliography\n\n\n\n\n\n\nPI 5620 Advanced Economic Policy | Summer term 2023\n\n\n\nScherer, Cédric (2022). Graphic design with ggplot2. https://rstudio-conf-2022.github.io/ggplot2-graphic-design/"
+    "text": "Bibliography\n\n\n\n\n\n\nPI 5620 Advanced Economic Policy | Summer term 2023\n\n\n\nScherer, Cédric (2022). Graphic design with ggplot2. https://rstudio-conf-2022.github.io/ggplot2-graphic-design/\n\n\nWeber, Isabella M./Wasner, Evan (2023). Sellers’ inflation, profits and conflict: Why can large firms hike prices in an emergency? (Economics Department Working Paper Series). University of Massachusetts Amherst.\n\n\nWuG Editorial board (2022). How to tackle the inflation crisis? Learnings from european case studies. Wirtschaft Und Gesellschaft, 48(4), 497–518.\n\n\nZuckerstätter, Sepp/Kafenda, Lukas/Muckenhuber, Mattias/Russinger, Reinhold (2022). Austria: Policies dealing with the inflation crisis. Wirtschaft Und Gesellschaft, 48(4), 578–598."
   },
   {
     "objectID": "slides/08_wealth/index.html#bibliography",
@@ -84,11 +112,144 @@
     "text": "Bibliography\n\n\n\n\n\n\nPI 5620 Advanced Economic Policy | Summer term 2023"
   },
   {
+    "objectID": "slides/06_labour/index.html#full-employment-as-economic-policy-goal",
+    "href": "slides/06_labour/index.html#full-employment-as-economic-policy-goal",
+    "title": "    Economic Policy Visualization",
+    "section": "Full employment as economic policy goal",
+    "text": "Full employment as economic policy goal\n\n\n\n\n\nUN SDG 8.5: “By 2030, achieve full and productive employment and decent work for all women and men, including for young people and persons with disabilities, and equal pay for work of equal value.”\nFull employment is desirable since the individual, economic, and social costs of unemployment are high (Young, 2012): risk of poverty, health issues, decreasing human and social capital, stigmatization, rising government expenditure, etc.\nHowever, full employment affects the industrial relations between capital and labour and might thus not be favoured by capital owners (Kalecki, 1943)"
+  },
+  {
+    "objectID": "slides/06_labour/index.html#opposing-views-on-the-labour-market",
+    "href": "slides/06_labour/index.html#opposing-views-on-the-labour-market",
+    "title": "    Economic Policy Visualization",
+    "section": "Opposing views on the labour market",
+    "text": "Opposing views on the labour market\n\n\nNeoclassical view\n\nLabour market is one among many other markets\nPrice (i.e. real wage) brings labour supply and labour demand into equilibrium\nFull employment is achieved in the labour market equilibrium, while unemployment is voluntary due to specific labour-leisure choices\nInvoluntary unemployment is a result of third-party intervention into the labour market\n\n\n\n\n(Post-)Keynesian view\n\nLabour market is posterior (downstream) to production\nDemand for labour is determined by effective demand on the goods market\nFull employment is reached when effective demand equals full capacity utilization\nInvoluntary unemployment is a consequence of lacking aggregate demand by private and public sector."
+  },
+  {
+    "objectID": "slides/06_labour/index.html#goods-and-labour-market-in-the-keynesian-cross",
+    "href": "slides/06_labour/index.html#goods-and-labour-market-in-the-keynesian-cross",
+    "title": "    Economic Policy Visualization",
+    "section": "Goods and labour market in the Keynesian cross",
+    "text": "Goods and labour market in the Keynesian cross"
+  },
+  {
+    "objectID": "slides/06_labour/index.html#a-classification-of-unemployment",
+    "href": "slides/06_labour/index.html#a-classification-of-unemployment",
+    "title": "    Economic Policy Visualization",
+    "section": "A classification of unemployment",
+    "text": "A classification of unemployment\n\n\n\n\n\n\n\n\n\n\nMacroeconomy\nSpecific sectors\n\n\n\n\nShort-term\nfrictional:  people voluntarily leaving their job need some time to find new employment. Unemployment is thus interim and even present in an economy with full employment.\nseasonal:  Seasonal jobs are limited to a certain time period, leaving people in those industries without employment after the season ends (e.g. tourism, construction).\n\n\nMid- and long-term\ncyclical:  the number of unemployed workers varies during cycles of economic ups and downs. Business cycles on average last 5-6 years and typically affect the whole economy.\nstructural:  caused by fundamental change in the economy such as evolving technology. While jobs are available, people who could fill those roles either don’t have the right skills or aren’t in the right location."
+  },
+  {
+    "objectID": "slides/06_labour/index.html#policies-against-unemployment",
+    "href": "slides/06_labour/index.html#policies-against-unemployment",
+    "title": "    Economic Policy Visualization",
+    "section": "Policies against unemployment",
+    "text": "Policies against unemployment\n\n\n\nActive labour market policy (ALMP)\n\nAim: integration of the unemployed into the labour market (Card et al., 2017)\nExamples: coaching, training, subsidies for secondary labour market, assistance for personal issues (homelessness, addiction)\n\nPassive labour market policy (PLMP)\n\nAim: social security for the unemployed\nExamples: unemployment benefits, income support, etc.\n\n\n\n\n\n\nActivating policies\n\nAim: ALMP paid from funds for PLMP\nExamples: part-time work for the elderly, training allowances\n\nJob guarantee\n\nAim: Public sector as amployer of the last resort\nExamples: India (Ravi/Engler, 2015), Marienthal in Austria (Kasy/Lehner, 2022)"
+  },
+  {
+    "objectID": "slides/06_labour/index.html#the-measurement-of-unemployment",
+    "href": "slides/06_labour/index.html#the-measurement-of-unemployment",
+    "title": "    Economic Policy Visualization",
+    "section": "The measurement of unemployment",
+    "text": "The measurement of unemployment\n\nInternational definition (ILO/Eurostat)\n\nData: Labour Force Survey (LFS) - 23,000 household per quarter in 🇦🇹\nUnemployed: if not worked at least 1 hour in the reference week\nRate: \\[\\frac{\\texttt{unemployed (15-74 years old)}}{\\texttt{labour force (employed + unemployed, 15-74 years old)}}\\]\n\nNational definition\n\nData: Public Employment Service (AMS)\nUnemployed: officially registered at AMS\nRate: \\[\\frac{\\texttt{registered unemployed}}{\\texttt{labour force (employed + unemployed)}}\\]"
+  },
+  {
+    "objectID": "slides/06_labour/index.html#unemployment-rates-across-europe",
+    "href": "slides/06_labour/index.html#unemployment-rates-across-europe",
+    "title": "    Economic Policy Visualization",
+    "section": "Unemployment rates across Europe",
+    "text": "Unemployment rates across Europe"
+  },
+  {
+    "objectID": "slides/06_labour/index.html#evolution-of-work-time",
+    "href": "slides/06_labour/index.html#evolution-of-work-time",
+    "title": "    Economic Policy Visualization",
+    "section": "Evolution of work time",
+    "text": "Evolution of work time"
+  },
+  {
+    "objectID": "slides/06_labour/index.html#labour-market-participation-of-parents-in-austria",
+    "href": "slides/06_labour/index.html#labour-market-participation-of-parents-in-austria",
+    "title": "    Economic Policy Visualization",
+    "section": "Labour market participation of parents in Austria",
+    "text": "Labour market participation of parents in Austria"
+  },
+  {
+    "objectID": "slides/06_labour/index.html#serif-and-sans-serif-fonts",
+    "href": "slides/06_labour/index.html#serif-and-sans-serif-fonts",
+    "title": "    Economic Policy Visualization",
+    "section": "Serif and sans-serif fonts",
+    "text": "Serif and sans-serif fonts\n\n\n\n\n\n\n\nSource: Datawrapper"
+  },
+  {
+    "objectID": "slides/06_labour/index.html#sans-serif-fonts-are-better-for-reading-charts",
+    "href": "slides/06_labour/index.html#sans-serif-fonts-are-better-for-reading-charts",
+    "title": "    Economic Policy Visualization",
+    "section": "Sans-serif fonts are better for reading charts",
+    "text": "Sans-serif fonts are better for reading charts\n\n\n\n\n\n\n\nSource: Datawrapper"
+  },
+  {
+    "objectID": "slides/06_labour/index.html#use-a-font-with-lining-and-tabular-numbers",
+    "href": "slides/06_labour/index.html#use-a-font-with-lining-and-tabular-numbers",
+    "title": "    Economic Policy Visualization",
+    "section": "Use a font with lining and tabular numbers",
+    "text": "Use a font with lining and tabular numbers\n\n  \n\n\n\nSource: Datawrapper"
+  },
+  {
+    "objectID": "slides/06_labour/index.html#use-bold-fonts-only-for-emphasis",
+    "href": "slides/06_labour/index.html#use-bold-fonts-only-for-emphasis",
+    "title": "    Economic Policy Visualization",
+    "section": "Use bold fonts only for emphasis",
+    "text": "Use bold fonts only for emphasis\n\n\n\n\n\n\n\nSource: Datawrapper"
+  },
+  {
+    "objectID": "slides/06_labour/index.html#but-dont-use-too-thin-font-either",
+    "href": "slides/06_labour/index.html#but-dont-use-too-thin-font-either",
+    "title": "    Economic Policy Visualization",
+    "section": "But don’t use too thin font, either",
+    "text": "But don’t use too thin font, either\n\n\n\n\n\n\n\nSource: Datawrapper"
+  },
+  {
+    "objectID": "slides/06_labour/index.html#choose-an-adequate-size-for-your-annotations",
+    "href": "slides/06_labour/index.html#choose-an-adequate-size-for-your-annotations",
+    "title": "    Economic Policy Visualization",
+    "section": "Choose an adequate size for your annotations",
+    "text": "Choose an adequate size for your annotations\n\n\n\n\n\n\n\nSource: Datawrapper"
+  },
+  {
+    "objectID": "slides/06_labour/index.html#use-uppercase-fonts-wisely",
+    "href": "slides/06_labour/index.html#use-uppercase-fonts-wisely",
+    "title": "    Economic Policy Visualization",
+    "section": "Use uppercase fonts wisely",
+    "text": "Use uppercase fonts wisely\n\n\n\n\n\n\n\nSource: Datawrapper"
+  },
+  {
+    "objectID": "slides/06_labour/index.html#there-are-condensed-and-wide-fonts",
+    "href": "slides/06_labour/index.html#there-are-condensed-and-wide-fonts",
+    "title": "    Economic Policy Visualization",
+    "section": "There are condensed and wide fonts",
+    "text": "There are condensed and wide fonts\n\n\n\n\n\n\n\nSource: Datawrapper"
+  },
+  {
+    "objectID": "slides/06_labour/index.html#dont-be-too-narrow-but-too-wide-neither",
+    "href": "slides/06_labour/index.html#dont-be-too-narrow-but-too-wide-neither",
+    "title": "    Economic Policy Visualization",
+    "section": "Don’t be too narrow, but too wide neither",
+    "text": "Don’t be too narrow, but too wide neither\n\n\n\n\n\n\n\nSource: Datawrapper"
+  },
+  {
+    "objectID": "slides/06_labour/index.html#some-examples",
+    "href": "slides/06_labour/index.html#some-examples",
+    "title": "    Economic Policy Visualization",
+    "section": "Some examples",
+    "text": "Some examples\n\n\n    \n\n    \n\n\n\n\nSource: Datawrapper"
+  },
+  {
     "objectID": "slides/06_labour/index.html#bibliography",
     "href": "slides/06_labour/index.html#bibliography",
     "title": "    Economic Policy Visualization",
     "section": "Bibliography",
-    "text": "Bibliography\n\n\n\n\n\n\nPI 5620 Advanced Economic Policy | Summer term 2023"
+    "text": "Bibliography\n\n\n\n\n\n\nPI 5620 Advanced Economic Policy | Summer term 2023\n\n\n\nCard, David/Kluve, Jochen/Weber, Andrea (2017). What works? A meta analysis of recent active labor market program evaluations. Journal of the European Economic Association, 16(3), 894–931. DOI: 10.1093/jeea/jvx028\n\n\nKalecki, Michal (1943). Political aspects of full employment. The Political Quarterly, 14(4), 322–330. DOI: 10.1111/j.1467-923x.1943.tb01016.x\n\n\nKasy, Maximilian/Lehner, Lukas (2022). Employing the unemployed of marienthal: Evaluation of a guaranteed job program (Working Paper No. 2022-29). INET Oxford.\n\n\nRavi, Shamika/Engler, Monika (2015). Workfare as an effective way to fight poverty: The case of india’s NREGS. World Development, 67, 57–71. DOI: 10.1016/j.worlddev.2014.09.029\n\n\nYoung, Cristobal (2012). Losing a job: The nonpecuniary cost of unemployment in the united states. Social Forces, 91(2), 609–634. DOI: 10.1093/sf/sos071"
   },
   {
     "objectID": "slides/04_growth/index.html#growth-in-economic-policy",
@@ -96,6 +257,13 @@
     "title": "    Economic Policy Visualization",
     "section": "Growth in economic policy",
     "text": "Growth in economic policy\n\nIn recent years economic growth has come to occupy an exalted position in the hierarchy of goals of government policy […] At least in professional economic discussion, we need to give a definite and distinctive meaning to growth as a policy objective. Let it be neither a new synonym for good things in general nor a fashionable way to describe other economic objectives. Let growth be something it is possible to oppose as well as to favor, depending on judgments of social priorities and opportunities.\n\n\nJames Tobin (1964)"
+  },
+  {
+    "objectID": "slides/04_growth/index.html#beyond-gdp-initiatives",
+    "href": "slides/04_growth/index.html#beyond-gdp-initiatives",
+    "title": "    Economic Policy Visualization",
+    "section": "Beyond GDP initiatives",
+    "text": "Beyond GDP initiatives\n\nEven though many aspects of the living standard correlate with GDP, there are also some blind spots (informal sector and non-market production, environmental and health externalities, etc.).\nGDP is not designed as comprehensive measure of prosperity and well-being. “Beyond GDP” initiatives aim to find additional indicators for environmental and social aspects of progress.\nIn 2007, the EU commission organized a conference on “Beyond GDP” which led to a roadmap for the “EU 2020 Strategy”.\nMuch attention for Stiglitz-Sen-Fitoussi Report in 2009 with 12 recommendations how to measure progress.\nUnited Nations formally adopted 17 “Sustainable Development Goals” (or Agenda 2030) in their general assembly in 2015."
   },
   {
     "objectID": "slides/04_growth/index.html#the-growth-imperative",
@@ -112,6 +280,13 @@
     "text": "Rule of 70\nWe often underestimate the power of growth! How long does it take for a variable to double with a specific growth rate? The rule of 70 is a good approximation. Just divide 70 by the annual growth rate:\n\\[ \\Delta = \\frac{70}{g} \\]\nEven with a moderate growth rate of 2%, total GDP doubles in 35 years. An annual growth rate of 7% would mean a doubling of production in only 10 years."
   },
   {
+    "objectID": "slides/04_growth/index.html#measuring-gdp",
+    "href": "slides/04_growth/index.html#measuring-gdp",
+    "title": "    Economic Policy Visualization",
+    "section": "Measuring GDP",
+    "text": "Measuring GDP\n\n1937: Simon Kuznets presented the modern concept of GDP to US Congress following the Great Depression, warning that it is not a measure of national welfare.\n1953: System of National Accounts (SNA) aims to harmonize measurement of GDP across the globe.\n1995: European System of Accounts (ESA) is used by member states of the European Union (latest adaption 2010)\nThree calculations: output, expenditure, and income approaches\nGDP is not entirely exact: some components have to be estimated (e.g. tip, underground economy)\nGDP has methodological gaps and some arbitrary definitions of what is productive, e.g. it includes childcare by nannies but not by parents.\n\n\n\nShort read: Economist: Why GDP is so difficult to measure?"
+  },
+  {
     "objectID": "slides/04_growth/index.html#gdp-growth-across-the-globe",
     "href": "slides/04_growth/index.html#gdp-growth-across-the-globe",
     "title": "    Economic Policy Visualization",
@@ -124,6 +299,20 @@
     "title": "    Economic Policy Visualization",
     "section": "Reeeally long-term growth of GDP",
     "text": "Reeeally long-term growth of GDP\n\n\nLinear scale  \n\nLogarithmic scale  \n\n\n\n\nSource: Our world in data"
+  },
+  {
+    "objectID": "slides/04_growth/index.html#why-do-some-economies-grow-and-others-dont",
+    "href": "slides/04_growth/index.html#why-do-some-economies-grow-and-others-dont",
+    "title": "    Economic Policy Visualization",
+    "section": "Why do some economies grow and others don’t?",
+    "text": "Why do some economies grow and others don’t?\n\n\n\n\n\n\n\nRelated reading: Cuaresma et al. (2020)"
+  },
+  {
+    "objectID": "slides/04_growth/index.html#reasons-for-differences-in-economic-growth",
+    "href": "slides/04_growth/index.html#reasons-for-differences-in-economic-growth",
+    "title": "    Economic Policy Visualization",
+    "section": "Reasons for differences in economic growth",
+    "text": "Reasons for differences in economic growth\nEconomists historically focus on the “factors of production”, like physical capital and human capital to explain differences in growth (Mankiw et al., 1992; Young, 1995).\nThe contemporary literature (Acemoglu et al., 2019; Glaeser et al., 2004) additionally highlights\n\nculture (e.g., the willingness to trust and engage in trade with strangers)\ngeography (e.g., ease of transportation, resources)\ninstitutions (e.g., welfare state regimes, democracy, legal rights)\n(luck)\n\n\n\nShort read: Asterisk Magazine"
   },
   {
     "objectID": "slides/04_growth/index.html#which-chart-describes-best-what-you-want-to-show",
@@ -151,42 +340,42 @@
     "href": "slides/04_growth/index.html#bibliography",
     "title": "    Economic Policy Visualization",
     "section": "Bibliography",
-    "text": "Bibliography\n\n\n\n\n\n\nPI 5620 Advanced Economic Policy | Summer term 2023\n\n\n\nTobin, James (1964). Economic growth as an objective of government policy. American Economic Review, 54(3), 1–20."
+    "text": "Bibliography\n\n\n\n\n\n\nPI 5620 Advanced Economic Policy | Summer term 2023\n\n\n\nAcemoglu, Daron/Naidu, Suresh/Restrepo, Pascual/Robinson, James A. (2019). Democracy does cause growth. Journal of Political Economy, 127(1), 47–100. DOI: 10.1086/700936\n\n\nCuaresma, Jesús Crespo/Danylo, Olha/Fritz, Steffen/Hofer, Martin/Kharas, Homi/Bayas, Juan Carlos Laso (2020). What do we know about poverty in north korea? Palgrave Communications, 6(40). DOI: 10.1057/s41599-020-0417-4\n\n\nGlaeser, Edward L./Porta, Rafael La/Lopez-de-Silanes, Florencio/Shleifer, Andrei (2004). Do institutions cause growth? Journal of Economic Growth, 9(3), 271–303. DOI: 10.1023/b:joeg.0000038933.16398.ed\n\n\nMankiw, N. G./Romer, D./Weil, D. N. (1992). A contribution to the empirics of economic growth. The Quarterly Journal of Economics, 107(2), 407–437. DOI: 10.2307/2118477\n\n\nTobin, James (1964). Economic growth as an objective of government policy. American Economic Review, 54(3), 1–20.\n\n\nYoung, A. (1995). The tyranny of numbers: Confronting the statistical realities of the east asian growth experience. The Quarterly Journal of Economics, 110(3), 641–680. DOI: 10.2307/2946695"
   },
   {
-    "objectID": "slides/03_visualization/index.html#john-snow-and-the-broad-street-pump",
-    "href": "slides/03_visualization/index.html#john-snow-and-the-broad-street-pump",
+    "objectID": "slides/03_visualization/index.html#william-playfair-1759-1823",
+    "href": "slides/03_visualization/index.html#william-playfair-1759-1823",
     "title": "    Economic Policy Visualization",
-    "section": "John Snow and the Broad Street Pump",
-    "text": "John Snow and the Broad Street Pump"
+    "section": "William Playfair (1759-1823)",
+    "text": "William Playfair (1759-1823)\n\n\n\n\n\n\n\n[created: 1786]"
   },
   {
-    "objectID": "slides/03_visualization/index.html#w.e.b.-du-bois",
-    "href": "slides/03_visualization/index.html#w.e.b.-du-bois",
+    "objectID": "slides/03_visualization/index.html#john-snow-1813-1858",
+    "href": "slides/03_visualization/index.html#john-snow-1813-1858",
     "title": "    Economic Policy Visualization",
-    "section": "W.E.B. Du Bois",
-    "text": "W.E.B. Du Bois"
+    "section": "John Snow (1813-1858)",
+    "text": "John Snow (1813-1858)\n\n\n\n\n\n\n\n\n\n[created: 1854]"
   },
   {
-    "objectID": "slides/03_visualization/index.html#otto-neurath",
-    "href": "slides/03_visualization/index.html#otto-neurath",
+    "objectID": "slides/03_visualization/index.html#charles-joseph-minard-1781-1870",
+    "href": "slides/03_visualization/index.html#charles-joseph-minard-1781-1870",
     "title": "    Economic Policy Visualization",
-    "section": "Otto Neurath",
-    "text": "Otto Neurath"
+    "section": "Charles Joseph Minard (1781-1870)",
+    "text": "Charles Joseph Minard (1781-1870)\n\n\n\n\n\n\n\n[created: 1869]"
   },
   {
-    "objectID": "slides/03_visualization/index.html#charles-joseph-minard",
-    "href": "slides/03_visualization/index.html#charles-joseph-minard",
+    "objectID": "slides/03_visualization/index.html#w.e.b.-du-bois-1868-1963",
+    "href": "slides/03_visualization/index.html#w.e.b.-du-bois-1868-1963",
     "title": "    Economic Policy Visualization",
-    "section": "Charles Joseph Minard",
-    "text": "Charles Joseph Minard"
+    "section": "W.E.B. Du Bois (1868-1963)",
+    "text": "W.E.B. Du Bois (1868-1963)\n\n\n\n\n\n\n\n\n\n[created: 1890]"
   },
   {
-    "objectID": "slides/03_visualization/index.html#william-playfair",
-    "href": "slides/03_visualization/index.html#william-playfair",
+    "objectID": "slides/03_visualization/index.html#otto-neurath-1882-1945",
+    "href": "slides/03_visualization/index.html#otto-neurath-1882-1945",
     "title": "    Economic Policy Visualization",
-    "section": "William Playfair",
-    "text": "William Playfair"
+    "section": "Otto Neurath (1882-1945)",
+    "text": "Otto Neurath (1882-1945)\n\n\n\n\n\n\n\n[created: 1943]"
   },
   {
     "objectID": "slides/03_visualization/index.html#choose-the-adequate-type-of-graph",
@@ -271,6 +460,34 @@
     "title": "    Economic Policy Visualization",
     "section": "Best practice",
     "text": "Best practice\n\n\n\n\n\n\n\n\n\nSource: Schwabish (2014)"
+  },
+  {
+    "objectID": "slides/03_visualization/index.html#deceptive-graphs",
+    "href": "slides/03_visualization/index.html#deceptive-graphs",
+    "title": "    Economic Policy Visualization",
+    "section": "Deceptive graphs",
+    "text": "Deceptive graphs\n\n\n\n\n\n\n\n\n\nQuelle: Lauer/OBrien (2020)"
+  },
+  {
+    "objectID": "slides/03_visualization/index.html#deceptive-graphs-1",
+    "href": "slides/03_visualization/index.html#deceptive-graphs-1",
+    "title": "    Economic Policy Visualization",
+    "section": "Deceptive graphs",
+    "text": "Deceptive graphs\n\n\n\n\n\n\n\n\n\nQuelle: Lauer/OBrien (2020)"
+  },
+  {
+    "objectID": "slides/03_visualization/index.html#misleading-titles",
+    "href": "slides/03_visualization/index.html#misleading-titles",
+    "title": "    Economic Policy Visualization",
+    "section": "Misleading titles",
+    "text": "Misleading titles\n\n\n\nQuelle: Lauer/OBrien (2020)"
+  },
+  {
+    "objectID": "slides/03_visualization/index.html#deceptive-graphs-meet-their-goal",
+    "href": "slides/03_visualization/index.html#deceptive-graphs-meet-their-goal",
+    "title": "    Economic Policy Visualization",
+    "section": "Deceptive graphs meet their goal",
+    "text": "Deceptive graphs meet their goal\n\n\n\nQuelle: Lauer/OBrien (2020)"
   },
   {
     "objectID": "slides/03_visualization/index.html#what-are-the-gestalt-principles",
@@ -361,7 +578,7 @@
     "href": "slides/03_visualization/index.html#calculate-median-and-standard-deviation",
     "title": "    Economic Policy Visualization",
     "section": "Calculate median and standard deviation",
-    "text": "Calculate median and standard deviation\n\ndata_summary <- data |>\n  group_by(species) |>\n  summarise(across(c(bill_length_mm, bill_depth_mm),\n  list(median = ~median(., na.rm = TRUE), \n       sd = ~sd(., na.rm = TRUE))))\n\ndata_summary\n\n\n\n# A tibble: 3 × 5\n  species   bill_length_mm_median bill_length_mm_sd bill_depth_mm_median bill_…¹\n  <fct>                     <dbl>             <dbl>                <dbl>   <dbl>\n1 Adelie                     38.8              2.66                 18.4   1.22 \n2 Chinstrap                  49.6              3.34                 18.4   1.14 \n3 Gentoo                     47.3              3.08                 15     0.981\n# … with abbreviated variable name ¹​bill_depth_mm_sd"
+    "text": "Calculate median and standard deviation\n\ndata_summary <- data |>\n  group_by(species) |>\n  summarise(across(c(bill_length_mm, bill_depth_mm),\n  list(median = ~median(., na.rm = TRUE), \n       sd = ~sd(., na.rm = TRUE))))\n\ndata_summary\n\n\n\n# A tibble: 3 × 5\n  species   bill_length_mm_median bill_length_mm_sd bill_depth_mm_median\n  <fct>                     <dbl>             <dbl>                <dbl>\n1 Adelie                     38.8              2.66                 18.4\n2 Chinstrap                  49.6              3.34                 18.4\n3 Gentoo                     47.3              3.08                 15  \n# ℹ 1 more variable: bill_depth_mm_sd <dbl>"
   },
   {
     "objectID": "slides/03_visualization/index.html#median",
@@ -382,7 +599,7 @@
     "href": "slides/03_visualization/index.html#bibliography",
     "title": "    Economic Policy Visualization",
     "section": "Bibliography",
-    "text": "Bibliography\n\n\n\n\n\n\nPI 5620 Advanced Economic Policy | Summer term 2023\n\n\n\nDougherty, Jack/Ilyankou, Ilya (2021). Hands-on data visualization: Interactive storytelling from spreadsheets to code. O’Reilly Media.\n\n\nHealy, Kieran (2018). Data visualization: A practical introduction. Princeton University Press.\n\n\nScherer, Cédric (2022). Graphic design with ggplot2. https://rstudio-conf-2022.github.io/ggplot2-graphic-design/\n\n\nSchwabish, Jonathan A. (2014). An economist’s guide to visualizing data. Journal of Economic Perspectives, 28(1), 209–234. DOI: 10.1257/jep.28.1.209"
+    "text": "Bibliography\n\n\n\n\n\n\nPI 5620 Advanced Economic Policy | Summer term 2023\n\n\n\nDougherty, Jack/Ilyankou, Ilya (2021). Hands-on data visualization: Interactive storytelling from spreadsheets to code. O’Reilly Media.\n\n\nHealy, Kieran (2018). Data visualization: A practical introduction. Princeton University Press.\n\n\nLauer, Claire/OBrien, Shaun (2020). How people are influenced by deceptive tactics in everyday charts and graphs. IEEE Transactions on Professional Communication, 63(4), 327–340. DOI: 10.1109/tpc.2020.3032053\n\n\nScherer, Cédric (2022). Graphic design with ggplot2. https://rstudio-conf-2022.github.io/ggplot2-graphic-design/\n\n\nSchwabish, Jonathan A. (2014). An economist’s guide to visualizing data. Journal of Economic Perspectives, 28(1), 209–234. DOI: 10.1257/jep.28.1.209"
   },
   {
     "objectID": "slides/10_climate/index.html#bibliography",
@@ -417,7 +634,7 @@
     "href": "slides/01_introduction/index.html#schedule",
     "title": "    Economic Policy Visualization",
     "section": "Schedule",
-    "text": "Schedule\n\n\n\n\n \n  \n    Date \n    Time \n    Room \n    Content \n    Assignment \n  \n \n\n  \n    Mar 06, 2023 \n    10:00-12:00 \n    TC.4.15 \n    Introduction \n     \n  \n  \n    Mar 13, 2023 \n    10:00-12:00 \n    TC.4.15 \n    Data \n     \n  \n  \n    Mar 20, 2023 \n    10:00-12:00 \n    TC.4.15 \n    Visualization \n     \n  \n  \n    Mar 27, 2023 \n    10:00-12:00 \n    D4.0.022 \n    Growth · Geometries \n     \n  \n  \n    Apr 17, 2023 \n    10:00-12:00 \n    TC.3.07 \n    Inflation · Colors \n     \n  \n  \n    Apr 24, 2023 \n    10:30-12:30 \n    TC.3.06 \n    Labour · Labels \n     \n  \n  \n    May 08, 2023 \n    10:00-12:00 \n    TC.3.11 \n    Income · Themes \n     \n  \n  \n    May 15, 2023 \n    10:00-12:00 \n    D4.0.127 \n    Wealth · Scales \n     \n  \n  \n    Jun 05, 2023 \n    10:00-12:00 \n    D4.0.127 \n    Mobility · Waffles \n     \n  \n  \n    Jun 12, 2023 \n    10:00-12:00 \n    TC.3.07 \n    Climate · Maps \n     \n  \n  \n    Jun 19, 2023 \n    10:00-12:00 \n    D4.0.127 \n    Student presentations \n     \n  \n  \n    Jun 26, 2023 \n    10:00-12:00 \n    D4.0.127 \n    Student presentations"
+    "text": "Schedule\n\n\n\n\n \n  \n    Date \n    Time \n    Room \n    Content \n    Data \n    Assignment \n  \n \n\n  \n    Mar 06, 2023 \n    10:00-12:00 \n    TC.4.15 \n    Introduction \n    NA \n     \n  \n  \n    Mar 13, 2023 \n    10:00-12:00 \n    TC.4.15 \n    Data \n    02_data.RData \n     \n  \n  \n    Mar 20, 2023 \n    10:00-12:00 \n    TC.4.15 \n    Visualization \n    03_visualization.RData \n     \n  \n  \n    Mar 27, 2023 \n    10:00-12:00 \n    D4.0.022 \n    Growth · Geometries \n    04_growth.RData \n     \n  \n  \n    Apr 17, 2023 \n    10:00-12:00 \n    TC.3.07 \n    Inflation · Colors \n    05_inflation.RData \n     \n  \n  \n    Apr 24, 2023 \n    10:00-12:00 \n    TC.3.06 \n    Labour · Labels \n    06_labour.RData \n     \n  \n  \n    May 08, 2023 \n    10:00-12:00 \n    TC.3.11 \n    Income · Scales \n    07_income.RData \n     \n  \n  \n    May 15, 2023 \n    10:00-12:00 \n    D4.0.127 \n    Wealth · Themes \n    NA \n     \n  \n  \n    Jun 05, 2023 \n    10:00-12:00 \n    D4.0.127 \n    Mobility · Maps \n    NA \n     \n  \n  \n    Jun 12, 2023 \n    10:00-12:00 \n    TC.3.07 \n    Climate · Facets \n    NA \n     \n  \n  \n    Jun 19, 2023 \n    10:00-12:00 \n    D4.0.127 \n    Student presentations \n    NA \n     \n  \n  \n    Jun 26, 2023 \n    10:00-12:00 \n    D4.0.127 \n    Student presentations \n    NA"
   },
   {
     "objectID": "slides/01_introduction/index.html#assignments",
@@ -455,11 +672,116 @@
     "text": "Recommended Literature\n\n\n\n\n\n\n\n\n\nJonathan Schwabish  Better Data Visualizations: A Guide for Scholars, Researchers, and Wonks  Columbia University Press  ISBN-13: 9780231193115\n\n\n\nDavid Spiegelhalter  The Art of Statistics: Learning from Data  Penguin Books UK  ISBN-13: 9780241258767\n\n\n\n\n\n\n\nPI 5620 Advanced Economic Policy | Summer term 2023"
   },
   {
+    "objectID": "slides/07_income/index.html#income-inequality-in-economic-policy",
+    "href": "slides/07_income/index.html#income-inequality-in-economic-policy",
+    "title": "    Economic Policy Visualization",
+    "section": "Income inequality in economic policy",
+    "text": "Income inequality in economic policy\n\n\n\n\n\nUN SDG 10.1: “By 2030, progressively achieve and sustain income growth of the bottom 40 per cent of the population at a rate higher than the national average.”\nEconomists focus on the economic origins and implications of inequality rather than the social and ecological context.\nIn neoclassical economics, income inequality arises from differences in marginal productivity and might stimulate economic growth due to differential savings rates, investment and incentives for effort (Josifidis/Supic, 2018).\nIn (Post-)Keynesian economics, income inequality is the result of institutional settings, power relations, etc. Inequality harms economic growth in most of these models due to detrimental effects on aggregate demand (Kurz/Salvadori, 2010)."
+  },
+  {
+    "objectID": "slides/07_income/index.html#functional-distribution",
+    "href": "slides/07_income/index.html#functional-distribution",
+    "title": "    Economic Policy Visualization",
+    "section": "Functional distribution",
+    "text": "Functional distribution\nIncome accounts in the System of National Accounts show primary (from production) and secondary (from redistribution) income flows. It is also the base for functional distribution:\n\n\nGross domestic product (GDP) at market prices  \\(+\\) Primary incomes receivable from the rest of world  \\(-\\) Primary incomes payable to the rest of world\n\n\\(=\\) Gross national income (GNI) at market prices  \\(-\\) Consumption of fixed capital\n\n\\(=\\) Net national income at market prices  \\(-\\) Taxes on products  \\(+\\) Subsidies on products\n\n\\(=\\) Net national income at factor cost\n\n\n\n ← Rest of World ← Depreciation ← Government ← Production factors"
+  },
+  {
+    "objectID": "slides/07_income/index.html#income-accounts-for-austria-2021",
+    "href": "slides/07_income/index.html#income-accounts-for-austria-2021",
+    "title": "    Economic Policy Visualization",
+    "section": "Income accounts for Austria, 2021",
+    "text": "Income accounts for Austria, 2021\n\n\n\n\n\n\nWage share = Compensation of Employees / Net national income at factor cost"
+  },
+  {
+    "objectID": "slides/07_income/index.html#the-wage-share-in-austria",
+    "href": "slides/07_income/index.html#the-wage-share-in-austria",
+    "title": "    Economic Policy Visualization",
+    "section": "The wage share in Austria",
+    "text": "The wage share in Austria"
+  },
+  {
+    "objectID": "slides/07_income/index.html#functional-income-distribution-in-continental-europe",
+    "href": "slides/07_income/index.html#functional-income-distribution-in-continental-europe",
+    "title": "    Economic Policy Visualization",
+    "section": "Functional income distribution in Continental Europe",
+    "text": "Functional income distribution in Continental Europe"
+  },
+  {
+    "objectID": "slides/07_income/index.html#functional-distribution-in-anglosaxon-countries",
+    "href": "slides/07_income/index.html#functional-distribution-in-anglosaxon-countries",
+    "title": "    Economic Policy Visualization",
+    "section": "Functional distribution in Anglosaxon countries",
+    "text": "Functional distribution in Anglosaxon countries"
+  },
+  {
+    "objectID": "slides/07_income/index.html#factors-influencing-the-wage-share",
+    "href": "slides/07_income/index.html#factors-influencing-the-wage-share",
+    "title": "    Economic Policy Visualization",
+    "section": "Factors influencing the wage share",
+    "text": "Factors influencing the wage share\n\nLabour market\n\nOrganization (e.g. collective bargaining, workers councils)\nLeverage (e.g. unemployment rate, strength of unions)\n\nProduct markets\n\nGlobalization\nTechnological change\n\nPolitics\n\nInfluence of capital income earners\n\n\n\n\n Reading recommendation: Stockhammer (2015)"
+  },
+  {
+    "objectID": "slides/07_income/index.html#historical-development-of-global-personal-inequality-3-views",
+    "href": "slides/07_income/index.html#historical-development-of-global-personal-inequality-3-views",
+    "title": "    Economic Policy Visualization",
+    "section": "Historical development of global personal inequality: 3 views",
+    "text": "Historical development of global personal inequality: 3 views\n\n\n\n\n\nSimon Kuznets\n\n\n\n\n\n\n\nThomas Piketty\n\n\n\n\n\n\n\n\n\nBranko Milanovic"
+  },
+  {
+    "objectID": "slides/07_income/index.html#global-inequality-1820-2020",
+    "href": "slides/07_income/index.html#global-inequality-1820-2020",
+    "title": "    Economic Policy Visualization",
+    "section": "Global inequality 1820-2020",
+    "text": "Global inequality 1820-2020\n\n\n\n\n\n\n\nSource: Chancel et al. (2022)"
+  },
+  {
+    "objectID": "slides/07_income/index.html#decomposition-of-global-inequality",
+    "href": "slides/07_income/index.html#decomposition-of-global-inequality",
+    "title": "    Economic Policy Visualization",
+    "section": "Decomposition of global inequality",
+    "text": "Decomposition of global inequality\n\n\n\n\n\n\n\nSource: Chancel et al. (2022)"
+  },
+  {
+    "objectID": "slides/07_income/index.html#disposable-net-income-in-europe",
+    "href": "slides/07_income/index.html#disposable-net-income-in-europe",
+    "title": "    Economic Policy Visualization",
+    "section": "Disposable net income in Europe",
+    "text": "Disposable net income in Europe"
+  },
+  {
+    "objectID": "slides/07_income/index.html#axes",
+    "href": "slides/07_income/index.html#axes",
+    "title": "    Economic Policy Visualization",
+    "section": "Axes",
+    "text": "Axes\nContinuous\n\nggplot(aes(x = life_expectancy, y = poverty_rate)) +\n  geom_point() +\n  scale_x_continuous(limits = c(40, 100),\n                     breaks = seq(40, 100, 20),\n                     labels = scales::number_format(suffix = \"years\")) +\n  scale_y_continuous(labels = scales::percent)\n\nDates\n\nggplot(aes(x = year, y = poverty_rate)) +\n  geom_line() +\n  scale_x_date(limits = c(as.Date(\"2020-01-01\"), as.Date(\"2024-01-01\")),\n                breaks = date_breaks = \"2 years\",\n                labels = date_labels = \"%Y\")\n\nOthers\nscale_x_log10(), scale_x_reverse(), scale_x_sqrt(), …"
+  },
+  {
+    "objectID": "slides/07_income/index.html#colors",
+    "href": "slides/07_income/index.html#colors",
+    "title": "    Economic Policy Visualization",
+    "section": "Colors",
+    "text": "Colors\nManual\n\nggplot(aes(x = year, y = poverty_rate, color = country)) +\n  geom_line() +\n  scale_color_manual(values = c(\"red\", \"blue\", \"green\"))\n\nGradient\n\nggplot(aes(x = gdp, y = life_expectancy, color = poverty_rate)) +\n  geom_point() +\n  scale_color_gradient(low = \"green\", high = \"red\", na.value = \"gray80\")\n\nBrewer\n\nggplot(aes(x = year, y = poverty_rate, fill = country)) +\n  geom_area() +\n  scale_fill_brewer(palette = \"Set1\")\n\nOthers\nscale_color_binned(), scale_color_distiller(), scale_color_grey(), …"
+  },
+  {
+    "objectID": "slides/07_income/index.html#shape-size-and-alpha",
+    "href": "slides/07_income/index.html#shape-size-and-alpha",
+    "title": "    Economic Policy Visualization",
+    "section": "Shape, size and alpha",
+    "text": "Shape, size and alpha\n\ntribble(~x, ~y, ~significance, ~gdp, ~continent,\n        0.5, 0.5, \"yes\", 140, \"Asia\",\n        1.0, 0.5, \"yes\", 100, \"Africa\",\n        1.5, 0.5, \"no\",  250, \"Europe\") |> \n  ggplot(aes(x = x, y = y)) +\n  geom_point(aes(alpha = significance, size = gdp, shape = continent)) +\n  scale_alpha_discrete(range = c(0.5, 1), guide = guide_none()) +\n  scale_size_continuous(range = c(5, 12), guide = guide_none()) +\n  scale_shape_manual(values = c(17, 19, 15),\n                     guide = guide_legend(title = \"Continent\", \n                                          override.aes = list(size = 5))) +\n  theme_minimal()"
+  },
+  {
+    "objectID": "slides/07_income/index.html#guides",
+    "href": "slides/07_income/index.html#guides",
+    "title": "    Economic Policy Visualization",
+    "section": "Guides",
+    "text": "Guides\n\nggplot(aes(x = life_expectancy, y = poverty_rate, color = continent)) +\n  geom_point() +\n  scale_color_viridis_d(guide = guide_legend(title.position = \"top\",\n                                             title.theme = element_text(size = 2),  \n                                             title.hjust = 0, title.vjust = 0.5,\n                                             label.position = \"bottom\",\n                                             label.hjust = 0, label.vjust = 0.5,\n                                             keywidth = 2, keyheight = 2,\n                                             direction = \"horizontal\",\n                                             override.aes = list(size = 4),\n                                             nrow = 1, ncol = 4,\n                                             byrow = FALSE, reverse = FALSE, ...))\n\n\n\n\n\n\n\n\n\n\nScale type\nDefault guide type\n\n\n\n\ncontinuous scales for colour/fill aesthetics\ncolourbar\n\n\nbinned scales for colour/fill aesthetics\ncoloursteps\n\n\nposition scales (continuous, binned and discrete)\naxis\n\n\ndiscrete scales (except position scales)\nlegend\n\n\nbinned scales (except position/colour/fill scales)\nbins"
+  },
+  {
     "objectID": "slides/07_income/index.html#bibliography",
     "href": "slides/07_income/index.html#bibliography",
     "title": "    Economic Policy Visualization",
     "section": "Bibliography",
-    "text": "Bibliography\n\n\n\n\n\n\nPI 5620 Advanced Economic Policy | Summer term 2023"
+    "text": "Bibliography\n\n\n\n\n\n\nPI 5620 Advanced Economic Policy | Summer term 2023\n\n\n\nChancel, Lucas/Piketty, Thomas/Saez, Emmanuel/Zucman, Gabriel (2022). World inequality report 2022. World Inequality Lab.\n\n\nJosifidis, Kosta/Supic, Novica (2018). Institutionalist versus neoclassical view on income distribution and economic progress: The OECD panel evidence. Panoeconomicus, 65(3), 319–337. DOI: 10.2298/pan1803319j\n\n\nKurz, Heinz D./Salvadori, Neri (2010). The post-keynesian theories of growth and distribution: A survey. In Setterfield, Mark (Ed.), Handbook of alternative theories of economic growth. Edward Elgar Publishing. DOI: 10.4337/9781849805582.00010\n\n\nStockhammer, Engelbert (2015). Determinants of the wage share: A panel analysis of advanced and developing economies. British Journal of Industrial Relations, 55(1), 3–33. DOI: 10.1111/bjir.12165"
   },
   {
     "objectID": "slides/02_data/index.html#the-era-of-evidence-in-economics",
@@ -630,94 +952,17 @@
     "text": "Lecturer\n\n   Dr. Matthias Schnetzer\n   https://mschnetzer.github.io\n   mschnetz@wu.ac.at\n   matschnetzer\n\n\n\nDates\n\n   Mar 6, 2023 – Jun 26, 2023\n   Mondays\n   10:00–12:00\n   TC.4.15\n\n\n\nHighlights\n\n   max. 30 students\n   Engage in policy discussion\n    Improve your R coding skills\n   Create an own data visualization\n\n\n\n\nCourse design\nThe lecturer introduces into various fields of economic policy and provides examples of data visualizations that serve as starting point for discussions. As the graphic illustration of statistical data gains in importance in both the academic and the public discourse, students will learn best practices and gain insights into the visualization of data. Another take-away of the course is to strengthen the knowledge about the power and limitations of the underlying data. A part of each session is dedicated to the work with data. The lecturer provides R-code to produce figures in class. Studens are expected to recreate three charts at home. The main assignment is the production of a comprehensive data visualization on a selected topic of economic policy. Studens will present their chart in class and draft a report with a detailed description of the data, the code and the final visualization in RMarkdown.\nThe course offers a lot of room for discussion in order to permit students to assess various arguments and perspectives, form their own opinion, and argue in a group setting. The teaching is designed to encourage students to actively participate in the debates, raise questions, and gain experience in visualizing data for academic publications or the general debate.\n\n\nRecommended literature\n\n\n\n\n\n\n\n\n\nJonathan Schwabish  Better Data Visualizations: A Guide for Scholars, Researchers, and Wonks  Columbia University Press  ISBN-13: 9780231193115  Link\n\n\n\nDavid Spiegelhalter  The Art of Statistics: Learning from Data  Penguin Books UK  ISBN-13: 9780241258767  Link\n\n\n\n\n\n\nLearning outcomes\nAfter completing this course, students will:\n\nknow key figures in various fields of economic policy\nbe aware of the potentials and limitations of available data for specific policy discussions\nshow improved programming skills in R and the ability to create a RMarkdown report\nhave basic knowledge of important principles of data visualization\nbe able to create simple charts to enrich their academic articles\n\n\n\nGrading\n\n\n\n\n\n\n\n\n\nAssignments: 30% (0-10 points for each visualization)\n\n\n\nChart presentation: 30% (0-20 points for the quality of the presentation, 0-10 for the preliminary chart)\n\n\n\nWritten report: 40% (0-40 points for the report and the final chart)\n\n\n\n\n   100-90: Excellent      89-80: Good      79-65: Satisfactory      64-50: Sufficient\nAll single tasks have to be passed (50% threshold each)."
   },
   {
+    "objectID": "data/code/07_income.html",
+    "href": "data/code/07_income.html",
+    "title": "The functional distribution of income",
+    "section": "",
+    "text": "Wage share in Austria\nThe wage share in Austria has been decreasing since the 1970s. In the wake of the global financial crisis that erupted in 2008, the wage share increased due to a sharp decline in profits.\n\n\n\n\n\nWe can improve the figure by editing the scales of the axes. We add percentage symbols to the y-axis and we remove the white space on the x-axis.\n\n\n\n\n\n\n\nWage shares in selected international countries\nWe can plot the wage shares for selected countries and emphasize the data for Austria with gghighlight. We can also improve the axis labels with scales.\n\n\n\n\n\n\n\nCode for the figure\nHere is the clean code for the figure on the functional distribution.\n\nwsdata |>\n  ggplot(aes(x = year, y = value, group = country, color = country)) +\n  geom_line(linewidth = 1.4) +\n  gghighlight(country == \"Austria\", \n              unhighlighted_params = list(color = \"gray80\", alpha = 0.5, linewidth = 0.9),\n              line_label_type = \"label_path\", label_key = country, use_group_by = F,\n              label_params = list(size = 3, hjust = 0.94)) +\n  geom_text_repel(data = wsdata |> slice_max(year, n=1, by=country) |> filter(!country == \"Austria\"), \n                  aes(x = year, y = value, label = country),\n                  size = 2.5, color = \"gray70\", hjust = 0, direction = \"y\", nudge_x = 600,\n                  min.segment.length = unit(2, \"pt\"), segment.size = 0.1) +\n  scale_color_manual(name = NULL, values = met.brewer(\"Austria\"),) +\n  scale_x_date(breaks= seq(min(wsdata$year),max(wsdata$year), by = \"10 years\"), date_labels = \"%Y\",\n               limits = c(as.Date(\"1960-01-01\"), as.Date(\"2026-01-01\"))) +\n  scale_y_continuous(limits = c(55,80), labels = scales::percent_format(scale = 1)) +\n  labs(y = NULL, x = NULL, caption = \"Data: Ameco.\",\n       title = \"Wage share in selected countries\", subtitle = \"Wage share in % of GDP at factor cost\") +\n  theme_minimal() + \n  theme(panel.grid.minor = element_blank(),\n        plot.title = element_text(size = 14),\n        plot.caption = element_text(size = 10, margin = margin(t = 1, unit = \"lines\")),\n        axis.title = element_text(size = 12),\n        axis.text = element_text(size = 10))"
+  },
+  {
     "objectID": "schedule.html",
     "href": "schedule.html",
     "title": "Schedule",
     "section": "",
-    "text": "In this table you find the dates and contents of all classes.\n\n\n\n\n \n  \n    Date \n    Time \n    Room \n    Content \n    Slides \n    Code \n    Assignment \n  \n \n\n  \n    Mar 06, 2023 \n    10:00-12:00 \n    TC.4.15 \n    Introduction \n    \n \n     \n     \n  \n  \n    Mar 13, 2023 \n    10:00-12:00 \n    TC.4.15 \n    Data \n    \n \n    \n \n     \n  \n  \n    Mar 20, 2023 \n    10:00-12:00 \n    TC.4.15 \n    Visualization \n    \n \n    \n \n     \n  \n  \n    Mar 27, 2023 \n    10:00-12:00 \n    D4.0.022 \n    Growth · Geometries \n    \n \n    \n \n     \n  \n  \n    Apr 17, 2023 \n    10:00-12:00 \n    TC.3.07 \n    Inflation · Colors \n    \n \n    \n \n     \n  \n  \n    Apr 24, 2023 \n    10:30-12:30 \n    TC.3.06 \n    Labour · Labels \n     \n     \n     \n  \n  \n    May 08, 2023 \n    10:00-12:00 \n    TC.3.11 \n    Income · Themes \n     \n     \n     \n  \n  \n    May 15, 2023 \n    10:00-12:00 \n    D4.0.127 \n    Wealth · Scales \n     \n     \n     \n  \n  \n    Jun 05, 2023 \n    10:00-12:00 \n    D4.0.127 \n    Mobility · Waffles \n     \n     \n     \n  \n  \n    Jun 12, 2023 \n    10:00-12:00 \n    TC.3.07 \n    Climate · Maps \n     \n     \n     \n  \n  \n    Jun 19, 2023 \n    10:00-12:00 \n    D4.0.127 \n    Student presentations \n     \n     \n     \n  \n  \n    Jun 26, 2023 \n    10:00-12:00 \n    D4.0.127 \n    Student presentations \n     \n     \n     \n  \n\n\n\n\n\n\nAssignments\nAssignment [1] provides the setup of the R infrastructure that is required in this course. There are no points for this assignment. Assignments [2] to [4] are recreations of examplary figures provided below. These examples are related to figures that are discussed in class. Students should then try to reproduce the plots at home and improve their individual coding skills. The raw data for the figures are available as *.csv files below.\n\nHomework 1\n\n\n\n\n\n\n\n\n\n\n\nInstall the latest R version (v4.2.2)\nInstall the latest version of RStudio Desktop\nOpen RStudio, copy the following code into the console and execute: install.packages(c(\"tidyverse\", \"rmarkdown\", \"scales\", \"lubridate\", \"colorspace\", \"devtools\")); sessionInfo()\nClick on Help > About RStudio\nMake sure that both the R version (Console) and the RStudio version are visible, take a screenshot and upload it to the learning platform before March 13, 2023 at 9 a.m.\n\n\n\n\n\nHomework 2\n\n\n\n\n\n\n\n\n\n\nPlease submit your chart before April 24, 2023 at 9 a.m. The data for this assignment is available here: \n\n\n\n\nHomework 3\n\n\n\n\n\n\n\n\n\n\nPlease submit your chart before May 15, 2023 at 9 a.m. The data for this assignment is available here: \n\n\n\n\nHomework 4\n\n\n\n\n\n\n\n\n\n\nPlease submit your chart before June 12, 2023 at 9 a.m. The data for this assignment is available here:"
-  },
-  {
-    "objectID": "slides/06_labour/index.html#serif-and-sans-serif-fonts",
-    "href": "slides/06_labour/index.html#serif-and-sans-serif-fonts",
-    "title": "    Economic Policy Visualization",
-    "section": "Serif and sans-serif fonts",
-    "text": "Serif and sans-serif fonts\n\n\n\n\n\n\n\nSource: Datawrapper"
-  },
-  {
-    "objectID": "slides/06_labour/index.html#sans-serif-fonts-for-charts-are-better",
-    "href": "slides/06_labour/index.html#sans-serif-fonts-for-charts-are-better",
-    "title": "    Economic Policy Visualization",
-    "section": "Sans-serif fonts for charts are better",
-    "text": "Sans-serif fonts for charts are better\n\n\n\n\n\n\n\nSource: Datawrapper"
-  },
-  {
-    "objectID": "slides/06_labour/index.html#sans-serif-fonts-for-charts-are-better-1",
-    "href": "slides/06_labour/index.html#sans-serif-fonts-for-charts-are-better-1",
-    "title": "    Economic Policy Visualization",
-    "section": "Sans-serif fonts for charts are better",
-    "text": "Sans-serif fonts for charts are better\n\n  \n\n\n\nSource: Datawrapper"
-  },
-  {
-    "objectID": "slides/06_labour/index.html#use-a-font-with-lining-and-tabular-numbers",
-    "href": "slides/06_labour/index.html#use-a-font-with-lining-and-tabular-numbers",
-    "title": "    Economic Policy Visualization",
-    "section": "Use a font with lining and tabular numbers",
-    "text": "Use a font with lining and tabular numbers\n\n  \n\n\n\nSource: Datawrapper"
-  },
-  {
-    "objectID": "slides/06_labour/index.html#use-bold-fonts-only-for-emphasis",
-    "href": "slides/06_labour/index.html#use-bold-fonts-only-for-emphasis",
-    "title": "    Economic Policy Visualization",
-    "section": "Use bold fonts only for emphasis",
-    "text": "Use bold fonts only for emphasis\n\n\n\n\n\n\n\nSource: Datawrapper"
-  },
-  {
-    "objectID": "slides/06_labour/index.html#but-dont-use-too-thin-font-either",
-    "href": "slides/06_labour/index.html#but-dont-use-too-thin-font-either",
-    "title": "    Economic Policy Visualization",
-    "section": "But don’t use too thin font, either",
-    "text": "But don’t use too thin font, either\n\n\n\n\n\n\n\nSource: Datawrapper"
-  },
-  {
-    "objectID": "slides/06_labour/index.html#choose-an-adequate-size-for-your-annotations",
-    "href": "slides/06_labour/index.html#choose-an-adequate-size-for-your-annotations",
-    "title": "    Economic Policy Visualization",
-    "section": "Choose an adequate size for your annotations",
-    "text": "Choose an adequate size for your annotations\n\n\n\n\n\n\n\nSource: Datawrapper"
-  },
-  {
-    "objectID": "slides/06_labour/index.html#use-uppercase-fonts-wisely",
-    "href": "slides/06_labour/index.html#use-uppercase-fonts-wisely",
-    "title": "    Economic Policy Visualization",
-    "section": "Use uppercase fonts wisely",
-    "text": "Use uppercase fonts wisely\n\n\n\n\n\n\n\nSource: Datawrapper"
-  },
-  {
-    "objectID": "slides/06_labour/index.html#there-are-condensed-and-wide-fonts",
-    "href": "slides/06_labour/index.html#there-are-condensed-and-wide-fonts",
-    "title": "    Economic Policy Visualization",
-    "section": "There are condensed and wide fonts",
-    "text": "There are condensed and wide fonts\n\n\n\n\n\n\n\nSource: Datawrapper"
-  },
-  {
-    "objectID": "slides/06_labour/index.html#dont-be-too-narrow-but-neither-too-wide",
-    "href": "slides/06_labour/index.html#dont-be-too-narrow-but-neither-too-wide",
-    "title": "    Economic Policy Visualization",
-    "section": "Don’t be too narrow, but neither too wide",
-    "text": "Don’t be too narrow, but neither too wide\n\n\n\n\n\n\n\nSource: Datawrapper"
-  },
-  {
-    "objectID": "slides/06_labour/index.html#some-examples",
-    "href": "slides/06_labour/index.html#some-examples",
-    "title": "    Economic Policy Visualization",
-    "section": "Some examples",
-    "text": "Some examples\n\n\n    \n\n    \n\n\n\n\nSource: Datawrapper"
-  },
-  {
-    "objectID": "slides/06_labour/index.html#sans-serif-fonts-are-better-for-reading-charts",
-    "href": "slides/06_labour/index.html#sans-serif-fonts-are-better-for-reading-charts",
-    "title": "    Economic Policy Visualization",
-    "section": "Sans-serif fonts are better for reading charts",
-    "text": "Sans-serif fonts are better for reading charts\n\n\n\n\n\n\n\nSource: Datawrapper"
+    "text": "In this table you find the dates and contents of all classes.\n\n\n\n\n \n  \n    Date \n    Time \n    Room \n    Content \n    Slides \n    Code \n    Data \n    Assignment \n  \n \n\n  \n    Mar 06, 2023 \n    10:00-12:00 \n    TC.4.15 \n    Introduction \n    \n \n     \n     \n     \n  \n  \n    Mar 13, 2023 \n    10:00-12:00 \n    TC.4.15 \n    Data \n    \n \n    \n \n    \n \n     \n  \n  \n    Mar 20, 2023 \n    10:00-12:00 \n    TC.4.15 \n    Visualization \n    \n \n    \n \n    \n \n     \n  \n  \n    Mar 27, 2023 \n    10:00-12:00 \n    D4.0.022 \n    Growth · Geometries \n    \n \n    \n \n    \n \n     \n  \n  \n    Apr 17, 2023 \n    10:00-12:00 \n    TC.3.07 \n    Inflation · Colors \n    \n \n    \n \n    \n \n     \n  \n  \n    Apr 24, 2023 \n    10:00-12:00 \n    TC.3.06 \n    Labour · Labels \n    \n \n    \n \n    \n \n     \n  \n  \n    May 08, 2023 \n    10:00-12:00 \n    TC.3.11 \n    Income · Scales \n    \n \n    \n \n    \n \n     \n  \n  \n    May 15, 2023 \n    10:00-12:00 \n    D4.0.127 \n    Wealth · Themes \n     \n     \n     \n     \n  \n  \n    Jun 05, 2023 \n    10:00-12:00 \n    D4.0.127 \n    Mobility · Maps \n     \n     \n     \n     \n  \n  \n    Jun 12, 2023 \n    10:00-12:00 \n    TC.3.07 \n    Climate · Facets \n     \n     \n     \n     \n  \n  \n    Jun 19, 2023 \n    10:00-12:00 \n    D4.0.127 \n    Student presentations \n     \n     \n     \n     \n  \n  \n    Jun 26, 2023 \n    10:00-12:00 \n    D4.0.127 \n    Student presentations \n     \n     \n     \n     \n  \n\n\n\n\n\n\nAssignments\nAssignment [1] provides the setup of the R infrastructure that is required in this course. There are no points for this assignment. Assignments [2] to [4] are recreations of examplary figures provided below. These examples are related to figures that are discussed in class. Students should then try to reproduce the plots at home and improve their individual coding skills. The raw data for the figures are available as *.csv files below.\n\nHomework 1\n\n\n\n\n\n\n\n\n\n\n\nInstall the latest R version (v4.2.2)\nInstall the latest version of RStudio Desktop\nOpen RStudio, copy the following code into the console and execute: install.packages(c(\"tidyverse\", \"rmarkdown\", \"scales\", \"lubridate\", \"colorspace\", \"devtools\")); sessionInfo()\nClick on Help > About RStudio\nMake sure that both the R version (Console) and the RStudio version are visible, take a screenshot and upload it to the learning platform before March 13, 2023 at 9 a.m.\n\n\n\n\n\nHomework 2\n\n\n\n\n\n\n\n\n\n\nPlease submit your chart before April 24, 2023 at 9 a.m. The data for this assignment is available here: \n\n\n\n\nHomework 3\n\n\n\n\n\n\n\n\n\n\nPlease submit your chart before May 15, 2023 at 9 a.m. The data for this assignment is available here: \n\n\n\n\nHomework 4\n\n\n\n\n\n\n\n\n\n\nPlease submit your chart before June 12, 2023 at 9 a.m. The data for this assignment is available here:"
   }
 ]

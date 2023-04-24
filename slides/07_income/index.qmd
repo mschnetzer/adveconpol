@@ -8,8 +8,8 @@ title: |
       </span><br>
     {{< var course.subtitle >}}
 author: "{{< var instructor.name >}}"  
-subtitle: Labour · Labels
-date: April 24, 2023
+subtitle: Income · Scales
+date: May 08, 2023
 date-format: long
 from: markdown+emoji
 bibliography: ../../data/lit/wipol_advanced.bib
@@ -28,25 +28,446 @@ format:
       <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet"/>
     slide-number: true
     show-slide-number: all
+    fig-cap-location: top
     transition: fade
     progress: true
     multiplex: false
-    scrollable: true
+    scrollable: false
     preview-links: false
     hide-inactive-cursor: true
     highlight-style: printing
     pause: true
 ---
 
+## Income inequality in economic policy {.smaller}
 
-# Labels and Fonts
+::: {.columns}
+::: {.column width="20%"}
+![](img/sdg10.png)
+:::
+::: {.column width="80%"}
+- UN SDG 10.1: "By 2030, progressively achieve and sustain income growth of the bottom 40 per cent of the population at a rate higher than the national average."
+- Economists focus on the economic origins and implications of inequality rather than the social and ecological context.
+- In neoclassical economics, income inequality arises from differences in marginal productivity and might [stimulate]{.hl .hl-dred} economic growth due to differential savings rates, investment and incentives for effort [@josifidis:2018].
+- In (Post-)Keynesian economics, income inequality is the result of institutional settings, power relations, etc. Inequality [harms]{.hl .hl-blue} economic growth in most of these models due to detrimental effects on aggregate demand [@kurz:2010].
+:::
+:::
 
-::: {.absolute top="90%" left="30%" width="400px" height="336px"}
-![](../../data/img/avatar_read.png)
+## Functional distribution {.medium}
+
+Income accounts in the System of National Accounts show primary (from production) and secondary (from redistribution) income flows. It is also the base for functional distribution:
+
+::: {.columns .secfont style="font-size:1.5rem;"}
+::: {.column width="60%"}
+Gross domestic product (GDP) at market prices <br>
+$+$ Primary incomes receivable from the rest of world <br>
+$-$ Primary incomes payable to the rest of world
+
+---
+
+$=$ Gross national income (GNI) at market prices <br>
+$-$ Consumption of fixed capital
+
+---
+
+$=$ Net national income **at market prices** <br>
+$-$ Taxes on products <br>
+$+$ Subsidies on products
+
+---
+
+$=$ Net national income **at factor cost**
+:::
+::: {.column width="5%"}
+:::
+::: {.column width="30%"}
+<br><br>
+[&larr; Rest of World]{.hl .hl-dred}<br><br><br>
+[&larr; Depreciation]{.hl .hl-blue}<br><br><br>
+[&larr; Government]{.hl .hl-green}<br><br>
+[&larr; Production factors]{.hl .hl-brown}
+:::
+:::
+
+## Income accounts for Austria, 2021 {.medium}
+
+```{r snaaut}
+#| echo: false
+#| output: asis
+#| fig-width: 10
+#| fig-height: 5
+library(tidyverse)
+library(networkD3)
+library(MetBrewer)
+
+snaut <- tribble(
+  ~source, ~target, ~value,
+  "Gross domestic product  (MP)", "Net national income (FC)", 288.8,
+  "Gross domestic product  (MP)", "Consumption of fixed capital", 79.9,
+  "Gross domestic product  (MP)", "Taxes on products – Subsidies", 37.4,
+  "Gross domestic product  (MP)", "Primary income with rest of world (ROW)", 1.8,
+  "Net national income (FC)", "Compensation of employees", 201.4,
+  "Net national income (FC)", "Net operating surplus + mixed income", 87.5,
+  "Compensation of employees", "Net wages and salaries", 116.8,
+  "Compensation of employees", "Wage tax", 24.1,
+  "Compensation of employees", "Social security cont. Employees", 25.3,
+  "Compensation of employees", "Social security cont. Employers", 35.1
+)
+
+nodes <- data.frame(
+  name=c(snaut$source, snaut$target) |> unique()
+)
+
+nodes$group <- factor(case_when(
+  nodes$name == "Net national income (FC)" ~ "NNI",
+  nodes$name == "Compensation of employees" ~ "CE",
+  TRUE ~ "nocol"))
+
+snaut$group <- "linkcol"
+snaut$IDsource <- match(snaut$source, nodes$name)-1 
+snaut$IDtarget <- match(snaut$target, nodes$name)-1
+
+my_color <- 'd3.scaleOrdinal() .domain(["NNI", "CE", "nocol", "linkcol"]) 
+            .range(["#d03161", "#5d8198", "#d4d4d4", "#e4e4e4"])'
+
+p <- sankeyNetwork(Links = snaut, Nodes = nodes,
+              Source = "IDsource", Target = "IDtarget", 
+              NodeGroup = "group", LinkGroup = "group",
+              Value = "value", NodeID = "name", colourScale = my_color,
+              sinksRight=FALSE, fontSize = 14, fontFamily = 'Roboto Slab', 
+              width = "1000px", height="500px")
+
+htmlwidgets::onRender(p, '
+  function(el) { 
+    var nodeWidth = this.sankey.nodeWidth();
+    var links = this.sankey.links();
+        
+    links.forEach((d, i) => {
+      var startX = d.source.x + nodeWidth;
+      var endX = d.target.x;
+      
+      var startY = d.source.y + d.sy + d.dy / 2;
+      var endY = d.target.y + d.ty + d.dy / 2;
+      
+      d3.select(el).select("svg g")
+        .append("text")
+        .attr("text-anchor", "middle")
+        .attr("alignment-baseline", "middle")
+        .attr("font-size", "13")
+        .attr("font-family", "Roboto Slab")
+        .attr("x", startX + ((endX - startX) / 2))
+        .attr("y", startY + ((endY - startY) / 2))
+        .text(d.value);
+    })
+  }
+')
+```
+
+::: {.fragment}
+::: {style="font-size:1.5rem;text-align:center;font-family:'Roboto Slab"}
+Wage share = [Compensation of Employees]{.hl .hl-blue} / [Net national income at factor cost]{.hl .hl-dred}
+:::
+:::
+
+## The wage share in Austria {.medium}
+
+```{r wsaut}
+#| echo: false
+#| output: asis
+#| fig-align: center
+#| fig-width: 10
+#| fig-heigh: 5
+library(tidyverse)
+library(MetBrewer)
+library(readxl)
+library(msthemes)
+wsdata <- readxl::read_xlsx("data/ameco_alcd2.xlsx") |>
+  select(Country, Year, Value = `KPI Value`) |> janitor::clean_names() |> 
+  mutate(country = str_remove_all(country, " \\(1\\)"),
+         year = as.Date(paste0(year,"-01-01"))) |> 
+  filter(year <= "2022-01-01")
+
+wsdata |> filter(country == "Austria") |>
+  ggplot(aes(x=year, y=value)) +
+  geom_line(linewidth = 1.5, color = "red") +
+  scale_x_date(breaks= seq(min(wsdata$year),max(wsdata$year), by = "10 years"), 
+               date_labels = "%Y") +
+  scale_y_continuous(limits = c(55,80), labels = scales::percent_format(scale = 1)) +
+  labs(y = "Wage share in % of GDP at factor cost", x = NULL, caption = "Data: Ameco.") +
+  theme_ms() + 
+  theme(legend.text = element_text(size = 14),
+        legend.position = "none",
+        plot.caption = element_text(size = 10, margin = margin(t = 1, unit = "lines")),
+        axis.title = element_text(size = 14),
+        axis.text = element_text(size = 12))
+```
+
+
+## Functional income distribution in Continental Europe {.medium}
+
+```{r wseur}
+#| echo: false
+#| output: asis
+#| fig-align: center
+#| fig-width: 10
+#| fig-heigh: 5
+wsdata |> filter(country %in% c("Germany","Spain","France","Italy")) |>
+  ggplot(aes(x = year, y = value, group = country, color = country)) +
+  geom_line(linewidth = 1.2) +
+  scale_color_manual(name = NULL, values = met.brewer("Austria"),) +
+  scale_x_date(breaks= seq(min(wsdata$year),max(wsdata$year), by = "10 years"), 
+               date_labels = "%Y") +
+  scale_y_continuous(limits = c(55,80), labels = scales::percent_format(scale = 1)) +
+  labs(y = "Wage share in % of GDP at factor cost", x = NULL, 
+      caption = "Data: Ameco.") +
+  theme_ms() + 
+  theme(legend.text = element_text(size = 14),
+        legend.position = c(0.8,0.8),
+        plot.caption = element_text(size = 10, margin = margin(t = 1, unit = "lines")),
+        axis.title = element_text(size = 14),
+        axis.text = element_text(size = 12))
+```
+
+
+## Functional distribution in Anglosaxon countries {.medium}
+
+```{r wsanglo}
+#| echo: false
+#| output: asis
+#| fig-align: center
+#| fig-width: 10
+#| fig-height: 5
+#| dpi: 320
+wsdata |> filter(country %in% c("United States","Australia","Canada","United Kingdom")) |>
+  ggplot(aes(x = year, y = value, group = country, color = country)) +
+  geom_line(linewidth = 1.2) +
+  scale_color_manual(name = NULL, values = met.brewer("Juarez")) +
+  scale_x_date(breaks= seq(min(wsdata$year),max(wsdata$year), by = "10 years"), 
+               date_labels = "%Y") +
+  scale_y_continuous(limits = c(55,80), labels = scales::percent_format(scale = 1)) +
+  labs(y = "Wage share in % of GDP at factor cost", x = NULL, 
+        caption = "Data: Ameco.") +
+  theme_ms() + 
+  theme(legend.text = element_text(size = 14),
+        legend.position = c(0.8,0.8),
+        plot.caption = element_text(size = 10, margin = margin(t = 1, unit = "lines")),
+        axis.title = element_text(size = 14),
+        axis.text = element_text(size = 12))
+```
+
+## Factors influencing the wage share {.medium}
+
+- [Labour market]{.marker-hl}
+  - Organization [(e.g. collective bargaining, workers councils)]{.grey600 style="font-size:1.3rem"}
+  - Leverage [(e.g. unemployment rate, strength of unions)]{.grey600 style="font-size:1.3rem"}
+- [Product markets]{.marker-hl}
+  - Globalization
+  - Technological change
+- [Politics]{.marker-hl}
+  - Influence of capital income earners
+
+::: {.aside}
+<i class="fa-solid fa-book"></i> Reading recommendation: @stockhammer:2015
+:::
+
+## Historical development of global personal inequality: 3 views
+
+::: {layout="[[1,1], [1]]" .dred style="font-size:1.5rem;text-align:center"}
+![Simon Kuznets](img/kuznets.png){width=400px}
+
+![Thomas Piketty](img/piketty.png){width=400px}
+
+![Branko Milanovic](img/milanovic.png){width=800px}
+:::
+
+## Global inequality 1820-2020 {.smaller}
+
+![](img/globalineq1820_2020.png){fig-align="center" height="500px"}
+
+::: {.aside}
+Source: @wir:2022
+:::
+
+## Decomposition of global inequality {.smaller}
+
+![](img/theildecom.png){fig-align="center" height="500px"}
+
+::: {.aside}
+Source: @wir:2022
+:::
+
+## Disposable net income in Europe {.medium}
+
+```{r incmap}
+#| echo: false
+#| output: asis
+#| fig-align: center
+#| dpi: 320
+library(tidyverse)
+library(eurostat)
+library(rnaturalearth)
+library(rnaturalearthdata)
+library(sf)
+load("data/inc_data.RData")
+load("data/eumap_nuts2.RData")
+
+inc_data <- raw_inc |> drop_na() |>   
+  mutate(cat = cut_to_classes(values, n = 6)) 
+
+plot_dat <- left_join(eumap_nuts2, inc_data) |> 
+  st_transform(crs = '+proj=laea +lat_0=52 +lon_0=10 +x_0=4321000 +y_0=3210000 +ellps=GRS80 +units=m +no_defs')
+
+bgmap <- ne_countries(continent = "Europe", returnclass = "sf", scale = "medium")
+
+plot_dat |> 
+  ggplot() + 
+  geom_sf(data = bgmap, fill = "gray95", color = "white", linewidth = 0.1) +
+  geom_sf(aes(fill = cat), linewidth = 0.05, color = "white") +
+  scale_fill_brewer(palette = "YlOrRd", na.translate=FALSE,
+                    name = str_wrap("Annual disposable income in PPP Euro", width = 20),
+                    guide = guide_legend(keywidth = 0.5, keyheight = 1.5, byrow = TRUE)) +
+  coord_sf(xlim = c(2500000, 6100000), ylim = c(1600000, 5200000)) +
+  labs(caption = "Data: Eurostat (nama_10r_2hhinc)") +
+  theme_void() +
+  theme(legend.position = "right",
+        legend.title = element_text(family = "Roboto Condensed", size = 10),
+        legend.text = element_text(family = "Roboto Condensed"),
+        legend.spacing.y = unit(0.1, "cm"),
+        plot.caption = element_text(family = "Roboto Condensed", color = "gray40"))
+```
+
+# Scales
+
+::: {.absolute top="90%" left="30%" width="400px"}
+![](../../data/img/avatar_point.png)
 :::
 
 ::: footer
 :::
+
+## Axes {.medium}
+
+[Continuous]{.secfont}
+
+```{r axescont}
+#| echo: true
+#| eval: false
+#| code-line-numbers: "1,2|3,4,5,6"
+ggplot(aes(x = life_expectancy, y = poverty_rate)) +
+  geom_point() +
+  scale_x_continuous(limits = c(40, 100),
+                     breaks = seq(40, 100, 20),
+                     labels = scales::number_format(suffix = "years")) +
+  scale_y_continuous(labels = scales::percent)
+```
+
+[Dates]{.secfont}
+
+```{r axesdate}
+#| echo: true
+#| eval: false
+ggplot(aes(x = year, y = poverty_rate)) +
+  geom_line() +
+  scale_x_date(limits = c(as.Date("2020-01-01"), as.Date("2024-01-01")),
+                breaks = date_breaks = "2 years",
+                labels = date_labels = "%Y")
+```
+
+[Others]{.secfont}
+
+[scale_x_log10(), scale_x_reverse(), scale_x_sqrt(), ...]{.secfont style="font-size:1.5rem;"}
+
+## Colors {.smaller}
+
+[Manual]{.secfont}
+
+```{r colman}
+#| echo: true
+#| eval: false
+ggplot(aes(x = year, y = poverty_rate, color = country)) +
+  geom_line() +
+  scale_color_manual(values = c("red", "blue", "green"))
+```
+
+[Gradient]{.secfont}
+
+```{r colgrad}
+#| echo: true
+#| eval: false
+ggplot(aes(x = gdp, y = life_expectancy, color = poverty_rate)) +
+  geom_point() +
+  scale_color_gradient(low = "green", high = "red", na.value = "gray80")
+```
+
+
+[Brewer]{.secfont}
+
+```{r fillbrew}
+#| echo: true
+#| eval: false
+ggplot(aes(x = year, y = poverty_rate, fill = country)) +
+  geom_area() +
+  scale_fill_brewer(palette = "Set1")
+```
+
+[Others]{.secfont}
+
+[scale_color_binned(), scale_color_distiller(), scale_color_grey(), ...]{.secfont style="font-size:1.5rem;"}
+
+## Shape, size and alpha {.smaller}
+
+```{r alphaxmpl}
+#| echo: true
+#| eval: true
+#| fig-width: 6
+#| fig-height: 3
+#| fig-align: center
+tribble(~x, ~y, ~significance, ~gdp, ~continent,
+        0.5, 0.5, "yes", 140, "Asia",
+        1.0, 0.5, "yes", 100, "Africa",
+        1.5, 0.5, "no",  250, "Europe") |> 
+  ggplot(aes(x = x, y = y)) +
+  geom_point(aes(alpha = significance, size = gdp, shape = continent)) +
+  scale_alpha_discrete(range = c(0.5, 1), guide = guide_none()) +
+  scale_size_continuous(range = c(5, 12), guide = guide_none()) +
+  scale_shape_manual(values = c(17, 19, 15),
+                     guide = guide_legend(title = "Continent", 
+                                          override.aes = list(size = 5))) +
+  theme_minimal()
+```
+
+## Guides {.smaller}
+
+```{r guide}
+#| echo: true
+#| eval: false
+ggplot(aes(x = life_expectancy, y = poverty_rate, color = continent)) +
+  geom_point() +
+  scale_color_viridis_d(guide = guide_legend(title.position = "top",
+                                             title.theme = element_text(size = 2),  
+                                             title.hjust = 0, title.vjust = 0.5,
+                                             label.position = "bottom",
+                                             label.hjust = 0, label.vjust = 0.5,
+                                             keywidth = 2, keyheight = 2,
+                                             direction = "horizontal",
+                                             override.aes = list(size = 4),
+                                             nrow = 1, ncol = 4,
+                                             byrow = FALSE, reverse = FALSE, ...))
+```
+
+<br>
+
+::: {.tbl .tbl-classic}
+| Scale type | Default guide type |
+|------------|--------------------|
+continuous scales for colour/fill aesthetics | colourbar |
+binned scales for colour/fill aesthetics | coloursteps |
+position scales (continuous, binned and discrete) | axis |
+discrete scales (except position scales) | legend |
+binned scales (except position/colour/fill scales) | bins |
+: {tbl-colwidths="[50,20]"}
+:::
+
 
 ## Bibliography {.bibstyle}
 

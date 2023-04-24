@@ -29,6 +29,10 @@ schedule %>% arrange(Date) %>% select(-c(Chart)) %>%
         glue('<a href="data/code/{Code}" target = "_blank">
              <i class="fa-solid fa-code fa-lg"></i></a>'),
         glue('<font color="#e9ecef"><i class="fa-solid fa-code fa-lg"></i></font>')),
+        Data = ifelse(!is.na(Data),
+        glue('<a href="data/code/{Data}" target = "_blank">
+             <i class="fa-solid fa-file-arrow-down fa-lg"></i></a>'),
+        glue('<font color="#e9ecef"><i class="fa-solid fa-file-arrow-down fa-lg"></i></font>')),
         Assignment = ifelse(!is.na(Assignment),
         glue('<a href="#h{Assignment}"><i class="fa-solid fa-pen fa-lg"></i></a>'),
         glue('<font color="#e9ecef"><i class="fa-solid fa-pen fa-lg"></i></font>')),
@@ -36,8 +40,8 @@ schedule %>% arrange(Date) %>% select(-c(Chart)) %>%
   kbl(escape = FALSE, align = "ccclcc", table.attr = 'class="schedule-table"') %>% 
   kable_styling() %>% 
   column_spec(1:3, width = "12%") %>% 
-  column_spec(4, width = "34%") %>% 
-  column_spec(5:7, width = "10%")
+  column_spec(4, width = "24%") %>% 
+  column_spec(5:8, width = "10%")
 ```
 :::
 

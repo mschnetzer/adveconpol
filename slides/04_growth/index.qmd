@@ -48,6 +48,14 @@ In recent years economic growth has come to occupy an exalted position in the hi
 James @tobin:1964
 :::
 
+## Beyond GDP initiatives {.smaller}
+
+- Even though many aspects of the living standard correlate with GDP, there are also some blind spots (informal sector and non-market production, environmental and health externalities, etc.).
+- GDP is not designed as comprehensive measure of prosperity and well-being. "Beyond GDP" initiatives aim to find additional indicators for [environmental and social aspects of progress]{.hl .hl-dred}.
+- In 2007, the EU commission organized a conference on "Beyond GDP" which led to a roadmap for the "EU 2020 Strategy".
+- Much attention for Stiglitz-Sen-Fitoussi Report in 2009 with 12 recommendations how to measure progress.
+- United Nations formally adopted 17 "Sustainable Development Goals" (or Agenda 2030) in their general assembly in 2015.
+
 ## The growth imperative {.medium}
 
 ::: {.columns}
@@ -69,6 +77,19 @@ We often underestimate the power of growth! How long does it take for a variable
 $$ \Delta = \frac{70}{g} $$
 
 Even with a moderate growth rate of 2%, total GDP doubles in 35 years. An annual growth rate of 7% would mean a doubling of production in only 10 years.
+
+## Measuring GDP {.smaller}
+
+- 1937: Simon Kuznets presented the modern concept of GDP to US Congress following the Great Depression, warning that it is not a measure of national welfare.
+- 1953: System of National Accounts (SNA) aims to harmonize measurement of GDP across the globe.
+- 1995: European System of Accounts (ESA) is used by member states of the European Union (latest adaption 2010)
+- Three calculations: output, expenditure, and income approaches
+- GDP is not entirely exact: some components have to be estimated (e.g. tip, underground economy)
+- GDP has methodological gaps and some arbitrary definitions of what is productive, e.g. it includes childcare by nannies but not by parents.
+
+::: {.aside}
+Short read: [Economist: Why GDP is so difficult to measure?](https://www.economist.com/the-economist-explains/2016/01/27/why-gdp-is-so-difficult-to-measure)
+:::
 
 ## GDP growth across the globe {.smaller}
 
@@ -126,7 +147,6 @@ breaks = c(1, 2, seq(4,16,4)))
 Source: World Bank
 :::
 
-
 ## Reeeally long-term growth of GDP {.smaller}
 
 ::: {.columns}
@@ -146,6 +166,28 @@ Source: World Bank
 Source: [Our world in data](https://ourworldindata.org/economic-growth)
 :::
 
+## Why do some economies grow and others don't? {.medium}
+
+![](img/korea.jpg){height="500" fig-align="center"}
+
+::: {.aside}
+Related reading: @crespo:2020
+:::
+
+## Reasons for differences in economic growth {.medium}
+
+Economists historically focus on the "factors of production", like physical capital and human capital to explain differences in growth [@mankiw:1992; @young:1995].
+
+The contemporary literature [@acemoglu:2019; @glaeser:2004] additionally highlights
+
+- culture (e.g., the willingness to trust and engage in trade with strangers)
+- geography (e.g., ease of transportation, resources)
+- institutions (e.g., welfare state regimes, democracy, legal rights)
+- (luck)
+
+::: {.aside}
+Short read: [Asterisk Magazine](https://asteriskmag.com/issues/1/why-isn-t-the-whole-world-rich#1)
+:::
 
 ## Which chart describes best what you want to show? {.medium}
 
@@ -225,7 +267,7 @@ gdp |> filter(str_detect(unit, "percentage")) |>
 
 # Show me your geometries!
 
-::: {.absolute top="90%" left="30%" width="400px" height="336px"}
+::: {.absolute top="90%" left="30%" width="400px"}
 ![](../../data/img/avatar_break.png)
 :::
 

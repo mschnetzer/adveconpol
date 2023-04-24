@@ -89,18 +89,18 @@ $presentation-font-medium: 0.8;
 }
 
 .iconlist ul {
-    list-style: none;
-    text-indent: -0.7rem;
-    padding-left: 1.4rem;
-  }
+  list-style: none;
+  text-indent: -0.7rem;
+  padding-left: 1.4rem;
+}
 
 .altlist ul {
-    list-style: none;
+  list-style: none;
 }
 
 lord-icon.small {
-    width: 60px;
-    height: 60px;
+  width: 60px;
+  height: 60px;
 }
 
 lord-icon.large {
@@ -116,61 +116,61 @@ lord-icon.large {
 }
 
 .circle-hl {
-    position: relative;
+  position: relative;
   }
   
 .circle-hl:before {
-    content: "";
-    z-index: -1;
-    left: -0.4em;
-    top: -0.15em;
-    border-width: 2.7px;
-    border-style: solid;
-    border-color: $blue;
-    position: absolute;
-    border-right-color: transparent;
-    width: 100%;
-    height: 1em;
-    transform: rotate(2deg);
-    opacity: 0.65;
-    border-radius: 75%;
-    padding: 0.1em 0.25em;
-  }
+  content: "";
+  z-index: -1;
+  left: -0.4em;
+  top: -0.15em;
+  border-width: 2.7px;
+  border-style: solid;
+  border-color: $blue;
+  position: absolute;
+  border-right-color: transparent;
+  width: 100%;
+  height: 1em;
+  transform: rotate(2deg);
+  opacity: 0.65;
+  border-radius: 75%;
+  padding: 0.1em 0.25em;
+}
   
 .circle-hl:after {
-    content: "";
-    z-index: -1;
-    left: -0.6em;
-    top: 0.04em;
-    padding: 0.05em 0.29em;
-    border-width: 2.7px;
-    border-style: solid;
-    border-color: $blue;
-    border-left-color: transparent;
-    border-top-color: transparent;
-    position:absolute;
-    width: 100%;
-    height: 1em;
-    transform: rotate(-1deg);
-    opacity: 0.65;
-    border-radius: 80%;
-  }
+  content: "";
+  z-index: -1;
+  left: -0.6em;
+  top: 0.04em;
+  padding: 0.05em 0.29em;
+  border-width: 2.7px;
+  border-style: solid;
+  border-color: $blue;
+  border-left-color: transparent;
+  border-top-color: transparent;
+  position:absolute;
+  width: 100%;
+  height: 1em;
+  transform: rotate(-1deg);
+  opacity: 0.65;
+  border-radius: 80%;
+}
 
 .marker-hl {
-    position: relative;
-  }
+  position: relative;
+}
   
 .marker-hl::before {
-    background-color: #ffd500;
-    content: "";
-    position: absolute;
-    width: calc(100% + 4px);
-    height: 60%;
-    left: -2px;
-    bottom: 0;
-    z-index: -1;
-    transform: rotate(-2deg);
-  }
+  background-color: #ffd500;
+  content: "";
+  position: absolute;
+  width: calc(100% + 4px);
+  height: 60%;
+  left: -2px;
+  bottom: 0;
+  z-index: -1;
+  transform: rotate(-2deg);
+}
 
 .hl {
   color: $white;
@@ -189,116 +189,120 @@ lord-icon.large {
 /* Slides standards */
 
 .backgrounds .title-slide {
-    background-color: $blue;
-  }
+  background-color: $blue;
+}
 
 .title-slide h1 {
-    font-family: $titlefont;
-    font-weight: 400;
-    text-align: center;
-  }
+  font-family: $titlefont;
+  font-weight: 400;
+  text-align: center;
+}
 
 .reveal .slide-number {
-    font-family: $secfont;
-    font-size: 0.8rem;
-  }
+  font-family: $secfont;
+  font-size: 0.8rem;
+}
 
 .reveal .footer {
-    font-family: $secfont;
-    font-size: 0.6rem;
-    font-weight: 100;
-    color: $grey800;
-  }
+  font-family: $secfont;
+  font-size: 0.6rem;
+  font-weight: 100;
+  color: $grey800;
+}
 
 .reveal aside {
-    font-family: $primfont;
-    font-size: 1rem;
-    font-weight: 100;
-  }
+  font-family: $primfont;
+  font-size: 1rem;
+  font-weight: 100;
+}
 
 .slide h2 {
-    margin-bottom: 50px;
-  }
+  margin-bottom: 50px;
+}
 
 .bibstyle {
-    font-family: $secfont;
-    font-size: 1.2rem !important;
-    font-weight: 100 !important;
-  }
+  font-family: $secfont;
+  font-size: 1.2rem !important;
+  font-weight: 100 !important;
+}
 
 /* Main title slide */
 
 .slide-background:first-child {
-    background-color: $grey200;
-  }
+  background-color: $grey200;
+}
 
-h1.title {
-    font-family: $titlefont;
-    font-size: 6rem;
-    font-weight: 700;
-    color: $red !important;
-  }
+  h1.title {
+  font-family: $titlefont;
+  font-size: 6rem;
+  font-weight: 700;
+  color: $red !important;
+}
 
-  p.subtitle {
-    font-family: $titlefont;
-    font-size: 4rem;
-    font-weight: 400;
-    color: $blue;
-  }
+p.subtitle {
+  font-family: $titlefont;
+  font-size: 4rem;
+  font-weight: 400;
+  color: $blue;
+}
 
-  p.author {
-    font-family: $secfont;
-    font-size: 2rem;
-    line-height: 2rem;
-    font-weight: 100;
-    color: $grey800;
-  }
-  
-  p.date{
-    font-family: $secfont;
-    font-size: 2rem;
-    line-height: 2rem;
-    font-weight: 100;
-    color: $grey800;
-  }
+p.author {
+  font-family: $secfont;
+  font-size: 2rem;
+  line-height: 2rem;
+  font-weight: 100;
+  color: $grey800;
+}
 
-  .course-icon {
-    font-size: 4rem;
-    display: block;
-    margin: 50px auto 0 -10px;
-  }
+p.date{
+  font-family: $secfont;
+  font-size: 2rem;
+  line-height: 2rem;
+  font-weight: 100;
+  color: $grey800;
+}
+
+.course-icon {
+  font-size: 4rem;
+  display: block;
+  margin: 50px auto 0 -10px;
+}
 
 /* Others */
 
 .schedule-table th {
-    font-weight: 400;
-    font-size: 1.3rem !important;
-  }
+  font-weight: 400;
+  font-size: 1.3rem !important;
+}
   
 .schedule-table td, tr, tbody {
-    font-weight: 100;
-    font-size: 1.3rem !important;
-    border-bottom: 0.5px solid $grey400 !important;
-  }
+  font-weight: 100;
+  font-size: 1.3rem !important;
+  border-bottom: 0.5px solid $grey400 !important;
+}
 
 .poster-table th {
-    font-family: $secfont;
-    font-weight: 400;
-    font-size: 1.3rem !important;
-  }
+  font-family: $secfont;
+  font-weight: 400;
+  font-size: 1.3rem !important;
+}
   
 .poster-table td, tr, tbody {
-    font-family: $secfont;
-    font-weight: 100;
-    font-size: 1.3rem !important;
-    border-bottom: solid 2px $grey200 !important;
-    padding-top: 0.4rem !important;
-    padding-bottom: 0.4rem !important;
-  }
+  font-family: $secfont;
+  font-weight: 100;
+  font-size: 1.3rem !important;
+  border-bottom: solid 2px $grey200 !important;
+  padding-top: 0.4rem !important;
+  padding-bottom: 0.4rem !important;
+}
 
-.tbl-larger td, tr, th, tbody {
-    font-size: 1.5rem !important;
-  }
+.tbl-larger th {
+  font-size: 1.7rem !important;
+}
+
+.tbl-larger td, tr, tbody {
+  font-size: 1.5rem !important;
+}
 
 .recommended-lit td, tr, th, tbody {
   border: none !important;
@@ -306,16 +310,16 @@ h1.title {
 }
 
 .tbl-smaller th, td, tr, tbody {
-    font-size: 1.2rem !important;
-  }
-
-.tbl-classic th {
-  border-top: 5px solid #000;
+  font-size: 1.2rem !important;
 }
 
+.tbl-classic th {
+  border-top: 5px solid #000 !important;
+}
+  
 .tbl-classic tbody {
-  border-top: 2px solid #000;
-  border-bottom: 5px solid #000;
+  border-top: 2px solid #000 !important;
+  border-bottom: 5px solid #000 !important;
 }
 
 .tbl-note {
@@ -384,30 +388,30 @@ h1.title {
 }
 
 .blockquote:before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: -4px;
-    height: 2em;
-    width: 5px;
-    margin-top: -1em;
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -4px;
+  height: 2em;
+  width: 5px;
+  margin-top: -1em;
 }
 
 .blockquote:after {
-    content: open-quote;
-    position: absolute;
-    top: 50%;
-    left: -0.5em;
-    color: $blue;
-    font-family: $quotefont;
-    font-size: 5rem;
-    font-style: normal;
-    background-color: $white;
-    line-height: 2.5rem;
-    text-align: center;
-    text-indent: -2px;
-    width: 1em;
-    padding-top: 2rem;
-    margin-top: -0.5em;
-    transition: .2s all ease-in-out, .4s transform ease-in-out;
+  content: open-quote;
+  position: absolute;
+  top: 50%;
+  left: -0.5em;
+  color: $blue;
+  font-family: $quotefont;
+  font-size: 5rem;
+  font-style: normal;
+  background-color: $white;
+  line-height: 2.5rem;
+  text-align: center;
+  text-indent: -2px;
+  width: 1em;
+  padding-top: 2rem;
+  margin-top: -0.5em;
+  transition: .2s all ease-in-out, .4s transform ease-in-out;
 }

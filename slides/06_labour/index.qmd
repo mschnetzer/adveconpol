@@ -14,6 +14,7 @@ date-format: long
 from: markdown+emoji
 bibliography: ../../data/lit/wipol_advanced.bib
 csl: ../../data/lit/wipol.csl
+prefer-html: true
 execute:
   freeze: auto
   echo: true
@@ -31,17 +32,311 @@ format:
     transition: fade
     progress: true
     multiplex: false
-    scrollable: true
+    scrollable: false
     preview-links: false
     hide-inactive-cursor: true
     highlight-style: printing
     pause: true
 ---
 
+## Full employment as economic policy goal {.smaller}
+
+::: {.columns}
+::: {.column width="20%"}
+![](img/sdg8.png)
+:::
+::: {.column width="80%"}
+- UN SDG 8.5: "By 2030, achieve [full and productive employment]{.hl .hl-dred} and decent work for all women and men, including for young people and persons with disabilities, and equal pay for work of equal value."
+- Full employment is desirable since the [individual, economic, and social costs]{.hl .hl-dred} of unemployment are high [@young:2012]: risk of poverty, health issues, decreasing human and social capital, stigmatization, rising government expenditure, etc.
+- However, full employment affects the [industrial relations]{.hl .hl-dred} between capital and labour and might thus not be favoured by capital owners [@kalecki:1943]
+:::
+:::
+
+## Opposing views on the labour market {.smaller}
+
+::: {.columns}
+::: {.column width="48%"}
+[Neoclassical view]{.secfont .marker-hl style="font-size:1.8rem;"}
+
+- Labour market is one among many other markets
+- Price (i.e. real wage) brings labour supply and labour demand into [equilibrium]{.hl .hl-dred}
+- Full employment is achieved in the labour market equilibrium, while unemployment is voluntary due to specific labour-leisure choices
+- Involuntary unemployment is a result of [third-party intervention]{.hl .hl-dred} into the labour market
+:::
+::: {.column width="4%"}
+:::
+::: {.column width="48%"}
+[(Post-)Keynesian view]{.secfont .marker-hl style="font-size:1.8rem;"}
+
+- Labour market is [posterior]{.hl .hl-blue} (downstream) to production
+- Demand for labour is determined by effective demand on the goods market
+- Full employment is reached when effective demand equals full capacity utilization
+- Involuntary unemployment is a consequence of [lacking aggregate demand]{.hl .hl-blue} by private and public sector.
+:::
+:::
+
+## Goods and labour market in the Keynesian cross {.medium}
+
+```{r engine='tikz'}
+#| echo: false
+#| output: asis
+#| fig-align: center
+\usetikzlibrary{calc,trees,positioning,arrows,chains,shapes.geometric,decorations.pathreplacing,decorations.markings,decorations.pathmorphing,shapes,matrix,shapes.symbols}
+\tikzset{->-/.style={decoration={
+	  markings,
+	  mark=at position #1 with {\arrow{>}}},postaction={decorate}}}
+
+\definecolor{myred}{HTML}{990000}
+\definecolor{myblue}{HTML}{16537e}
+\definecolor{mygreen}{HTML}{38761d}
+\definecolor{mybrown}{HTML}{f1c232}
+
+\begin{tikzpicture}[scale=2, dot/.style={circle, fill=black, minimum size=4pt, inner sep=0pt, outer sep=-1pt}]
+	% Schriftgröße
+	\tikzstyle{every node}=[font=\small, color=black]
+  % Achsen zeichnen
+	\node[left] at (-2.5,1) {$w$/P};
+    \draw[<->] (-2.5,1) coordinate (x_1) -- (2.5,1) coordinate (x_2) node[right] {Y}; 
+	\node[below] at (0,-0.5) {N};
+	\draw[<->] (0,-0.5) coordinate (y_1) -- (0,2.5) coordinate (y_2) node[above] {AD};
+	% Winkel einzeichnen mit arc von 0 bis 45 Grad und bei .3 vom Ursprung entfernt beginnen 
+	\draw (0,1)--(0.4,1) arc (0:45:0.4) node[above] at (0.25,1) {\tiny $45^\circ$};
+    % Vollbeschäftigungs- und Konsumgerade zeichnen sowie Schnittpunkt c berechnen
+    \draw[very thick, color=myred!80] (0,1) coordinate (a_1) -- (1.6,2.6) coordinate (a_2) node[above] {Y};
+    \draw[very thick, color=myblue!70] (0,1.7) coordinate (b_1) -- (1.8,2.2) coordinate (b_2) node[right] {AD};
+	\coordinate (c) at (intersection of a_1--a_2 and b_1--b_2);
+	% Arbeitsmarkt zeichnen
+	\draw[very thick, color=mybrown!60] (-0.2,0.8) coordinate (d_1) -- (-2,-0.4) coordinate (d_2) node[below] {N$^\text{S}$};
+	\draw[very thick, color=mybrown!60] (-2,0.8) coordinate (d_3) -- (-0.2,-0.4) coordinate (d_4) node[below] {N$^\text{D}$};
+	\coordinate (d) at (intersection of d_1--d_2 and d_3--d_4);
+	% Produktionsfunktion zeichnen
+	\draw [very thick, color=mygreen!80] (0,1) coordinate (e_1) parabola bend (0,1) (1.7,-0.4) coordinate (e_2) node[below] {F(N,$\dot{\text{K}}$)};
+	% Schnittpunkt auf der Produktionsfunktion bei Vollbeschäftigung
+	\coordinate (e) at (intersection of d--[xshift=1]d and e_1--e_2);
+	\draw[very thin,->-=.5,->-=.25,->-=.75] (d)--([xshift=9]e) node[dot] {};
+	\coordinate (f) at (intersection of [xshift=9]e--[xshift=9,yshift=10]e and a_1--a_2);
+	\draw[very thin,->-=.5,->-=.25,->-=.75,->] ([xshift=9]e)--(f);
+	% Schnittpunkt auf der Produktionsfunktion bei effektiver Nachfrage
+	\coordinate (g) at (intersection of c--[yshift=-1]c and e_1--e_2);
+	\draw[very thin,->-=.5,->-=.25,->-=.75] (c)--([yshift=10]g) node[dot] {};
+	\coordinate (h) at (intersection of [yshift=10]g--[xshift=-1,yshift=10]g and d_3--d_4);
+	\draw[very thin,->-=.5,->-=.25,->-=.75,->] ([yshift=10]g)--(h);
+	% Arbeitslosigkeit einzeichnen
+	\coordinate (i_1) at (intersection of d--e and y_1--y_2);
+	\coordinate (i_2) at (intersection of h--[yshift=10]g and y_1--y_2);
+	\draw[decorate, decoration={brace, mirror}] (i_1) -- (i_2) node[midway, right=1pt] {\tiny{UE}};
+	% Überproduktion einzeichnen
+	\coordinate (j_1) at (intersection of c--g and x_1--x_2);
+	\coordinate (j_2) at (intersection of f--[xshift=9]e and x_1--x_2);
+	\draw[decorate, decoration={brace, mirror}] (j_1) -- (j_2) node[midway, below=1pt] {\tiny{SP}};
+	% Ausweitung der Staatsausgaben einzeichnen
+	\draw[very thick, color=myblue!70] (0,1.94) coordinate (k_1) -- (1.8,2.44) coordinate (k_2) node[right] {AD$'$};
+	\draw[decorate, decoration={brace, mirror}] ([xshift=12]b_2) -- ([xshift=12]k_2) node[midway, right=1pt] {\tiny{$\Delta$G}};
+	\coordinate (l) at (intersection of k_1--k_2 and a_1--a_2);
+	% Schnittpunkte der Staatsausgaben mit der Y-Achse
+	\coordinate (m_1) at (intersection of c--[xshift=-1]c and y_1--y_2);
+	\coordinate (m_2) at (intersection of l--[xshift=-1]l and y_1--y_2);
+	\draw[very thin, dashed] (c)--(m_1);
+	\draw[very thin, dashed] (l)--(m_2);
+	\draw[decorate, decoration={brace}] (m_1) -- (m_2) node[midway, left=1pt] {\footnotesize{$\Delta$AD = $\Delta$Y $>$ $\Delta$G}};
+\end{tikzpicture}
+```
+
+## A classification of unemployment
+
+::: {.tbl-classic .tbl-larger}
+|   | Macroeconomy | Specific sectors |
+|---|--------------|------------------|
+| [**Short-term**]{style="font-size:1.7rem"} | [frictional:]{.hl .hl-blue} <br> people voluntarily leaving their job need some time to find new employment. Unemployment is thus [interim]{.hl .hl-dred} and even present in an economy with full employment. | [seasonal:]{.hl .hl-blue} <br> Seasonal jobs are limited to a certain [time period]{.hl .hl-dred}, leaving people in those industries without employment after the season ends (e.g. tourism, construction). | 
+| [**Mid- and long-term**]{style="font-size:1.7rem"} | [cyclical:]{.hl .hl-blue} <br> the number of unemployed workers varies during cycles of economic [ups and downs]{.hl .hl-dred}. Business cycles on average last 5-6 years and typically affect the whole economy. | [structural:]{.hl .hl-blue} <br> caused by fundamental change in the economy such as evolving technology. While jobs are available, people who could fill those roles either don’t have the right [skills]{.hl .hl-dred} or aren’t in the right location. |
+: {tbl-colwidths="[20,40,40]"}
+:::
+
+
+## Policies against unemployment {.smaller}
+
+::: {.columns}
+::: {.column width="48%"}
+- [Active labour market policy (ALMP)]{.marker-hl}
+  - Aim: integration of the unemployed into the labour market [@card:2017]
+  - Examples: coaching, training, subsidies for *secondary* labour market, assistance for personal issues (homelessness, addiction)
+- [Passive labour market policy (PLMP)]{.marker-hl}
+  - Aim: social security for the unemployed
+  - Examples: unemployment benefits, income support, etc.
+:::
+::: {.column width=4%}
+:::
+::: {.column width=48% .fragment} 
+- [Activating policies]{.marker-hl}
+  - Aim: ALMP paid from funds for PLMP
+  - Examples: part-time work for the elderly, training allowances
+- [Job guarantee]{.marker-hl}
+  - Aim: Public sector as amployer of the last resort
+  - Examples: India [@ravi:2015], Marienthal in Austria [@kasy:2022]
+:::
+:::
+
+## The measurement of unemployment {.smaller}
+
+- [International definition]{.marker-hl} (ILO/Eurostat)
+  - Data: Labour Force Survey (LFS) - 23,000 household per quarter in :austria:
+  - Unemployed: if not worked at least 1 hour in the reference week
+  - Rate: [$$\frac{\texttt{unemployed (15-74 years old)}}{\texttt{labour force (employed + unemployed, 15-74 years old)}}$$]{style="font-size:1.2rem;"}
+- [National definition]{.marker-hl}
+  - Data: Public Employment Service (AMS)
+  - Unemployed: officially registered at AMS 
+  - Rate: [$$\frac{\texttt{registered unemployed}}{\texttt{labour force (employed + unemployed)}}$$]{style="font-size:1.2rem;"}
+
+## Unemployment rates across Europe {.medium}
+
+<br>
+
+```{r eurates}
+#| echo: false
+#| output: asis
+#| fig-align: center
+#| fig-width: 10
+#| fig-height: 4.5
+librarian::shelf(tidyverse, ggtext, MetBrewer, ggflags, countrycode, ggrepel, gghighlight)
+
+load("data/eu_unemp.RData")
+
+unemp <- rawdat |> 
+  filter(time >= "2005-01-01") |>
+  drop_na() |> 
+  mutate(geo = ifelse(str_detect(geo, "Germany"), "Germany", geo)) |> 
+  left_join(countrycode::codelist |> select(country.name.en, iso2c), by = c("geo" = "country.name.en"))
+
+unemp |> 
+  ggplot(aes(x = time, y= values, color = geo)) +
+  geom_hline(yintercept = 0, linewidth = 0.1, color = "gray40") +
+  geom_area(aes(fill = geo)) +
+  geom_line(linewidth = 0.6, aes(group = geo)) +
+  geom_label_repel(data = unemp |> slice_min(values, n=1, with_ties = F ,by = geo), 
+             size = 2.5, nudge_y = -2, label.padding = unit(0.15,"lines"), family = "Roboto Condensed",
+             aes(label = glue::glue("Min: {round(values,1)}%")),
+             min.segment.length = unit(2, unit="pt"), segment.colour = "black", 
+             segment.size = 0.3, arrow = arrow(type = "open", length = unit(0.01, "npc"))) +
+  geom_label_repel(data = unemp |> slice_max(values, n=1, with_ties = F ,by = geo), 
+             size = 2.5, nudge_y = 2, label.padding = unit(0.15, "lines"), family = "Roboto Condensed",
+             aes(label = glue::glue("Max: {round(values,1)}%")),
+             min.segment.length = unit(2, unit="pt"), segment.colour = "black", 
+             segment.size = 0.3, arrow = arrow(type = "open", length = unit(0.01, "npc"))) +
+  geom_flag(data = unemp |> slice_min(time, n=1), size = 6,
+            aes(x = as.Date("2011-01-01"), y = 32, country = tolower(iso2c))) +
+  geom_text(data = unemp |> slice_min(time, n=1), size = 4, hjust = 0, family = "Roboto Condensed",
+            aes(x = as.Date("2013-01-01"), y = 32, label = toupper(geo))) +
+  scale_y_continuous(labels = scales::percent_format(scale = 1)) +
+  scale_color_manual(values = colorspace::darken(met.brewer("Nattier")[5:1], 0.2)) +
+  scale_fill_manual(values = colorspace::lighten(met.brewer("Nattier")[5:1], 0.2)) +
+  facet_wrap(~geo, nrow = 1) +
+  labs(x = NULL, y = NULL, caption = "Data: Eurostat.") +
+  theme_minimal() +
+  theme(legend.position = "none",
+        strip.text = element_blank(),
+        axis.text = element_text(family = "Roboto Condensed"),
+        plot.caption = element_text(family = "Roboto Condensed", color = "gray40"),
+        panel.grid.minor = element_blank(),
+        panel.grid.major = element_line(linewidth = 0.2),
+        panel.spacing.x = unit(1, "lines"))
+```
+
+## Evolution of work time {.medium}
+
+```{r time}
+#| echo: false
+#| output: asis
+#| fig-align: center
+#| fig-width: 8
+#| fig-height: 4
+load("data/eu_time.RData")
+
+plotdat <- eutime |> 
+  mutate(geo = case_when(
+    str_detect(geo, "Germany") ~ "Germany",
+    str_detect(geo, "European") ~ "EU-27",
+    TRUE ~ geo)) |> 
+  filter(time >= "2005-01-01",
+         geo %in% c("Austria", "Germany", "Spain", "Italy", "France", "Belgium", "Netherlands", "EU-27")) |> 
+  drop_na()
+
+plotdat |> 
+  ggplot(aes(x = time, y = values, color = geo)) +
+  geom_line(linewidth = 1) +
+  gghighlight(geo %in% c("Austria", "EU-27"), 
+              unhighlighted_params = list(color = "gray90", linewidth = 0.7), 
+              line_label_type = "label_path", 
+              label_params = list(size = 3, hjust = 0.7, family = "Roboto Condensed")) +
+  geom_text_repel(data = plotdat |> slice_max(time, n=1) |> 
+                  filter(!geo %in% c("Austria", "EU-27")), 
+                  aes(label = geo), min.segment.length = Inf, family = "Roboto Condensed", size = 3, color = "gray70", nudge_x = 100, 
+                  direction = "y", hjust = 0) +
+  scale_color_manual(values = RColorBrewer::brewer.pal(name = "Dark2", n = 8)) +
+  scale_y_continuous(labels = scales::number_format(suffix="h")) +
+  scale_x_date(limits = c(as.Date("2005-01-01"), as.Date("2024-01-01")), 
+                expand = c(0,0)) +
+  labs(x = NULL, y = NULL, caption = "Data: Eurostat.") +
+  theme_minimal() +
+  theme(legend.position = "none",
+        plot.caption = element_text(family = "Roboto Condensed", color = "gray40", size = 7),
+        panel.grid.minor = element_blank(),
+        panel.grid.major = element_line(linewidth = 0.2))
+```
+
+## Labour market participation of parents in Austria {.medium}
+
+```{r care}
+#| echo: false
+#| output: asis
+#| fig-align: center
+#| fig-width: 8
+#| fig-height: 4
+library(msthemes)
+
+df <- tribble(
+  ~Gender, ~Status, ~"<1", ~"1", ~"2", ~"3-5", ~"6-9", ~"10-14",
+  "Male", "Full time", 84.4, 83.2, 82.5, 83.7, 85.2, 83.5,
+  "Female", "Full time", 8.6, 6, 11.9, 16.4, 20.1, 30.7,
+  "Male", "Part time", 7.7, 8.7, 8.2, 7.3, 4.6, 6.3,
+  "Female", "Part time", 11, 27.4, 50.7, 60.3, 60, 52.2,
+  "Male", "On leave", 1, 1, 0, 0, 0, 0,
+  "Female", "On leave", 45.3, 30.5, 3.2, 0, 0, 0,
+  "Male", "Not in employment", 7.1, 7.1, 9.1, 9.0, 10.1, 10.2,
+  "Female", "Not in employment", 35.1, 36.1, 34.1, 23.3, 19.8, 17.2
+)
+
+plotdf <- df |> 
+  pivot_longer(-c(Gender, Status), names_to = "Age", values_to = "Value") |> 
+  mutate(Age = factor(Age, levels=c("<1", "1", "2", "3-5", "6-9", "10-14")),
+         Status = factor(Status, levels=c("Not in employment","On leave","Part time","Full time")))
+
+plotdf |> ggplot(aes(x=Age, y=Value, fill=Status, group=Status)) + 
+  geom_area() +
+  facet_wrap(~Gender, strip.position = "top", dir = "h") +
+  scale_fill_manual(name = NULL, values = met.brewer("Lakota"),
+                    guide = guide_legend(keywidth = 0.5)) +
+  scale_y_continuous(labels = scales::percent_format(scale = 1)) +
+  coord_cartesian(expand = F) +
+  labs(y = NULL, x = "Age of the youngest child",
+        caption="Data: Microcensus 2021, Statistics Austria.") +
+  theme_ms(grid=F) +
+  theme(plot.caption = element_text(family = "Roboto Condensed", color = "gray40"),
+        plot.caption.position = "plot",
+        legend.text = element_text(family = "Roboto Condensed"),
+        strip.text = element_text(hjust = 0.5, family = "Roboto Condensed",
+                                  margin = margin(b = 1, unit = "lines")),
+        axis.text.y = element_text(size = 9, family = "Victor Mono",
+                                  margin = margin (r = 1, unit = "lines")),
+        axis.text.x = element_text(size = 9, family = "Victor Mono",
+                                  margin = margin (t = 1, unit = "lines")),
+        axis.title.x = element_text(hjust = .1, size = 12, family = "Roboto Condensed",
+                                    margin = margin(t=1, unit = "lines")),
+        panel.spacing.x = unit(3, "lines"))
+```
 
 # Labels and Fonts
 
-::: {.absolute top="90%" left="30%" width="400px" height="336px"}
+::: {.absolute top="90%" left="30%" width="400px"}
 ![](../../data/img/avatar_read.png)
 :::
 
@@ -116,7 +411,7 @@ Source: [Datawrapper](https://blog.datawrapper.de/fonts-for-data-visualization/)
 Source: [Datawrapper](https://blog.datawrapper.de/fonts-for-data-visualization/)
 :::
 
-## Don't be too narrow, but neither too wide {.medium}
+## Don't be too narrow, but too wide neither {.medium}
 
 ![](img/narrow.png){height="500" fig-align="center"}
 

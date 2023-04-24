@@ -38,19 +38,230 @@ format:
     pause: true
 ---
 
-## What exactly is inflation?
+## What exactly is inflation? {.smaller}
 
-## How do we calculate inflation?
+Inflation is the increase of the general price level in an economy which is usually expressed as annual percentage change in a price index. Inflation implies a decrease in purchasing power. The causes of inflation include:
 
-## What is COICOP?
+::: {.columns}
+::: {.column width="48%"}
+[Keynesian view]{.secfont .marker-hl style="font-size:1.5rem;"}
 
-## Is there a trade-off between inflation and unemployment?
+- [Demand-pull]{.hl .hl-dred} inflation via increases of aggregate demand
+- [Cost-push]{.hl .hl-dred} inflation via drop in aggregate supply (supply-shock inflation)
+- [Built-in]{.hl .hl-dred} inflation via adaptive expectations (i.e. price-wage/profit spiral), e.g. @weber:2023
+:::
+::: {.column width="4%"}
+:::
+::: {.column width="48%"}
+[Monetarist view]{.secfont .marker-hl style="font-size:1.5rem;"}
+
+- [Money supply]{.hl .hl-blue} controls inflation 
+- [Quantity theory]{.hl .hl-blue} relates the quantity of money ($M$) to the price level ($P$): $M \cdot V = P \cdot Y$, with the velocity of money ($V$) being stable in the short-run.
+- [Rational expectations]{.hl .hl-blue} influence inflation
+:::
+:::
+
+## Inflation in economic policy {.medium}
+
+- Price stability (i.e. low or even now inflation) is an important goal for economic policy. 
+- It is also the main goal of the European Central Bank (ECB) which it aims to obtain with monetary policy. The ECB mid-term inflation target lies at 2% and is [symmetric]{.hl .hl-blue}: meaning negative and positive deviations of inflation from the target are equally undesirable. 
+- Mix of fiscal (government spending, taxation, subsidies, etc.) and monetary (interest rate, quantitative easing) policies affect inflation in "normal times".
+- Potential triggers of current inflation: war, supply shortages due to the pandemics, CO2 taxation
+
+## Conflicting economic policy goals: Inflation and unemployment {.medium}
+
+A longstanding discussion in economic policy revolves around the (negative) relationship between inflation and unemployment. This has been expressed in the [Phillips curve]{.secfont .hl .hl-dred}.
+
+::: {.columns}
+::: {.column}
+[Keynesian view]{.secfont .marker-hl style="font-size:1.3rem;"}<br>
+![](img/phillips-curve.png)
+:::
+::: {.column}
+[Monetarist view]{.secfont .marker-hl style="font-size:1.3rem;"}<br>
+![](img/phillips-monetarist.png)
+:::
+:::
+
+## How do we measure inflation? {.medium}
+
+The most important measure is the [Consumer prices index (CPI)]{.secfont .hl .hl-dred}, which is based on a weighted average market basket of consumer goods and services purchased by households 
+
+For international comparison of price levels, Eurostat provides the [Harmonised Indices of Consumer Prices (HICP)]{.secfont .hl .hl-blue} and the OECD calculates [Purchasing Power Parities (PPP)]{.secfont .hl .hl-blue}
+
+Other important indices include the [Wholesale Price Index (WPI)]{.secfont .hl .hl-green} and [Producer Price Index (PPI)]{.secfont .hl .hl-green}.
+
+Apart from price indices, the [GDP deflator]{.secfont .hl .hl-yellow} measures the general price level of all domestically produced goods and services. 
 
 
+## How to construct the CPI in Austria? {.medium}
+
+- [Household Budgetary Survey]{.hl .hl-dred}: survey on household consumption; every five years with roughly 7,000 households
+- Consumer basket: 1958 only 197 goods and surveys, today 757 index positions
+- [COICOP]{.hl .hl-dred}: "Classification of Individual Consumption by Purpose" with 12 main groups
+- Price information directly from companies (scanner data since 2022, cigarettes, etc.) and from inquiries in retail shops
+- More than 38,000 prices surveyed monthly in 19 cities and 4,200 shops
+
+
+## Changes in the CPI in selected European countries {.medium}
+
+```{r loaddata}
+#| echo: false
+#| include: false
+library(tidyverse)
+library(MetBrewer)
+load("data/inflation_data.RData")
+Sys.setlocale("LC_TIME", "en_US")
+```
+
+```{r euroinf}
+#| echo: false
+#| fig-width: 10
+#| fig-align: center
+#| results: asis
+library(gghighlight)
+library(ggflags)
+
+euinfdata |> filter(time >= "2020-01-01") |> 
+  ggplot(aes(x = time, y= values, color = geo.de)) +
+  geom_hline(yintercept = 0, linewidth = 0.1, color = "gray40") +
+  geom_line(linewidth = 0.8, aes(group = geo)) +
+  gghighlight(unhighlighted_params = list(color = "gray80", linewidth = 0.2), use_direct_label = F) +
+  geom_label(data = euinfdata |> slice_max(time, n=1), size = 2.7, family = "Roboto Condensed",
+             aes(label = glue::glue("{round(values,1)}%")), nudge_y = -0.5,
+             nudge_x = 20, label.padding = unit(0.15,"lines"), fill = "gray98") +
+  geom_label(data = euinfdata |> slice_max(values, n=1, with_ties = F ,by = geo), size = 2.7,
+             aes(label = glue::glue("{round(values,1)}%")), family = "Roboto Condensed",
+             nudge_y = 1, label.padding = unit(0.15,"lines"), fill = "gray98") +
+  geom_flag(data = euinfdata |> slice_min(time, n=1), size = 6,
+            aes(x = as.Date("2020-04-01"), y = 5, country = tolower(iso2c))) +
+  geom_text(data = euinfdata |> slice_min(time, n=1), size = 4, hjust = 0, family = "Roboto Condensed",
+            aes(x = as.Date("2020-06-01"), y = 5, label = toupper(geo))) +
+  scale_y_continuous(labels = scales::percent_format(scale = 1)) +
+  scale_color_manual(values = met.brewer("Tiepolo")) +
+  facet_wrap(~geo.de) +
+  labs(x = NULL, y = NULL) +
+  theme_minimal() +
+  theme(legend.position = "none",
+        strip.text = element_text(family = "Roboto Condensed"),
+        strip.background = element_blank(),
+        strip.text.x = element_blank(),
+        axis.text = element_text(family = "Roboto Condensed"),
+        panel.grid.minor = element_blank(),
+        panel.grid.major = element_line(linewidth = 0.2),
+        panel.spacing.x = unit(1.5, "lines"),
+        panel.spacing.y = unit(1, "lines"))
+```
+
+::: {.aside}
+Further reading: @wug:2022, @zuckerstatter:2022
+:::
+
+## Inflation in Austria by selected COICOP groups {.medium}
+
+```{r infstream}
+#| echo: false
+#| fig-width: 10
+#| fig-align: center
+#| results: asis
+library(ggstream)
+library(colorspace)
+library(msthemes)
+
+infdata <- infdata |> filter(Datum >= "2018-01-01") |>
+  mutate(Coicop = fct_recode(Coicop, Transport = "Verkehr", 
+  `Housing &\nhousehold` = "Wohnen & Haushalt",
+  `Electricy &\nheating` = "Energie",
+  Food = "Nahrungsmittel",
+  `Recreation &\nculture` = "Freizeit & Kultur",
+  `Restaurants &\naccomodation` = "Restaurants & Hotels",
+  Others = "Sonstige"
+  ))
+
+lastdate <- infdata |> slice_max(Datum, n=1) |> 
+  filter(Coicop == "Inflation")
+firstdate <- infdata |> slice_min(Datum, n=1) |> 
+  filter(Coicop == "Inflation")
+maxinflation <- infdata |> filter(Coicop == "Inflation") |> 
+  slice_max(Beitrag, n=1) |> pull(Beitrag)
+
+pal <- met.brewer("Lakota")[c(3,2,1,5)]
+cols <- c(rbind(darken(pal, 0.1), lighten(pal, 0.2)))
+
+infdata |> filter(!Coicop == "Inflation") |>
+  ggplot(aes(x = Datum, y = Beitrag, group = Coicop, fill = Coicop)) +
+  geom_stream(type = "mirror", sorting = "onset") +
+  scale_fill_manual(values = c(cols[1:6], "gray80"), 
+                    name = "", guide = guide_legend(reverse = F, keywidth = 0.5,
+                    keyheight = 2.5)) +
+  scale_x_date(date_labels = "%b %y", position = "bottom",
+               breaks = seq(firstdate$Datum, lastdate$Datum, by="6 months")) +
+  coord_cartesian(expand = F, xlim = c(firstdate$Datum - 60, lastdate$Datum + 60),
+             ylim = c(-maxinflation/2, maxinflation/2)) +
+  labs(x=NULL, y=NULL) +
+  theme_ms() +
+  theme(legend.position = "right",
+        legend.background = element_rect(fill = "white", colour = NA),
+        legend.text = element_text(size = 10, family = "Raleway"),
+        panel.grid.major.y = element_blank(),
+        axis.text.x = element_text(family = "Raleway", color = "gray50", size = 10),
+        axis.text.y = element_blank())
+
+```
+
+## Drivers of inflation in Austria {.medium}
+
+```{r infbump}
+#| echo: false
+#| fig-width: 10
+#| fig-height: 4
+#| fig-align: center
+#| results: asis
+library(ggbump)
+library(futurevisions)
+
+firstdate <- as.Date("2022-07-01")
+lastdate <- max(infdata$Datum)
+
+findat <- infdata |> filter(!Coicop == "Inflation", Datum >= firstdate) |> 
+  mutate(rank = rank(-Beitrag, ties.method = "random"), .by = Datum) |> 
+  mutate(intop = any(rank <= 5), .by = Coicop) |> 
+  filter(intop == T)
+
+findat |>  
+  ggplot(aes(x = Datum, y = rank, color = Coicop)) +
+  geom_point(aes(size = Beitrag)) + 
+  geom_text(data = findat |> slice_min(Datum, n=1), family = "Raleway",
+            aes(x = Datum - days(7), label = str_replace(Coicop, "\n", " ")), size = 3.5, hjust = 0, nudge_y = 0.3) +
+  geom_text(data = findat |> slice_max(Datum, n=1), family = "Raleway",
+            aes(x = Datum + days(5), label = Coicop), size = 3.5, hjust = 0) +
+  geom_bump(size = 2, smooth = 8) +
+  geom_point(data = tibble(x = firstdate - days(20), y = 1:5), aes(x = x, y = y), 
+             inherit.aes = F, color = "black", size = 8, pch = 21) +
+  geom_text(data = tibble(x = firstdate - days(20), 
+                          y = 1:5), aes(x = x, y = y, label = y), 
+            inherit.aes = F, color = "black", family = "Roboto", size = 3.5) +
+  scale_color_manual(values = lighten(futurevisions("grand_tour"), .3)) +
+  scale_size_continuous(range = c(2, 6)) +
+  scale_y_reverse() +
+  scale_x_date(limits = c(NA_Date_, as.Date("2023-03-20")),
+               breaks = seq(firstdate, lastdate, "1 month"), 
+               date_labels = "%b '%y") +
+  labs(x = NULL, y = NULL) +
+  theme_ms(dark = F, grid = F) +
+  theme(legend.position = "none",
+       # plot.background = element_rect(fill = "grey10"), 
+        axis.text.y = element_blank(),
+        axis.text.x = element_text(family = "Raleway", margin = margin(t = 5, unit = "pt"), size = 9),
+        plot.title = element_text(family = "Raleway", margin = margin(b = 5, unit = "pt"), face = "plain", size = 15),
+        plot.subtitle = element_text(family = "Raleway", margin = margin(b = 10, unit = "pt"), face = "plain", size = 11),
+        plot.caption = element_text(family = "Raleway", margin = margin(t = 10, unit = "pt"),size = 5),
+        panel.grid = element_blank())
+```
 
 # All colours are beautiful
 
-::: {.absolute top="90%" left="30%" width="400px" height="336px"}
+::: {.absolute top="90%" left="30%" width="400px"}
 ![](../../data/img/avatar_sweatshirt.png)
 :::
 

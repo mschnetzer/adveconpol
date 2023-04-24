@@ -43,5 +43,8 @@
   },
   "slides/09_mobility/index.qmd": {
     "index.html": "f982f506"
+  },
+  "data/code/07_income.Rmd": {
+    "07_income.html": "05808f61"
   }
 }
