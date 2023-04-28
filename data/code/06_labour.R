@@ -89,7 +89,7 @@ unemp |>
         plot.title = element_text(family = "Oswald", size = 24),
 # Subtitle should be rendered as markdown (from ggtext package) rather than element_text!
         plot.subtitle = element_markdown(family = "Roboto Condensed", color = "gray40", 
-                                         size = 14, margin = margin(b = 1, unit = "lines")),
+                                         size = 14),
         plot.caption = element_text(family = "Roboto Condensed", color = "gray40", size = 7,
                                     margin = margin(t = 1, unit = "lines")),
         plot.title.position = "plot",
@@ -97,5 +97,5 @@ unemp |>
         panel.grid.major = element_line(linewidth = 0.2),
         panel.spacing.x = unit(1, "lines"))
 
-ggsave(filename = "unemp.png", width = 10, height = 4.5, dpi = 320)
+ggsave(filename = "plots/unemp.png", width = 10, height = 4.5, dpi = 320)
  
