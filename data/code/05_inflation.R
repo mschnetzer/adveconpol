@@ -37,7 +37,7 @@ plotdat <- inflation |>
          `Restaurants & Hotels` = x11_restaurants_and_hotels,              
          Others) |> 
   pivot_longer(cols = -Date, names_to = "Coicop", values_to = "Contribution") |> 
-  mutate(Coicop = fct_reorder2(Coicop, Date, Contribution, .desc = F)) |> 
+  mutate(Coicop = fct_relevel(Coicop, "Inflation", "Others", "Transport", "Recreation & Culture", "Restaurants & Hotels", "Food", "Housing & Energy")) |> 
   filter(Date >= "2019-01-01")
 
 # Let's test the data
