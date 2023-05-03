@@ -39,20 +39,21 @@ gdp |> filter(unit == "Chain linked volumes (2010), euro per capita") |>
   theme_minimal() +
   theme(panel.grid.minor = element_blank(),
         legend.position = "bottom")
-ggsave("gdp_evolution.png", width = 6, height = 4, dpi = 320)
+ggsave("plots/gdp_evolution.png", width = 6, height = 4, dpi = 320)
 
 # Annotation within the plot; for casual style, try "stat = 'smooth'"
 library(geomtextpath)
 gdp |> filter(unit == "Chain linked volumes (2010), euro per capita") |> 
   ggplot(aes(x = time, y = values, group = geo, color = geo)) +
   geomtextpath::geom_textline(aes(label = geo), hjust = 0.75, vjust = 0.5, #stat = "smooth",
-                              size = 3, fontface = "bold") +
+                              size = 3, fontface = "bold", linewidth = 0.8) +
   scale_color_manual(values = met.brewer("Juarez")) +
   scale_y_continuous(labels = scales::number_format(prefix = "€", big.mark = ",")) +
   labs(x = NULL, y = NULL, title = "Evolution of GDP 2000-2021", 
        subtitle = "GDP per capita in €") +
   theme_minimal() +
   theme(legend.position = "none")
+ggsave("plots/gdp_evolution_label.png", width = 6, height = 4, dpi = 320)
   
 
 # 2. Create base year for better comparability of evolution & reorder countries for legend
@@ -156,4 +157,4 @@ growthrank |>
         axis.text.y = element_blank(),
         axis.text.x = element_text(color = "white", size = 10))
 
-ggsave("~/Desktop/bipbump.png", width = 8, height = 4, dpi = 320) 
+ggsave("plots/gdpbump.png", width = 8, height = 4, dpi = 320) 

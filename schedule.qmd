@@ -8,8 +8,7 @@ css: layout/css/adveconpol.scss
 library(tidyverse)
 library(readxl)
 library(glue)
-library(knitr)
-library(kableExtra)
+library(gt)
 
 Sys.setlocale(locale="en_US.UTF-8")
 schedule <- read_xlsx(here::here("data/schedule/schedule.xlsx"))
@@ -18,12 +17,13 @@ schedule <- read_xlsx(here::here("data/schedule/schedule.xlsx"))
 In this table you find the dates and contents of all classes.
 
 
-::: {.schedule-table}
-```{r table, echo=F, results='asis'}
-schedule %>% arrange(Date) %>% select(-c(Chart)) %>%
+```{r schedule}
+#| echo: false
+#| results: 'asis'
+schedule |> arrange(Date) |> select(-c(Chart)) |>
   mutate(Slides = ifelse(!is.na(Slides),
         glue('<a href="slides/{Slides}/" target = "_blank">
-             <i class="fa-solid fa-display fa-lg"></i></a>'),
+               <i class="fa-solid fa-display fa-lg"></i></a>'),
         glue('<font color="#e9ecef"><i class="fa-solid fa-display fa-lg"></i></font>')), 
         Code = ifelse(!is.na(Code),
         glue('<a href="data/code/{Code}" target = "_blank">
@@ -36,14 +36,29 @@ schedule %>% arrange(Date) %>% select(-c(Chart)) %>%
         Assignment = ifelse(!is.na(Assignment),
         glue('<a href="#h{Assignment}"><i class="fa-solid fa-pen fa-lg"></i></a>'),
         glue('<font color="#e9ecef"><i class="fa-solid fa-pen fa-lg"></i></font>')),
-        Date = format(Date, '%b %d, %Y')) %>%
-  kbl(escape = FALSE, align = "ccclcc", table.attr = 'class="schedule-table"') %>% 
-  kable_styling() %>% 
-  column_spec(1:3, width = "12%") %>% 
-  column_spec(4, width = "24%") %>% 
-  column_spec(5:8, width = "10%")
+        Date = format(Date, '%b %d, %Y')) |>
+     mutate(across(c(Slides, Code, Data, Assignment), ~map(., gt::html))) |>
+          gt() |>
+ #         opt_table_font(font = google_font("Roboto Slab")) |>
+          tab_options(
+               column_labels.font.size = "18px",
+               column_labels.font.weight = "bolder",
+               data_row.padding = px(10),
+          ) |>
+          tab_style(location = cells_body(),
+                    style = cell_text(size = "16px", weight = 100)) |>
+          tab_style(style = cell_borders(sides = "bottom", 
+                                        color = "gray200", weight = px(0.2)),
+                    locations = cells_body(columns = everything(),
+                                           rows = everything())
+          ) |>
+          cols_width(1:3 ~pct(12),
+                    Content ~ pct(20),
+                    5:8 ~ pct(11)) |>
+          cols_align(align = "center") |>
+          cols_align(align = "left", columns = 1:4) |>
+          as_raw_html(inline_css = FALSE) 
 ```
-:::
 
 #### Assignments
 
@@ -52,7 +67,7 @@ Assignment [[1]](#h1) provides the setup of the R infrastructure that is require
 ##### Homework 1{#h1}
 
 ```{r assign1, include = F}
-assignvars <- schedule %>% filter(!is.na(Assignment)) %>%
+assignvars <- schedule |> filter(!is.na(Assignment)) |>
   mutate(deadline = format(Date, '%B %d, %Y'),
          data = paste0("data/assignments/", Chart, ".csv"),
          png = paste0("data/assignments/", Chart, ".png"))

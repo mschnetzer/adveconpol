@@ -26,6 +26,7 @@ data_summary <- data |>
                         sd = ~sd(., na.rm = TRUE))))
 
 # Scatter plot with error bars by species
+# Idea by Cedric Scherer: https://www.behance.net/gallery/101517403/Bill-Dimensions-of-Penguins
 data |> ggplot(aes(x = bill_length_mm, 
                    y = bill_depth_mm, 
                    color = species)) +
@@ -36,20 +37,20 @@ data |> ggplot(aes(x = bill_length_mm,
     aes(x = bill_length_mm_median,
         ymin = bill_depth_mm_median - bill_depth_mm_sd,
         ymax = bill_depth_mm_median + bill_depth_mm_sd,
-        color = species, 
+        color = species,
         color = after_scale(colorspace::darken(color, .2, space = "combined"))
     ),
-    inherit.aes = F, width = .8, size = .8
+    inherit.aes = F, width = .8, linewidth = .8
   ) +
   geom_errorbar(
     data = data_summary,
     aes(y = bill_depth_mm_median,
         xmin = bill_length_mm_median - bill_length_mm_sd,
         xmax = bill_length_mm_median + bill_length_mm_sd,
-        color = species, 
+        color = species,
         color = after_scale(colorspace::darken(color, .2, space = "combined"))
     ),
-    inherit.aes = F, width = .8, size = .8
+    inherit.aes = F, width = .8, linewidth = .8
   ) +
   geom_point(size = 1.5, alpha = 0.5) +
   scale_color_manual(name = NULL,
@@ -111,9 +112,10 @@ plotdat |>
        caption = "Note: Data is calendar but not seasonally adjusted\n Data: Eurostat. Figure: @matschnetzer") +
   theme(legend.position = "none",
         plot.subtitle = element_text(margin = margin(t = 5, b = 10, unit = "pt")),
+        plot.caption = element_text(size = 6),
         axis.text.y = element_text(size = 8),
         axis.text.x = element_text(size = 7),
         panel.spacing.x = unit(2, "lines"),
         strip.text = element_text(size = 10))
 
-ggsave(filename = "retail_sales.png", dpi = 320, width = 8, height = 4)
+ggsave(filename = "plots/retail_sales.png", dpi = 320, width = 8, height = 4)

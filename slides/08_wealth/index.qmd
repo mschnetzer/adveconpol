@@ -8,8 +8,8 @@ title: |
       </span><br>
     {{< var course.subtitle >}}
 author: "{{< var instructor.name >}}"  
-subtitle: Labour · Labels
-date: April 24, 2023
+subtitle: Wealth · Themes
+date: May 15, 2023
 date-format: long
 from: markdown+emoji
 bibliography: ../../data/lit/wipol_advanced.bib
@@ -31,21 +31,299 @@ format:
     transition: fade
     progress: true
     multiplex: false
-    scrollable: true
+    scrollable: false
     preview-links: false
     hide-inactive-cursor: true
     highlight-style: printing
     pause: true
 ---
 
+## Definition of private wealth {.smaller}
 
-# Labels and Fonts
+::: columns 
+::: {style="font-size:1.5rem"}
+::: {.column width="30%"}
+[**Non-financial assets**]{.red style="font-size:1.7rem"}
 
-::: {.absolute top="90%" left="30%" width="400px" height="336px"}
-![](../../data/img/avatar_read.png)
+- Dwellings (owner-occupied residence, other real estate)
+- Consumer durables (vehicles, etc.)
+- Valuables
+- Intellectual property
+:::
+
+::: {.column width="30%"}
+[**Financial assets**]{.red style="font-size:1.7rem"}
+
+- Currency and deposits
+- Net equity in own unincorporated business
+- Mututal funds and investment funds
+- (Private) Pensions funds
+- Bonds and other debt securities
+- Shares and other equity
+- Life insurance funds
+-Other financial assets
+:::
+
+::: {.column width="30%"}
+[**Liabilities**]{.red style="font-size:1.7rem"}
+
+- Owner-occupied residence loans
+- Consumer durable loans (e.g. for vehicles)
+- Other investment loans (collateralized)
+- Other loans (e.g. education loans)
+:::
+:::
+:::
+
+::: {.absolute top="70%" left="60%" .textbox .fragment .fade-up}
+No human, social and cultural capital; 
+No public social security pensions (marketable vs. augmented wealth)
+:::
+
+::: {.aside}
+Source: @oecd:2013
+:::
+
+## HFCS versus National Accounts {.smaller}
+
+::: {.tbl-classic .tbl-larger}
+| | Tangible assets | Financial wealth | Liabilities | Net wealth |
+|-----|:-----:|:-----:|:-----:|:-----:|
+Austria | -8 | 62 | 59 | 12 |
+Germany | 15 | 58 | 29 | 30 | 
+France | 17 | 61 | 33 | 32 | 
+Spain | 16 | 63 | 39 | 24 | 
+Italy | -5 | 80 | 60 | 23 | 
+Belgium | -21 | 42 | 24 | 6 | 
+Finland | -1 | 63 | 12 | 22 | 
+Netherlands | 13 | 86 | 16 | 47 | 
+: HFCS aggregates in % of National Accounts {tbl-colwidths="[20,15,15,15,15]"}
+:::
+
+::: {.aside}
+Source: @vermeulen:2016
+:::
+
+## Why is there underreporting in HFCS?
+
+::: {.incremental style="font-size:1.8rem"}
+- Target population in Austria: [3.9 million households]{.hl .hl-dred .secfont}
+- Gross sample in HFCS 2017: [6,280 households]{.hl .hl-dred .secfont}
+- Realized interviews: [3,072 households]{.hl .hl-dred .secfont}
+- Response rate in HFCS 2017: [approx. 50%]{.hl .hl-dred .secfont}
+- Residual: [refused interviews]{.marker-hl}, invalid addresses, households not available, etc.
+:::
+
+::: {.absolute bottom="5%" left="10%" width="800px" .textbox .fragment .fade-up style="font-size:1.7rem;padding:0.5rem 1rem;" .altlist}
+- Response refusal correlates with wealth and is highest at the top [@vermeulen:2016]
+- Wealthy households own a greater number of assets and miss some components more easily [@kennickell:1999]
+:::
+
+## Upstream strategy against underreporting: Oversampling {.smaller}
+
+- Undercoverage and Underreporting
+- Oversampling is crucial for wealth surveys 
+- Oversampling in HFCS 2017: :belgium: :cyprus: :de: :estonia: :es: :finland: :fr: :greece: :croatia: :hungary: :ireland: :latvia: :lithuania: :luxembourg: :poland: :portugal: :slovakia:
+- No oversampling: :austria: :it: :malta: :netherlands: :slovenia:
+- How does oversampling work?
+    - External personal wealth data (:fr: :es:)
+    - List of streets with high-income people (:de: :slovakia:)
+    - Income tax data (:luxembourg: 20% of the sample from top 10% earners)
+    - Regions with higher average income (:poland:)
+
+## Downstream strategy against underreporting: Pareto estimation {.smaller}
+
+- Pareto-Distribution is a sensible approximation to the distribution of large wealth
+- Two parameters:
+    - Threshold for "large" wealth $m$
+    - Pareto-Index $\alpha$
+
+$$P_i(x_i) = Pr(X_i \leqslant x_i) = 1 - \left(\frac{m_i}{x_i}\right)^{\alpha_i}$$
+$$\forall ~\text{implicates} ~i = 1...5 \wedge x_i \geqslant m_i$$
+
+::: {.fragment .fade-in}
+[A smaller $\alpha$ means greater inequality. Empirically, $\alpha$ often is around 1.5 for wealth.]{.bubble .bubble-bottom-left .absolute top="30%" right="0%" style="--bubcol: var(--bubcol-red);max-width:350px;font-size:1.2rem;"}
+:::
+
+::: {.aside}
+<i class="fa-solid fa-book"></i> Reading recommendation: @gabaix:2016
+:::
+
+## European Rich List Database (ERLDB) and HFCS {.smaller}
+
+![](img/rlmap_col.png){fig-align="center" height="500"}
+
+::: {.aside}
+Source: @disslbacher:2020
+:::
+
+## Cumulative density function of wealth in Germany {.smaller}
+
+![](img/ccdf_col.png){fig-align="center" height="500"}
+
+::: {.aside}
+Source: @disslbacher:2020
+:::
+
+## Net wealth distribution in Austria
+
+```{r waffle}
+#| echo: false
+#| results: 'asis'
+#| fig-width: 10
+#| fig-height: 4.5
+library(tidyverse)
+library(MetBrewer)
+library(msthemes)
+library(waffle)
+
+wineq <- tribble(
+  ~group, ~share, ~popshare,
+  "Top 1%", 38.9, 1,
+  "Top 2-5%", 16.2, 4,
+  "Top 6-10%", 10.6, 5, 
+  "Top 11-50%", 31.4, 40,
+  "Bottom 50%", 2.8, 50
+) |>
+mutate(group = factor(group, levels = rev(group)),
+labpos = cumsum(share)- 0.5*share)
+
+wineq |>
+  select(group, `Wealth share`=share, `Population share`=popshare) |>
+  pivot_longer(cols = -group, names_to = "cat", values_to = "value") |>
+  mutate(value = round(value,0)) |>
+  ggplot(aes(fill=group, values=value)) +
+  geom_waffle(color = "white", size=1.125, n_rows = 5, na.rm = F) +
+  facet_wrap(~cat, ncol=1) +
+  scale_x_discrete(expand=c(0,0)) +
+  scale_y_discrete(expand=c(0,0)) +
+  scale_fill_manual(values = met.brewer("Juarez"), guide = guide_legend(reverse=T, keywidth = 0.5, keyheight = 2)) +
+  theme_ms(grid=F,alttf=T) +
+  theme(strip.text.x = element_text(size=20,margin=margin(b=5, t=5)),
+      legend.text = element_text(size=14),
+      legend.title=element_blank()) +
+  coord_equal() +
+  theme_enhance_waffle()
+```
+
+
+## Income and wealth inequality across Europe
+
+```{r ginis}
+#| echo: false
+#| results: 'asis'
+#| fig-width: 10
+#| fig-height: 4.5
+load("data/ginidat.RData")
+
+ginidat |> ggplot(aes(x=reorder(geo, rank, na.rm=T))) +
+  geom_segment(aes(y = 0, yend = values, xend=geo), size = 0.1, color="grey70") +
+  geom_point(aes(y=values, group = type, shape = type, color = type), size = 3) +
+  geom_hline(aes(yintercept = mean(values[type=="Income"])),
+             size = 0.1, linetype = "longdash") +
+  geom_hline(aes(yintercept = mean(values[type=="Wealth"], na.rm=T)), 
+             size = 0.1, linetype = "longdash") +
+  annotate("text", x = 24, y = 68, label = "Average", size = 3) +
+  scale_color_manual(values = met.brewer("Juarez"), 
+                    labels = c("Income" = "Disposable income (Eurostat)", 
+                               "Wealth" = "Net wealth (HFCS)")) +
+  scale_shape_manual(values = c(19,17), 
+                    labels = c("Income" = "Disposable income (Eurostat)", 
+                                "Wealth" = "Net wealth (HFCS)")) +
+  theme_ms() +
+  labs(x="",y="Gini index") +
+  theme(legend.title = element_blank(),
+        legend.text = element_text(size=14),
+        axis.title = element_text(size = 14),
+        axis.text = element_text(size = 12),
+        legend.position = "bottom",
+        axis.title.x = element_blank(),
+        panel.grid.major.x = element_blank())
+```
+
+## Global income and wealth inequality {.smaller}
+
+![](img/incwealthineq.png){fig-align="center" height="500px"}
+
+::: {.aside}
+Source: @wir:2022
+:::
+
+## Private and public wealth {.smaller}
+
+![](img/privpubwealth.png){fig-align="center" height="500px"}
+
+::: {.aside}
+Source: @wir:2022
+:::
+
+# Themes
+
+::: {.absolute top="90%" left="30%" width="400px"}
+![](../../data/img/avatar_break.png)
 :::
 
 ::: footer
+:::
+
+## Themes
+
+```{r themes}
+#| echo: false
+#| results: 'asis'
+#| fig-width: 10
+#| fig-height: 5.5
+library(patchwork)
+
+mtcars2 <- within(mtcars, {
+  vs <- factor(vs, labels = c("V-shaped", "Straight"))
+  am <- factor(am, labels = c("Automatic", "Manual"))
+  cyl  <- factor(cyl)
+  gear <- factor(gear)
+})
+
+p <- ggplot(mtcars2) +
+  geom_point(aes(x = wt, y = mpg, colour = gear)) +
+  labs(x = "Weight (1000 lbs)", y = "Fuel economy (mpg)", colour = "Gears") +
+  theme(plot.title = element_text(family = "Roboto Condensed"))
+
+p1 <- p + labs(title = "theme_grey()") + theme_grey(base_size = 7)
+p2 <- p + labs(title = "theme_bw()") + theme_bw(base_size = 7)
+p3 <- p + labs(title = "theme_minimal()") + theme_minimal(base_size = 7)
+p4 <- p + labs(title = "theme_dark()") + theme_dark(base_size = 7)
+p5 <- p + labs(title = "theme_classic()") + theme_classic(base_size = 7)
+p6 <- p + labs(title = "theme_void()") + theme_void(base_size = 7)
+
+(p1 + p2 + p3) / (p4 + p5 + p6) & 
+  theme(plot.title = element_text(family = "Roboto Condensed", size = 16),
+        plot.margin = margin(b = 2, r = 1, unit = "lines"))
+```
+
+## Main theme components {.medium}
+
+```{r theming}
+#| echo: true
+#| eval: false
+data |> ggplot(aes(x = var1, y = var2)) |>
+  geom_line() +
+  theme_minimal() +
+  theme(plot.background = element_rect(fill = "red"),
+        panel.grid.x = element_blank(),
+        axis.line.x = element_line(linewidth = 1.2),
+        legend.text = element_text(size = 7),
+        legend.position = "top")
+```
+
+<br>
+
+::: {.tbl-classic}
+| Plot | Panel | Axis | Legend | Strip |
+|------|-------|------|--------|-------|
+| background | background | title | background | background |
+| title | border | text | key | placement | 
+| subtitle | grid | ticks | title | text |
+| caption | spacing | line | text | |
+| margin |  |  | position | |
 :::
 
 ## Bibliography {.bibstyle}

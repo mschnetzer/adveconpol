@@ -37,7 +37,7 @@ plotdat <- inflation |>
          `Restaurants & Hotels` = x11_restaurants_and_hotels,              
          Others) |> 
   pivot_longer(cols = -Date, names_to = "Coicop", values_to = "Contribution") |> 
-  mutate(Coicop = fct_reorder2(Coicop, Date, Contribution, .desc = F)) |> 
+  mutate(Coicop = fct_relevel(Coicop, "Inflation", "Others", "Transport", "Recreation & Culture", "Restaurants & Hotels", "Food", "Housing & Energy")) |> 
   filter(Date >= "2019-01-01")
 
 # Let's test the data
@@ -109,7 +109,7 @@ baseplot + scale_fill_manual(values = viridis(n=6, option = "B",  direction = -1
 baseplot + scale_fill_manual(values = viridis(n=6, option = "D",  direction = -1), 
                              name = "", guide = guide_legend(reverse = TRUE, keywidth = 0.5))
 
-ggsave("inflation.png", width = 6, height = 8, dpi=320)
+ggsave("plots/inflation_stream.png", width = 6, height = 8, dpi=320)
 
 
 ## Now, let's create a line chart with inflation rates across Europe
@@ -118,22 +118,26 @@ ggsave("inflation.png", width = 6, height = 8, dpi=320)
 library(ggflags)
 library(gghighlight)
 
+# Load local data
+load("05_inflation.RData")
+
 euinfdata |> filter(time >= "2020-01-01") |> 
   ggplot(aes(x = time, y= values, color = geo.de)) +
   geom_hline(yintercept = 0, linewidth = 0.1, color = "gray40") +
   geom_line(linewidth = 0.8, aes(group = geo)) +
   gghighlight(unhighlighted_params = list(color = "gray80", linewidth = 0.2), use_direct_label = F) +
-  geom_label(data = euinfdata |> slice_max(time, n=1), size = 2.7,
+  geom_label(data = euinfdata |> slice_max(time, n=1), size = 2.3,
              aes(label = glue::glue("{round(values,1)}%")), nudge_y = -0.5,
              nudge_x = 20, label.padding = unit(0.15,"lines"), fill = "gray98") +
-  geom_label(data = euinfdata |> slice_max(values, n=1, with_ties = F ,by = geo), size = 2.7,
+  geom_label(data = euinfdata |> slice_max(values, n=1, with_ties = F ,by = geo), size = 2.3,
              aes(label = glue::glue("{round(values,1)}%")),
              nudge_y = 1, label.padding = unit(0.15,"lines"), fill = "gray98") +
-  geom_flag(data = euinfdata |> slice_min(time, n=1), size = 6,
+  geom_flag(data = euinfdata |> slice_min(time, n=1), size = 5,
             aes(x = as.Date("2020-04-01"), y = 5, country = tolower(iso2c))) +
-  geom_text(data = euinfdata |> slice_min(time, n=1), size = 4, hjust = 0,
+  geom_text(data = euinfdata |> slice_min(time, n=1), size = 3, hjust = 0,
             aes(x = as.Date("2020-06-01"), y = 5, label = toupper(geo))) +
   scale_y_continuous(labels = scales::percent_format(scale = 1)) +
+  scale_x_date(limits = c(NA_Date_, as.Date("2023-05-01"))) +
   scale_color_manual(values = met.brewer("Tiepolo")) +
   facet_wrap(~geo.de) +
   labs(x = NULL, y = NULL) +
@@ -145,3 +149,5 @@ euinfdata |> filter(time >= "2020-01-01") |>
         panel.grid.major = element_line(linewidth = 0.2),
         panel.spacing.x = unit(1.5, "lines"),
         panel.spacing.y = unit(1, "lines"))
+
+ggsave("plots/inflation_eu.png", width = 8, height = 4, dpi=320)

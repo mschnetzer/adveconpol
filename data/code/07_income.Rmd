@@ -95,8 +95,9 @@ wsdata |>
               line_label_type = "label_path", label_key = country, use_group_by = F,
               label_params = list(size = 3, hjust = 0.94)) +
   geom_text_repel(data = wsdata |> slice_max(year, n=1, by=country) |> filter(!country == "Austria"), 
-                  aes(x = year, y = value, label = country),
-                  size = 2.5, color = "gray70", hjust = 0, direction = "y", nudge_x = 600,
+                  aes(x = year, y = value, label = country), 
+                  xlim = c(as.Date("2023-01-01"), NA),
+                  size = 2.5, color = "gray70", hjust = 0, direction = "y",
                   min.segment.length = unit(2, "pt"), segment.size = 0.1) +
   scale_color_manual(name = NULL, values = met.brewer("Austria"),) +
   scale_x_date(breaks= seq(min(wsdata$year),max(wsdata$year), by = "10 years"), date_labels = "%Y",

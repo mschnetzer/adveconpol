@@ -28,7 +28,7 @@ website:
         text: Schedule
       - href: visualization.qmd
         text: Chart & Report
-        
+
   page-footer:
     right: |
       {{< fa brands creative-commons >}} {{< var course.copyright_year >}} by {{< var author >}}
