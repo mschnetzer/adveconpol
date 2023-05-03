@@ -11,7 +11,7 @@
   <meta name="generator" content="quarto-1.3.340">
 
   <meta name="author" content="Dr.&nbsp;Matthias Schnetzer">
-  <meta name="dcterms.date" content="2023-04-24">
+  <meta name="dcterms.date" content="2023-05-15">
   <title>PI 5620 Advanced Economic Policy -     Economic Policy Visualization</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -30,7 +30,91 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
-  </style>
+    /* CSS for syntax highlighting */
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+      }
+    pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+    div.sourceCode
+      { color: #000000; background-color: #ffffff; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #000000; } /* Normal */
+    code span.al { color: #bf0303; background-color: #f7e6e6; font-weight: bold; } /* Alert */
+    code span.an { color: #ca60ca; } /* Annotation */
+    code span.at { color: #0057ae; } /* Attribute */
+    code span.bn { color: #b08000; } /* BaseN */
+    code span.bu { color: #644a9b; } /* BuiltIn */
+    code span.cf { color: #000000; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #924c9d; } /* Char */
+    code span.cn { color: #aa5500; } /* Constant */
+    code span.co { color: #898887; } /* Comment */
+    code span.cv { color: #0095ff; } /* CommentVar */
+    code span.do { color: #607880; } /* Documentation */
+    code span.dt { color: #0057ae; } /* DataType */
+    code span.dv { color: #b08000; } /* DecVal */
+    code span.er { color: #bf0303; text-decoration: underline; } /* Error */
+    code span.ex { color: #0095ff; font-weight: bold; } /* Extension */
+    code span.fl { color: #b08000; } /* Float */
+    code span.fu { color: #644a9b; } /* Function */
+    code span.im { color: #644a9b; } /* Import */
+    code span.in { color: #b08000; } /* Information */
+    code span.kw { color: #000000; font-weight: bold; } /* Keyword */
+    code span.op { color: #000000; } /* Operator */
+    code span.ot { color: #006e28; } /* Other */
+    code span.pp { color: #006e28; } /* Preprocessor */
+    code span.re { color: #0057ae; background-color: #e0e9f8; } /* RegionMarker */
+    code span.sc { color: #ff5500; } /* SpecialChar */
+    code span.ss { color: #ff5500; } /* SpecialString */
+    code span.st { color: #bf0303; } /* String */
+    code span.va { color: #0057ae; } /* Variable */
+    code span.vs { color: #bf0303; } /* VerbatimString */
+    code span.wa { color: #bf0303; } /* Warning */
+    /* CSS for citations */
+    div.csl-bib-body { }
+    div.csl-entry {
+      clear: both;
+    }
+    .hanging-indent div.csl-entry {
+      margin-left:2em;
+      text-indent:-2em;
+    }
+    div.csl-left-margin {
+      min-width:2em;
+      float:left;
+    }
+    div.csl-right-inline {
+      margin-left:2em;
+      padding-left:1em;
+    }
+    div.csl-indent {
+      margin-left: 2em;
+    }  </style>
   <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto.css" id="theme">
   <link href="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
@@ -244,7 +328,6 @@
     }
     .reveal .slide:not(.center) {
       height: 100%;
-      overflow-y: auto;
     }
     .reveal .slide.scrollable {
       overflow-y: auto;
@@ -329,7 +412,7 @@
 
 <section id="title-slide" class="quarto-title-block center">
   <h1 class="title"><p><span class="fa-stack course-icon"> <i class="fas fa-comment fa-stack-2x blue"></i> <i class="fas fa-chart-column fa-stack-1x fa-inverse" style="margin-top:-5pt"></i> </span><br> Economic Policy Visualization</p></h1>
-  <p class="subtitle">Labour · Labels</p>
+  <p class="subtitle">Wealth · Themes</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -339,19 +422,319 @@ Dr.&nbsp;Matthias Schnetzer
 </div>
 </div>
 
-  <p class="date">April 24, 2023</p>
+  <p class="date">May 15, 2023</p>
 </section>
+<section id="definition-of-private-wealth" class="slide level2 smaller">
+<h2>Definition of private wealth</h2>
+<div class="columns">
+<div style="font-size:1.5rem">
+<div class="column" style="width:30%;">
+<p><span class="red" style="font-size:1.7rem"><strong>Non-financial assets</strong></span></p>
+<ul>
+<li>Dwellings (owner-occupied residence, other real estate)</li>
+<li>Consumer durables (vehicles, etc.)</li>
+<li>Valuables</li>
+<li>Intellectual property</li>
+</ul>
+</div>
+<div class="column" style="width:30%;">
+<p><span class="red" style="font-size:1.7rem"><strong>Financial assets</strong></span></p>
+<ul>
+<li>Currency and deposits</li>
+<li>Net equity in own unincorporated business</li>
+<li>Mututal funds and investment funds</li>
+<li>(Private) Pensions funds</li>
+<li>Bonds and other debt securities</li>
+<li>Shares and other equity</li>
+<li>Life insurance funds -Other financial assets</li>
+</ul>
+</div>
+<div class="column" style="width:30%;">
+<p><span class="red" style="font-size:1.7rem"><strong>Liabilities</strong></span></p>
+<ul>
+<li>Owner-occupied residence loans</li>
+<li>Consumer durable loans (e.g.&nbsp;for vehicles)</li>
+<li>Other investment loans (collateralized)</li>
+<li>Other loans (e.g.&nbsp;education loans)</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="absolute textbox fragment fade-up" style="top: 70%; left: 60%; ">
+<p>No human, social and cultural capital; No public social security pensions (marketable vs.&nbsp;augmented wealth)</p>
+</div>
+
+<aside><div>
+<p>Source: <span class="citation" data-cites="oecd:2013">OECD (<a href="#/bibliography" role="doc-biblioref" onclick="">2013</a>)</span></p>
+</div></aside></section>
+<section id="hfcs-versus-national-accounts" class="slide level2 smaller">
+<h2>HFCS versus National Accounts</h2>
+<div class="tbl-classic tbl-larger">
+<table style="width:80%;">
+<caption>HFCS aggregates in % of National Accounts</caption>
+<colgroup>
+<col style="width: 20%">
+<col style="width: 15%">
+<col style="width: 15%">
+<col style="width: 15%">
+<col style="width: 15%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th style="text-align: center;">Tangible assets</th>
+<th style="text-align: center;">Financial wealth</th>
+<th style="text-align: center;">Liabilities</th>
+<th style="text-align: center;">Net wealth</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Austria</td>
+<td style="text-align: center;">-8</td>
+<td style="text-align: center;">62</td>
+<td style="text-align: center;">59</td>
+<td style="text-align: center;">12</td>
+</tr>
+<tr class="even">
+<td>Germany</td>
+<td style="text-align: center;">15</td>
+<td style="text-align: center;">58</td>
+<td style="text-align: center;">29</td>
+<td style="text-align: center;">30</td>
+</tr>
+<tr class="odd">
+<td>France</td>
+<td style="text-align: center;">17</td>
+<td style="text-align: center;">61</td>
+<td style="text-align: center;">33</td>
+<td style="text-align: center;">32</td>
+</tr>
+<tr class="even">
+<td>Spain</td>
+<td style="text-align: center;">16</td>
+<td style="text-align: center;">63</td>
+<td style="text-align: center;">39</td>
+<td style="text-align: center;">24</td>
+</tr>
+<tr class="odd">
+<td>Italy</td>
+<td style="text-align: center;">-5</td>
+<td style="text-align: center;">80</td>
+<td style="text-align: center;">60</td>
+<td style="text-align: center;">23</td>
+</tr>
+<tr class="even">
+<td>Belgium</td>
+<td style="text-align: center;">-21</td>
+<td style="text-align: center;">42</td>
+<td style="text-align: center;">24</td>
+<td style="text-align: center;">6</td>
+</tr>
+<tr class="odd">
+<td>Finland</td>
+<td style="text-align: center;">-1</td>
+<td style="text-align: center;">63</td>
+<td style="text-align: center;">12</td>
+<td style="text-align: center;">22</td>
+</tr>
+<tr class="even">
+<td>Netherlands</td>
+<td style="text-align: center;">13</td>
+<td style="text-align: center;">86</td>
+<td style="text-align: center;">16</td>
+<td style="text-align: center;">47</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<aside><div>
+<p>Source: <span class="citation" data-cites="vermeulen:2016">Vermeulen (<a href="#/bibliography" role="doc-biblioref" onclick="">2016</a>)</span></p>
+</div></aside></section>
+<section id="why-is-there-underreporting-in-hfcs" class="slide level2">
+<h2>Why is there underreporting in HFCS?</h2>
+<div style="font-size:1.8rem">
+<ul>
+<li class="fragment">Target population in Austria: <span class="hl hl-dred secfont">3.9 million households</span></li>
+<li class="fragment">Gross sample in HFCS 2017: <span class="hl hl-dred secfont">6,280 households</span></li>
+<li class="fragment">Realized interviews: <span class="hl hl-dred secfont">3,072 households</span></li>
+<li class="fragment">Response rate in HFCS 2017: <span class="hl hl-dred secfont">approx. 50%</span></li>
+<li class="fragment">Residual: <span class="marker-hl">refused interviews</span>, invalid addresses, households not available, etc.</li>
+</ul>
+</div>
+<div class="absolute textbox fragment fade-up altlist" style="font-size:1.7rem;padding:0.5rem 1rem;left: 10%; bottom: 5%; width: 800px; ">
+<ul>
+<li>Response refusal correlates with wealth and is highest at the top <span class="citation" data-cites="vermeulen:2016">(<a href="#/bibliography" role="doc-biblioref" onclick="">Vermeulen, 2016</a>)</span></li>
+<li>Wealthy households own a greater number of assets and miss some components more easily <span class="citation" data-cites="kennickell:1999">(<a href="#/bibliography" role="doc-biblioref" onclick="">Kennickell/Woodburn, 1999</a>)</span></li>
+</ul>
+</div>
+</section>
+<section id="upstream-strategy-against-underreporting-oversampling" class="slide level2 smaller">
+<h2>Upstream strategy against underreporting: Oversampling</h2>
+<ul>
+<li>Undercoverage and Underreporting</li>
+<li>Oversampling is crucial for wealth surveys</li>
+<li>Oversampling in HFCS 2017: <span class="emoji" data-emoji="belgium">🇧🇪</span> <span class="emoji" data-emoji="cyprus">🇨🇾</span> <span class="emoji" data-emoji="de">🇩🇪</span> <span class="emoji" data-emoji="estonia">🇪🇪</span> <span class="emoji" data-emoji="es">🇪🇸</span> <span class="emoji" data-emoji="finland">🇫🇮</span> <span class="emoji" data-emoji="fr">🇫🇷</span> <span class="emoji" data-emoji="greece">🇬🇷</span> <span class="emoji" data-emoji="croatia">🇭🇷</span> <span class="emoji" data-emoji="hungary">🇭🇺</span> <span class="emoji" data-emoji="ireland">🇮🇪</span> <span class="emoji" data-emoji="latvia">🇱🇻</span> <span class="emoji" data-emoji="lithuania">🇱🇹</span> <span class="emoji" data-emoji="luxembourg">🇱🇺</span> <span class="emoji" data-emoji="poland">🇵🇱</span> <span class="emoji" data-emoji="portugal">🇵🇹</span> <span class="emoji" data-emoji="slovakia">🇸🇰</span></li>
+<li>No oversampling: <span class="emoji" data-emoji="austria">🇦🇹</span> <span class="emoji" data-emoji="it">🇮🇹</span> <span class="emoji" data-emoji="malta">🇲🇹</span> <span class="emoji" data-emoji="netherlands">🇳🇱</span> <span class="emoji" data-emoji="slovenia">🇸🇮</span></li>
+<li>How does oversampling work?
+<ul>
+<li>External personal wealth data (<span class="emoji" data-emoji="fr">🇫🇷</span> <span class="emoji" data-emoji="es">🇪🇸</span>)</li>
+<li>List of streets with high-income people (<span class="emoji" data-emoji="de">🇩🇪</span> <span class="emoji" data-emoji="slovakia">🇸🇰</span>)</li>
+<li>Income tax data (<span class="emoji" data-emoji="luxembourg">🇱🇺</span> 20% of the sample from top 10% earners)</li>
+<li>Regions with higher average income (<span class="emoji" data-emoji="poland">🇵🇱</span>)</li>
+</ul></li>
+</ul>
+</section>
+<section id="downstream-strategy-against-underreporting-pareto-estimation" class="slide level2 smaller">
+<h2>Downstream strategy against underreporting: Pareto estimation</h2>
+<ul>
+<li>Pareto-Distribution is a sensible approximation to the distribution of large wealth</li>
+<li>Two parameters:
+<ul>
+<li>Threshold for “large” wealth <span class="math inline">\(m\)</span></li>
+<li>Pareto-Index <span class="math inline">\(\alpha\)</span></li>
+</ul></li>
+</ul>
+<p><span class="math display">\[P_i(x_i) = Pr(X_i \leqslant x_i) = 1 - \left(\frac{m_i}{x_i}\right)^{\alpha_i}\]</span> <span class="math display">\[\forall ~\text{implicates} ~i = 1...5 \wedge x_i \geqslant m_i\]</span></p>
+<div class="fragment fade-in">
+<p><span class="bubble bubble-bottom-left absolute" style="--bubcol: var(--bubcol-red);max-width:350px;font-size:1.2rem;top: 30%; right: 0%; ">A smaller <span class="math inline">\(\alpha\)</span> means greater inequality. Empirically, <span class="math inline">\(\alpha\)</span> often is around 1.5 for wealth.</span></p>
+</div>
+
+<aside><div>
+<p><i class="fa-solid fa-book"></i> Reading recommendation: <span class="citation" data-cites="gabaix:2016">Gabaix (<a href="#/bibliography" role="doc-biblioref" onclick="">2016</a>)</span></p>
+</div></aside></section>
+<section id="european-rich-list-database-erldb-and-hfcs" class="slide level2 smaller">
+<h2>European Rich List Database (ERLDB) and HFCS</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/rlmap_col.png" height="500"></p>
+</figure>
+</div>
+
+<aside><div>
+<p>Source: <span class="citation" data-cites="disslbacher:2020">Disslbacher et al. (<a href="#/bibliography" role="doc-biblioref" onclick="">2020</a>)</span></p>
+</div></aside></section>
+<section id="cumulative-density-function-of-wealth-in-germany" class="slide level2 smaller">
+<h2>Cumulative density function of wealth in Germany</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/ccdf_col.png" height="500"></p>
+</figure>
+</div>
+
+<aside><div>
+<p>Source: <span class="citation" data-cites="disslbacher:2020">Disslbacher et al. (<a href="#/bibliography" role="doc-biblioref" onclick="">2020</a>)</span></p>
+</div></aside></section>
+<section id="net-wealth-distribution-in-austria" class="slide level2">
+<h2>Net wealth distribution in Austria</h2>
+
+<img data-src="index_files/figure-revealjs/waffle-1.png" width="960" class="r-stretch"></section>
+<section id="income-and-wealth-inequality-across-europe" class="slide level2">
+<h2>Income and wealth inequality across Europe</h2>
+
+<img data-src="index_files/figure-revealjs/ginis-1.png" width="960" class="r-stretch"></section>
+<section id="global-income-and-wealth-inequality" class="slide level2 smaller">
+<h2>Global income and wealth inequality</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/incwealthineq.png" height="500"></p>
+</figure>
+</div>
+
+<aside><div>
+<p>Source: <span class="citation" data-cites="wir:2022">Chancel et al. (<a href="#/bibliography" role="doc-biblioref" onclick="">2022</a>)</span></p>
+</div></aside></section>
+<section id="private-and-public-wealth" class="slide level2 smaller">
+<h2>Private and public wealth</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/privpubwealth.png" height="500"></p>
+</figure>
+</div>
+
+<aside><div>
+<p>Source: <span class="citation" data-cites="wir:2022">Chancel et al. (<a href="#/bibliography" role="doc-biblioref" onclick="">2022</a>)</span></p>
+</div></aside></section>
 <section>
-<section id="labels-and-fonts" class="title-slide slide level1 center">
-<h1>Labels and Fonts</h1>
-<div class="absolute" style="top: 90%; left: 30%; width: 400px; height: 336px; ">
-<p><img data-src="../../data/img/avatar_read.png"></p>
+<section id="themes" class="title-slide slide level1 center">
+<h1>Themes</h1>
+<div class="absolute" style="top: 90%; left: 30%; width: 400px; ">
+<p><img data-src="../../data/img/avatar_break.png"></p>
 </div>
 <div class="footer">
 
 </div>
 </section>
-<section id="bibliography" class="slide level2 bibstyle">
+<section id="themes-1" class="slide level2">
+<h2>Themes</h2>
+
+<img data-src="index_files/figure-revealjs/themes-1.png" width="960" class="r-stretch"></section>
+<section id="main-theme-components" class="slide level2 medium">
+<h2>Main theme components</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a>data <span class="sc">|&gt;</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> var1, <span class="at">y =</span> var2)) <span class="sc">|&gt;</span></span>
+<span id="cb1-2"><a href="#cb1-2"></a>  <span class="fu">geom_line</span>() <span class="sc">+</span></span>
+<span id="cb1-3"><a href="#cb1-3"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
+<span id="cb1-4"><a href="#cb1-4"></a>  <span class="fu">theme</span>(<span class="at">plot.background =</span> <span class="fu">element_rect</span>(<span class="at">fill =</span> <span class="st">"red"</span>),</span>
+<span id="cb1-5"><a href="#cb1-5"></a>        <span class="at">panel.grid.x =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb1-6"><a href="#cb1-6"></a>        <span class="at">axis.line.x =</span> <span class="fu">element_line</span>(<span class="at">linewidth =</span> <span class="fl">1.2</span>),</span>
+<span id="cb1-7"><a href="#cb1-7"></a>        <span class="at">legend.text =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">7</span>),</span>
+<span id="cb1-8"><a href="#cb1-8"></a>        <span class="at">legend.position =</span> <span class="st">"top"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><br></p>
+<div class="tbl-classic">
+<table>
+<thead>
+<tr class="header">
+<th>Plot</th>
+<th>Panel</th>
+<th>Axis</th>
+<th>Legend</th>
+<th>Strip</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>background</td>
+<td>background</td>
+<td>title</td>
+<td>background</td>
+<td>background</td>
+</tr>
+<tr class="even">
+<td>title</td>
+<td>border</td>
+<td>text</td>
+<td>key</td>
+<td>placement</td>
+</tr>
+<tr class="odd">
+<td>subtitle</td>
+<td>grid</td>
+<td>ticks</td>
+<td>title</td>
+<td>text</td>
+</tr>
+<tr class="even">
+<td>caption</td>
+<td>spacing</td>
+<td>line</td>
+<td>text</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>margin</td>
+<td></td>
+<td></td>
+<td>position</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="bibliography" class="slide level2 bibstyle smaller scrollable">
 <h2>Bibliography</h2>
 <div class="footer">
 
@@ -360,6 +743,26 @@ Dr.&nbsp;Matthias Schnetzer
 
 <img src="../../data/img/wu-logo-simple.png" class="slide-logo r-stretch"><div class="footer footer-default">
 <p>PI 5620 Advanced Economic Policy | Summer term 2023</p>
+</div>
+<div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-wir:2022" class="csl-entry" role="listitem">
+Chancel, Lucas/Piketty, Thomas/Saez, Emmanuel/Zucman, Gabriel (2022). <em>World inequality report 2022</em>. World Inequality Lab.
+</div>
+<div id="ref-disslbacher:2020" class="csl-entry" role="listitem">
+Disslbacher, Franziska/Ertl, Michael/List, Emanuel/Mokre, Patrick/Schnetzer, Matthias (2020). <em>On top of the top - adjusting wealth distributions using national rich lists</em> (Working Paper Series No. 20). INEQ.
+</div>
+<div id="ref-gabaix:2016" class="csl-entry" role="listitem">
+Gabaix, Xavier (2016). Power laws in economics: An introduction. <em>Journal of Economic Perspectives</em>, <em>30</em>(1), 185–206. DOI: <a href="https://doi.org/10.1257/jep.30.1.185">10.1257/jep.30.1.185</a>
+</div>
+<div id="ref-kennickell:1999" class="csl-entry" role="listitem">
+Kennickell, Arthur B./Woodburn, R. Louise (1999). Consistent weight design for the 1989, 1992 and 1995 SCFs, and the distribution of wealth. <em>Review of Income and Wealth</em>, <em>45</em>(2), 193–215. DOI: <a href="https://doi.org/10.1111/j.1475-4991.1999.tb00328.x">10.1111/j.1475-4991.1999.tb00328.x</a>
+</div>
+<div id="ref-oecd:2013" class="csl-entry" role="listitem">
+OECD (2013). <em>OECD guidelines for micro statistics on household wealth</em>. <span>OECD</span>. DOI: <a href="https://doi.org/10.1787/9789264194878-en">10.1787/9789264194878-en</a>
+</div>
+<div id="ref-vermeulen:2016" class="csl-entry" role="listitem">
+Vermeulen, Philip (2016). Estimating the top tail of the wealth distribution. <em>The American Economic Review</em>, <em>106</em>(5), 646–650. DOI: <a href="https://doi.org/10.1257/aer.p20161021">10.1257/aer.p20161021</a>
+</div>
 </div>
 </section></section>
     </div>
@@ -573,6 +976,44 @@ Dr.&nbsp;Matthias Schnetzer
         ]
       });
     </script>
+    
+    <script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script>
+
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const toggleBodyColorMode = (bsSheetEl) => {

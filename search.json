@@ -105,11 +105,102 @@
     "text": "Bibliography\n\n\n\n\n\n\nPI 5620 Advanced Economic Policy | Summer term 2023\n\n\n\nScherer, Cédric (2022). Graphic design with ggplot2. https://rstudio-conf-2022.github.io/ggplot2-graphic-design/\n\n\nWeber, Isabella M./Wasner, Evan (2023). Sellers’ inflation, profits and conflict: Why can large firms hike prices in an emergency? Review of Keynesian Economics, 11(2), 183–213. DOI: https://doi.org/10.4337/roke.2023.02.05\n\n\nWuG Editorial board (2022). How to tackle the inflation crisis? Learnings from european case studies. Wirtschaft Und Gesellschaft, 48(4), 497–518.\n\n\nZuckerstätter, Sepp/Kafenda, Lukas/Muckenhuber, Mattias/Russinger, Reinhold (2022). Austria: Policies dealing with the inflation crisis. Wirtschaft Und Gesellschaft, 48(4), 578–598."
   },
   {
+    "objectID": "slides/08_wealth/index.html#definition-of-private-wealth",
+    "href": "slides/08_wealth/index.html#definition-of-private-wealth",
+    "title": "    Economic Policy Visualization",
+    "section": "Definition of private wealth",
+    "text": "Definition of private wealth\n\n\n\nNon-financial assets\n\nDwellings (owner-occupied residence, other real estate)\nConsumer durables (vehicles, etc.)\nValuables\nIntellectual property\n\n\n\nFinancial assets\n\nCurrency and deposits\nNet equity in own unincorporated business\nMututal funds and investment funds\n(Private) Pensions funds\nBonds and other debt securities\nShares and other equity\nLife insurance funds -Other financial assets\n\n\n\nLiabilities\n\nOwner-occupied residence loans\nConsumer durable loans (e.g. for vehicles)\nOther investment loans (collateralized)\nOther loans (e.g. education loans)\n\n\n\n\n\nNo human, social and cultural capital; No public social security pensions (marketable vs. augmented wealth)\n\n\n\nSource: OECD (2013)"
+  },
+  {
+    "objectID": "slides/08_wealth/index.html#hfcs-versus-national-accounts",
+    "href": "slides/08_wealth/index.html#hfcs-versus-national-accounts",
+    "title": "    Economic Policy Visualization",
+    "section": "HFCS versus National Accounts",
+    "text": "HFCS versus National Accounts\n\n\nHFCS aggregates in % of National Accounts\n\n\n\n\n\n\n\n\n\n\nTangible assets\nFinancial wealth\nLiabilities\nNet wealth\n\n\n\n\nAustria\n-8\n62\n59\n12\n\n\nGermany\n15\n58\n29\n30\n\n\nFrance\n17\n61\n33\n32\n\n\nSpain\n16\n63\n39\n24\n\n\nItaly\n-5\n80\n60\n23\n\n\nBelgium\n-21\n42\n24\n6\n\n\nFinland\n-1\n63\n12\n22\n\n\nNetherlands\n13\n86\n16\n47\n\n\n\n\n\n\nSource: Vermeulen (2016)"
+  },
+  {
+    "objectID": "slides/08_wealth/index.html#why-is-there-underreporting-in-hfcs",
+    "href": "slides/08_wealth/index.html#why-is-there-underreporting-in-hfcs",
+    "title": "    Economic Policy Visualization",
+    "section": "Why is there underreporting in HFCS?",
+    "text": "Why is there underreporting in HFCS?\n\n\nTarget population in Austria: 3.9 million households\nGross sample in HFCS 2017: 6,280 households\nRealized interviews: 3,072 households\nResponse rate in HFCS 2017: approx. 50%\nResidual: refused interviews, invalid addresses, households not available, etc.\n\n\n\n\nResponse refusal correlates with wealth and is highest at the top (Vermeulen, 2016)\nWealthy households own a greater number of assets and miss some components more easily (Kennickell/Woodburn, 1999)"
+  },
+  {
+    "objectID": "slides/08_wealth/index.html#upstream-strategy-against-underreporting-oversampling",
+    "href": "slides/08_wealth/index.html#upstream-strategy-against-underreporting-oversampling",
+    "title": "    Economic Policy Visualization",
+    "section": "Upstream strategy against underreporting: Oversampling",
+    "text": "Upstream strategy against underreporting: Oversampling\n\nUndercoverage and Underreporting\nOversampling is crucial for wealth surveys\nOversampling in HFCS 2017: 🇧🇪 🇨🇾 🇩🇪 🇪🇪 🇪🇸 🇫🇮 🇫🇷 🇬🇷 🇭🇷 🇭🇺 🇮🇪 🇱🇻 🇱🇹 🇱🇺 🇵🇱 🇵🇹 🇸🇰\nNo oversampling: 🇦🇹 🇮🇹 🇲🇹 🇳🇱 🇸🇮\nHow does oversampling work?\n\nExternal personal wealth data (🇫🇷 🇪🇸)\nList of streets with high-income people (🇩🇪 🇸🇰)\nIncome tax data (🇱🇺 20% of the sample from top 10% earners)\nRegions with higher average income (🇵🇱)"
+  },
+  {
+    "objectID": "slides/08_wealth/index.html#downstream-strategy-against-underreporting-pareto-estimation",
+    "href": "slides/08_wealth/index.html#downstream-strategy-against-underreporting-pareto-estimation",
+    "title": "    Economic Policy Visualization",
+    "section": "Downstream strategy against underreporting: Pareto estimation",
+    "text": "Downstream strategy against underreporting: Pareto estimation\n\nPareto-Distribution is a sensible approximation to the distribution of large wealth\nTwo parameters:\n\nThreshold for “large” wealth \\(m\\)\nPareto-Index \\(\\alpha\\)\n\n\n\\[P_i(x_i) = Pr(X_i \\leqslant x_i) = 1 - \\left(\\frac{m_i}{x_i}\\right)^{\\alpha_i}\\] \\[\\forall ~\\text{implicates} ~i = 1...5 \\wedge x_i \\geqslant m_i\\]\n\nA smaller \\(\\alpha\\) means greater inequality. Empirically, \\(\\alpha\\) often is around 1.5 for wealth.\n\n\n\n Reading recommendation: Gabaix (2016)"
+  },
+  {
+    "objectID": "slides/08_wealth/index.html#european-rich-list-database-erldb-and-hfcs",
+    "href": "slides/08_wealth/index.html#european-rich-list-database-erldb-and-hfcs",
+    "title": "    Economic Policy Visualization",
+    "section": "European Rich List Database (ERLDB) and HFCS",
+    "text": "European Rich List Database (ERLDB) and HFCS\n\n\n\n\n\n\n\nSource: Disslbacher et al. (2020)"
+  },
+  {
+    "objectID": "slides/08_wealth/index.html#cumulative-density-function-of-wealth-in-germany",
+    "href": "slides/08_wealth/index.html#cumulative-density-function-of-wealth-in-germany",
+    "title": "    Economic Policy Visualization",
+    "section": "Cumulative density function of wealth in Germany",
+    "text": "Cumulative density function of wealth in Germany\n\n\n\n\n\n\n\nSource: Disslbacher et al. (2020)"
+  },
+  {
+    "objectID": "slides/08_wealth/index.html#net-wealth-distribution-in-austria",
+    "href": "slides/08_wealth/index.html#net-wealth-distribution-in-austria",
+    "title": "    Economic Policy Visualization",
+    "section": "Net wealth distribution in Austria",
+    "text": "Net wealth distribution in Austria"
+  },
+  {
+    "objectID": "slides/08_wealth/index.html#income-and-wealth-inequality-across-europe",
+    "href": "slides/08_wealth/index.html#income-and-wealth-inequality-across-europe",
+    "title": "    Economic Policy Visualization",
+    "section": "Income and wealth inequality across Europe",
+    "text": "Income and wealth inequality across Europe"
+  },
+  {
+    "objectID": "slides/08_wealth/index.html#global-income-and-wealth-inequality",
+    "href": "slides/08_wealth/index.html#global-income-and-wealth-inequality",
+    "title": "    Economic Policy Visualization",
+    "section": "Global income and wealth inequality",
+    "text": "Global income and wealth inequality\n\n\n\n\n\n\n\nSource: Chancel et al. (2022)"
+  },
+  {
+    "objectID": "slides/08_wealth/index.html#private-and-public-wealth",
+    "href": "slides/08_wealth/index.html#private-and-public-wealth",
+    "title": "    Economic Policy Visualization",
+    "section": "Private and public wealth",
+    "text": "Private and public wealth\n\n\n\n\n\n\n\nSource: Chancel et al. (2022)"
+  },
+  {
+    "objectID": "slides/08_wealth/index.html#themes-1",
+    "href": "slides/08_wealth/index.html#themes-1",
+    "title": "    Economic Policy Visualization",
+    "section": "Themes",
+    "text": "Themes"
+  },
+  {
+    "objectID": "slides/08_wealth/index.html#main-theme-components",
+    "href": "slides/08_wealth/index.html#main-theme-components",
+    "title": "    Economic Policy Visualization",
+    "section": "Main theme components",
+    "text": "Main theme components\n\ndata |&gt; ggplot(aes(x = var1, y = var2)) |&gt;\n  geom_line() +\n  theme_minimal() +\n  theme(plot.background = element_rect(fill = \"red\"),\n        panel.grid.x = element_blank(),\n        axis.line.x = element_line(linewidth = 1.2),\n        legend.text = element_text(size = 7),\n        legend.position = \"top\")\n\n\n\n\n\n\nPlot\nPanel\nAxis\nLegend\nStrip\n\n\n\n\nbackground\nbackground\ntitle\nbackground\nbackground\n\n\ntitle\nborder\ntext\nkey\nplacement\n\n\nsubtitle\ngrid\nticks\ntitle\ntext\n\n\ncaption\nspacing\nline\ntext\n\n\n\nmargin\n\n\nposition"
+  },
+  {
     "objectID": "slides/08_wealth/index.html#bibliography",
     "href": "slides/08_wealth/index.html#bibliography",
     "title": "    Economic Policy Visualization",
     "section": "Bibliography",
-    "text": "Bibliography\n\n\n\n\n\n\nPI 5620 Advanced Economic Policy | Summer term 2023"
+    "text": "Bibliography\n\n\n\n\n\n\nPI 5620 Advanced Economic Policy | Summer term 2023\n\n\n\nChancel, Lucas/Piketty, Thomas/Saez, Emmanuel/Zucman, Gabriel (2022). World inequality report 2022. World Inequality Lab.\n\n\nDisslbacher, Franziska/Ertl, Michael/List, Emanuel/Mokre, Patrick/Schnetzer, Matthias (2020). On top of the top - adjusting wealth distributions using national rich lists (Working Paper Series No. 20). INEQ.\n\n\nGabaix, Xavier (2016). Power laws in economics: An introduction. Journal of Economic Perspectives, 30(1), 185–206. DOI: 10.1257/jep.30.1.185\n\n\nKennickell, Arthur B./Woodburn, R. Louise (1999). Consistent weight design for the 1989, 1992 and 1995 SCFs, and the distribution of wealth. Review of Income and Wealth, 45(2), 193–215. DOI: 10.1111/j.1475-4991.1999.tb00328.x\n\n\nOECD (2013). OECD guidelines for micro statistics on household wealth. OECD. DOI: 10.1787/9789264194878-en\n\n\nVermeulen, Philip (2016). Estimating the top tail of the wealth distribution. The American Economic Review, 106(5), 646–650. DOI: 10.1257/aer.p20161021"
   },
   {
     "objectID": "slides/06_labour/index.html#full-employment-as-economic-policy-goal",
@@ -956,13 +1047,13 @@
     "href": "data/code/07_income.html",
     "title": "The functional distribution of income",
     "section": "",
-    "text": "Wage share in Austria\nThe wage share in Austria has been decreasing since the 1970s. In the wake of the global financial crisis that erupted in 2008, the wage share increased due to a sharp decline in profits.\n\n\n\n\n\nWe can improve the figure by editing the scales of the axes. We add percentage symbols to the y-axis and we remove the white space on the x-axis.\n\n\n\n\n\n\n\nWage shares in selected international countries\nWe can plot the wage shares for selected countries and emphasize the data for Austria with gghighlight. We can also improve the axis labels with scales.\n\n\n\n\n\n\n\nCode for the figure\nHere is the clean code for the figure on the functional distribution.\n\nwsdata |&gt;\n  ggplot(aes(x = year, y = value, group = country, color = country)) +\n  geom_line(linewidth = 1.4) +\n  gghighlight(country == \"Austria\", \n              unhighlighted_params = list(color = \"gray80\", alpha = 0.5, linewidth = 0.9),\n              line_label_type = \"label_path\", label_key = country, use_group_by = F,\n              label_params = list(size = 3, hjust = 0.94)) +\n  geom_text_repel(data = wsdata |&gt; slice_max(year, n=1, by=country) |&gt; filter(!country == \"Austria\"), \n                  aes(x = year, y = value, label = country),\n                  size = 2.5, color = \"gray70\", hjust = 0, direction = \"y\", nudge_x = 600,\n                  min.segment.length = unit(2, \"pt\"), segment.size = 0.1) +\n  scale_color_manual(name = NULL, values = met.brewer(\"Austria\"),) +\n  scale_x_date(breaks= seq(min(wsdata$year),max(wsdata$year), by = \"10 years\"), date_labels = \"%Y\",\n               limits = c(as.Date(\"1960-01-01\"), as.Date(\"2026-01-01\"))) +\n  scale_y_continuous(limits = c(55,80), labels = scales::percent_format(scale = 1)) +\n  labs(y = NULL, x = NULL, caption = \"Data: Ameco.\",\n       title = \"Wage share in selected countries\", subtitle = \"Wage share in % of GDP at factor cost\") +\n  theme_minimal() + \n  theme(panel.grid.minor = element_blank(),\n        plot.title = element_text(size = 14),\n        plot.caption = element_text(size = 10, margin = margin(t = 1, unit = \"lines\")),\n        axis.title = element_text(size = 12),\n        axis.text = element_text(size = 10))"
+    "text": "Wage share in Austria\nThe wage share in Austria has been decreasing since the 1970s. In the wake of the global financial crisis that erupted in 2008, the wage share increased due to a sharp decline in profits.\n\n\n\n\n\nWe can improve the figure by editing the scales of the axes. We add percentage symbols to the y-axis and we remove the white space on the x-axis.\n\n\n\n\n\n\n\nWage shares in selected international countries\nWe can plot the wage shares for selected countries and emphasize the data for Austria with gghighlight. We can also improve the axis labels with scales.\n\n\n\n\n\n\n\nCode for the figure\nHere is the clean code for the figure on the functional distribution.\n\nwsdata |&gt;\n  ggplot(aes(x = year, y = value, group = country, color = country)) +\n  geom_line(linewidth = 1.4) +\n  gghighlight(country == \"Austria\", \n              unhighlighted_params = list(color = \"gray80\", alpha = 0.5, linewidth = 0.9),\n              line_label_type = \"label_path\", label_key = country, use_group_by = F,\n              label_params = list(size = 3, hjust = 0.94)) +\n  geom_text_repel(data = wsdata |&gt; slice_max(year, n=1, by=country) |&gt; filter(!country == \"Austria\"), \n                  aes(x = year, y = value, label = country), \n                  xlim = c(as.Date(\"2023-01-01\"), NA),\n                  size = 2.5, color = \"gray70\", hjust = 0, direction = \"y\",\n                  min.segment.length = unit(2, \"pt\"), segment.size = 0.1) +\n  scale_color_manual(name = NULL, values = met.brewer(\"Austria\"),) +\n  scale_x_date(breaks= seq(min(wsdata$year),max(wsdata$year), by = \"10 years\"), date_labels = \"%Y\",\n               limits = c(as.Date(\"1960-01-01\"), as.Date(\"2026-01-01\"))) +\n  scale_y_continuous(limits = c(55,80), labels = scales::percent_format(scale = 1)) +\n  labs(y = NULL, x = NULL, caption = \"Data: Ameco.\",\n       title = \"Wage share in selected countries\", subtitle = \"Wage share in % of GDP at factor cost\") +\n  theme_minimal() + \n  theme(panel.grid.minor = element_blank(),\n        plot.title = element_text(size = 14),\n        plot.caption = element_text(size = 10, margin = margin(t = 1, unit = \"lines\")),\n        axis.title = element_text(size = 12),\n        axis.text = element_text(size = 10))"
   },
   {
     "objectID": "schedule.html",
     "href": "schedule.html",
     "title": "Schedule",
     "section": "",
-    "text": "In this table you find the dates and contents of all classes.\n\n\n\n  \n  \n  \n    \n    \n    \n    \n    \n    \n    \n    \n  \n  \n    \n    \n      Date\n      Time\n      Room\n      Content\n      Slides\n      Code\n      Data\n      Assignment\n    \n  \n  \n    Mar 06, 2023\n10:00-12:00\nTC.4.15\nIntroduction\n\n\n\n\n\n    Mar 13, 2023\n10:00-12:00\nTC.4.15\nData\n\n\n\n\n\n\n\n    Mar 20, 2023\n10:00-12:00\nTC.4.15\nVisualization\n\n\n\n\n\n\n\n    Mar 27, 2023\n10:00-12:00\nD4.0.022\nGrowth · Geometries\n\n\n\n\n\n\n\n    Apr 17, 2023\n10:00-12:00\nTC.3.07\nInflation · Colors\n\n\n\n\n\n\n\n    Apr 24, 2023\n10:00-12:00\nTC.3.06\nLabour · Labels\n\n\n\n\n\n\n\n    May 08, 2023\n10:00-12:00\nTC.3.11\nIncome · Scales\n\n\n\n\n\n\n\n    May 15, 2023\n10:00-12:00\nD4.0.127\nWealth · Themes\n\n\n\n\n    Jun 05, 2023\n10:00-12:00\nD4.0.127\nMobility · Maps\n\n\n\n\n    Jun 12, 2023\n10:00-12:00\nTC.3.07\nClimate · Facets\n\n\n\n\n    Jun 19, 2023\n10:00-12:00\nD4.0.127\nStudent presentations\n\n\n\n\n    Jun 26, 2023\n10:00-12:00\nD4.0.127\nStudent presentations\n\n\n\n\n  \n  \n  \n\n\n\n\nAssignments\nAssignment [1] provides the setup of the R infrastructure that is required in this course. There are no points for this assignment. Assignments [2] to [4] are recreations of examplary figures provided below. These examples are related to figures that are discussed in class. Students should then try to reproduce the plots at home and improve their individual coding skills. The raw data for the figures are available as *.csv files below.\n\nHomework 1\n\n\n\n\n\n\n\n\n\n\n\nInstall the latest R version (v4.2.2)\nInstall the latest version of RStudio Desktop\nOpen RStudio, copy the following code into the console and execute: install.packages(c(\"tidyverse\", \"rmarkdown\", \"scales\", \"lubridate\", \"colorspace\", \"devtools\")); sessionInfo()\nClick on Help &gt; About RStudio\nMake sure that both the R version (Console) and the RStudio version are visible, take a screenshot and upload it to the learning platform before March 13, 2023 at 9 a.m.\n\n\n\n\n\nHomework 2\n\n\n\n\n\n\n\n\n\n\nPlease submit your chart before April 24, 2023 at 9 a.m. The data for this assignment is available here: \n\n\n\n\nHomework 3\n\n\n\n\n\n\n\n\n\n\nPlease submit your chart before May 15, 2023 at 9 a.m. The data for this assignment is available here: \n\n\n\n\nHomework 4\n\n\n\n\n\n\n\n\n\n\nPlease submit your chart before June 12, 2023 at 9 a.m. The data for this assignment is available here:"
+    "text": "In this table you find the dates and contents of all classes.\n\n\n\n  \n  \n  \n    \n    \n    \n    \n    \n    \n    \n    \n  \n  \n    \n    \n      Date\n      Time\n      Room\n      Content\n      Slides\n      Code\n      Data\n      Assignment\n    \n  \n  \n    Mar 06, 2023\n10:00-12:00\nTC.4.15\nIntroduction\n\n\n\n\n\n    Mar 13, 2023\n10:00-12:00\nTC.4.15\nData\n\n\n\n\n\n\n\n    Mar 20, 2023\n10:00-12:00\nTC.4.15\nVisualization\n\n\n\n\n\n\n\n    Mar 27, 2023\n10:00-12:00\nD4.0.022\nGrowth · Geometries\n\n\n\n\n\n\n\n    Apr 17, 2023\n10:00-12:00\nTC.3.07\nInflation · Colors\n\n\n\n\n\n\n\n    Apr 24, 2023\n10:00-12:00\nTC.3.06\nLabour · Labels\n\n\n\n\n\n\n\n    May 08, 2023\n10:00-12:00\nTC.3.11\nIncome · Scales\n\n\n\n\n\n\n\n    May 15, 2023\n10:00-12:00\nD4.0.127\nWealth · Themes\n\n\n\n\n\n\n\n    Jun 05, 2023\n10:00-12:00\nD4.0.127\nMobility · Maps\n\n\n\n\n    Jun 12, 2023\n10:00-12:00\nTC.3.07\nClimate · Facets\n\n\n\n\n    Jun 19, 2023\n10:00-12:00\nD4.0.127\nStudent presentations\n\n\n\n\n    Jun 26, 2023\n10:00-12:00\nD4.0.127\nStudent presentations\n\n\n\n\n  \n  \n  \n\n\n\n\nAssignments\nAssignment [1] provides the setup of the R infrastructure that is required in this course. There are no points for this assignment. Assignments [2] to [4] are recreations of examplary figures provided below. These examples are related to figures that are discussed in class. Students should then try to reproduce the plots at home and improve their individual coding skills. The raw data for the figures are available as *.csv files below.\n\nHomework 1\n\n\n\n\n\n\n\n\n\n\n\nInstall the latest R version (v4.2.2)\nInstall the latest version of RStudio Desktop\nOpen RStudio, copy the following code into the console and execute: install.packages(c(\"tidyverse\", \"rmarkdown\", \"scales\", \"lubridate\", \"colorspace\", \"devtools\")); sessionInfo()\nClick on Help &gt; About RStudio\nMake sure that both the R version (Console) and the RStudio version are visible, take a screenshot and upload it to the learning platform before March 13, 2023 at 9 a.m.\n\n\n\n\n\nHomework 2\n\n\n\n\n\n\n\n\n\n\nPlease submit your chart before April 24, 2023 at 9 a.m. The data for this assignment is available here: \n\n\n\n\nHomework 3\n\n\n\n\n\n\n\n\n\n\nPlease submit your chart before May 15, 2023 at 9 a.m. The data for this assignment is available here: \n\n\n\n\nHomework 4\n\n\n\n\n\n\n\n\n\n\nPlease submit your chart before June 12, 2023 at 9 a.m. The data for this assignment is available here:"
   }
 ]
