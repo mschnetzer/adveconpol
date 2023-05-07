@@ -405,10 +405,9 @@
     }
   </style>
   <script src="../../site_libs/htmlwidgets-1.6.2/htmlwidgets.js"></script>
-  <script src="../../site_libs/d3-4.9.1/d3.min.js"></script>
+  <script src="../../site_libs/d3-4.5.0/d3.min.js"></script>
   <script src="../../site_libs/sankey-1/sankey.js"></script>
-  <script src="../../site_libs/sankeyNetworkDefinition-1/sankeyNetworkDefinition.js"></script>
-  <script src="../../site_libs/sankeyNetwork-binding-0.5.0/sankeyNetwork.js"></script>
+  <script src="../../site_libs/sankeyNetwork-binding-0.4/sankeyNetwork.js"></script>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet">
 </head>
 <body class="quarto-light">
@@ -466,8 +465,8 @@ Dr.&nbsp;Matthias Schnetzer
 <section id="income-accounts-for-austria-2021" class="slide level2 medium">
 <h2>Income accounts for Austria, 2021</h2>
 <div class="cell-output-display">
-<div id="htmlwidget-4c7e3d89eb2b05d7bea6" style="width:1000px;height:500px;" class="sankeyNetwork html-widget "></div>
-<script type="application/json" data-for="htmlwidget-4c7e3d89eb2b05d7bea6">{"x":{"links":{"source":[0,0,0,0,1,1,2,2,2,2],"target":[1,3,4,5,2,6,7,8,9,10],"value":[288.8,79.9,37.4,1.8,201.4,87.5,116.8,24.1,25.3,35.1],"group":["linkcol","linkcol","linkcol","linkcol","linkcol","linkcol","linkcol","linkcol","linkcol","linkcol"]},"nodes":{"name":["Gross domestic product  (MP)","Net national income (FC)","Compensation of employees","Consumption of fixed capital","Taxes on products – Subsidies","Primary income with rest of world (ROW)","Net operating surplus + mixed income","Net wages and salaries","Wage tax","Social security cont. Employees","Social security cont. Employers"],"group":["nocol","NNI","CE","nocol","nocol","nocol","nocol","nocol","nocol","nocol","nocol"]},"options":{"NodeID":"name","NodeGroup":"group","LinkGroup":"group","colourScale":"d3.scaleOrdinal() .domain([\"NNI\", \"CE\", \"nocol\", \"linkcol\"]) \n            .range([\"#d03161\", \"#5d8198\", \"#d4d4d4\", \"#e4e4e4\"])","fontSize":14,"fontFamily":"Roboto Slab","nodeWidth":15,"nodePadding":10,"units":"","margin":{"top":null,"right":null,"bottom":null,"left":null},"iterations":32,"sinksRight":false}},"evals":[],"jsHooks":{"render":[{"code":"\n  function(el) { \n    var nodeWidth = this.sankey.nodeWidth();\n    var links = this.sankey.links();\n        \n    links.forEach((d, i) => {\n      var startX = d.source.x + nodeWidth;\n      var endX = d.target.x;\n      \n      var startY = d.source.y + d.sy + d.dy / 2;\n      var endY = d.target.y + d.ty + d.dy / 2;\n      \n      d3.select(el).select(\"svg g\")\n        .append(\"text\")\n        .attr(\"text-anchor\", \"middle\")\n        .attr(\"alignment-baseline\", \"middle\")\n        .attr(\"font-size\", \"13\")\n        .attr(\"font-family\", \"Roboto Slab\")\n        .attr(\"x\", startX + ((endX - startX) / 2))\n        .attr(\"y\", startY + ((endY - startY) / 2))\n        .text(d.value);\n    })\n  }\n","data":null}]}}</script>
+<div id="htmlwidget-50ea13de819e929f447f" style="width:1000px;height:500px;" class="sankeyNetwork html-widget "></div>
+<script type="application/json" data-for="htmlwidget-50ea13de819e929f447f">{"x":{"links":{"source":[0,0,0,0,1,1,2,2,2,2],"target":[1,3,4,5,2,6,7,8,9,10],"value":[288.8,79.9,37.4,1.8,201.4,87.5,116.8,24.1,25.3,35.1],"group":["linkcol","linkcol","linkcol","linkcol","linkcol","linkcol","linkcol","linkcol","linkcol","linkcol"]},"nodes":{"name":["Gross domestic product  (MP)","Net national income (FC)","Compensation of employees","Consumption of fixed capital","Taxes on products – Subsidies","Primary income with rest of world (ROW)","Net operating surplus + mixed income","Net wages and salaries","Wage tax","Social security cont. Employees","Social security cont. Employers"],"group":["nocol","NNI","CE","nocol","nocol","nocol","nocol","nocol","nocol","nocol","nocol"]},"options":{"NodeID":"name","NodeGroup":"group","LinkGroup":"group","colourScale":"d3.scaleOrdinal() .domain([\"NNI\", \"CE\", \"nocol\", \"linkcol\"]) \n            .range([\"#d03161\", \"#5d8198\", \"#d4d4d4\", \"#e4e4e4\"])","fontSize":14,"fontFamily":"Roboto Slab","nodeWidth":15,"nodePadding":10,"units":"","margin":{"top":null,"right":null,"bottom":null,"left":null},"iterations":32,"sinksRight":false}},"evals":[],"jsHooks":{"render":[{"code":"\n  function(el) { \n    var nodeWidth = this.sankey.nodeWidth();\n    var links = this.sankey.links();\n        \n    links.forEach((d, i) => {\n      var startX = d.source.x + nodeWidth;\n      var endX = d.target.x;\n      \n      var startY = d.source.y + d.sy + d.dy / 2;\n      var endY = d.target.y + d.ty + d.dy / 2;\n      \n      d3.select(el).select(\"svg g\")\n        .append(\"text\")\n        .attr(\"text-anchor\", \"middle\")\n        .attr(\"alignment-baseline\", \"middle\")\n        .attr(\"font-size\", \"13\")\n        .attr(\"font-family\", \"Roboto Slab\")\n        .attr(\"x\", startX + ((endX - startX) / 2))\n        .attr(\"y\", startY + ((endY - startY) / 2))\n        .text(d.value);\n    })\n  }\n","data":null}]}}</script>
 </div>
 <div class="fragment">
 <div style="font-size:1.5rem;text-align:center;font-family:'Roboto Slab">
@@ -571,8 +570,10 @@ Dr.&nbsp;Matthias Schnetzer
 <section>
 <section id="scales" class="title-slide slide level1 center">
 <h1>Scales</h1>
-<div class="absolute" style="top: 90%; left: 30%; width: 400px; ">
-<p><img data-src="../../data/img/avatar_point.png"></p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="../../data/img/avatar_point.png" height="350"></p>
+</figure>
 </div>
 <div class="footer">
 
