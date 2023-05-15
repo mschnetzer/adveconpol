@@ -41,9 +41,9 @@ format:
 
 # Pioneers of data visualization
 
-::: {.absolute top="90%" left="30%" width="400px"}
-![](../../data/img/avatar_sakko.png)
-:::
+<center>
+![](../../data/img/avatar_sakko.png){width=250}
+</center>
 
 ::: footer
 :::
@@ -106,9 +106,9 @@ format:
 
 # Five guidelines for better visualization
 
-::: {.absolute top="90%" left="30%" width="400px"}
-![](../../data/img/avatar_laptop.png)
-:::
+<center>
+![](../../data/img/avatar_laptop.png){width=250}
+</center>
 
 ::: footer
 :::
@@ -471,9 +471,9 @@ Quelle: @lauer:2020
 
 # The Gestalt Principles
 
-::: {.absolute top="90%" left="30%" width="400px"}
-![](../../data/img/avatar_finger.png)
-:::
+<center>
+![](../../data/img/avatar_finger.png){width=250}
+</center>
 
 ::: footer
 :::
@@ -526,9 +526,9 @@ Source: @healy:2018
 
 # Let's start with {ggplot}
 
-::: {.absolute top="90%" left="30%" width="400px"}
-![](../../data/img/avatar_cool.png)
-:::
+<center>
+![](../../data/img/avatar_cool.png){width=250}
+</center>
 
 ::: footer
 :::

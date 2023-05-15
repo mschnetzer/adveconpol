@@ -70,9 +70,9 @@ Source: @angrist:2017
 
 # Mind the (data) gap!
 
-::: {.absolute top="90%" left="30%" width="400px"}
-![](../../data/img/avatar_finger.png)
-:::
+<center>
+![](../../data/img/avatar_finger.png){height=350}
+</center>
 
 ::: footer
 :::
@@ -132,9 +132,9 @@ Illustrations by [https://openpeeps.com](https://openpeeps.com).
 
 # From conceptual disparities to data
 
-::: {.absolute top="90%" left="30%" width="400px"}
-![](../../data/img/avatar_laptop.png)
-:::
+<center>
+![](../../data/img/avatar_laptop.png){height=350}
+</center>
 
 ::: footer
 :::
@@ -241,9 +241,9 @@ kable_classic(full_width = F)
 
 # Be aware of differences between data sources!
 
-::: {.absolute top="90%" left="30%" width="369"}
-![](../../data/img/avatar_read.png)
-:::
+<center>
+![](../../data/img/avatar_read.png){height=350}
+</center>
 
 ::: footer
 :::
@@ -329,9 +329,9 @@ Source: @angel:2019
 
 # Why should we plot data?
 
-::: {.absolute top="90%" left="30%" width="400px"}
-![](../../data/img/avatar_shrug.png)
-:::
+<center>
+![](../../data/img/avatar_shrug.png){height=350}
+</center>
 
 ::: footer
 :::
@@ -446,9 +446,9 @@ datasaurus_dozen |>
 
 # Let's start coding with the penguins
 
-::: {.absolute top="90%" left="40%"}
+<center>
 ![](img/penguins.png)
-:::
+</center>
 
 ::: footer
 :::

@@ -8,8 +8,8 @@ title: |
       </span><br>
     {{< var course.subtitle >}}
 author: "{{< var instructor.name >}}"  
-subtitle: Labour · Labels
-date: April 24, 2023
+subtitle: Climate · Facets
+date: June 12, 2023
 date-format: long
 from: markdown+emoji
 bibliography: ../../data/lit/wipol_advanced.bib
@@ -31,7 +31,7 @@ format:
     transition: fade
     progress: true
     multiplex: false
-    scrollable: true
+    scrollable: false
     preview-links: false
     hide-inactive-cursor: true
     highlight-style: printing
@@ -39,11 +39,9 @@ format:
 ---
 
 
-# Labels and Fonts
+# Facets
 
-::: {.absolute top="90%" left="30%" width="400px" height="336px"}
-![](../../data/img/avatar_read.png)
-:::
+![](../../data/img/avatar_read.png){fig-align="center" height=350}
 
 ::: footer
 :::

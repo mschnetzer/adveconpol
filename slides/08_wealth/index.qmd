@@ -84,27 +84,7 @@ No public social security pensions (marketable vs. augmented wealth)
 Source: @oecd:2013
 :::
 
-## HFCS versus National Accounts {.smaller}
-
-::: {.tbl-classic .tbl-larger}
-| | Tangible assets | Financial wealth | Liabilities | Net wealth |
-|-----|:-----:|:-----:|:-----:|:-----:|
-Austria | -8 | 62 | 59 | 12 |
-Germany | 15 | 58 | 29 | 30 | 
-France | 17 | 61 | 33 | 32 | 
-Spain | 16 | 63 | 39 | 24 | 
-Italy | -5 | 80 | 60 | 23 | 
-Belgium | -21 | 42 | 24 | 6 | 
-Finland | -1 | 63 | 12 | 22 | 
-Netherlands | 13 | 86 | 16 | 47 | 
-: HFCS aggregates in % of National Accounts {tbl-colwidths="[20,15,15,15,15]"}
-:::
-
-::: {.aside}
-Source: @vermeulen:2016
-:::
-
-## Why is there underreporting in HFCS?
+## HFCS sampling and underreporting
 
 ::: {.incremental style="font-size:1.8rem"}
 - Target population in Austria: [3.9 million households]{.hl .hl-dred .secfont}
@@ -259,15 +239,14 @@ Source: @wir:2022
 
 # Themes
 
-::: {.absolute top="90%" left="30%" width="400px"}
-![](../../data/img/avatar_break.png)
-:::
+![](../../data/img/avatar_break.png){fig-align="center" height=350}
 
 ::: footer
 :::
 
 ## Themes
 
+<center>
 ```{r themes}
 #| echo: false
 #| results: 'asis'
@@ -298,6 +277,7 @@ p6 <- p + labs(title = "theme_void()") + theme_void(base_size = 7)
   theme(plot.title = element_text(family = "Roboto Condensed", size = 16),
         plot.margin = margin(b = 2, r = 1, unit = "lines"))
 ```
+</center>
 
 ## Main theme components {.medium}
 

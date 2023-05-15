@@ -8,8 +8,8 @@ title: |
       </span><br>
     {{< var course.subtitle >}}
 author: "{{< var instructor.name >}}"  
-subtitle: Labour · Labels
-date: April 24, 2023
+subtitle: Mobility · Maps
+date: June 5, 2023
 date-format: long
 from: markdown+emoji
 bibliography: ../../data/lit/wipol_advanced.bib
@@ -31,22 +31,270 @@ format:
     transition: fade
     progress: true
     multiplex: false
-    scrollable: true
+    scrollable: false
     preview-links: false
     hide-inactive-cursor: true
     highlight-style: printing
     pause: true
 ---
 
+## Discuss with your neighbour {.smaller}
 
-# Labels and Fonts
+[How would you describe the state of intergenerational social mobility in your country?]{.bubble .bubble-bottom-left .absolute top="20%" left="25%" style="max-width:350px;--bubcol: var(--bubcol-blue);font-size:1.5rem;"}
 
-::: {.absolute top="90%" left="30%" width="400px" height="336px"}
-![](../../data/img/avatar_read.png)
+[Which channels do you know where parents exert influence on the socio-economic outcomes of children?]{.bubble .bubble-bottom-right .absolute top="50%" left="30%" style="max-width:350px;--bubcol: var(--bubcol-dred);font-size:1.5rem;"}
+
+![](img/discuss1.png){.absolute bottom="0px" left="5%" height="600px"}
+![](img/discuss2.png){.absolute bottom="0px" right="5%" height="600px" style="transform: rotateY(180deg);"}
+
+::: footer
+Illustrations by [https://openpeeps.com](https://openpeeps.com).
 :::
+
+
+## Selected channels of intergenerational persistence {.medium}
+
+::: {.altlist .incremental}
+- Children of well-off families [attend better educational institutions]{.marker-hl}, which results in higher incomes later on.
+- Family background shapes [individual labor market-related]{.marker-hl} characteristics (Habitus, social and cultural capital, health, etc.)
+- Children of poorer families face [higher opportunity costs]{.marker-hl} at their job search and tend to accept the first job opportunity
+- [Social networks]{.marker-hl} of the well-off facilitate job search substantially
+:::
+
+::: {.aside}
+Source: @franzini:2009
+:::
+
+## Glass ceiling
+
+::: {.blockquote style="font-size:1.9rem;"}
+That room [at the top] rarely opens up because those mediocrities are too well-screened by parents who hire private tutors, buy cultural enrichment, teach etiquette, set expectations, stand as personal examples of success, coach interview technique, navigate any bureaucratic maze put before them, set up home in nice areas, arrange internships via friends and, just to rub in their supremacy, make direct gifts of cash and assets. To fail under these conditions is a kind of achievement in itself.  
+:::
+
+::: {style="font-size:1.2rem;text-align:right;font-family:'Roboto Slab';"}
+Janan Ganesh<br>Financial Times (December 9, 2016)
+:::
+
+## Traditional theory {.smaller}
+
+@becker:1979, @becker:1986:
+
+::: {.incremental}
+- Optimization problem for parental investments into the human capital of descendants (utility of parents is maximized)
+- Stochastic term for "birth lottery" (genetic abilities, talents): *Nature versus Nurture*
+- Parental utility does not only depend on the life-cycle income of the descendant, but there is dynastic utility
+:::
+
+. . .
+
+Response by @daly:1982: Provision of descendants in future generations is a public good, since the future offspring may potentially descend from all other members in a society.
+
+. . .
+
+Objection by @mani:2013: Rational parental behaviour is limited by income and wealth, since poverty impedes cognitive abilities of adults and hinders rational investment decisions in childern.
+
+## Measurement of intergenerational mobility {.medium}
+
+::: {style="text-align:center;"}
+Intergenerational earnings elasticity: $\beta$
+$$log~y_{ic} = \alpha + \beta~y_{ip} + \varepsilon_{ic}$$
+Intergenerational earnings correlation: $\rho$
+$$\rho = \beta~\frac{\sigma_p}{\sigma_c}$$
+with $\sigma$ being the standard deviation.
+:::
+
+## Life cycle vs. current income
+
+::: {style="font-size:1.5rem;"}
+(Measurable) current income corresponds to life cycle income plus random transitory deviations
+$$ y_{ic}^* = y_{ic} + \omega_{ic} \\
+y_{ip}^* = y_{ip} + \omega_{ip} $$
+
+Intergenerational elasticity is calculated with current income records
+
+$$ plim~\widehat{\beta} = \frac{cov(y_{ip}^*, y_{ic}^*)}{var(y_{ip}^*)} = \\ 
+= \frac{\beta\left[var(y_{ip}) + cov(y_{ip}, \omega_{ip})\right] + cov(y_{ic}, \omega_{ic})/\beta + cov(\omega_{ic}, \omega_{ip})}{var(y_{ip}) + 2 \cdot cov(y_{ip}, \omega_{ip}) + var(\omega_{ip})} $$
+ 
+Consequently there is an attenuation bias (downward bias)
+$$ plim~\widehat{\beta} = \beta \frac{var(y_{ip})}{var(y_{ip}) + var(\omega_{ip})} < \beta $$
+:::
+
+## Transition matrices {.smaller}
+
+A transition matrix captures the probabilities of switches $p_{ij}$ from status $i$ to $j$.
+
+$$
+  P =
+  \left[ {\begin{array}{cccc}
+    p_{11} & p_{12} & \cdots & p_{1n}\\
+    p_{21} & p_{22} & \cdots & p_{2n}\\
+    \vdots & \vdots & \ddots & \vdots\\
+    p_{m1} & p_{m2} & \cdots & p_{mn}\\
+  \end{array} } \right]
+$$
+
+<br>
+
+There are various indices to compare transition matrices:
+
+- Prais-Index: $M(P) = \frac{n - trace(P)}{n-1}$ where $M(P) \in [0,1]$
+- Absolute Average Jump (AAJ): $\Omega = \frac{\sum_{i=1}^{n}|rank_{ic} - rank_{ip}|}{n}$
+
+## Great Gatsby curve {.smaller}
+
+```{r gatsby}
+#| echo: false
+#| results: 'asis'
+#| fig-width: 8.5
+#| fig-height: 5
+#| fig-align: center
+library(tidyverse)
+library(ggrepel)
+library(ggtext)
+
+load("data/gatsby.RData")
+
+gatsby <- gatsby |> 
+  mutate(mobility = 1-mobility) |> 
+  filter(iso3c != "OECD24") |>
+  left_join(countrycode::codelist |> select(iso3c, country.name.en))
+
+gatsby |>
+  ggplot(aes(x = inequality, y=mobility)) +
+  geom_smooth(method = "lm", se = F, color = "darkred") +
+  geom_point(color = ifelse(gatsby$iso3c == "AUT", "darkred", "black")) +
+  geom_text_repel(aes(label=country.name.en), size = 3.2, family = "Roboto Condensed", segment.size = 0.2, color = ifelse(gatsby$iso3c == "AUT", "darkred", "black")) +
+  labs(x = "Gini coefficient (more inequality <span style = 'font-family:Arial;'>&rightarrow;</span>)", y = "Intergenerational earnings elasticity (less mobility <span style = 'font-family:Arial;'>&rightarrow;</span>)") +
+  theme_minimal(base_family = "Roboto") +
+  theme(panel.grid.minor = element_blank(),
+  panel.grid.major = element_line(linewidth = 0.2),
+  axis.title.y = element_markdown(size = 12, margin = margin(r = 0.5, unit="lines")),
+  axis.title.x = element_markdown(size = 12, margin = margin(t = 0.5, unit="lines")),
+  axis.text = element_text(size = 10))
+```
+
+::: {.aside}
+Source: @oecd:2018, @corak:2013
+:::
+
+
+## Educational mobility in Austria {.smaller}
+
+![](img/educationmobility.png){fig-align="center"}
+
+::: {.aside}
+Note: Sample of 25 to 44 years of age
+:::
+
+## Decreasing absolute mobility in the US {.smaller}
+
+![](img/mobilityusa.png){fig-align="center"}
+
+::: {.aside}
+Source: @chetty:2017
+:::
+
+## Multigenerational persistence {.smaller}
+
+::: columns
+::: {.column width="50%"}
+![](img/grandparents1.png){fig-align="center"}
+:::
+::: {.column width="50%"}
+![](img/grandparents2.png){fig-align="center"}
+:::
+:::
+
+::: {.aside}
+Source: @neidhofer:2018
+:::
+
+## Mobility takes generations {.smaller}
+
+```{r generations}
+#| echo: false
+#| results: 'asis'
+#| fig-width: 6
+#| fig-height: 5.5
+#| fig-align: center
+library(stringi)
+load("data/oecd.RData")
+
+socmob <- socmob |>
+  mutate(country = ifelse(iso3c == "CHN", "China", country),
+  country = fct_reorder(country, generations, .desc = T))
+
+socmob |> filter(iso3c != "OECD24") |>
+  ggplot(aes(x = country, y = generations)) +
+  geom_segment(aes(xend = country, yend = 0), linewidth = 4, color = "darkred", alpha = 0.3) +
+  geom_point(size = 4, color = "darkred") +
+  geom_text(aes(label = generations), color = "white", fontface = "bold", size = 2.5) + 
+  annotate("richtext", x = 24, y = 6, label = "Expected **number of generations**<br>it takes an offspring from<br>a family at the **bottom 10%** to <br>reach the **mean income**", hjust = 0, family = "Roboto Condensed", size = 3.5, label.color = NA) +
+  coord_flip() +
+  labs(x = NULL, y = NULL) +
+  theme_minimal(base_family = "Roboto Condensed") +
+  theme(panel.grid = element_blank())
+```
+
+::: {.aside}
+Source: @oecd:2018
+:::
+
+## Long-term social persistence {.medium}
+
+::: {.iconlist}
+- :uk: @clark:2015: Richest british families around 1850 still own four times the average family wealth in 2012 <br> (= [5 generations later]{.marker-hl})
+- :it: @barone:2020: Families with highest income in Florence in 1427 still are at the top of the income distribution in 2011 <br> (= [6 centuries later]{.marker-hl})
+- :de: @braun:2017: Social status in Germany also depends from the great-grandparents.<br> (= [4 generations later]{.marker-hl})
+:::
+
+
+# Maps
+
+![](../../data/img/avatar_cool.png){fig-align="center" height=350}
 
 ::: footer
 :::
+
+## Projections {.smaller}
+
+Choose a [map projection]{.marker-hl}! For instance, [{giscoR}]{.secfont} by Eurostat provides maps in the following three projections. Check coordinates for axis limits at [https://epsg.io](https://epsg.io).
+
+```{r projections}
+#| echo: false
+#| results: 'asis'
+#| fig-width: 10
+#| fig-align: center
+library(sf)
+library(giscoR)
+library(patchwork)
+
+load("data/projections.RData")
+
+map1 <- europe_4326 |> ggplot() + 
+  geom_sf(fill = "gray95", linewidth = .1, color = "black") + 
+  coord_sf(xlim = c(-26, 50), ylim = c(35, 72), expand = F) +
+  labs(title = "EPSG:4326 World Geodetic System 1984 (WGS84)")
+map2 <- europe_3035 |> ggplot() + 
+  geom_sf(fill = "gray95", linewidth = .1, color = "black") + 
+  coord_sf(xlim = c(2377294, 7453440), ylim = c(1313597, 5628510), expand = F) +
+  labs(title = "EPSG:3035 ETRS89-extended / LAEA Europe")
+map3 <- europe_3857 |> ggplot() + 
+  geom_sf(fill = "gray95", linewidth = .1, color = "black") + 
+  coord_sf(xlim = c(-3090000, 4500000), ylim = c(11500000,  4100000), expand = F) +
+  labs(title = "EPSG:3857 Pseudo-Mercator")
+
+map1 + map2 + map3 & theme_minimal(base_family = "Roboto Condensed") +
+  theme(axis.text = element_text(size = 7),
+        panel.grid = element_line(linewidth = 0.2, color = "gray80"),
+        panel.background = element_rect(color = NA, fill = "aliceblue"),
+        plot.title = element_text(size = 10))
+```
+
+## The {sf} package {.medium}
+
+## Maps resources {.medium}
+
 
 ## Bibliography {.bibstyle}
 

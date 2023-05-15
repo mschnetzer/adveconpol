@@ -336,9 +336,9 @@ plotdf |> ggplot(aes(x=Age, y=Value, fill=Status, group=Status)) +
 
 # Labels and Fonts
 
-::: {.absolute top="90%" left="30%" width="400px"}
-![](../../data/img/avatar_read.png)
-:::
+<center>
+![](../../data/img/avatar_read.png){width=250}
+</center>
 
 ::: footer
 :::

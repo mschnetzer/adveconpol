@@ -267,9 +267,9 @@ gdp |> filter(str_detect(unit, "percentage")) |>
 
 # Show me your geometries!
 
-::: {.absolute top="90%" left="30%" width="400px"}
-![](../../data/img/avatar_break.png)
-:::
+<center>
+![](../../data/img/avatar_break.png){width=250}
+</center>
 
 ::: footer
 :::

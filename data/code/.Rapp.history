@@ -1,2 +1,5 @@
 load("/Users/matthiasschnetzer/Daten/Lehre/wipol_advanced_BA/data/code/06_labour.RData")
 load("/Users/matthiasschnetzer/Daten/Lehre/wipol_advanced_BA/data/code/02_data.RData")
+load("/Users/matthiasschnetzer/Daten/Lehre/wipol_advanced_BA/data/code/08_wealth.RData")
+ls()
+hfcs

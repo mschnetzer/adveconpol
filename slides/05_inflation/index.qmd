@@ -261,9 +261,9 @@ findat |>
 
 # All colours are beautiful
 
-::: {.absolute top="90%" left="30%" width="400px"}
-![](../../data/img/avatar_sweatshirt.png)
-:::
+<center>
+![](../../data/img/avatar_sweatshirt.png){width=250}
+</center>
 
 ::: footer
 :::

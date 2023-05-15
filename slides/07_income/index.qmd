@@ -48,7 +48,7 @@ format:
 ::: {.column width="80%"}
 - UN SDG 10.1: "By 2030, progressively achieve and sustain income growth of the bottom 40 per cent of the population at a rate higher than the national average."
 - Economists focus on the economic origins and implications of inequality rather than the social and ecological context.
-- In neoclassical economics, income inequality arises from differences in marginal productivity and might [stimulate]{.hl .hl-dred} economic growth due to differential savings rates, investment and incentives for effort [@josifidis:2018].
+- In neoclassical economics, income inequality arises from differences in marginal productivity and might [stimulate]{.hl .hl-dred} economic growth due to differential savings rates, investment, and incentives for effort [@josifidis:2018].
 - In (Post-)Keynesian economics, income inequality is the result of institutional settings, power relations, etc. Inequality [harms]{.hl .hl-blue} economic growth in most of these models due to detrimental effects on aggregate demand [@kurz:2010].
 :::
 :::
@@ -338,9 +338,7 @@ plot_dat |>
 
 # Scales
 
-::: {.absolute top="90%" left="30%" width="400px"}
-![](../../data/img/avatar_point.png)
-:::
+![](../../data/img/avatar_point.png){fig-align="center" height=350}
 
 ::: footer
 :::

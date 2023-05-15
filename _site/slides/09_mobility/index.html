@@ -11,7 +11,7 @@
   <meta name="generator" content="quarto-1.3.340">
 
   <meta name="author" content="Dr.&nbsp;Matthias Schnetzer">
-  <meta name="dcterms.date" content="2023-04-24">
+  <meta name="dcterms.date" content="2023-06-05">
   <title>PI 5620 Advanced Economic Policy -     Economic Policy Visualization</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -30,7 +30,26 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
-  </style>
+    /* CSS for citations */
+    div.csl-bib-body { }
+    div.csl-entry {
+      clear: both;
+    }
+    .hanging-indent div.csl-entry {
+      margin-left:2em;
+      text-indent:-2em;
+    }
+    div.csl-left-margin {
+      min-width:2em;
+      float:left;
+    }
+    div.csl-right-inline {
+      margin-left:2em;
+      padding-left:1em;
+    }
+    div.csl-indent {
+      margin-left: 2em;
+    }  </style>
   <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto.css" id="theme">
   <link href="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
@@ -244,7 +263,6 @@
     }
     .reveal .slide:not(.center) {
       height: 100%;
-      overflow-y: auto;
     }
     .reveal .slide.scrollable {
       overflow-y: auto;
@@ -329,7 +347,7 @@
 
 <section id="title-slide" class="quarto-title-block center">
   <h1 class="title"><p><span class="fa-stack course-icon"> <i class="fas fa-comment fa-stack-2x blue"></i> <i class="fas fa-chart-column fa-stack-1x fa-inverse" style="margin-top:-5pt"></i> </span><br> Economic Policy Visualization</p></h1>
-  <p class="subtitle">Labour · Labels</p>
+  <p class="subtitle">Mobility · Maps</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -339,19 +357,196 @@ Dr.&nbsp;Matthias Schnetzer
 </div>
 </div>
 
-  <p class="date">April 24, 2023</p>
+  <p class="date">June 5, 2023</p>
+</section>
+<section id="discuss-with-your-neighbour" class="slide level2 smaller">
+<h2>Discuss with your neighbour</h2>
+<p><span class="bubble bubble-bottom-left absolute" style="max-width:350px;--bubcol: var(--bubcol-blue);font-size:1.5rem;top: 20%; left: 25%; ">How would you describe the state of intergenerational social mobility in your country?</span></p>
+<p><span class="bubble bubble-bottom-right absolute" style="max-width:350px;--bubcol: var(--bubcol-dred);font-size:1.5rem;top: 50%; left: 30%; ">Which channels do you know where parents exert influence on the socio-economic outcomes of children?</span></p>
+<p><img data-src="img/discuss1.png" class="absolute" style="left: 5%; bottom: 0px; height: 600px; "> <img data-src="img/discuss2.png" class="absolute" style="transform: rotateY(180deg);bottom: 0px; right: 5%; height: 600px; "></p>
+<div class="footer">
+<p>Illustrations by <a href="https://openpeeps.com">https://openpeeps.com</a>.</p>
+</div>
+</section>
+<section id="selected-channels-of-intergenerational-persistence" class="slide level2 medium">
+<h2>Selected channels of intergenerational persistence</h2>
+<div class="altlist">
+<ul>
+<li class="fragment">Children of well-off families <span class="marker-hl">attend better educational institutions</span>, which results in higher incomes later on.</li>
+<li class="fragment">Family background shapes <span class="marker-hl">individual labor market-related</span> characteristics (Habitus, social and cultural capital, health, etc.)</li>
+<li class="fragment">Children of poorer families face <span class="marker-hl">higher opportunity costs</span> at their job search and tend to accept the first job opportunity</li>
+<li class="fragment"><span class="marker-hl">Social networks</span> of the well-off facilitate job search substantially</li>
+</ul>
+</div>
+
+<aside><div>
+<p>Source: <span class="citation" data-cites="franzini:2009">Franzini/Raitano (<a href="#/bibliography" role="doc-biblioref" onclick="">2009</a>)</span></p>
+</div></aside></section>
+<section id="glass-ceiling" class="slide level2">
+<h2>Glass ceiling</h2>
+<div class="blockquote" style="font-size:1.9rem;">
+<p>That room [at the top] rarely opens up because those mediocrities are too well-screened by parents who hire private tutors, buy cultural enrichment, teach etiquette, set expectations, stand as personal examples of success, coach interview technique, navigate any bureaucratic maze put before them, set up home in nice areas, arrange internships via friends and, just to rub in their supremacy, make direct gifts of cash and assets. To fail under these conditions is a kind of achievement in itself.</p>
+</div>
+<div style="font-size:1.2rem;text-align:right;font-family:'Roboto Slab';">
+<p>Janan Ganesh<br>Financial Times (December 9, 2016)</p>
+</div>
+</section>
+<section id="traditional-theory" class="slide level2 smaller">
+<h2>Traditional theory</h2>
+<p><span class="citation" data-cites="becker:1979">Becker/Tomes (<a href="#/bibliography" role="doc-biblioref" onclick="">1979</a>)</span>, <span class="citation" data-cites="becker:1986">Becker/Tomes (<a href="#/bibliography" role="doc-biblioref" onclick="">1986</a>)</span>:</p>
+<div>
+<ul>
+<li class="fragment">Optimization problem for parental investments into the human capital of descendants (utility of parents is maximized)</li>
+<li class="fragment">Stochastic term for “birth lottery” (genetic abilities, talents): <em>Nature versus Nurture</em></li>
+<li class="fragment">Parental utility does not only depend on the life-cycle income of the descendant, but there is dynastic utility</li>
+</ul>
+</div>
+<div class="fragment">
+<p>Response by <span class="citation" data-cites="daly:1982">Daly (<a href="#/bibliography" role="doc-biblioref" onclick="">1982</a>)</span>: Provision of descendants in future generations is a public good, since the future offspring may potentially descend from all other members in a society.</p>
+</div>
+<div class="fragment">
+<p>Objection by <span class="citation" data-cites="mani:2013">Mani et al. (<a href="#/bibliography" role="doc-biblioref" onclick="">2013</a>)</span>: Rational parental behaviour is limited by income and wealth, since poverty impedes cognitive abilities of adults and hinders rational investment decisions in childern.</p>
+</div>
+</section>
+<section id="measurement-of-intergenerational-mobility" class="slide level2 medium">
+<h2>Measurement of intergenerational mobility</h2>
+<div style="text-align:center;">
+<p>Intergenerational earnings elasticity: <span class="math inline">\(\beta\)</span> <span class="math display">\[log~y_{ic} = \alpha + \beta~y_{ip} + \varepsilon_{ic}\]</span> Intergenerational earnings correlation: <span class="math inline">\(\rho\)</span> <span class="math display">\[\rho = \beta~\frac{\sigma_p}{\sigma_c}\]</span> with <span class="math inline">\(\sigma\)</span> being the standard deviation.</p>
+</div>
+</section>
+<section id="life-cycle-vs.-current-income" class="slide level2">
+<h2>Life cycle vs.&nbsp;current income</h2>
+<div style="font-size:1.5rem;">
+<p>(Measurable) current income corresponds to life cycle income plus random transitory deviations <span class="math display">\[ y_{ic}^* = y_{ic} + \omega_{ic} \\
+y_{ip}^* = y_{ip} + \omega_{ip} \]</span></p>
+<p>Intergenerational elasticity is calculated with current income records</p>
+<p><span class="math display">\[ plim~\widehat{\beta} = \frac{cov(y_{ip}^*, y_{ic}^*)}{var(y_{ip}^*)} = \\
+= \frac{\beta\left[var(y_{ip}) + cov(y_{ip}, \omega_{ip})\right] + cov(y_{ic}, \omega_{ic})/\beta + cov(\omega_{ic}, \omega_{ip})}{var(y_{ip}) + 2 \cdot cov(y_{ip}, \omega_{ip}) + var(\omega_{ip})} \]</span></p>
+<p>Consequently there is an attenuation bias (downward bias) <span class="math display">\[ plim~\widehat{\beta} = \beta \frac{var(y_{ip})}{var(y_{ip}) + var(\omega_{ip})} &lt; \beta \]</span></p>
+</div>
+</section>
+<section id="transition-matrices" class="slide level2 smaller">
+<h2>Transition matrices</h2>
+<p>A transition matrix captures the probabilities of switches <span class="math inline">\(p_{ij}\)</span> from status <span class="math inline">\(i\)</span> to <span class="math inline">\(j\)</span>.</p>
+<p><span class="math display">\[
+  P =
+  \left[ {\begin{array}{cccc}
+    p_{11} &amp; p_{12} &amp; \cdots &amp; p_{1n}\\
+    p_{21} &amp; p_{22} &amp; \cdots &amp; p_{2n}\\
+    \vdots &amp; \vdots &amp; \ddots &amp; \vdots\\
+    p_{m1} &amp; p_{m2} &amp; \cdots &amp; p_{mn}\\
+  \end{array} } \right]
+\]</span></p>
+<p><br></p>
+<p>There are various indices to compare transition matrices:</p>
+<ul>
+<li>Prais-Index: <span class="math inline">\(M(P) = \frac{n - trace(P)}{n-1}\)</span> where <span class="math inline">\(M(P) \in [0,1]\)</span></li>
+<li>Absolute Average Jump (AAJ): <span class="math inline">\(\Omega = \frac{\sum_{i=1}^{n}|rank_{ic} - rank_{ip}|}{n}\)</span></li>
+</ul>
+</section>
+<section id="great-gatsby-curve" class="slide level2 smaller">
+<h2>Great Gatsby curve</h2>
+<div class="cell" data-layout-align="center">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="index_files/figure-revealjs/gatsby-1.png" width="816"></p>
+</figure>
+</div>
+</div>
+
+<aside><div>
+<p>Source: <span class="citation" data-cites="oecd:2018">OECD (<a href="#/bibliography" role="doc-biblioref" onclick="">2018</a>)</span>, <span class="citation" data-cites="corak:2013">Corak (<a href="#/bibliography" role="doc-biblioref" onclick="">2013</a>)</span></p>
+</div></aside></section>
+<section id="educational-mobility-in-austria" class="slide level2 smaller">
+<h2>Educational mobility in Austria</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/educationmobility.png"></p>
+</figure>
+</div>
+
+<aside><div>
+<p>Note: Sample of 25 to 44 years of age</p>
+</div></aside></section>
+<section id="decreasing-absolute-mobility-in-the-us" class="slide level2 smaller">
+<h2>Decreasing absolute mobility in the US</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/mobilityusa.png"></p>
+</figure>
+</div>
+
+<aside><div>
+<p>Source: <span class="citation" data-cites="chetty:2017">Chetty et al. (<a href="#/bibliography" role="doc-biblioref" onclick="">2017</a>)</span></p>
+</div></aside></section>
+<section id="multigenerational-persistence" class="slide level2 smaller">
+<h2>Multigenerational persistence</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/grandparents1.png"></p>
+</figure>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/grandparents2.png"></p>
+</figure>
+</div>
+</div>
+</div>
+
+<aside><div>
+<p>Source: <span class="citation" data-cites="neidhofer:2018">Neidhöfer/Stockhausen (<a href="#/bibliography" role="doc-biblioref" onclick="">2018</a>)</span></p>
+</div></aside></section>
+<section id="mobility-takes-generations" class="slide level2 smaller">
+<h2>Mobility takes generations</h2>
+<div class="cell" data-layout-align="center">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="index_files/figure-revealjs/generations-1.png" width="576"></p>
+</figure>
+</div>
+</div>
+
+<aside><div>
+<p>Source: <span class="citation" data-cites="oecd:2018">OECD (<a href="#/bibliography" role="doc-biblioref" onclick="">2018</a>)</span></p>
+</div></aside></section>
+<section id="long-term-social-persistence" class="slide level2 medium">
+<h2>Long-term social persistence</h2>
+<div class="iconlist">
+<ul>
+<li><span class="emoji" data-emoji="uk">🇬🇧</span> <span class="citation" data-cites="clark:2015">Clark/Cummins (<a href="#/bibliography" role="doc-biblioref" onclick="">2015</a>)</span>: Richest british families around 1850 still own four times the average family wealth in 2012 <br> (= <span class="marker-hl">5 generations later</span>)</li>
+<li><span class="emoji" data-emoji="it">🇮🇹</span> <span class="citation" data-cites="barone:2020">Barone/Mocetti (<a href="#/bibliography" role="doc-biblioref" onclick="">2020</a>)</span>: Families with highest income in Florence in 1427 still are at the top of the income distribution in 2011 <br> (= <span class="marker-hl">6 centuries later</span>)</li>
+<li><span class="emoji" data-emoji="de">🇩🇪</span> <span class="citation" data-cites="braun:2017">Braun/Stuhler (<a href="#/bibliography" role="doc-biblioref" onclick="">2017</a>)</span>: Social status in Germany also depends from the great-grandparents.<br> (= <span class="marker-hl">4 generations later</span>)</li>
+</ul>
+</div>
 </section>
 <section>
-<section id="labels-and-fonts" class="title-slide slide level1 center">
-<h1>Labels and Fonts</h1>
-<div class="absolute" style="top: 90%; left: 30%; width: 400px; height: 336px; ">
-<p><img data-src="../../data/img/avatar_read.png"></p>
+<section id="maps" class="title-slide slide level1 center">
+<h1>Maps</h1>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="../../data/img/avatar_cool.png" height="350"></p>
+</figure>
 </div>
 <div class="footer">
 
 </div>
 </section>
-<section id="bibliography" class="slide level2 bibstyle">
+<section id="projections" class="slide level2 smaller">
+<h2>Projections</h2>
+<p>Choose a <span class="marker-hl">map projection</span>! For instance, <span class="secfont">{giscoR}</span> by Eurostat provides maps in the following three projections. Check coordinates for axis limits at <a href="https://epsg.io">https://epsg.io</a>.</p>
+
+<img data-src="index_files/figure-revealjs/projections-1.png" width="960" class="r-stretch quarto-figure-center"></section>
+<section id="the-sf-package" class="slide level2 medium">
+<h2>The {sf} package</h2>
+</section>
+<section id="maps-resources" class="slide level2 medium">
+<h2>Maps resources</h2>
+</section>
+<section id="bibliography" class="slide level2 bibstyle smaller scrollable">
 <h2>Bibliography</h2>
 <div class="footer">
 
@@ -360,6 +555,44 @@ Dr.&nbsp;Matthias Schnetzer
 
 <img src="../../data/img/wu-logo-simple.png" class="slide-logo r-stretch"><div class="footer footer-default">
 <p>PI 5620 Advanced Economic Policy | Summer term 2023</p>
+</div>
+<div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-barone:2020" class="csl-entry" role="listitem">
+Barone, Guglielmo/Mocetti, Sauro (2020). Intergenerational mobility in the very long run: Florence 1427-2011. <em>The Review of Economic Studies</em>, <em>88</em>(4), 1863–1891. DOI: <a href="https://doi.org/10.1093/restud/rdaa075">10.1093/restud/rdaa075</a>
+</div>
+<div id="ref-becker:1979" class="csl-entry" role="listitem">
+Becker, Gary/Tomes, Nigel (1979). An equilibrium theory of the distribution of income and intergenerational mobility. <em>The Journal of Political Economy</em>, <em>87</em>(6), 1153–1189.
+</div>
+<div id="ref-becker:1986" class="csl-entry" role="listitem">
+Becker, Gary/Tomes, Nigel (1986). Human capital and the rise and fall of families. <em>Journal of Labor Economics</em>, <em>4</em>(3), S1–S39.
+</div>
+<div id="ref-braun:2017" class="csl-entry" role="listitem">
+Braun, Sebastian Till/Stuhler, Jan (2017). The transmission of inequality across multiple generations: Testing recent theories with evidence from germany. <em>The Economic Journal</em>, <em>128</em>(609), 576–611. DOI: <a href="https://doi.org/10.1111/ecoj.12453">10.1111/ecoj.12453</a>
+</div>
+<div id="ref-chetty:2017" class="csl-entry" role="listitem">
+Chetty, Raj/Grusky, David/Hell, Maximilian/Hendren, Nathaniel/Manduca, Robert/Narang, Jimmy (2017). The fading american dream: Trends in absolute income mobility since 1940. <em>Science</em>, <em>356</em>(6336), 398–406. DOI: <a href="https://doi.org/10.1126/science.aal4617">10.1126/science.aal4617</a>
+</div>
+<div id="ref-clark:2015" class="csl-entry" role="listitem">
+Clark, Gregory/Cummins, Neil (2015). Intergenerational wealth mobility in england, 1858–2012: Surnames and social mobility. <em>The Economic Journal</em>, <em>125</em>(582), 61–85. DOI: <a href="https://doi.org/10.1111/ecoj.12165">10.1111/ecoj.12165</a>
+</div>
+<div id="ref-corak:2013" class="csl-entry" role="listitem">
+Corak, Miles (2013). Income inequality, equality of opportunity, and intergenerational mobility. <em>Journal of Economic Perspectives</em>, <em>27</em>(3), 79–102. DOI: <a href="https://doi.org/10.1257/jep.27.3.79">10.1257/jep.27.3.79</a>
+</div>
+<div id="ref-daly:1982" class="csl-entry" role="listitem">
+Daly, Herman E. (1982). Chicago school individualism versus sexual reproduction: A critique of becker and tomes. <em>Journal of Economic Issues,</em> <em>16</em>(1), 307–312.
+</div>
+<div id="ref-franzini:2009" class="csl-entry" role="listitem">
+Franzini, Maurizio/Raitano, Michele (2009). Persistence of inequality in europe: The role of family economic conditions. <em>International Review of Applied Economics</em>, <em>23</em>(3), 345–366. DOI: <a href="https://doi.org/10.1080/02692170902811777">10.1080/02692170902811777</a>
+</div>
+<div id="ref-mani:2013" class="csl-entry" role="listitem">
+Mani, Anandi/Mullainathan, Sendhil/Shafir, Eldar/Zhao, Jiaying (2013). Poverty impedes cognitive function. <em>Science</em>, <em>341</em>(6149), 976–980. DOI: <a href="https://doi.org/10.1126/science.1238041">10.1126/science.1238041</a>
+</div>
+<div id="ref-neidhofer:2018" class="csl-entry" role="listitem">
+Neidhöfer, Guido/Stockhausen, Maximilian (2018). Dynastic inequality compared: Multigenerational mobility in the united states, the united kingdom, and germany. <em>Review of Income and Wealth</em>, <em>65</em>(2), 383–414. DOI: <a href="https://doi.org/10.1111/roiw.12364">10.1111/roiw.12364</a>
+</div>
+<div id="ref-oecd:2018" class="csl-entry" role="listitem">
+OECD (2018). <em>A broken social elevator? How to promote social mobility</em>. OECD Publishing. DOI: <a href="https://doi.org/10.1787/9789264301085-en">10.1787/9789264301085-en</a>
+</div>
 </div>
 </section></section>
     </div>
@@ -573,6 +806,44 @@ Dr.&nbsp;Matthias Schnetzer
         ]
       });
     </script>
+    
+    <script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script>
+
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const toggleBodyColorMode = (bsSheetEl) => {
