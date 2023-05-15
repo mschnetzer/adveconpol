@@ -112,18 +112,11 @@
     "text": "Definition of private wealth\n\n\n\nNon-financial assets\n\nDwellings (owner-occupied residence, other real estate)\nConsumer durables (vehicles, etc.)\nValuables\nIntellectual property\n\n\n\nFinancial assets\n\nCurrency and deposits\nNet equity in own unincorporated business\nMututal funds and investment funds\n(Private) Pensions funds\nBonds and other debt securities\nShares and other equity\nLife insurance funds -Other financial assets\n\n\n\nLiabilities\n\nOwner-occupied residence loans\nConsumer durable loans (e.g. for vehicles)\nOther investment loans (collateralized)\nOther loans (e.g. education loans)\n\n\n\n\n\nNo human, social and cultural capital; No public social security pensions (marketable vs. augmented wealth)\n\n\n\nSource: OECD (2013)"
   },
   {
-    "objectID": "slides/08_wealth/index.html#hfcs-versus-national-accounts",
-    "href": "slides/08_wealth/index.html#hfcs-versus-national-accounts",
+    "objectID": "slides/08_wealth/index.html#hfcs-sampling-and-underreporting",
+    "href": "slides/08_wealth/index.html#hfcs-sampling-and-underreporting",
     "title": "    Economic Policy Visualization",
-    "section": "HFCS versus National Accounts",
-    "text": "HFCS versus National Accounts\n\n\nHFCS aggregates in % of National Accounts\n\n\n\n\n\n\n\n\n\n\nTangible assets\nFinancial wealth\nLiabilities\nNet wealth\n\n\n\n\nAustria\n-8\n62\n59\n12\n\n\nGermany\n15\n58\n29\n30\n\n\nFrance\n17\n61\n33\n32\n\n\nSpain\n16\n63\n39\n24\n\n\nItaly\n-5\n80\n60\n23\n\n\nBelgium\n-21\n42\n24\n6\n\n\nFinland\n-1\n63\n12\n22\n\n\nNetherlands\n13\n86\n16\n47\n\n\n\n\n\n\nSource: Vermeulen (2016)"
-  },
-  {
-    "objectID": "slides/08_wealth/index.html#why-is-there-underreporting-in-hfcs",
-    "href": "slides/08_wealth/index.html#why-is-there-underreporting-in-hfcs",
-    "title": "    Economic Policy Visualization",
-    "section": "Why is there underreporting in HFCS?",
-    "text": "Why is there underreporting in HFCS?\n\n\nTarget population in Austria: 3.9 million households\nGross sample in HFCS 2017: 6,280 households\nRealized interviews: 3,072 households\nResponse rate in HFCS 2017: approx. 50%\nResidual: refused interviews, invalid addresses, households not available, etc.\n\n\n\n\nResponse refusal correlates with wealth and is highest at the top (Vermeulen, 2016)\nWealthy households own a greater number of assets and miss some components more easily (Kennickell/Woodburn, 1999)"
+    "section": "HFCS sampling and underreporting",
+    "text": "HFCS sampling and underreporting\n\n\nTarget population in Austria: 3.9 million households\nGross sample in HFCS 2017: 6,280 households\nRealized interviews: 3,072 households\nResponse rate in HFCS 2017: approx. 50%\nResidual: refused interviews, invalid addresses, households not available, etc.\n\n\n\n\nResponse refusal correlates with wealth and is highest at the top (Vermeulen, 2016)\nWealthy households own a greater number of assets and miss some components more easily (Kennickell/Woodburn, 1999)"
   },
   {
     "objectID": "slides/08_wealth/index.html#upstream-strategy-against-underreporting-oversampling",
@@ -767,7 +760,7 @@
     "href": "slides/07_income/index.html#income-inequality-in-economic-policy",
     "title": "    Economic Policy Visualization",
     "section": "Income inequality in economic policy",
-    "text": "Income inequality in economic policy\n\n\n\n\n\nUN SDG 10.1: “By 2030, progressively achieve and sustain income growth of the bottom 40 per cent of the population at a rate higher than the national average.”\nEconomists focus on the economic origins and implications of inequality rather than the social and ecological context.\nIn neoclassical economics, income inequality arises from differences in marginal productivity and might stimulate economic growth due to differential savings rates, investment and incentives for effort (Josifidis/Supic, 2018).\nIn (Post-)Keynesian economics, income inequality is the result of institutional settings, power relations, etc. Inequality harms economic growth in most of these models due to detrimental effects on aggregate demand (Kurz/Salvadori, 2010)."
+    "text": "Income inequality in economic policy\n\n\n\n\n\nUN SDG 10.1: “By 2030, progressively achieve and sustain income growth of the bottom 40 per cent of the population at a rate higher than the national average.”\nEconomists focus on the economic origins and implications of inequality rather than the social and ecological context.\nIn neoclassical economics, income inequality arises from differences in marginal productivity and might stimulate economic growth due to differential savings rates, investment, and incentives for effort (Josifidis/Supic, 2018).\nIn (Post-)Keynesian economics, income inequality is the result of institutional settings, power relations, etc. Inequality harms economic growth in most of these models due to detrimental effects on aggregate demand (Kurz/Salvadori, 2010)."
   },
   {
     "objectID": "slides/07_income/index.html#functional-distribution",

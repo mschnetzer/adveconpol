@@ -13,7 +13,7 @@ hfcs <- readxl::read_xlsx("HFCS_Statistical_tables_Wave 2017_May2021.xlsx",
   mutate(across(-measure, as.numeric))
 
 # Alternatively, load local RData file
-load("08_wealth.RData")
+# load("08_wealth.RData")
 
 # Data into long format with "pivot_longer", capitalize country codes with "toupper" and merge country names from countrycode package with "left_join"
 findat <- hfcs |> 
