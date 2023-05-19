@@ -1117,14 +1117,14 @@
     "href": "slides/09_mobility/index.html#the-sf-package",
     "title": "    Economic Policy Visualization",
     "section": "The {sf} package",
-    "text": "The {sf} package"
+    "text": "The {sf} package\nThe sf (simple features) package deals with spatial geometries. These features have a geometry describing where on Earth the feature is located, and they have attributes, which describe other properties."
   },
   {
-    "objectID": "slides/09_mobility/index.html#maps-resources",
-    "href": "slides/09_mobility/index.html#maps-resources",
+    "objectID": "slides/09_mobility/index.html#plot-a-map",
+    "href": "slides/09_mobility/index.html#plot-a-map",
     "title": "    Economic Policy Visualization",
-    "section": "Maps resources",
-    "text": "Maps resources"
+    "section": "Plot a map",
+    "text": "Plot a map\n\neurope_3035 |&gt; select(CNTR_ID, NAME_ENGL, geometry) |&gt; slice_head(n = 3)\n\nSimple feature collection with 3 features and 2 fields\nGeometry type: POLYGON\nDimension:     XY\nBounding box:  xmin: 3618229 ymin: 1900590 xmax: 5257241 ymax: 2889034\nProjected CRS: ETRS89-extended / LAEA Europe\n  CNTR_ID NAME_ENGL                       geometry\n1      AL   Albania POLYGON ((5148385 2216599, ...\n2      AT   Austria POLYGON ((4832035 2857837, ...\n3      AD   Andorra POLYGON ((3640254 2192873, ...\n\neurope_3035 |&gt; ggplot() + \n  geom_sf(fill = \"midnightblue\", linewidth = .1, color = \"white\") + \n  coord_sf(xlim = c(2377294, 7453440), ylim = c(1313597, 5628510), expand = F)"
   },
   {
     "objectID": "slides/09_mobility/index.html#bibliography",
