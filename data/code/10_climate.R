@@ -1,7 +1,6 @@
 library(tidyverse)
 library(lubridate)
 library(sf)
-library(scales)
 
 load("10_climate.RData")
 
