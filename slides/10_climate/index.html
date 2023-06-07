@@ -446,6 +446,17 @@ Dr.&nbsp;Matthias Schnetzer
 <aside><div>
 <p>Source: <a href="https://showyourstripes.info/s/globe">Ed Hawkins</a></p>
 </div></aside></section>
+<section id="global-warming-stripes-explained" class="slide level2 medium">
+<h2>Global warming stripes explained</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/bars.png" width="800"></p>
+</figure>
+</div>
+
+<aside><div>
+<p>Source: <a href="https://showyourstripes.info/s/globe">Ed Hawkins</a></p>
+</div></aside></section>
 <section id="ocean-surface-temperature-at-record-high" class="slide level2 medium">
 <h2>Ocean surface temperature at record high</h2>
 <div class="quarto-figure quarto-figure-center">
@@ -502,7 +513,7 @@ Dr.&nbsp;Matthias Schnetzer
 <ul>
 <li>Ecological sustainability is no explicit goal in traditional economic policy frameworks</li>
 <li>Climate and the environment are addressed in several SDGs, like in SDG 7 (clean energy) or SDG12 (responsible consumption &amp; production)</li>
-<li>SDG 13: “Take urgent action to combat climate change and its impacts” but only vague targets</li>
+<li><span class="marker-hl">SDG 13</span>: “Take urgent action to combat climate change and its impacts” but only vague targets</li>
 <li>The UN “Paris agreement” of 2015 is a legally binding treaty to limit the temperature increase to <span class="marker-hl">1.5°C</span> above pre-industrial levels and to reduce global emissions by <span class="marker-hl">43%</span> by 2030.</li>
 </ul>
 </div>
@@ -517,7 +528,7 @@ Dr.&nbsp;Matthias Schnetzer
 <p><span class="marker-hl secfont">Attention!</span></p>
 <ul>
 <li>Consumption-based versus production-based emissions!</li>
-<li>These countries represent less than 15% of population and less than 30% of emissions!</li>
+<li>These countries represent less than 15% of global population and less than 30% of global emissions!</li>
 <li>Global emissions still continue to rise!</li>
 </ul>
 </div>
@@ -526,9 +537,9 @@ Dr.&nbsp;Matthias Schnetzer
 <section id="climate-crisis-and-inequality" class="slide level2 medium">
 <h2>Climate crisis and inequality</h2>
 <ul>
-<li>There is ample evidence of inequality in (consumption-based) greenhouse gas emissions.</li>
-<li>20 global billionaires emit 164,000 tons of CO2e whereof two thirds origin from their yachts only. <span class="citation" data-cites="barros:2021">(<a href="#/bibliography" role="doc-biblioref" onclick="">Barros/Wilk, 2021</a>)</span></li>
-<li>In the EU, top 1% of households emit 22 times the per capita climate targets. Only 5% of EU households live within the targets. <span class="citation" data-cites="ivanova:2020">(<a href="#/bibliography" role="doc-biblioref" onclick="">Ivanova/Wood, 2020</a>)</span></li>
+<li>There is ample evidence of inequality in (consumption-based) greenhouse gas emissions. However, studies typically find emissions inequality being smaller than income or wealth inequality.</li>
+<li>20 global billionaires emit 164,000 tons of CO2e whereof two thirds origin from their yachts only. The global average is 5 tons per capita, thus 20 indiviuals emit 100 tons. <span class="citation" data-cites="barros:2021">(<a href="#/bibliography" role="doc-biblioref" onclick="">Barros/Wilk, 2021</a>)</span></li>
+<li>In the EU, top 1% of households emit 22 times the per capita climate target of 2.5 tons of CO2e. Only 5% of EU households live within the targets. <span class="citation" data-cites="ivanova:2020">(<a href="#/bibliography" role="doc-biblioref" onclick="">Ivanova/Wood, 2020</a>)</span></li>
 <li>In Austria, the top decile in the income distribution emits 4 times more than the bottom decile. <span class="citation" data-cites="theine:2022">(<a href="#/bibliography" role="doc-biblioref" onclick="">Theine et al., 2022</a>)</span></li>
 </ul>
 </section>
@@ -572,6 +583,10 @@ Dr.&nbsp;Matthias Schnetzer
 <p><br></p>
 <div class="tbl-classic tbl-larger">
 <table>
+<colgroup>
+<col style="width: 42%">
+<col style="width: 57%">
+</colgroup>
 <thead>
 <tr class="header">
 <th>Code</th>
@@ -580,25 +595,36 @@ Dr.&nbsp;Matthias Schnetzer
 </thead>
 <tbody>
 <tr class="odd">
-<td>facet_wrap(vars(continent))</td>
+<td>facet_wrap(~continent)</td>
 <td>Plot for each continent</td>
 </tr>
 <tr class="even">
-<td>facet_wrap(vars(continent, year))</td>
+<td>facet_wrap(continent ~ year)</td>
 <td>Plot for each continent/year</td>
 </tr>
 <tr class="odd">
-<td>facet_wrap(…, ncol = 1)</td>
-<td>Put all facets in one column</td>
+<td>facet_wrap(…, ncol = 1, nrow = 1)</td>
+<td>Specify grid layout with columns and rows</td>
 </tr>
 <tr class="even">
-<td>facet_wrap(…, nrow = 1)</td>
-<td>Put all facets in one row</td>
+<td>facet_wrap(…, scales = “fixed”)</td>
+<td>Specify fixed axis, alternatively “free_x” or “free_y”</td>
+</tr>
+<tr class="odd">
+<td>facet_wrap(…, dir = “h”)</td>
+<td>Direction of facets, horizontal (“h”) or vertical (“v”)</td>
+</tr>
+<tr class="even">
+<td>facet_wrap(…, strip.position = “top”)</td>
+<td>Positioning of the facet labels (strips)</td>
 </tr>
 </tbody>
 </table>
 </div>
-</section>
+
+<aside><div>
+<p>Note: <span class="secfont">facet_grid()</span> produces a grid of plots for each combination of variables, even if some plots are empty.</p>
+</div></aside></section>
 <section id="create-facets-by-a-variable-of-interest" class="slide level2 medium">
 <h2>Create facets by a variable of interest</h2>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> mpg) <span class="sc">+</span></span>

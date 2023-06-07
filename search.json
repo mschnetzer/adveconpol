@@ -700,6 +700,13 @@
     "text": "Global warming stripes for 1850-2022\n\n\n\n\n\n\n\nSource: Ed Hawkins"
   },
   {
+    "objectID": "slides/10_climate/index.html#global-warming-stripes-explained",
+    "href": "slides/10_climate/index.html#global-warming-stripes-explained",
+    "title": "    Economic Policy Visualization",
+    "section": "Global warming stripes explained",
+    "text": "Global warming stripes explained\n\n\n\n\n\n\n\nSource: Ed Hawkins"
+  },
+  {
     "objectID": "slides/10_climate/index.html#ocean-surface-temperature-at-record-high",
     "href": "slides/10_climate/index.html#ocean-surface-temperature-at-record-high",
     "title": "    Economic Policy Visualization",
@@ -739,14 +746,14 @@
     "href": "slides/10_climate/index.html#decoupling-growth-from-emissions",
     "title": "    Economic Policy Visualization",
     "section": "Decoupling growth from emissions",
-    "text": "Decoupling growth from emissions\n\n\n\n\nAttention!\n\nConsumption-based versus production-based emissions!\nThese countries represent less than 15% of population and less than 30% of emissions!\nGlobal emissions still continue to rise!"
+    "text": "Decoupling growth from emissions\n\n\n\n\nAttention!\n\nConsumption-based versus production-based emissions!\nThese countries represent less than 15% of global population and less than 30% of global emissions!\nGlobal emissions still continue to rise!"
   },
   {
     "objectID": "slides/10_climate/index.html#climate-crisis-and-inequality",
     "href": "slides/10_climate/index.html#climate-crisis-and-inequality",
     "title": "    Economic Policy Visualization",
     "section": "Climate crisis and inequality",
-    "text": "Climate crisis and inequality\n\nThere is ample evidence of inequality in (consumption-based) greenhouse gas emissions.\n20 global billionaires emit 164,000 tons of CO2e whereof two thirds origin from their yachts only. (Barros/Wilk, 2021)\nIn the EU, top 1% of households emit 22 times the per capita climate targets. Only 5% of EU households live within the targets. (Ivanova/Wood, 2020)\nIn Austria, the top decile in the income distribution emits 4 times more than the bottom decile. (Theine et al., 2022)"
+    "text": "Climate crisis and inequality\n\nThere is ample evidence of inequality in (consumption-based) greenhouse gas emissions. However, studies typically find emissions inequality being smaller than income or wealth inequality.\n20 global billionaires emit 164,000 tons of CO2e whereof two thirds origin from their yachts only. The global average is 5 tons per capita, thus 20 indiviuals emit 100 tons. (Barros/Wilk, 2021)\nIn the EU, top 1% of households emit 22 times the per capita climate target of 2.5 tons of CO2e. Only 5% of EU households live within the targets. (Ivanova/Wood, 2020)\nIn Austria, the top decile in the income distribution emits 4 times more than the bottom decile. (Theine et al., 2022)"
   },
   {
     "objectID": "slides/10_climate/index.html#global-emissions-inequality",
@@ -767,7 +774,7 @@
     "href": "slides/10_climate/index.html#what-are-facets",
     "title": "    Economic Policy Visualization",
     "section": "What are facets?",
-    "text": "What are facets?\nFacets show small multiples (or subplots) for different subsets of data\n\n\n\n\n\nCode\nResult\n\n\n\n\nfacet_wrap(vars(continent))\nPlot for each continent\n\n\nfacet_wrap(vars(continent, year))\nPlot for each continent/year\n\n\nfacet_wrap(…, ncol = 1)\nPut all facets in one column\n\n\nfacet_wrap(…, nrow = 1)\nPut all facets in one row"
+    "text": "What are facets?\nFacets show small multiples (or subplots) for different subsets of data\n\n\n\n\n\n\n\n\n\nCode\nResult\n\n\n\n\nfacet_wrap(~continent)\nPlot for each continent\n\n\nfacet_wrap(continent ~ year)\nPlot for each continent/year\n\n\nfacet_wrap(…, ncol = 1, nrow = 1)\nSpecify grid layout with columns and rows\n\n\nfacet_wrap(…, scales = “fixed”)\nSpecify fixed axis, alternatively “free_x” or “free_y”\n\n\nfacet_wrap(…, dir = “h”)\nDirection of facets, horizontal (“h”) or vertical (“v”)\n\n\nfacet_wrap(…, strip.position = “top”)\nPositioning of the facet labels (strips)\n\n\n\n\n\n\nNote: facet_grid() produces a grid of plots for each combination of variables, even if some plots are empty."
   },
   {
     "objectID": "slides/10_climate/index.html#create-facets-by-a-variable-of-interest",
