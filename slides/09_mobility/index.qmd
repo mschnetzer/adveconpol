@@ -256,7 +256,7 @@ Source: @oecd:2018
 ::: footer
 :::
 
-## Projections {.smaller}
+## Projections {.medium}
 
 Choose a [map projection]{.marker-hl}! For instance, [{giscoR}]{.secfont} by Eurostat provides maps in the following three projections. Check coordinates for axis limits at [https://epsg.io](https://epsg.io).
 
@@ -293,8 +293,43 @@ map1 + map2 + map3 & theme_minimal(base_family = "Roboto Condensed") +
 
 ## The {sf} package {.medium}
 
-## Maps resources {.medium}
+The [sf]{.secfont} (*simple features*) package deals with spatial geometries. These features have a geometry describing where on Earth the feature is located, and they have attributes, which describe other properties.
 
+```{r sfgeom}
+#| echo: false
+#| results: 'asis'
+#| fig-width: 11
+#| fig-align: center
+p <- rbind(c(3.2,4), c(3,4.6), c(3.8,4.4), c(3.5,3.8), c(3.4,3.6), c(3.9,4.5))
+mp <- st_multipoint(p)
+p1 <- mp |> ggplot() + geom_sf() + labs(title = "Multipoint")
+s1 <- rbind(c(0,3),c(0,4),c(1,5),c(2,5))
+s2 <- rbind(c(0.2,3), c(0.2,4), c(1,4.8), c(2,4.8))
+s3 <- rbind(c(0,4.4), c(0.6,5))
+mls <- st_multilinestring(list(s1,s2,s3))
+p2 <- mls |> ggplot() + geom_sf() + labs(title = "Multilinestring")
+mp1 <- rbind(c(0,0), c(1,0), c(3,2), c(2,4), c(1,4), c(0,0))
+mp2 <- rbind(c(1,1), c(1,2), c(2,2), c(1,1))
+mp3 <- rbind(c(3,0), c(4,0), c(4,1), c(3,1), c(3,0))
+mp4 <- rbind(c(3.3,0.3), c(3.8,0.3), c(3.8,0.8), c(3.3,0.8), c(3.3,0.3))[5:1,]
+mp5 <- rbind(c(3,3), c(4,2), c(4,3), c(3,3))
+mpol <- st_multipolygon(list(list(mp1,mp2), list(mp3,mp4), list(mp5)))
+p3 <- mpol |> ggplot() + geom_sf() + labs(title = "Multipolygon")
+p1 + p2 + p3 & 
+  theme_minimal(base_family = "Roboto Condensed", base_size = 12) + 
+  theme(plot.title = element_text(hjust = 0.5),
+        panel.background = element_rect(fill = "transparent"),
+        plot.margin = margin(l = 1, r = 1, unit = "lines"))
+```
+
+## Plot a map {.smaller}
+
+```{r plotmap}
+europe_3035 |> select(CNTR_ID, NAME_ENGL, geometry) |> slice_head(n = 3)
+europe_3035 |> ggplot() + 
+  geom_sf(fill = "midnightblue", linewidth = .1, color = "white") + 
+  coord_sf(xlim = c(2377294, 7453440), ylim = c(1313597, 5628510), expand = F)
+```
 
 ## Bibliography {.bibstyle}
 

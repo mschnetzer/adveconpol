@@ -38,6 +38,139 @@ format:
     pause: true
 ---
 
+## What does global warming mean? {.medium}
+
+![](img/warming.png){height="550" fig-align="center"}
+
+::: {.aside}
+Source: [Datawrapper](https://blog.datawrapper.de/climate-crisis-global-warming/)
+:::
+
+## Global warming stripes for 1850-2022 {.medium}
+
+![](img/stripes.png){height="400" width="800" fig-align="center"}
+
+::: {.aside}
+Source: [Ed Hawkins](https://showyourstripes.info/s/globe)
+:::
+
+## Global warming stripes explained {.medium}
+
+![](img/bars.png){width="800" fig-align="center"}
+
+::: {.aside}
+Source: [Ed Hawkins](https://showyourstripes.info/s/globe)
+:::
+
+## Ocean surface temperature at record high {.medium}
+
+![](img/ocean_temp.jpeg){height="500" fig-align="center"}
+
+::: {.aside}
+Source: [Guardian](https://www.theguardian.com/environment/2023/apr/26/accelerating-ocean-warming-earth-temperatures-climate-crisis)
+:::
+
+## Arctic ice at record low {.medium}
+
+![](img/arctic_ice.png){height="500" fig-align="center"}
+
+::: {.aside}
+Source: [New York Times](https://www.nytimes.com/interactive/2015/03/24/science/earth/arctic-ice-low-winter-maximum.html?_r=0)
+:::
+
+## Number of very hot days (+30°C) in Vienna {.medium}
+
+```{r wienplot}
+#| echo: false
+#| result: 'asis'
+#| dpi: 320
+#| fig-width: 10
+#| fig-align: center
+library(tidyverse)
+library(msthemes)
+library(sf)
+load("data/wienplot.RData")
+
+wienplot |> ggplot(aes(fill = n)) +
+  facet_wrap(~year, ncol = 10) +
+  geom_sf(linewidth = 0.05, color = "black") +
+  geom_text(aes(x=16.37505, y= 48.20915, label = round(n,0)), size = 4.5, family = "Hack",
+            fontface = "bold", color = "white", alpha = 0.8) +
+  scale_fill_distiller(palette = "Reds", direction = 1, name = "Anzahl Hitzetage") +
+  guides(fill = guide_colorbar(direction = "horizontal", barheight = 0.5, 
+                               barwidth = 10, title.position = "top")) +
+  labs(x=NULL, y=NULL) +
+  theme_ms(grid = F, alttf = T) +
+  theme(axis.text = element_blank(),
+        strip.text = element_text(size = 7, family = "Roboto Condensed",
+        margin = margin(b = 2, unit = "pt")),
+        legend.position = "none")
+
+```
+
+::: {.aside}
+Source: ZAMG
+:::
+
+## What is ecological economics? {.medium}
+
+- Economics of natural resources has a long history dating back to classical economists like Malthus and the phyisocrats where land is source of wealth
+- 1960s: Revival of Pigou’s concept of [externalities]{.marker-hl} to describe pollution
+- 1970s: Are there [limits]{.marker-hl} to growth? [@meadows:1972]
+- 1980s: Institutionalization of ecological economics with establishment of the [International Society for Ecological Economics]{.marker-hl} in 1988 [@ropke:2004]
+- Ecological economics addresses the interdependence and coevolution of human economies and natural ecosystems
+
+## Climate in economic policy {.medium}
+
+::: {.columns}
+::: {.column width="20%"}
+![](img/sdg13.png) 
+:::
+::: {.column width="80%"}
+- Ecological sustainability is no explicit goal in traditional economic policy frameworks
+- Climate and the environment are addressed in several SDGs, like in SDG 7 (clean energy) or SDG12 (responsible consumption & production)
+- [SDG 13]{.marker-hl}: "Take urgent action to combat climate change and its impacts" but only vague targets
+- The UN "Paris agreement" of 2015 is a legally binding treaty to limit the temperature increase to [1.5°C]{.marker-hl} above pre-industrial levels and to reduce global emissions by [43%]{.marker-hl} by 2030.
+:::
+:::
+
+## Decoupling growth from emissions {.medium}
+
+::: {.columns}
+::: {.column width="50%"}
+![](img/decoupling.png)
+:::
+::: {.column width="50%"}
+[Attention!]{.marker-hl .secfont}
+
+- Consumption-based versus production-based emissions!
+- These countries represent less than 15% of global population and less than 30% of global emissions!
+- Global emissions still continue to rise!
+:::
+:::
+
+## Climate crisis and inequality {.medium}
+
+- There is ample evidence of inequality in (consumption-based) greenhouse gas emissions. However, studies typically find emissions inequality being smaller than income or wealth inequality.
+- 20 global billionaires emit 164,000 tons of CO2e whereof two thirds origin from their yachts only. The global average is 5 tons per capita, thus 20 indiviuals emit 100 tons. [@barros:2021]
+- In the EU, top 1% of households emit 22 times the per capita climate target of 2.5 tons of CO2e. Only 5% of EU households live within the targets. [@ivanova:2020]
+- In Austria, the top decile in the income distribution emits 4 times more than the bottom decile. [@theine:2022]
+
+## Global emissions inequality {.medium}
+
+![](img/ghg_ineq.png){height="500" fig-align="center"}
+
+::: {.aside}
+Source: @chancel:2023
+:::
+
+## A framework for climate policy {.smaller}
+
+![](img/framework.png){height="500" fig-align="center"}
+
+::: {.aside}
+Source: @chancel:2023
+:::
 
 # Facets
 
@@ -45,6 +178,38 @@ format:
 
 ::: footer
 :::
+
+## What are facets? {.medium}
+
+Facets show small multiples (or subplots) for different subsets of data
+
+<br>
+
+::: {.tbl-classic .tbl-larger}
+| Code | Result |
+|------|--------|
+| facet_wrap(~continent)	| Plot for each continent |
+| facet_wrap(continent ~ year) |	Plot for each continent/year |
+| facet_wrap(..., ncol = 1, nrow = 1)	| Specify grid layout with columns and rows | 
+| facet_wrap(..., scales = "fixed") | Specify fixed axis, alternatively "free_x" or "free_y"|
+| facet_wrap(..., dir = "h") | Direction of facets, horizontal ("h") or vertical ("v") |
+| facet_wrap(..., strip.position = "top") | Positioning of the facet labels (strips) |
+:::
+
+::: {.aside}
+Note: [facet_grid()]{.secfont} produces a grid of plots for each combination of variables, even if some plots are empty.
+:::
+
+## Create facets by a variable of interest {.medium}
+
+```{r facets}
+#| echo: true
+#| results: 'asis'
+#| fig-width: 10
+ggplot(data = mpg) +
+  geom_point(aes(x = displ, y = hwy)) +
+  facet_wrap(~class, nrow = 2)
+```
 
 ## Bibliography {.bibstyle}
 

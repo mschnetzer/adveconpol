@@ -3,3 +3,6 @@ load("/Users/matthiasschnetzer/Daten/Lehre/wipol_advanced_BA/data/code/02_data.R
 load("/Users/matthiasschnetzer/Daten/Lehre/wipol_advanced_BA/data/code/08_wealth.RData")
 ls()
 hfcs
+load("/Users/matthiasschnetzer/Daten/Lehre/wipol_advanced_BA/data/code/08_wealth.RData")
+ls()
+hfcs

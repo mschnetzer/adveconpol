@@ -686,11 +686,109 @@
     "text": "Bibliography\n\n\n\n\n\n\nPI 5620 Advanced Economic Policy | Summer term 2023\n\n\n\nDougherty, Jack/Ilyankou, Ilya (2021). Hands-on data visualization: Interactive storytelling from spreadsheets to code. O’Reilly Media.\n\n\nHealy, Kieran (2018). Data visualization: A practical introduction. Princeton University Press.\n\n\nLauer, Claire/OBrien, Shaun (2020). How people are influenced by deceptive tactics in everyday charts and graphs. IEEE Transactions on Professional Communication, 63(4), 327–340. DOI: 10.1109/tpc.2020.3032053\n\n\nScherer, Cédric (2022). Graphic design with ggplot2. https://rstudio-conf-2022.github.io/ggplot2-graphic-design/\n\n\nSchwabish, Jonathan A. (2014). An economist’s guide to visualizing data. Journal of Economic Perspectives, 28(1), 209–234. DOI: 10.1257/jep.28.1.209"
   },
   {
+    "objectID": "slides/10_climate/index.html#what-does-global-warming-mean",
+    "href": "slides/10_climate/index.html#what-does-global-warming-mean",
+    "title": "    Economic Policy Visualization",
+    "section": "What does global warming mean?",
+    "text": "What does global warming mean?\n\n\n\n\n\n\n\nSource: Datawrapper"
+  },
+  {
+    "objectID": "slides/10_climate/index.html#global-warming-stripes-for-1850-2022",
+    "href": "slides/10_climate/index.html#global-warming-stripes-for-1850-2022",
+    "title": "    Economic Policy Visualization",
+    "section": "Global warming stripes for 1850-2022",
+    "text": "Global warming stripes for 1850-2022\n\n\n\n\n\n\n\nSource: Ed Hawkins"
+  },
+  {
+    "objectID": "slides/10_climate/index.html#global-warming-stripes-explained",
+    "href": "slides/10_climate/index.html#global-warming-stripes-explained",
+    "title": "    Economic Policy Visualization",
+    "section": "Global warming stripes explained",
+    "text": "Global warming stripes explained\n\n\n\n\n\n\n\nSource: Ed Hawkins"
+  },
+  {
+    "objectID": "slides/10_climate/index.html#ocean-surface-temperature-at-record-high",
+    "href": "slides/10_climate/index.html#ocean-surface-temperature-at-record-high",
+    "title": "    Economic Policy Visualization",
+    "section": "Ocean surface temperature at record high",
+    "text": "Ocean surface temperature at record high\n\n\n\n\n\n\n\nSource: Guardian"
+  },
+  {
+    "objectID": "slides/10_climate/index.html#arctic-ice-at-record-low",
+    "href": "slides/10_climate/index.html#arctic-ice-at-record-low",
+    "title": "    Economic Policy Visualization",
+    "section": "Arctic ice at record low",
+    "text": "Arctic ice at record low\n\n\n\n\n\n\n\nSource: New York Times"
+  },
+  {
+    "objectID": "slides/10_climate/index.html#number-of-very-hot-days-30c-in-vienna",
+    "href": "slides/10_climate/index.html#number-of-very-hot-days-30c-in-vienna",
+    "title": "    Economic Policy Visualization",
+    "section": "Number of very hot days (+30°C) in Vienna",
+    "text": "Number of very hot days (+30°C) in Vienna\n\n\n\n\n\n\n\n\n\n\n\nSource: ZAMG"
+  },
+  {
+    "objectID": "slides/10_climate/index.html#what-is-ecological-economics",
+    "href": "slides/10_climate/index.html#what-is-ecological-economics",
+    "title": "    Economic Policy Visualization",
+    "section": "What is ecological economics?",
+    "text": "What is ecological economics?\n\nEconomics of natural resources has a long history dating back to classical economists like Malthus and the phyisocrats where land is source of wealth\n1960s: Revival of Pigou’s concept of externalities to describe pollution\n1970s: Are there limits to growth? (Meadows et al., 1972)\n1980s: Institutionalization of ecological economics with establishment of the International Society for Ecological Economics in 1988 (Røpke, 2004)\nEcological economics addresses the interdependence and coevolution of human economies and natural ecosystems"
+  },
+  {
+    "objectID": "slides/10_climate/index.html#climate-in-economic-policy",
+    "href": "slides/10_climate/index.html#climate-in-economic-policy",
+    "title": "    Economic Policy Visualization",
+    "section": "Climate in economic policy",
+    "text": "Climate in economic policy\n\n\n\n\n\nEcological sustainability is no explicit goal in traditional economic policy frameworks\nClimate and the environment are addressed in several SDGs, like in SDG 7 (clean energy) or SDG12 (responsible consumption & production)\nSDG 13: “Take urgent action to combat climate change and its impacts” but only vague targets\nThe UN “Paris agreement” of 2015 is a legally binding treaty to limit the temperature increase to 1.5°C above pre-industrial levels and to reduce global emissions by 43% by 2030."
+  },
+  {
+    "objectID": "slides/10_climate/index.html#decoupling-growth-from-emissions",
+    "href": "slides/10_climate/index.html#decoupling-growth-from-emissions",
+    "title": "    Economic Policy Visualization",
+    "section": "Decoupling growth from emissions",
+    "text": "Decoupling growth from emissions\n\n\n\n\nAttention!\n\nConsumption-based versus production-based emissions!\nThese countries represent less than 15% of global population and less than 30% of global emissions!\nGlobal emissions still continue to rise!"
+  },
+  {
+    "objectID": "slides/10_climate/index.html#climate-crisis-and-inequality",
+    "href": "slides/10_climate/index.html#climate-crisis-and-inequality",
+    "title": "    Economic Policy Visualization",
+    "section": "Climate crisis and inequality",
+    "text": "Climate crisis and inequality\n\nThere is ample evidence of inequality in (consumption-based) greenhouse gas emissions. However, studies typically find emissions inequality being smaller than income or wealth inequality.\n20 global billionaires emit 164,000 tons of CO2e whereof two thirds origin from their yachts only. The global average is 5 tons per capita, thus 20 indiviuals emit 100 tons. (Barros/Wilk, 2021)\nIn the EU, top 1% of households emit 22 times the per capita climate target of 2.5 tons of CO2e. Only 5% of EU households live within the targets. (Ivanova/Wood, 2020)\nIn Austria, the top decile in the income distribution emits 4 times more than the bottom decile. (Theine et al., 2022)"
+  },
+  {
+    "objectID": "slides/10_climate/index.html#global-emissions-inequality",
+    "href": "slides/10_climate/index.html#global-emissions-inequality",
+    "title": "    Economic Policy Visualization",
+    "section": "Global emissions inequality",
+    "text": "Global emissions inequality\n\n\n\n\n\n\n\nSource: Chancel et al. (2023)"
+  },
+  {
+    "objectID": "slides/10_climate/index.html#a-framework-for-climate-policy",
+    "href": "slides/10_climate/index.html#a-framework-for-climate-policy",
+    "title": "    Economic Policy Visualization",
+    "section": "A framework for climate policy",
+    "text": "A framework for climate policy\n\n\n\n\n\n\n\nSource: Chancel et al. (2023)"
+  },
+  {
+    "objectID": "slides/10_climate/index.html#what-are-facets",
+    "href": "slides/10_climate/index.html#what-are-facets",
+    "title": "    Economic Policy Visualization",
+    "section": "What are facets?",
+    "text": "What are facets?\nFacets show small multiples (or subplots) for different subsets of data\n\n\n\n\n\n\n\n\n\nCode\nResult\n\n\n\n\nfacet_wrap(~continent)\nPlot for each continent\n\n\nfacet_wrap(continent ~ year)\nPlot for each continent/year\n\n\nfacet_wrap(…, ncol = 1, nrow = 1)\nSpecify grid layout with columns and rows\n\n\nfacet_wrap(…, scales = “fixed”)\nSpecify fixed axis, alternatively “free_x” or “free_y”\n\n\nfacet_wrap(…, dir = “h”)\nDirection of facets, horizontal (“h”) or vertical (“v”)\n\n\nfacet_wrap(…, strip.position = “top”)\nPositioning of the facet labels (strips)\n\n\n\n\n\n\nNote: facet_grid() produces a grid of plots for each combination of variables, even if some plots are empty."
+  },
+  {
+    "objectID": "slides/10_climate/index.html#create-facets-by-a-variable-of-interest",
+    "href": "slides/10_climate/index.html#create-facets-by-a-variable-of-interest",
+    "title": "    Economic Policy Visualization",
+    "section": "Create facets by a variable of interest",
+    "text": "Create facets by a variable of interest\nggplot(data = mpg) +\n  geom_point(aes(x = displ, y = hwy)) +\n  facet_wrap(~class, nrow = 2)"
+  },
+  {
     "objectID": "slides/10_climate/index.html#bibliography",
     "href": "slides/10_climate/index.html#bibliography",
     "title": "    Economic Policy Visualization",
     "section": "Bibliography",
-    "text": "Bibliography\n\n\n\n\n\n\nPI 5620 Advanced Economic Policy | Summer term 2023"
+    "text": "Bibliography\n\n\n\n\n\n\nPI 5620 Advanced Economic Policy | Summer term 2023\n\n\n\nBarros, Beatriz/Wilk, Richard (2021). The outsized carbon footprints of the super-rich. Sustainability: Science, Practice and Policy, 17(1), 316–322. DOI: 10.1080/15487733.2021.1949847\n\n\nChancel, Lucas/Bothe, Philipp/Voituriez, Tancrède (2023). Climate inequality report. World Inequality Lab Study 2023/1.\n\n\nIvanova, Diana/Wood, Richard (2020). The unequal distribution of household carbon footprints in europe and its link to sustainability. Global Sustainability, 3(e18), 1–12. DOI: 10.1017/sus.2020.12\n\n\nMeadows, Dennis L./Meadows, Donella/Randers, Jørgen/Behrens, William W. (1972). The limits to growth. Universe Books, New York.\n\n\nRøpke, Inge (2004). The early history of modern ecological economics. Ecological Economics, 50(3-4), 293–314. DOI: 10.1016/j.ecolecon.2004.02.012\n\n\nTheine, Hendrik/Humer, Stefan/Moser, Mathias/Schnetzer, Matthias (2022). Emissions inequality: Disparities in income, expenditure, and the carbon footprint in austria. Ecological Economics, 197, 107435. DOI: 10.1016/j.ecolecon.2022.107435"
   },
   {
     "objectID": "slides/01_introduction/index.html#course-info",
@@ -1117,14 +1215,14 @@
     "href": "slides/09_mobility/index.html#the-sf-package",
     "title": "    Economic Policy Visualization",
     "section": "The {sf} package",
-    "text": "The {sf} package"
+    "text": "The {sf} package\nThe sf (simple features) package deals with spatial geometries. These features have a geometry describing where on Earth the feature is located, and they have attributes, which describe other properties."
   },
   {
-    "objectID": "slides/09_mobility/index.html#maps-resources",
-    "href": "slides/09_mobility/index.html#maps-resources",
+    "objectID": "slides/09_mobility/index.html#plot-a-map",
+    "href": "slides/09_mobility/index.html#plot-a-map",
     "title": "    Economic Policy Visualization",
-    "section": "Maps resources",
-    "text": "Maps resources"
+    "section": "Plot a map",
+    "text": "Plot a map\n\neurope_3035 |&gt; select(CNTR_ID, NAME_ENGL, geometry) |&gt; slice_head(n = 3)\n\nSimple feature collection with 3 features and 2 fields\nGeometry type: POLYGON\nDimension:     XY\nBounding box:  xmin: 3618229 ymin: 1900590 xmax: 5257241 ymax: 2889034\nProjected CRS: ETRS89-extended / LAEA Europe\n  CNTR_ID NAME_ENGL                       geometry\n1      AL   Albania POLYGON ((5148385 2216599, ...\n2      AT   Austria POLYGON ((4832035 2857837, ...\n3      AD   Andorra POLYGON ((3640254 2192873, ...\n\neurope_3035 |&gt; ggplot() + \n  geom_sf(fill = \"midnightblue\", linewidth = .1, color = \"white\") + \n  coord_sf(xlim = c(2377294, 7453440), ylim = c(1313597, 5628510), expand = F)"
   },
   {
     "objectID": "slides/09_mobility/index.html#bibliography",
@@ -1159,6 +1257,6 @@
     "href": "schedule.html",
     "title": "Schedule",
     "section": "",
-    "text": "In this table you find the dates and contents of all classes.\n\n\n\n  \n  \n  \n    \n    \n    \n    \n    \n    \n    \n    \n  \n  \n    \n    \n      Date\n      Time\n      Room\n      Content\n      Slides\n      Code\n      Data\n      Assignment\n    \n  \n  \n    Mar 06, 2023\n10:00-12:00\nTC.4.15\nIntroduction\n\n\n\n\n\n    Mar 13, 2023\n10:00-12:00\nTC.4.15\nData\n\n\n\n\n\n\n\n    Mar 20, 2023\n10:00-12:00\nTC.4.15\nVisualization\n\n\n\n\n\n\n\n    Mar 27, 2023\n10:00-12:00\nD4.0.022\nGrowth · Geometries\n\n\n\n\n\n\n\n    Apr 17, 2023\n10:00-12:00\nTC.3.07\nInflation · Colors\n\n\n\n\n\n\n\n    Apr 24, 2023\n10:00-12:00\nTC.3.06\nLabour · Labels\n\n\n\n\n\n\n\n    May 08, 2023\n10:00-12:00\nTC.3.11\nIncome · Scales\n\n\n\n\n\n\n\n    May 15, 2023\n10:00-12:00\nD4.0.127\nWealth · Themes\n\n\n\n\n\n\n\n    Jun 05, 2023\n10:00-12:00\nD4.0.127\nMobility · Maps\n\n\n\n\n\n\n\n    Jun 12, 2023\n10:00-12:00\nTC.3.07\nClimate · Facets\n\n\n\n\n    Jun 19, 2023\n10:00-12:00\nD4.0.127\nStudent presentations\n\n\n\n\n    Jun 26, 2023\n10:00-12:00\nD4.0.127\nStudent presentations\n\n\n\n\n  \n  \n  \n\n\n\n\nAssignments\nAssignment [1] provides the setup of the R infrastructure that is required in this course. There are no points for this assignment. Assignments [2] to [4] are recreations of examplary figures provided below. These examples are related to figures that are discussed in class. Students should then try to reproduce the plots at home and improve their individual coding skills. The raw data for the figures are available as *.csv files below.\n\nHomework 1\n\n\n\n\n\n\n\n\n\n\n\nInstall the latest R version (v4.2.2)\nInstall the latest version of RStudio Desktop\nOpen RStudio, copy the following code into the console and execute: install.packages(c(\"tidyverse\", \"rmarkdown\", \"scales\", \"lubridate\", \"colorspace\", \"devtools\")); sessionInfo()\nClick on Help &gt; About RStudio\nMake sure that both the R version (Console) and the RStudio version are visible, take a screenshot and upload it to the learning platform before March 13, 2023 at 9 a.m.\n\n\n\n\n\nHomework 2\n\n\n\n\n\n\n\n\n\n\nPlease submit your chart before April 24, 2023 at 9 a.m. The data for this assignment is available here: \n\n\n\n\nHomework 3\n\n\n\n\n\n\n\n\n\n\nPlease submit your chart before May 15, 2023 at 9 a.m. The data for this assignment is available here: \n\n\n\n\nHomework 4\n\n\n\n\n\n\n\n\n\n\nPlease submit your chart before June 12, 2023 at 9 a.m. The data for this assignment is available here:"
+    "text": "In this table you find the dates and contents of all classes.\n\n\n\n  \n  \n  \n    \n    \n    \n    \n    \n    \n    \n    \n  \n  \n    \n    \n      Date\n      Time\n      Room\n      Content\n      Slides\n      Code\n      Data\n      Assignment\n    \n  \n  \n    Mar 06, 2023\n10:00-12:00\nTC.4.15\nIntroduction\n\n\n\n\n\n    Mar 13, 2023\n10:00-12:00\nTC.4.15\nData\n\n\n\n\n\n\n\n    Mar 20, 2023\n10:00-12:00\nTC.4.15\nVisualization\n\n\n\n\n\n\n\n    Mar 27, 2023\n10:00-12:00\nD4.0.022\nGrowth · Geometries\n\n\n\n\n\n\n\n    Apr 17, 2023\n10:00-12:00\nTC.3.07\nInflation · Colors\n\n\n\n\n\n\n\n    Apr 24, 2023\n10:00-12:00\nTC.3.06\nLabour · Labels\n\n\n\n\n\n\n\n    May 08, 2023\n10:00-12:00\nTC.3.11\nIncome · Scales\n\n\n\n\n\n\n\n    May 15, 2023\n10:00-12:00\nD4.0.127\nWealth · Themes\n\n\n\n\n\n\n\n    Jun 05, 2023\n10:00-12:00\nD4.0.127\nMobility · Maps\n\n\n\n\n\n\n\n    Jun 12, 2023\n10:00-12:00\nTC.3.07\nClimate · Facets\n\n\n\n\n\n\n\n    Jun 19, 2023\n10:00-12:00\nD4.0.127\nStudent presentations\n\n\n\n\n    Jun 26, 2023\n10:00-12:00\nD4.0.127\nStudent presentations\n\n\n\n\n  \n  \n  \n\n\n\n\nAssignments\nAssignment [1] provides the setup of the R infrastructure that is required in this course. There are no points for this assignment. Assignments [2] to [4] are recreations of examplary figures provided below. These examples are related to figures that are discussed in class. Students should then try to reproduce the plots at home and improve their individual coding skills. The raw data for the figures are available as *.csv files below.\n\nHomework 1\n\n\n\n\n\n\n\n\n\n\n\nInstall the latest R version (v4.2.2)\nInstall the latest version of RStudio Desktop\nOpen RStudio, copy the following code into the console and execute: install.packages(c(\"tidyverse\", \"rmarkdown\", \"scales\", \"lubridate\", \"colorspace\", \"devtools\")); sessionInfo()\nClick on Help &gt; About RStudio\nMake sure that both the R version (Console) and the RStudio version are visible, take a screenshot and upload it to the learning platform before March 13, 2023 at 9 a.m.\n\n\n\n\n\nHomework 2\n\n\n\n\n\n\n\n\n\n\nPlease submit your chart before April 24, 2023 at 9 a.m. The data for this assignment is available here: \n\n\n\n\nHomework 3\n\n\n\n\n\n\n\n\n\n\nPlease submit your chart before May 15, 2023 at 9 a.m. The data for this assignment is available here: \n\n\n\n\nHomework 4\n\n\n\n\n\n\n\n\n\n\nPlease submit your chart before June 12, 2023 at 9 a.m. The data for this assignment is available here:"
   }
 ]
