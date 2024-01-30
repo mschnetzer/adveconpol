@@ -109,7 +109,7 @@ baseplot + scale_fill_manual(values = viridis(n=6, option = "B",  direction = -1
 baseplot + scale_fill_manual(values = viridis(n=6, option = "D",  direction = -1), 
                              name = "", guide = guide_legend(reverse = TRUE, keywidth = 0.5))
 
-ggsave("plots/inflation_stream.png", width = 6, height = 8, dpi=320)
+ggsave("plots/inflation_stream.png", width = 6, height = 8, dpi=320, bg = "white")
 
 
 ## Now, let's create a line chart with inflation rates across Europe
@@ -140,9 +140,15 @@ euinfdata |> filter(time >= "2020-01-01") |>
   scale_x_date(limits = c(NA_Date_, as.Date("2023-05-01"))) +
   scale_color_manual(values = met.brewer("Tiepolo")) +
   facet_wrap(~geo.de) +
-  labs(x = NULL, y = NULL) +
-  theme_minimal() +
+  labs(x = NULL, y = NULL,
+       title = "Inflation roller coaster",
+       subtitle = "Harmonised inflation rates (HIPC) for selected European countries",
+       caption = "Source: Eurostat. Figure: @matschnetzer") +
+  theme_minimal(base_family = "Roboto Condensed", base_size = 8) +
   theme(legend.position = "none",
+        plot.title.position = "plot",
+        plot.title = element_text(size = 16),
+        plot.subtitle = element_text(size = 11, margin = margin(b=1, unit="lines")),
         strip.background = element_blank(),
         strip.text.x = element_blank(),
         panel.grid.minor = element_blank(),
@@ -150,4 +156,4 @@ euinfdata |> filter(time >= "2020-01-01") |>
         panel.spacing.x = unit(1.5, "lines"),
         panel.spacing.y = unit(1, "lines"))
 
-ggsave("plots/inflation_eu.png", width = 8, height = 4, dpi=320)
+ggsave("plots/inflation_eu.png", width = 8, height = 4.2, dpi=320, bg = "white")

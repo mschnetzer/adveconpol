@@ -1,63 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://mschnetzer.github.io/adveconpol/index.html</loc>
-    <lastmod>2023-06-07T11:57:48.546Z</lastmod>
-  </url>
-  <url>
-    <loc>https://mschnetzer.github.io/adveconpol/slides/05_inflation/index.html</loc>
-    <lastmod>2023-06-07T11:57:49.835Z</lastmod>
-  </url>
-  <url>
-    <loc>https://mschnetzer.github.io/adveconpol/slides/08_wealth/index.html</loc>
-    <lastmod>2023-06-07T11:57:51.041Z</lastmod>
-  </url>
-  <url>
-    <loc>https://mschnetzer.github.io/adveconpol/slides/06_labour/index.html</loc>
-    <lastmod>2023-06-07T11:57:51.888Z</lastmod>
-  </url>
-  <url>
-    <loc>https://mschnetzer.github.io/adveconpol/slides/04_growth/index.html</loc>
-    <lastmod>2023-06-07T11:57:52.738Z</lastmod>
-  </url>
-  <url>
-    <loc>https://mschnetzer.github.io/adveconpol/slides/03_visualization/index.html</loc>
-    <lastmod>2023-06-07T11:57:53.970Z</lastmod>
-  </url>
-  <url>
-    <loc>https://mschnetzer.github.io/adveconpol/slides/10_climate/index.html</loc>
-    <lastmod>2023-06-07T11:57:54.831Z</lastmod>
-  </url>
-  <url>
-    <loc>https://mschnetzer.github.io/adveconpol/slides/01_introduction/index.html</loc>
-    <lastmod>2023-06-07T11:57:57.816Z</lastmod>
-  </url>
-  <url>
-    <loc>https://mschnetzer.github.io/adveconpol/slides/07_income/index.html</loc>
-    <lastmod>2023-06-07T11:57:58.711Z</lastmod>
-  </url>
-  <url>
-    <loc>https://mschnetzer.github.io/adveconpol/slides/02_data/index.html</loc>
-    <lastmod>2023-06-07T11:58:05.382Z</lastmod>
-  </url>
-  <url>
-    <loc>https://mschnetzer.github.io/adveconpol/slides/09_mobility/index.html</loc>
-    <lastmod>2023-06-07T11:58:06.295Z</lastmod>
-  </url>
-  <url>
-    <loc>https://mschnetzer.github.io/adveconpol/visualization.html</loc>
-    <lastmod>2023-06-07T11:58:06.935Z</lastmod>
+    <loc>https://mschnetzer.github.io/adveconpol/schedule.html</loc>
+    <lastmod>2023-07-11T17:08:17.467Z</lastmod>
   </url>
   <url>
     <loc>https://mschnetzer.github.io/adveconpol/syllabus.html</loc>
-    <lastmod>2023-06-07T11:58:07.504Z</lastmod>
+    <lastmod>2023-07-11T17:08:10.499Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mschnetzer.github.io/adveconpol/slides/09_mobility/index.html</loc>
+    <lastmod>2023-07-11T17:08:09.450Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mschnetzer.github.io/adveconpol/slides/07_income/index.html</loc>
+    <lastmod>2023-07-11T17:08:02.273Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mschnetzer.github.io/adveconpol/slides/10_climate/index.html</loc>
+    <lastmod>2023-07-11T17:07:57.863Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mschnetzer.github.io/adveconpol/slides/04_growth/index.html</loc>
+    <lastmod>2023-07-11T17:07:55.990Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mschnetzer.github.io/adveconpol/slides/08_wealth/index.html</loc>
+    <lastmod>2023-07-11T17:07:54.455Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mschnetzer.github.io/adveconpol/index.html</loc>
+    <lastmod>2023-07-11T17:07:51.929Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mschnetzer.github.io/adveconpol/slides/05_inflation/index.html</loc>
+    <lastmod>2023-07-11T17:07:53.309Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mschnetzer.github.io/adveconpol/slides/06_labour/index.html</loc>
+    <lastmod>2023-07-11T17:07:55.260Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mschnetzer.github.io/adveconpol/slides/03_visualization/index.html</loc>
+    <lastmod>2023-07-11T17:07:57.087Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mschnetzer.github.io/adveconpol/slides/01_introduction/index.html</loc>
+    <lastmod>2023-07-11T17:08:01.468Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mschnetzer.github.io/adveconpol/slides/02_data/index.html</loc>
+    <lastmod>2023-07-11T17:08:08.675Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mschnetzer.github.io/adveconpol/visualization.html</loc>
+    <lastmod>2023-07-11T17:08:09.996Z</lastmod>
   </url>
   <url>
     <loc>https://mschnetzer.github.io/adveconpol/data/code/07_income.html</loc>
-    <lastmod>2023-06-07T11:58:12.357Z</lastmod>
-  </url>
-  <url>
-    <loc>https://mschnetzer.github.io/adveconpol/schedule.html</loc>
-    <lastmod>2023-06-07T11:58:15.089Z</lastmod>
+    <lastmod>2023-07-11T17:08:14.964Z</lastmod>
   </url>
 </urlset>
