@@ -8,7 +8,7 @@
 <link href="../../site_libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="../../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.3.433">
+  <meta name="generator" content="quarto-1.4.549">
 
   <meta name="author" content="Dr.&nbsp;Matthias Schnetzer">
   <meta name="dcterms.date" content="2023-06-12">
@@ -32,7 +32,7 @@
     }
     /* CSS for syntax highlighting */
     pre > code.sourceCode { white-space: pre; position: relative; }
-    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span { line-height: 1.25; }
     pre > code.sourceCode > span:empty { height: 1.2em; }
     .sourceCode { overflow: visible; }
     code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -99,6 +99,7 @@
     div.csl-bib-body { }
     div.csl-entry {
       clear: both;
+      margin-bottom: 0em;
     }
     .hanging-indent div.csl-entry {
       margin-left:2em;
@@ -241,7 +242,8 @@
   }
 
   .callout.callout-titled .callout-body > .callout-content > :last-child {
-    margin-bottom: 0.5rem;
+    padding-bottom: 0.5rem;
+    margin-bottom: 0;
   }
 
   .callout.callout-titled .callout-icon::before {
@@ -428,7 +430,7 @@ Dr.&nbsp;Matthias Schnetzer
 <h2>What does global warming mean?</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="img/warming.png" height="550"></p>
+<p><img data-src="img/warming.png" class="quarto-figure quarto-figure-center" height="550"></p>
 </figure>
 </div>
 
@@ -439,7 +441,7 @@ Dr.&nbsp;Matthias Schnetzer
 <h2>Global warming stripes for 1850-2022</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="img/stripes.png" width="800" height="400"></p>
+<p><img data-src="img/stripes.png" class="quarto-figure quarto-figure-center" width="800" height="400"></p>
 </figure>
 </div>
 
@@ -450,7 +452,7 @@ Dr.&nbsp;Matthias Schnetzer
 <h2>Global warming stripes explained</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="img/bars.png" width="800"></p>
+<p><img data-src="img/bars.png" class="quarto-figure quarto-figure-center" width="800"></p>
 </figure>
 </div>
 
@@ -461,7 +463,7 @@ Dr.&nbsp;Matthias Schnetzer
 <h2>Ocean surface temperature at record high</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="img/ocean_temp.jpeg" height="500"></p>
+<p><img data-src="img/ocean_temp.jpeg" class="quarto-figure quarto-figure-center" height="500"></p>
 </figure>
 </div>
 
@@ -472,7 +474,7 @@ Dr.&nbsp;Matthias Schnetzer
 <h2>Arctic ice at record low</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="img/arctic_ice.png" height="500"></p>
+<p><img data-src="img/arctic_ice.png" class="quarto-figure quarto-figure-center" height="500"></p>
 </figure>
 </div>
 
@@ -485,7 +487,7 @@ Dr.&nbsp;Matthias Schnetzer
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="index_files/figure-revealjs/wienplot-1.png" width="3200"></p>
+<p><img data-src="index_files/figure-revealjs/wienplot-1.png" class="quarto-figure quarto-figure-center" width="3200"></p>
 </figure>
 </div>
 </div>
@@ -547,7 +549,7 @@ Dr.&nbsp;Matthias Schnetzer
 <h2>Global emissions inequality</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="img/ghg_ineq.png" height="500"></p>
+<p><img data-src="img/ghg_ineq.png" class="quarto-figure quarto-figure-center" height="500"></p>
 </figure>
 </div>
 
@@ -558,7 +560,7 @@ Dr.&nbsp;Matthias Schnetzer
 <h2>A framework for climate policy</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="img/framework.png" height="500"></p>
+<p><img data-src="img/framework.png" class="quarto-figure quarto-figure-center" height="500"></p>
 </figure>
 </div>
 
@@ -570,7 +572,7 @@ Dr.&nbsp;Matthias Schnetzer
 <h1>Facets</h1>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="../../data/img/avatar_read.png" height="350"></p>
+<p><img data-src="../../data/img/avatar_read.png" class="quarto-figure quarto-figure-center" height="350"></p>
 </figure>
 </div>
 <div class="footer">
@@ -627,9 +629,9 @@ Dr.&nbsp;Matthias Schnetzer
 </div></aside></section>
 <section id="create-facets-by-a-variable-of-interest" class="slide level2 medium">
 <h2>Create facets by a variable of interest</h2>
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> mpg) <span class="sc">+</span></span>
-<span id="cb1-2"><a href="#cb1-2"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">x =</span> displ, <span class="at">y =</span> hwy)) <span class="sc">+</span></span>
-<span id="cb1-3"><a href="#cb1-3"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>class, <span class="at">nrow =</span> <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="fu">ggplot</span>(<span class="at">data =</span> mpg) <span class="sc">+</span></span>
+<span id="cb1-2"><a></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">x =</span> displ, <span class="at">y =</span> hwy)) <span class="sc">+</span></span>
+<span id="cb1-3"><a></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>class, <span class="at">nrow =</span> <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 <img data-src="index_files/figure-revealjs/facets-1.png" width="960" class="r-stretch"></section>
 <section id="bibliography" class="slide level2 bibstyle smaller scrollable">
@@ -638,11 +640,13 @@ Dr.&nbsp;Matthias Schnetzer
 
 </div>
 
-
-<img src="../../data/img/wu-logo-simple.png" class="slide-logo r-stretch"><div class="footer footer-default">
+<div class="quarto-auto-generated-content">
+<p><img src="../../data/img/wu-logo-simple.png" class="slide-logo"></p>
+<div class="footer footer-default">
 <p>PI 5620 Advanced Economic Policy | Summer term 2023</p>
 </div>
-<div id="refs" class="references csl-bib-body hanging-indent" role="list">
+</div>
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
 <div id="ref-barros:2021" class="csl-entry" role="listitem">
 Barros, Beatriz/Wilk, Richard (2021). The outsized carbon footprints of the super-rich. <em>Sustainability: Science, Practice and Policy</em>, <em>17</em>(1), 316–322. DOI: <a href="https://doi.org/10.1080/15487733.2021.1949847">10.1080/15487733.2021.1949847</a>
 </div>
@@ -689,7 +693,6 @@ Theine, Hendrik/Humer, Stefan/Moser, Mathias/Schnetzer, Matthias (2022). Emissio
       Reveal.initialize({
 'controlsAuto': true,
 'previewLinksAuto': false,
-'smaller': false,
 'pdfSeparateFragments': false,
 'autoAnimateEasing': "ease",
 'autoAnimateDuration': 1,
@@ -988,10 +991,9 @@ Theine, Hendrik/Humer, Stefan/Moser, Mathias/Schnetzer, Matthias (2022). Emissio
         // clear code selection
         e.clearSelection();
       });
-      function tippyHover(el, contentFn) {
+      function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
         const config = {
           allowHTML: true,
-          content: contentFn,
           maxWidth: 500,
           delay: 100,
           arrow: false,
@@ -1001,8 +1003,17 @@ Theine, Hendrik/Humer, Stefan/Moser, Mathias/Schnetzer, Matthias (2022). Emissio
           interactive: true,
           interactiveBorder: 10,
           theme: 'light-border',
-          placement: 'bottom-start'
+          placement: 'bottom-start',
         };
+        if (contentFn) {
+          config.content = contentFn;
+        }
+        if (onTriggerFn) {
+          config.onTrigger = onTriggerFn;
+        }
+        if (onUntriggerFn) {
+          config.onUntrigger = onUntriggerFn;
+        }
           config['offset'] = [0,0];
           config['maxWidth'] = 700;
         window.tippy(el, config); 
