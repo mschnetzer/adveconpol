@@ -207,9 +207,9 @@ h4, h5, h6 {
 }
 
 .summary-points ul li:before {
-  font-family: 'FontAwesome';
+  font: var(--fa-font-solid);
+  content: '\f35a';
   font-size: 1rem;
-  content: '\f0a9';
   margin: 0 15px 0 -20px;
 }
 
