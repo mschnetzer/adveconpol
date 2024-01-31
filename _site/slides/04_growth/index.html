@@ -8,7 +8,7 @@
 <link href="../../site_libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="../../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.3.433">
+  <meta name="generator" content="quarto-1.4.549">
 
   <meta name="author" content="Dr.&nbsp;Matthias Schnetzer">
   <meta name="dcterms.date" content="2023-03-27">
@@ -34,6 +34,7 @@
     div.csl-bib-body { }
     div.csl-entry {
       clear: both;
+      margin-bottom: 0em;
     }
     .hanging-indent div.csl-entry {
       margin-left:2em;
@@ -176,7 +177,8 @@
   }
 
   .callout.callout-titled .callout-body > .callout-content > :last-child {
-    margin-bottom: 0.5rem;
+    padding-bottom: 0.5rem;
+    margin-bottom: 0;
   }
 
   .callout.callout-titled .callout-icon::before {
@@ -421,14 +423,22 @@ Dr.&nbsp;Matthias Schnetzer
 <p><span class="secfont">Linear scale (1989 = 1)</span></p>
 <div class="cell">
 <div class="cell-output-display">
+<div>
+<figure>
 <p><img data-src="index_files/figure-revealjs/linear-1.png" width="576"></p>
+</figure>
+</div>
 </div>
 </div>
 </div><div class="column fragment">
 <p><span class="secfont">Logarithmic scale (1989 = 1)</span></p>
 <div class="cell">
 <div class="cell-output-display">
+<div>
+<figure>
 <p><img data-src="index_files/figure-revealjs/log-1.png" width="576"></p>
+</figure>
+</div>
 </div>
 </div>
 </div>
@@ -441,9 +451,9 @@ Dr.&nbsp;Matthias Schnetzer
 <h2>Reeeally long-term growth of GDP</h2>
 <div class="columns">
 <div class="column">
-<p><span class="secfont">Linear scale</span> <br><br> <img data-src="img/gdp_growth_long.png" data-fig-align="center"></p>
+<p><span class="secfont">Linear scale</span> <br><br> <img data-src="img/gdp_growth_long.png" class="quarto-figure quarto-figure-center"></p>
 </div><div class="column">
-<p><span class="secfont">Logarithmic scale</span> <br><br> <img data-src="img/gdp_growth_long_log.png" data-fig-align="center"></p>
+<p><span class="secfont">Logarithmic scale</span> <br><br> <img data-src="img/gdp_growth_long_log.png" class="quarto-figure quarto-figure-center"></p>
 </div>
 </div>
 
@@ -454,7 +464,7 @@ Dr.&nbsp;Matthias Schnetzer
 <h2>Why do some economies grow and others don’t?</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="img/korea.jpg" height="500"></p>
+<p><img data-src="img/korea.jpg" class="quarto-figure quarto-figure-center" height="500"></p>
 </figure>
 </div>
 
@@ -481,23 +491,39 @@ Dr.&nbsp;Matthias Schnetzer
 <div class="column">
 <div class="cell">
 <div class="cell-output-display">
+<div>
+<figure>
 <p><img data-src="index_files/figure-revealjs/abs-1.png" width="576"></p>
+</figure>
+</div>
 </div>
 </div>
 <div class="cell">
 <div class="cell-output-display">
+<div>
+<figure>
 <p><img data-src="index_files/figure-revealjs/rates-1.png" width="576"></p>
+</figure>
+</div>
 </div>
 </div>
 </div><div class="column fragment">
 <div class="cell">
 <div class="cell-output-display">
+<div>
+<figure>
 <p><img data-src="index_files/figure-revealjs/base-1.png" width="576"></p>
+</figure>
+</div>
 </div>
 </div>
 <div class="cell">
 <div class="cell-output-display">
+<div>
+<figure>
 <p><img data-src="index_files/figure-revealjs/bars-1.png" width="576"></p>
+</figure>
+</div>
 </div>
 </div>
 </div>
@@ -616,11 +642,13 @@ Dr.&nbsp;Matthias Schnetzer
 
 </div>
 
-
-<img src="../../data/img/wu-logo-simple.png" class="slide-logo r-stretch"><div class="footer footer-default">
+<div class="quarto-auto-generated-content">
+<p><img src="../../data/img/wu-logo-simple.png" class="slide-logo"></p>
+<div class="footer footer-default">
 <p>PI 5620 Advanced Economic Policy | Summer term 2023</p>
 </div>
-<div id="refs" class="references csl-bib-body hanging-indent" role="list">
+</div>
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
 <div id="ref-acemoglu:2019" class="csl-entry" role="listitem">
 Acemoglu, Daron/Naidu, Suresh/Restrepo, Pascual/Robinson, James A. (2019). Democracy does cause growth. <em>Journal of Political Economy</em>, <em>127</em>(1), 47–100. DOI: <a href="https://doi.org/10.1086/700936">10.1086/700936</a>
 </div>
@@ -667,7 +695,6 @@ Young, A. (1995). The tyranny of numbers: Confronting the statistical realities 
       Reveal.initialize({
 'controlsAuto': true,
 'previewLinksAuto': false,
-'smaller': false,
 'pdfSeparateFragments': false,
 'autoAnimateEasing': "ease",
 'autoAnimateDuration': 1,
@@ -966,10 +993,9 @@ Young, A. (1995). The tyranny of numbers: Confronting the statistical realities 
         // clear code selection
         e.clearSelection();
       });
-      function tippyHover(el, contentFn) {
+      function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
         const config = {
           allowHTML: true,
-          content: contentFn,
           maxWidth: 500,
           delay: 100,
           arrow: false,
@@ -979,8 +1005,17 @@ Young, A. (1995). The tyranny of numbers: Confronting the statistical realities 
           interactive: true,
           interactiveBorder: 10,
           theme: 'light-border',
-          placement: 'bottom-start'
+          placement: 'bottom-start',
         };
+        if (contentFn) {
+          config.content = contentFn;
+        }
+        if (onTriggerFn) {
+          config.onTrigger = onTriggerFn;
+        }
+        if (onUntriggerFn) {
+          config.onUntrigger = onUntriggerFn;
+        }
           config['offset'] = [0,0];
           config['maxWidth'] = 700;
         window.tippy(el, config); 

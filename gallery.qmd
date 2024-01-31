@@ -1,0 +1,40 @@
+---
+title: "Gallery"
+page-layout: full
+css: layout/css/adveconpol.scss
+filter:
+    - lightbox
+lightbox: auto
+---
+
+#### Selected charts created by students in this course
+
+<br>
+
+::: {style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));grid-gap: 1em;"}
+
+![](data/gallery/breyer.png){group="my-gallery"}
+
+![](data/gallery/muellner.png){group="my-gallery"}
+
+![](data/gallery/schnettgen.png){group="my-gallery"}
+
+![](data/gallery/radoslavova.png){group="my-gallery"}
+
+![](data/gallery/hrivula.png){group="my-gallery"}
+
+![](data/gallery/piller.png){group="my-gallery"}
+
+![](data/gallery/ritter.png){group="my-gallery"}
+
+![](data/gallery/maraguat.png){group="my-gallery"}
+
+![](data/gallery/mccann.png){group="my-gallery"}
+
+![](data/gallery/kahler.png){group="my-gallery"}
+
+![](data/gallery/strahlhofer.png){group="my-gallery"}
+
+![](data/gallery/kalugin.png){group="my-gallery"}
+
+:::

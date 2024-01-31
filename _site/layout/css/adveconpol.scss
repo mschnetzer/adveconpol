@@ -98,7 +98,7 @@ h4, h5, h6 {
   text-transform: uppercase;
 }
 
-.nav-footer {
+.nav-footer p {
   font-size: 0.7rem;
   font-weight: 100;
   color: $gray-800;
@@ -125,7 +125,7 @@ h4, h5, h6 {
     font-size: 0.9rem;
   }
   
-  .nav-footer {
+  .nav-footer p {
     font-size: 0.8rem;
   }
 }
@@ -147,9 +147,9 @@ h4, h5, h6 {
   .navbar-title {
     font-size: 1rem;
   }
-  
-  .nav-footer {
-    font-size: 1rem;
+
+  .nav-footer p {
+    font-size: 0.8rem;
   }
 }
 
@@ -207,9 +207,9 @@ h4, h5, h6 {
 }
 
 .summary-points ul li:before {
-  font-family: 'FontAwesome';
+  font: var(--fa-font-solid);
+  content: '\f35a';
   font-size: 1rem;
-  content: '\f0a9';
   margin: 0 15px 0 -20px;
 }
 

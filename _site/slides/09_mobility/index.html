@@ -8,7 +8,7 @@
 <link href="../../site_libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="../../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.3.433">
+  <meta name="generator" content="quarto-1.4.549">
 
   <meta name="author" content="Dr.&nbsp;Matthias Schnetzer">
   <meta name="dcterms.date" content="2023-06-05">
@@ -32,7 +32,7 @@
     }
     /* CSS for syntax highlighting */
     pre > code.sourceCode { white-space: pre; position: relative; }
-    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span { line-height: 1.25; }
     pre > code.sourceCode > span:empty { height: 1.2em; }
     .sourceCode { overflow: visible; }
     code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -99,6 +99,7 @@
     div.csl-bib-body { }
     div.csl-entry {
       clear: both;
+      margin-bottom: 0em;
     }
     .hanging-indent div.csl-entry {
       margin-left:2em;
@@ -241,7 +242,8 @@
   }
 
   .callout.callout-titled .callout-body > .callout-content > :last-child {
-    margin-bottom: 0.5rem;
+    padding-bottom: 0.5rem;
+    margin-bottom: 0;
   }
 
   .callout.callout-titled .callout-icon::before {
@@ -514,7 +516,7 @@ y_{ip}^* = y_{ip} + \omega_{ip} \]</span></p>
 <div class="cell" data-layout-align="center">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="index_files/figure-revealjs/gatsby-1.png" width="816"></p>
+<p><img data-src="index_files/figure-revealjs/gatsby-1.png" class="quarto-figure quarto-figure-center" width="816"></p>
 </figure>
 </div>
 </div>
@@ -526,7 +528,7 @@ y_{ip}^* = y_{ip} + \omega_{ip} \]</span></p>
 <h2>Educational mobility in Austria</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="img/educationmobility.png"></p>
+<p><img data-src="img/educationmobility.png" class="quarto-figure quarto-figure-center"></p>
 </figure>
 </div>
 
@@ -537,7 +539,7 @@ y_{ip}^* = y_{ip} + \omega_{ip} \]</span></p>
 <h2>Decreasing absolute mobility in the US</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="img/mobilityusa.png"></p>
+<p><img data-src="img/mobilityusa.png" class="quarto-figure quarto-figure-center"></p>
 </figure>
 </div>
 
@@ -550,13 +552,13 @@ y_{ip}^* = y_{ip} + \omega_{ip} \]</span></p>
 <div class="column" style="width:50%;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="img/grandparents1.png"></p>
+<p><img data-src="img/grandparents1.png" class="quarto-figure quarto-figure-center"></p>
 </figure>
 </div>
 </div><div class="column" style="width:50%;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="img/grandparents2.png"></p>
+<p><img data-src="img/grandparents2.png" class="quarto-figure quarto-figure-center"></p>
 </figure>
 </div>
 </div>
@@ -570,7 +572,7 @@ y_{ip}^* = y_{ip} + \omega_{ip} \]</span></p>
 <div class="cell" data-layout-align="center">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="index_files/figure-revealjs/generations-1.png" width="576"></p>
+<p><img data-src="index_files/figure-revealjs/generations-1.png" class="quarto-figure quarto-figure-center" width="576"></p>
 </figure>
 </div>
 </div>
@@ -593,7 +595,7 @@ y_{ip}^* = y_{ip} + \omega_{ip} \]</span></p>
 <h1>Maps</h1>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="../../data/img/avatar_cool.png" height="350"></p>
+<p><img data-src="../../data/img/avatar_cool.png" class="quarto-figure quarto-figure-center" height="350"></p>
 </figure>
 </div>
 <div class="footer">
@@ -604,16 +606,16 @@ y_{ip}^* = y_{ip} + \omega_{ip} \]</span></p>
 <h2>Projections</h2>
 <p>Choose a <span class="marker-hl">map projection</span>! For instance, <span class="secfont">{giscoR}</span> by Eurostat provides maps in the following three projections. Check coordinates for axis limits at <a href="https://epsg.io">https://epsg.io</a>.</p>
 
-<img data-src="index_files/figure-revealjs/projections-1.png" width="960" class="r-stretch quarto-figure-center"></section>
+<img data-src="index_files/figure-revealjs/projections-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"></section>
 <section id="the-sf-package" class="slide level2 medium">
 <h2>The {sf} package</h2>
 <p>The <span class="secfont">sf</span> (<em>simple features</em>) package deals with spatial geometries. These features have a geometry describing where on Earth the feature is located, and they have attributes, which describe other properties.</p>
 
-<img data-src="index_files/figure-revealjs/sfgeom-1.png" width="1056" class="r-stretch quarto-figure-center"></section>
+<img data-src="index_files/figure-revealjs/sfgeom-1.png" class="quarto-figure quarto-figure-center r-stretch" width="1056"></section>
 <section id="plot-a-map" class="slide level2 smaller">
 <h2>Plot a map</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a>europe_3035 <span class="sc">|&gt;</span> <span class="fu">select</span>(CNTR_ID, NAME_ENGL, geometry) <span class="sc">|&gt;</span> <span class="fu">slice_head</span>(<span class="at">n =</span> <span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a>europe_3035 <span class="sc">|&gt;</span> <span class="fu">select</span>(CNTR_ID, NAME_ENGL, geometry) <span class="sc">|&gt;</span> <span class="fu">slice_head</span>(<span class="at">n =</span> <span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Simple feature collection with 3 features and 2 fields
 Geometry type: POLYGON
@@ -625,9 +627,9 @@ Projected CRS: ETRS89-extended / LAEA Europe
 2      AT   Austria POLYGON ((4832035 2857837, ...
 3      AD   Andorra POLYGON ((3640254 2192873, ...</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a>europe_3035 <span class="sc">|&gt;</span> <span class="fu">ggplot</span>() <span class="sc">+</span> </span>
-<span id="cb3-2"><a href="#cb3-2"></a>  <span class="fu">geom_sf</span>(<span class="at">fill =</span> <span class="st">"midnightblue"</span>, <span class="at">linewidth =</span> .<span class="dv">1</span>, <span class="at">color =</span> <span class="st">"white"</span>) <span class="sc">+</span> </span>
-<span id="cb3-3"><a href="#cb3-3"></a>  <span class="fu">coord_sf</span>(<span class="at">xlim =</span> <span class="fu">c</span>(<span class="dv">2377294</span>, <span class="dv">7453440</span>), <span class="at">ylim =</span> <span class="fu">c</span>(<span class="dv">1313597</span>, <span class="dv">5628510</span>), <span class="at">expand =</span> F)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a>europe_3035 <span class="sc">|&gt;</span> <span class="fu">ggplot</span>() <span class="sc">+</span> </span>
+<span id="cb3-2"><a></a>  <span class="fu">geom_sf</span>(<span class="at">fill =</span> <span class="st">"midnightblue"</span>, <span class="at">linewidth =</span> .<span class="dv">1</span>, <span class="at">color =</span> <span class="st">"white"</span>) <span class="sc">+</span> </span>
+<span id="cb3-3"><a></a>  <span class="fu">coord_sf</span>(<span class="at">xlim =</span> <span class="fu">c</span>(<span class="dv">2377294</span>, <span class="dv">7453440</span>), <span class="at">ylim =</span> <span class="fu">c</span>(<span class="dv">1313597</span>, <span class="dv">5628510</span>), <span class="at">expand =</span> F)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
 <img data-src="index_files/figure-revealjs/plotmap-1.png" width="576" class="r-stretch"></section>
@@ -637,11 +639,13 @@ Projected CRS: ETRS89-extended / LAEA Europe
 
 </div>
 
-
-<img src="../../data/img/wu-logo-simple.png" class="slide-logo r-stretch"><div class="footer footer-default">
+<div class="quarto-auto-generated-content">
+<p><img src="../../data/img/wu-logo-simple.png" class="slide-logo"></p>
+<div class="footer footer-default">
 <p>PI 5620 Advanced Economic Policy | Summer term 2023</p>
 </div>
-<div id="refs" class="references csl-bib-body hanging-indent" role="list">
+</div>
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
 <div id="ref-barone:2020" class="csl-entry" role="listitem">
 Barone, Guglielmo/Mocetti, Sauro (2020). Intergenerational mobility in the very long run: Florence 1427-2011. <em>The Review of Economic Studies</em>, <em>88</em>(4), 1863–1891. DOI: <a href="https://doi.org/10.1093/restud/rdaa075">10.1093/restud/rdaa075</a>
 </div>
@@ -706,7 +710,6 @@ OECD (2018). <em>A broken social elevator? How to promote social mobility</em>. 
       Reveal.initialize({
 'controlsAuto': true,
 'previewLinksAuto': false,
-'smaller': false,
 'pdfSeparateFragments': false,
 'autoAnimateEasing': "ease",
 'autoAnimateDuration': 1,
@@ -1005,10 +1008,9 @@ OECD (2018). <em>A broken social elevator? How to promote social mobility</em>. 
         // clear code selection
         e.clearSelection();
       });
-      function tippyHover(el, contentFn) {
+      function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
         const config = {
           allowHTML: true,
-          content: contentFn,
           maxWidth: 500,
           delay: 100,
           arrow: false,
@@ -1018,8 +1020,17 @@ OECD (2018). <em>A broken social elevator? How to promote social mobility</em>. 
           interactive: true,
           interactiveBorder: 10,
           theme: 'light-border',
-          placement: 'bottom-start'
+          placement: 'bottom-start',
         };
+        if (contentFn) {
+          config.content = contentFn;
+        }
+        if (onTriggerFn) {
+          config.onTrigger = onTriggerFn;
+        }
+        if (onUntriggerFn) {
+          config.onUntrigger = onUntriggerFn;
+        }
           config['offset'] = [0,0];
           config['maxWidth'] = 700;
         window.tippy(el, config); 

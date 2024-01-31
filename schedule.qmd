@@ -19,34 +19,37 @@ In this table you find the dates and contents of all classes.
 
 ```{r schedule}
 #| echo: false
-#| results: 'asis'
+#| results: asis
 schedule |> arrange(Date) |> select(-c(Chart)) |>
   mutate(Slides = ifelse(!is.na(Slides),
         glue('<a href="slides/{Slides}/" target = "_blank">
-               <i class="fa-solid fa-display fa-lg"></i></a>'),
-        glue('<font color="#e9ecef"><i class="fa-solid fa-display fa-lg"></i></font>')), 
+               {fontawesome::fa("display")}</a>'),
+        glue('<font color="#e9ecef">{fontawesome::fa("display")}</font>')),
         Code = ifelse(!is.na(Code),
         glue('<a href="data/code/{Code}" target = "_blank">
-             <i class="fa-solid fa-code fa-lg"></i></a>'),
-        glue('<font color="#e9ecef"><i class="fa-solid fa-code fa-lg"></i></font>')),
+             {fontawesome::fa("code")}</a>'),
+        glue('<font color="#e9ecef">{fontawesome::fa("code")}</font>')),
         Data = ifelse(!is.na(Data),
         glue('<a href="data/code/{Data}" target = "_blank">
-             <i class="fa-solid fa-file-arrow-down fa-lg"></i></a>'),
-        glue('<font color="#e9ecef"><i class="fa-solid fa-file-arrow-down fa-lg"></i></font>')),
+             {fontawesome::fa("file-arrow-down")}</a>'),
+        glue('<font color="#e9ecef">{fontawesome::fa("file-arrow-down")}</font>')),
         Assignment = ifelse(!is.na(Assignment),
-        glue('<a href="#h{Assignment}"><i class="fa-solid fa-pen fa-lg"></i></a>'),
-        glue('<font color="#e9ecef"><i class="fa-solid fa-pen fa-lg"></i></font>')),
+        glue('<a href="#h{Assignment}">{fontawesome::fa("pen")}</a>'),
+        glue('<font color="#e9ecef">{fontawesome::fa("pen")}</font>')),
         Date = format(Date, '%b %d, %Y')) |>
      mutate(across(c(Slides, Code, Data, Assignment), ~map(., gt::html))) |>
           gt() |>
  #         opt_table_font(font = google_font("Roboto Slab")) |>
           tab_options(
+               table.width = pct(100),
                column_labels.font.size = "18px",
                column_labels.font.weight = "bolder",
-               data_row.padding = px(10),
+               data_row.padding = px(7),
           ) |>
           tab_style(location = cells_body(),
                     style = cell_text(size = "16px", weight = 100)) |>
+          tab_style(location = cells_body(columns = c(Slides, Code, Data, Assignment)),
+                    style = cell_text(size = "18px", weight = 100)) |>
           tab_style(style = cell_borders(sides = "bottom", 
                                         color = "gray200", weight = px(0.2)),
                     locations = cells_body(columns = everything(),
@@ -56,8 +59,8 @@ schedule |> arrange(Date) |> select(-c(Chart)) |>
                     Content ~ pct(20),
                     5:8 ~ pct(11)) |>
           cols_align(align = "center") |>
-          cols_align(align = "left", columns = 1:4) |>
-          as_raw_html(inline_css = FALSE) 
+          cols_align(align = "left", columns = 1:4) |> 
+          as_raw_html(inline_css = FALSE)
 ```
 
 #### Assignments

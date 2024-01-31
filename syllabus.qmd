@@ -11,7 +11,7 @@ css: layout/css/adveconpol.scss
 
 - {{< fa user >}} &nbsp; {{< var instructor.name >}}
 - {{< fa globe >}} &nbsp; [{{< var instructor.url >}}]({{< var instructor.url >}})
-- {{< fa envelope >}} &nbsp; <a href="mailto:{{< var instructor.email >}}">{{< var instructor.email >}}</a>
+- {{< fa envelope >}} &nbsp; {{< var instructor.email >}}
 - {{< fa brands twitter >}} &nbsp; [{{< var instructor.twitter >}}](https://www.twitter.com/{{< var instructor.twitter >}})
 :::
 

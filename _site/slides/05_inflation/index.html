@@ -8,7 +8,7 @@
 <link href="../../site_libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="../../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.3.433">
+  <meta name="generator" content="quarto-1.4.549">
 
   <meta name="author" content="Dr.&nbsp;Matthias Schnetzer">
   <meta name="dcterms.date" content="2023-04-17">
@@ -34,6 +34,7 @@
     div.csl-bib-body { }
     div.csl-entry {
       clear: both;
+      margin-bottom: 0em;
     }
     .hanging-indent div.csl-entry {
       margin-left:2em;
@@ -176,7 +177,8 @@
   }
 
   .callout.callout-titled .callout-body > .callout-content > :last-child {
-    margin-bottom: 0.5rem;
+    padding-bottom: 0.5rem;
+    margin-bottom: 0;
   }
 
   .callout.callout-titled .callout-icon::before {
@@ -425,7 +427,7 @@ Dr.&nbsp;Matthias Schnetzer
 <div class="cell" data-layout-align="center">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="index_files/figure-revealjs/euroinf-1.png" width="960"></p>
+<p><img data-src="index_files/figure-revealjs/euroinf-1.png" class="quarto-figure quarto-figure-center" width="960"></p>
 </figure>
 </div>
 </div>
@@ -436,11 +438,11 @@ Dr.&nbsp;Matthias Schnetzer
 <section id="inflation-in-austria-by-selected-coicop-groups" class="slide level2 medium">
 <h2>Inflation in Austria by selected COICOP groups</h2>
 
-<img data-src="index_files/figure-revealjs/infstream-1.png" width="960" class="r-stretch quarto-figure-center"></section>
+<img data-src="index_files/figure-revealjs/infstream-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"></section>
 <section id="drivers-of-inflation-in-austria" class="slide level2 medium">
 <h2>Drivers of inflation in Austria</h2>
 
-<img data-src="index_files/figure-revealjs/infbump-1.png" width="960" class="r-stretch quarto-figure-center"></section>
+<img data-src="index_files/figure-revealjs/infbump-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"></section>
 <section>
 <section id="all-colours-are-beautiful" class="title-slide slide level1 center">
 <h1>All colours are beautiful</h1>
@@ -483,7 +485,11 @@ Dr.&nbsp;Matthias Schnetzer
 <p><span style="font-size:1.3rem;">Use to encode numerical information <em>with order</em></span></p>
 <div class="cell">
 <div class="cell-output-display">
+<div>
+<figure>
 <p><img data-src="index_files/figure-revealjs/seq-1.png" width="576"></p>
+</figure>
+</div>
 </div>
 </div>
 </div><div class="column center fragment" style="width:33%;">
@@ -491,7 +497,11 @@ Dr.&nbsp;Matthias Schnetzer
 <p><span style="font-size:1.3rem;">Use to encode numerical information with <em>critical midpoint</em></span></p>
 <div class="cell">
 <div class="cell-output-display">
+<div>
+<figure>
 <p><img data-src="index_files/figure-revealjs/div-1.png" width="576"></p>
+</figure>
+</div>
 </div>
 </div>
 </div><div class="column center fragment" style="width:33%;">
@@ -499,7 +509,11 @@ Dr.&nbsp;Matthias Schnetzer
 <p><span style="font-size:1.3rem;">Use to encode <em>categorical</em> information</span></p>
 <div class="cell">
 <div class="cell-output-display">
+<div>
+<figure>
 <p><img data-src="index_files/figure-revealjs/qual-1.png" width="576"></p>
+</figure>
+</div>
 </div>
 </div>
 </div>
@@ -515,14 +529,22 @@ Dr.&nbsp;Matthias Schnetzer
 <p>You may check whether the color scale works for people who can distinguish fewer colours than others with <span class="secfont">{colorBlindness}</span>.</p>
 <div class="cell">
 <div class="cell-output-display">
+<div>
+<figure>
 <p><img data-src="index_files/figure-revealjs/cblind-1.png" width="576"></p>
+</figure>
+</div>
 </div>
 </div>
 </div><div class="column fragment">
 <p>The <span class="secfont">viridis</span> color scale is discriminable under the most common forms of colour blindness, and reproduces well in greyscale.</p>
 <div class="cell">
 <div class="cell-output-display">
+<div>
+<figure>
 <p><img data-src="index_files/figure-revealjs/viridis-1.png" width="576"></p>
+</figure>
+</div>
 </div>
 </div>
 </div>
@@ -535,14 +557,22 @@ Dr.&nbsp;Matthias Schnetzer
 <p><a href="https://github.com/BlakeRMills/MetBrewer"><span class="secfont">{MetBrewer}</span></a></p>
 <div class="cell">
 <div class="cell-output-display">
+<div>
+<figure>
 <p><img data-src="index_files/figure-revealjs/met-1.png" width="576"></p>
+</figure>
+</div>
 </div>
 </div>
 </div><div class="column center">
 <p><a href="https://github.com/karthik/wesanderson"><span class="secfont">{wesanderson}</span></a></p>
 <div class="cell">
 <div class="cell-output-display">
+<div>
+<figure>
 <p><img data-src="index_files/figure-revealjs/wes-1.png" width="576"></p>
+</figure>
+</div>
 </div>
 </div>
 </div>
@@ -581,11 +611,13 @@ Dr.&nbsp;Matthias Schnetzer
 
 </div>
 
-
-<img src="../../data/img/wu-logo-simple.png" class="slide-logo r-stretch"><div class="footer footer-default">
+<div class="quarto-auto-generated-content">
+<p><img src="../../data/img/wu-logo-simple.png" class="slide-logo"></p>
+<div class="footer footer-default">
 <p>PI 5620 Advanced Economic Policy | Summer term 2023</p>
 </div>
-<div id="refs" class="references csl-bib-body hanging-indent" role="list">
+</div>
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
 <div id="ref-scherer:2022" class="csl-entry" role="listitem">
 Scherer, Cédric (2022). Graphic design with ggplot2. <a href="https://rstudio-conf-2022.github.io/ggplot2-graphic-design/">https://rstudio-conf-2022.github.io/ggplot2-graphic-design/</a>
 </div>
@@ -626,7 +658,6 @@ Zuckerstätter, Sepp/Kafenda, Lukas/Muckenhuber, Mattias/Russinger, Reinhold (20
       Reveal.initialize({
 'controlsAuto': true,
 'previewLinksAuto': false,
-'smaller': false,
 'pdfSeparateFragments': false,
 'autoAnimateEasing': "ease",
 'autoAnimateDuration': 1,
@@ -925,10 +956,9 @@ Zuckerstätter, Sepp/Kafenda, Lukas/Muckenhuber, Mattias/Russinger, Reinhold (20
         // clear code selection
         e.clearSelection();
       });
-      function tippyHover(el, contentFn) {
+      function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
         const config = {
           allowHTML: true,
-          content: contentFn,
           maxWidth: 500,
           delay: 100,
           arrow: false,
@@ -938,8 +968,17 @@ Zuckerstätter, Sepp/Kafenda, Lukas/Muckenhuber, Mattias/Russinger, Reinhold (20
           interactive: true,
           interactiveBorder: 10,
           theme: 'light-border',
-          placement: 'bottom-start'
+          placement: 'bottom-start',
         };
+        if (contentFn) {
+          config.content = contentFn;
+        }
+        if (onTriggerFn) {
+          config.onTrigger = onTriggerFn;
+        }
+        if (onUntriggerFn) {
+          config.onUntrigger = onUntriggerFn;
+        }
           config['offset'] = [0,0];
           config['maxWidth'] = 700;
         window.tippy(el, config); 
